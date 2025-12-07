@@ -1,0 +1,42 @@
+[
+    {
+        "id": "sci-7-ch1",
+        "title": "The Living World: Adaptations and Classification",
+        "description": "Learn about how living organisms adapt to their surroundings and how they are classified.",
+        "units": 3,
+        "icon": "leaf",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-7-ch2",
+        "title": "Plants: Structure and Function",
+        "description": "Understand the different parts of plants and their functions.",
+        "units": 2,
+        "icon": "flower",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-7-ch3",
+        "title": "Properties of Natural Resources",
+        "description": "Explore the properties of air, water, and soil.",
+        "units": 3,
+        "icon": "water",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-7-ch4",
+        "title": "Nutrition in Living Organisms",
+        "description": "Study how plants and animals obtain and use food.",
+        "units": 2,
+        "icon": "food-apple",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-7-ch5",
+        "title": "Food Safety",
+        "description": "Learn about food spoilage, preservation, and adulteration.",
+        "units": 2,
+        "icon": "shield-check",
+        "color": "#4ECDC4"
+    }
+]

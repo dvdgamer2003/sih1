@@ -1,0 +1,105 @@
+{
+    "class": 6,
+    "subject": "Mathematics",
+    "chapters": [
+        {
+            "id": "ch1",
+            "title": "Knowing Our Numbers",
+            "description": "Learn about large numbers, place value, and number systems",
+            "lessons": [
+                {
+                    "id": "lesson1",
+                    "title": "Introduction to Large Numbers",
+                    "duration": "15 mins",
+                    "content": "In our daily life, we come across numbers in various forms. Let's explore how to read and write large numbers.",
+                    "sections": [
+                        {
+                            "heading": "Place Value System",
+                            "text": "Our number system is based on place values. Each position in a number has a specific value.",
+                            "examples": [
+                                "In 5,432: 5 is in thousands place",
+                                "4 is in hundreds place",
+                                "3 is in tens place",
+                                "2 is in ones place"
+                            ]
+                        },
+                        {
+                            "heading": "Reading Large Numbers",
+                            "text": "We use commas to separate periods (ones, thousands, lakhs, crores) to make large numbers easier to read.",
+                            "examples": [
+                                "1,234 = One thousand two hundred thirty-four",
+                                "12,345 = Twelve thousand three hundred forty-five",
+                                "1,23,456 = One lakh twenty-three thousand four hundred fifty-six"
+                            ]
+                        }
+                    ],
+                    "keyPoints": [
+                        "Place value determines the value of a digit",
+                        "Use commas to separate periods",
+                        "Read numbers from left to right",
+                        "Practice with real-world examples"
+                    ],
+                    "practice": [
+                        {
+                            "question": "Write in words: 45,678",
+                            "answer": "Forty-five thousand six hundred seventy-eight"
+                        },
+                        {
+                            "question": "Write in numbers: Three lakh twenty-one thousand",
+                            "answer": "3,21,000"
+                        }
+                    ]
+                },
+                {
+                    "id": "lesson2",
+                    "title": "Comparing Numbers",
+                    "duration": "12 mins",
+                    "content": "Learn how to compare large numbers and arrange them in ascending or descending order.",
+                    "sections": [
+                        {
+                            "heading": "Comparing Two Numbers",
+                            "text": "To compare numbers, start from the leftmost digit and compare place by place.",
+                            "examples": [
+                                "5,432 vs 5,234: Compare thousands (both 5), then hundreds (4 > 2), so 5,432 > 5,234",
+                                "12,345 vs 9,876: Compare ten-thousands (1 > 0), so 12,345 > 9,876"
+                            ]
+                        }
+                    ],
+                    "keyPoints": [
+                        "Compare digits from left to right",
+                        "The number with more digits is usually larger",
+                        "Use > (greater than) and < (less than) symbols"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ch2",
+            "title": "Whole Numbers",
+            "description": "Understanding whole numbers and their properties",
+            "lessons": [
+                {
+                    "id": "lesson3",
+                    "title": "Introduction to Whole Numbers",
+                    "duration": "10 mins",
+                    "content": "Whole numbers include all natural numbers and zero (0, 1, 2, 3, ...).",
+                    "sections": [
+                        {
+                            "heading": "What are Whole Numbers?",
+                            "text": "Whole numbers are counting numbers starting from zero.",
+                            "examples": [
+                                "0, 1, 2, 3, 4, 5, ...",
+                                "All natural numbers plus zero"
+                            ]
+                        }
+                    ],
+                    "keyPoints": [
+                        "Whole numbers start from 0",
+                        "They go on forever (infinite)",
+                        "No fractions or decimals"
+                    ]
+                }
+            ]
+        }
+    ]
+}

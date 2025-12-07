@@ -1,0 +1,130 @@
+[
+    {
+        "id": "sci-6-ch1",
+        "title": "Natural Resources – Air, Water and Land",
+        "description": "Learn about the importance of air, water, and land as natural resources.",
+        "icon": "earth",
+        "color": "#4CAF50",
+        "units": 3
+    },
+    {
+        "id": "sci-6-ch2",
+        "title": "The Living World",
+        "description": "Explore the characteristics of living things.",
+        "icon": "leaf",
+        "color": "#8BC34A",
+        "units": 2
+    },
+    {
+        "id": "sci-6-ch3",
+        "title": "Diversity in Living Things and their Classification",
+        "description": "Understand how plants and animals are classified.",
+        "icon": "tree",
+        "color": "#CDDC39",
+        "units": 2
+    },
+    {
+        "id": "sci-6-ch4",
+        "title": "Disaster Management",
+        "description": "Learn how to manage natural and man-made disasters.",
+        "icon": "alert",
+        "color": "#FF9800",
+        "units": 2
+    },
+    {
+        "id": "sci-6-ch5",
+        "title": "Substances in the Surroundings",
+        "description": "States and properties of substances around us.",
+        "icon": "flask",
+        "color": "#00BCD4",
+        "units": 3
+    },
+    {
+        "id": "sci-6-ch6",
+        "title": "Substances in Daily Use",
+        "description": "Identify substances we use in our daily lives.",
+        "icon": "bottle-tonic",
+        "color": "#03A9F4",
+        "units": 2
+    },
+    {
+        "id": "sci-6-ch7",
+        "title": "Nutrition and Diet",
+        "description": "Learn about nutrients, balanced diet, and deficiency diseases.",
+        "icon": "food-apple",
+        "color": "#FF5722",
+        "units": 3
+    },
+    {
+        "id": "sci-6-ch8",
+        "title": "Our Skeletal System and the Skin",
+        "description": "Understand the human skeletal system and skin functions.",
+        "icon": "human-handsup",
+        "color": "#795548",
+        "units": 3
+    },
+    {
+        "id": "sci-6-ch9",
+        "title": "Motion and Types of Motion",
+        "description": "Explore different types of motion.",
+        "icon": "run",
+        "color": "#9C27B0",
+        "units": 2
+    },
+    {
+        "id": "sci-6-ch10",
+        "title": "Force and Types of Force",
+        "description": "Learn about force and its various types.",
+        "icon": "arm-flex",
+        "color": "#673AB7",
+        "units": 2
+    },
+    {
+        "id": "sci-6-ch11",
+        "title": "Work and Energy",
+        "description": "Relationship between work and energy.",
+        "icon": "lightning-bolt",
+        "color": "#FFC107",
+        "units": 2
+    },
+    {
+        "id": "sci-6-ch12",
+        "title": "Simple Machines",
+        "description": "Understand how simple machines make work easier.",
+        "icon": "cog",
+        "color": "#607D8B",
+        "units": 2
+    },
+    {
+        "id": "sci-6-ch13",
+        "title": "Sound",
+        "description": "Production and propagation of sound.",
+        "icon": "volume-high",
+        "color": "#3F51B5",
+        "units": 2
+    },
+    {
+        "id": "sci-6-ch14",
+        "title": "Light and the Formation of Shadows",
+        "description": "Learn about light sources and shadows.",
+        "icon": "lightbulb",
+        "color": "#FFEB3B",
+        "units": 2
+    },
+    {
+        "id": "sci-6-ch15",
+        "title": "Fun with Magnets",
+        "description": "Discover the properties of magnets.",
+        "icon": "magnet",
+        "color": "#F44336",
+        "units": 2
+    },
+    {
+        "id": "sci-6-ch16",
+        "title": "The Universe",
+        "description": "Explore the solar system and the universe.",
+        "icon": "rocket",
+        "color": "#2196F3",
+        "units": 2
+    }
+]

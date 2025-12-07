@@ -1,0 +1,26 @@
+[
+    {
+        "id": "eng-12-ch1",
+        "title": "The Last Lesson",
+        "description": "A story about the importance of language and culture.",
+        "units": 3,
+        "icon": "book-alphabet",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-12-ch2",
+        "title": "Lost Spring",
+        "description": "Stories of stolen childhood and poverty.",
+        "units": 4,
+        "icon": "book-alphabet",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-12-ch3",
+        "title": "Deep Water",
+        "description": "Overcoming the fear of water.",
+        "units": 4,
+        "icon": "book-alphabet",
+        "color": "#A78BFA"
+    }
+]

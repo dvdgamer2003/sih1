@@ -1,0 +1,144 @@
+{
+    "id": "comp-9-ch1",
+    "title": "Introduction to Python",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Python Basics",
+            "readingTime": 5,
+            "content": "# Python Programming\n\nPython is a high-level, interpreted programming language.\n\n## Features\n- Easy to learn\n- Readable syntax\n- Versatile\n- Large community"
+        },
+        {
+            "id": "l2",
+            "title": "Variables and Data Types",
+            "readingTime": 5,
+            "content": "# Variables and Data Types\n\n## Data Types\n- int: Integer numbers\n- float: Decimal numbers\n- str: Text strings\n- bool: True/False"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Python Basics",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What type of language is Python?",
+                "options": [
+                    "Low-level",
+                    "High-level",
+                    "Machine",
+                    "Assembly"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Python is a high-level programming language."
+            },
+            {
+                "id": "q1_2",
+                "question": "Which data type stores whole numbers?",
+                "options": [
+                    "float",
+                    "str",
+                    "int",
+                    "bool"
+                ],
+                "correctAnswer": 2,
+                "explanation": "'int' data type stores integer (whole) numbers."
+            },
+            {
+                "id": "q1_3",
+                "question": "What is used for comments in Python?",
+                "options": [
+                    "//",
+                    "/*",
+                    "#",
+                    "<!--"
+                ],
+                "correctAnswer": 2,
+                "explanation": "# is used for single-line comments in Python."
+            },
+            {
+                "id": "q1_4",
+                "question": "Which stores text in Python?",
+                "options": [
+                    "int",
+                    "float",
+                    "str",
+                    "bool"
+                ],
+                "correctAnswer": 2,
+                "explanation": "'str' (string) data type stores text."
+            },
+            {
+                "id": "q1_5",
+                "question": "What does print() do?",
+                "options": [
+                    "Takes input",
+                    "Displays output",
+                    "Stores data",
+                    "Deletes data"
+                ],
+                "correctAnswer": 1,
+                "explanation": "print() function displays output on the screen."
+            },
+            {
+                "id": "q1_6",
+                "question": "Which is a valid variable name?",
+                "options": [
+                    "2name",
+                    "my-name",
+                    "my_name",
+                    "my name"
+                ],
+                "correctAnswer": 2,
+                "explanation": "'my_name' is valid. Variables can't start with numbers or contain spaces/hyphens."
+            },
+            {
+                "id": "q1_7",
+                "question": "What type is True/False?",
+                "options": [
+                    "int",
+                    "str",
+                    "bool",
+                    "float"
+                ],
+                "correctAnswer": 2,
+                "explanation": "True and False are boolean (bool) values."
+            },
+            {
+                "id": "q1_8",
+                "question": "Which stores decimal numbers?",
+                "options": [
+                    "int",
+                    "float",
+                    "str",
+                    "bool"
+                ],
+                "correctAnswer": 1,
+                "explanation": "'float' data type stores decimal numbers."
+            },
+            {
+                "id": "q1_9",
+                "question": "How to get user input in Python?",
+                "options": [
+                    "get()",
+                    "input()",
+                    "read()",
+                    "scan()"
+                ],
+                "correctAnswer": 1,
+                "explanation": "input() function is used to get user input."
+            },
+            {
+                "id": "q1_10",
+                "question": "What is indentation used for in Python?",
+                "options": [
+                    "Decoration",
+                    "Define code blocks",
+                    "Comments",
+                    "Variables"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Indentation defines code blocks in Python."
+            }
+        ]
+    }
+}

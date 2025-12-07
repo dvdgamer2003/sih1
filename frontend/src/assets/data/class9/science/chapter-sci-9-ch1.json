@@ -1,0 +1,144 @@
+{
+    "id": "sci-9-ch1",
+    "title": "Matter in Our Surroundings",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "States of Matter",
+            "readingTime": 5,
+            "content": "# States of Matter\n\nMatter exists in three states: solid, liquid, and gas.\n\n## Characteristics\n- **Solid**: Fixed shape and volume\n- **Liquid**: Fixed volume, no fixed shape\n- **Gas**: No fixed shape or volume"
+        },
+        {
+            "id": "l2",
+            "title": "Change of State",
+            "readingTime": 5,
+            "content": "# Change of State\n\nMatter can change from one state to another.\n\n## Processes\n- Melting: Solid to liquid\n- Freezing: Liquid to solid\n- Evaporation: Liquid to gas\n- Condensation: Gas to liquid"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Matter",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "Which state has fixed shape and volume?",
+                "options": [
+                    "Solid",
+                    "Liquid",
+                    "Gas",
+                    "Plasma"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Solids have both fixed shape and fixed volume."
+            },
+            {
+                "id": "q1_2",
+                "question": "What is the process of liquid changing to gas called?",
+                "options": [
+                    "Melting",
+                    "Freezing",
+                    "Evaporation",
+                    "Condensation"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Evaporation is the process of liquid changing to gas."
+            },
+            {
+                "id": "q1_3",
+                "question": "At what temperature does water freeze?",
+                "options": [
+                    "0°C",
+                    "100°C",
+                    "50°C",
+                    "-10°C"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Water freezes at 0°C (32°F)."
+            },
+            {
+                "id": "q1_4",
+                "question": "Which has the highest kinetic energy?",
+                "options": [
+                    "Solid",
+                    "Liquid",
+                    "Gas",
+                    "All same"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Gas particles have the highest kinetic energy and move freely."
+            },
+            {
+                "id": "q1_5",
+                "question": "What is sublimation?",
+                "options": [
+                    "Solid to liquid",
+                    "Liquid to gas",
+                    "Solid to gas directly",
+                    "Gas to liquid"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Sublimation is the direct conversion of solid to gas without becoming liquid."
+            },
+            {
+                "id": "q1_6",
+                "question": "Which state is compressible?",
+                "options": [
+                    "Solid",
+                    "Liquid",
+                    "Gas",
+                    "None"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Gases are highly compressible due to large spaces between particles."
+            },
+            {
+                "id": "q1_7",
+                "question": "What happens during condensation?",
+                "options": [
+                    "Solid to liquid",
+                    "Liquid to solid",
+                    "Gas to liquid",
+                    "Liquid to gas"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Condensation is the process of gas changing to liquid."
+            },
+            {
+                "id": "q1_8",
+                "question": "At what temperature does water boil?",
+                "options": [
+                    "0°C",
+                    "50°C",
+                    "100°C",
+                    "150°C"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Water boils at 100°C (212°F) at standard pressure."
+            },
+            {
+                "id": "q1_9",
+                "question": "Which state has particles closest together?",
+                "options": [
+                    "Solid",
+                    "Liquid",
+                    "Gas",
+                    "All same"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Solid particles are packed closest together."
+            },
+            {
+                "id": "q1_10",
+                "question": "Dry ice is an example of:",
+                "options": [
+                    "Melting",
+                    "Freezing",
+                    "Sublimation",
+                    "Evaporation"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Dry ice (solid CO2) sublimates directly to gas."
+            }
+        ]
+    }
+}

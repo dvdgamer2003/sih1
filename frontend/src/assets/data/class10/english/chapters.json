@@ -1,0 +1,34 @@
+[
+    {
+        "id": "eng-10-ch1",
+        "title": "Where the Mind is Without Fear",
+        "description": "A prayer for freedom and enlightenment by Rabindranath Tagore.",
+        "units": 2,
+        "icon": "book-open-page-variant",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-10-ch2",
+        "title": "The Thief's Story",
+        "description": "A story about trust and redemption by Ruskin Bond.",
+        "units": 3,
+        "icon": "account-key",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-10-ch3",
+        "title": "On Wings of Courage",
+        "description": "The inspiring story of Air Force Marshal Arjan Singh.",
+        "units": 3,
+        "icon": "airplane",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-10-ch4",
+        "title": "All the World's a Stage",
+        "description": "A monologue from Shakespeare's As You Like It.",
+        "units": 2,
+        "icon": "drama-masks",
+        "color": "#A78BFA"
+    }
+]

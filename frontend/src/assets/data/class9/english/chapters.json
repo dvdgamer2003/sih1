@@ -1,0 +1,34 @@
+[
+    {
+        "id": "eng-9-ch1",
+        "title": "Life",
+        "description": "A poem about the ups and downs of life.",
+        "units": 2,
+        "icon": "book-open-page-variant",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-9-ch2",
+        "title": "A Synopsis- The Swiss Family Robinson",
+        "description": "Adventure story of a family stranded on an island.",
+        "units": 3,
+        "icon": "island",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-9-ch3",
+        "title": "Have you ever seen...?",
+        "description": "A humorous poem playing with homographs.",
+        "units": 2,
+        "icon": "emoticon-happy",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-9-ch4",
+        "title": "The Necklace",
+        "description": "A story about greed and its consequences.",
+        "units": 3,
+        "icon": "necklace",
+        "color": "#A78BFA"
+    }
+]

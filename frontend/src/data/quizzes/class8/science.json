@@ -1,0 +1,730 @@
+{
+    "class": "8",
+    "board": "CBSE (NCERT)",
+    "subject": "Science",
+    "textbook": "Science – Textbook for Class VIII (Rationalised Edition)",
+    "quiz": {
+      "easy": [
+        {
+          "id": "E1",
+          "chapter": "Crop Production and Management",
+          "type": "mcq",
+          "question": "Watering the crops at regular intervals is called irrigation.",
+          "options": [
+            "Sowing",
+            "Irrigation",
+            "Weeding",
+            "Harvesting"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E2",
+          "chapter": "Crop Production and Management",
+          "type": "mcq",
+          "question": "Plants of the same kind grown on a large scale in a field are called a crop.",
+          "options": [
+            "Forest",
+            "Garden",
+            "Crop",
+            "Pasture"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E3",
+          "chapter": "Microorganisms: Friend and Foe",
+          "type": "mcq",
+          "question": "Which instrument is commonly used to see microorganisms like bacteria and protozoa?",
+          "options": [
+            "Telescope",
+            "Magnifying glass",
+            "Microscope",
+            "Periscope"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E4",
+          "chapter": "Microorganisms: Friend and Foe",
+          "type": "mcq",
+          "question": "Yeast is most useful to make bread soft and fluffy because it produces carbon dioxide gas during fermentation.",
+          "options": [
+            "Produces oxygen",
+            "Produces carbon dioxide",
+            "Produces nitrogen",
+            "Removes water"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E5",
+          "chapter": "Coal and Petroleum",
+          "type": "mcq",
+          "question": "Which of the following is an example of fossil fuel?",
+          "options": [
+            "Coal",
+            "Wood",
+            "Paper",
+            "Plastic"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E6",
+          "chapter": "Coal and Petroleum",
+          "type": "mcq",
+          "question": "Petroleum is often called black gold because it is very valuable.",
+          "options": [
+            "It is golden in colour",
+            "It is very costly and useful",
+            "It is found with gold",
+            "It is not useful"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E7",
+          "chapter": "Combustion and Flame",
+          "type": "mcq",
+          "question": "A substance that burns in air to produce heat and light is called a combustible substance.",
+          "options": [
+            "Non‑combustible substance",
+            "Combustible substance",
+            "Coolant",
+            "Insoluble substance"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E8",
+          "chapter": "Combustion and Flame",
+          "type": "mcq",
+          "question": "Which of these is necessary for combustion to take place?",
+          "options": [
+            "Water",
+            "Oxygen (air)",
+            "Carbon dioxide only",
+            "Salt"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E9",
+          "chapter": "Conservation of Plants and Animals",
+          "type": "mcq",
+          "question": "Cutting down large numbers of trees in a forest is called deforestation.",
+          "options": [
+            "Afforestation",
+            "Deforestation",
+            "Irrigation",
+            "Harvesting"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E10",
+          "chapter": "Conservation of Plants and Animals",
+          "type": "mcq",
+          "question": "Areas where animals are protected in their natural habitats are called wildlife sanctuaries.",
+          "options": [
+            "Zoos",
+            "National parks",
+            "Wildlife sanctuaries",
+            "Botanical gardens"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E11",
+          "chapter": "Reproduction in Animals",
+          "type": "mcq",
+          "question": "The union of male and female gametes is called fertilisation.",
+          "options": [
+            "Respiration",
+            "Fertilisation",
+            "Digestion",
+            "Excretion"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E12",
+          "chapter": "Reproduction in Animals",
+          "type": "mcq",
+          "question": "Animals which give birth to young ones are called viviparous animals.",
+          "options": [
+            "Oviparous",
+            "Viviparous",
+            "Herbivorous",
+            "Carnivorous"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E13",
+          "chapter": "Reaching the Age of Adolescence",
+          "type": "mcq",
+          "question": "The period of life when the body undergoes changes leading to reproductive maturity is called adolescence.",
+          "options": [
+            "Childhood",
+            "Adolescence",
+            "Old age",
+            "Infancy"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E14",
+          "chapter": "Reaching the Age of Adolescence",
+          "type": "mcq",
+          "question": "Hormones are secreted by which type of glands in the body?",
+          "options": [
+            "Sweat glands",
+            "Endocrine glands",
+            "Oil glands",
+            "Salivary glands"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E15",
+          "chapter": "Force and Pressure",
+          "type": "mcq",
+          "question": "A push or pull acting on an object is called a force.",
+          "options": [
+            "Energy",
+            "Pressure",
+            "Force",
+            "Weight"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E16",
+          "chapter": "Force and Pressure",
+          "type": "mcq",
+          "question": "Pressure is defined as force acting per unit area.",
+          "options": [
+            "Force × area",
+            "Force ÷ area",
+            "Area ÷ force",
+            "Force + area"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E17",
+          "chapter": "Friction",
+          "type": "mcq",
+          "question": "Friction always acts in a direction opposite to the motion of an object.",
+          "options": [
+            "Same as motion",
+            "Opposite to motion",
+            "At right angles to motion",
+            "In all directions equally"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E18",
+          "chapter": "Sound",
+          "type": "mcq",
+          "question": "Sound is produced when objects:",
+          "options": [
+            "Glow",
+            "Vibrate",
+            "Melt",
+            "Rust"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E19",
+          "chapter": "Chemical Effects of Electric Current",
+          "type": "mcq",
+          "question": "A device used for electroplating or to test conduction of liquids is called an electrolytic cell.",
+          "options": [
+            "Battery",
+            "Electrolytic cell",
+            "Transformer",
+            "Switch"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E20",
+          "chapter": "Light",
+          "type": "mcq",
+          "question": "Light travels in a straight line in a uniform medium.",
+          "options": [
+            "In circles",
+            "In zig‑zag paths",
+            "In straight lines",
+            "Randomly"
+          ],
+          "answer_index": 2
+        }
+      ],
+      "medium": [
+        {
+          "id": "M1",
+          "chapter": "Crop Production and Management",
+          "type": "mcq",
+          "question": "Growing different crops on the same piece of land in a planned sequence to maintain soil fertility is called:",
+          "options": [
+            "Weeding",
+            "Manuring",
+            "Crop rotation",
+            "Storage"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M2",
+          "chapter": "Crop Production and Management",
+          "type": "mcq",
+          "question": "Weeds are best described as:",
+          "options": [
+            "Main crop plants",
+            "Unwanted plants that grow among crops",
+            "Useful fertilisers",
+            "Insects feeding on crops"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M3",
+          "chapter": "Microorganisms: Friend and Foe",
+          "type": "mcq",
+          "question": "Which of the following is an example of a beneficial use of microorganisms?",
+          "options": [
+            "Causing diseases like cholera",
+            "Spoiling food kept outside",
+            "Making curd from milk",
+            "Causing rusting of iron"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M4",
+          "chapter": "Microorganisms: Friend and Foe",
+          "type": "odd_one_out",
+          "question": "Find the odd one out as a disease‑causing microorganism.",
+          "options": [
+            "Bacteria",
+            "Virus",
+            "Fungus",
+            "Lactobacillus in curd"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "M5",
+          "chapter": "Coal and Petroleum",
+          "type": "mcq",
+          "question": "Which is the purest form of coal with highest carbon content?",
+          "options": [
+            "Peat",
+            "Lignite",
+            "Bituminous coal",
+            "Anthracite"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "M6",
+          "chapter": "Coal and Petroleum",
+          "type": "mcq",
+          "question": "Resources that are present in limited quantity and can be exhausted by human activities are called:",
+          "options": [
+            "Inexhaustible natural resources",
+            "Exhaustible natural resources",
+            "Artificial resources",
+            "Infinite resources"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M7",
+          "chapter": "Combustion and Flame",
+          "type": "mcq",
+          "question": "The middle luminous zone (yellow) of a candle flame is:",
+          "options": [
+            "Coldest part of the flame",
+            "Hottest part of the flame",
+            "Moderately hot and contains unburnt carbon particles",
+            "Entirely blue in colour"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M8",
+          "chapter": "Conservation of Plants and Animals",
+          "type": "mcq",
+          "question": "Which of the following practices helps in conservation of forests and wildlife?",
+          "options": [
+            "Poaching",
+            "Deforestation",
+            "Establishing national parks and sanctuaries",
+            "Overgrazing"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M9",
+          "chapter": "Reproduction in Animals",
+          "type": "mcq",
+          "question": "In humans, the development of the embryo into a baby takes place in which organ?",
+          "options": [
+            "Ovary",
+            "Uterus",
+            "Testis",
+            "Liver"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M10",
+          "chapter": "Reaching the Age of Adolescence",
+          "type": "mcq",
+          "question": "Which hormone controls the sugar level in the blood?",
+          "options": [
+            "Thyroxine",
+            "Insulin",
+            "Adrenaline",
+            "Oestrogen"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M11",
+          "chapter": "Force and Pressure",
+          "type": "mcq",
+          "question": "A girl standing on loose sand applies more pressure when she:",
+          "options": [
+            "Lies down on the sand",
+            "Stands on both feet",
+            "Stands on one foot",
+            "Sits on the sand"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M12",
+          "chapter": "Force and Pressure",
+          "type": "odd_one_out",
+          "question": "Choose the odd one out where liquid pressure is acting in all directions.",
+          "options": [
+            "Water in a bottle",
+            "Air in a tyre",
+            "Water in a dam",
+            "Stone lying on the ground"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "M13",
+          "chapter": "Friction",
+          "type": "mcq",
+          "question": "Which surface will provide the least friction for a moving block?",
+          "options": [
+            "Rough concrete floor",
+            "Polished marble floor",
+            "Carpeted floor",
+            "Sandpaper sheet"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M14",
+          "chapter": "Friction",
+          "type": "mcq",
+          "question": "Friction is sometimes called a necessary evil because:",
+          "options": [
+            "It is always harmful only",
+            "It helps us walk but also causes wear and tear",
+            "It has no useful effects",
+            "It makes all objects float"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M15",
+          "chapter": "Sound",
+          "type": "mcq",
+          "question": "Sound cannot travel through:",
+          "options": [
+            "Solids",
+            "Liquids",
+            "Gases",
+            "Vacuum"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "M16",
+          "chapter": "Sound",
+          "type": "mcq",
+          "question": "Loudness of sound depends mainly on the:",
+          "options": [
+            "Amplitude of vibration",
+            "Frequency of vibration",
+            "Speed of sound",
+            "Medium only"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M17",
+          "chapter": "Chemical Effects of Electric Current",
+          "type": "mcq",
+          "question": "When electric current passes through copper sulphate solution using copper electrodes, the change is known as:",
+          "options": [
+            "Electroplating",
+            "Rusting",
+            "Freezing",
+            "Distillation"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M18",
+          "chapter": "Chemical Effects of Electric Current",
+          "type": "odd_one_out",
+          "question": "Find the odd one out as an example of solution that conducts electricity well.",
+          "options": [
+            "Common salt solution",
+            "Lemon juice",
+            "Distilled water",
+            "Acidic solution"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M19",
+          "chapter": "Some Natural Phenomena",
+          "type": "mcq",
+          "question": "Lightning is an example of:",
+          "options": [
+            "Static electricity discharge in the atmosphere",
+            "Flow of water",
+            "Chemical reaction in clouds only",
+            "Sunlight reflection"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M20",
+          "chapter": "Light",
+          "type": "mcq",
+          "question": "The bouncing back of light from a surface is called:",
+          "options": [
+            "Refraction",
+            "Reflection",
+            "Dispersion",
+            "Diffusion"
+          ],
+          "answer_index": 1
+        }
+      ],
+      "hard": [
+        {
+          "id": "H1",
+          "chapter": "Crop Production and Management",
+          "type": "mcq",
+          "question": "A farmer wants to check which seeds are healthy for sowing; which method should he use?",
+          "options": [
+            "Boiling seeds in hot water",
+            "Soaking seeds in water and selecting the ones that sink",
+            "Drying seeds in strong sunlight only",
+            "Mixing seeds with fertiliser"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H2",
+          "chapter": "Crop Production and Management",
+          "type": "mcq",
+          "question": "Which combination best explains why manure is considered better for long‑term soil health than only chemical fertilisers?",
+          "options": [
+            "Manure is cheaper but harms soil structure.",
+            "Manure improves soil texture and adds organic matter.",
+            "Fertilisers always kill useful microbes.",
+            "Manure gives only one nutrient."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H3",
+          "chapter": "Microorganisms: Friend and Foe",
+          "type": "mcq",
+          "question": "Which statement correctly explains why sealed and unrefrigerated cooked food spoils faster?",
+          "options": [
+            "Microorganisms cannot grow without air.",
+            "Most microorganisms grow faster in warm, moist conditions.",
+            "Microorganisms only grow at very low temperatures.",
+            "Salt is always present to kill microbes."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H4",
+          "chapter": "Coal and Petroleum",
+          "type": "mcq",
+          "question": "Which statement best describes why fossil fuels are called non‑renewable resources?",
+          "options": [
+            "They can be made quickly in factories.",
+            "They take millions of years to form and may get exhausted by over‑use.",
+            "They are present in unlimited amounts.",
+            "They are found only in forests."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H5",
+          "chapter": "Combustion and Flame",
+          "type": "mcq",
+          "question": "A burning candle suddenly goes out when covered with a glass jar; which is the best explanation?",
+          "options": [
+            "Wax gets too hot and stops burning.",
+            "Oxygen inside the jar is used up and combustion stops.",
+            "The wick disappears immediately.",
+            "Glass cools the flame."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H6",
+          "chapter": "Conservation of Plants and Animals",
+          "type": "mcq",
+          "question": "Which combination correctly lists two major consequences of large‑scale deforestation?",
+          "options": [
+            "Increased rainfall and more wild animals.",
+            "Soil erosion and loss of biodiversity.",
+            "Formation of more humus and thicker forests.",
+            "Cooling of the Earth and more oxygen."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H7",
+          "chapter": "Reproduction in Animals",
+          "type": "mcq",
+          "question": "Which sequence correctly shows the stages in sexual reproduction in humans?",
+          "options": [
+            "Zygote → fertilisation → embryo → foetus",
+            "Gametes → embryo → fertilisation → foetus",
+            "Fertilisation → zygote → embryo → foetus",
+            "Embryo → zygote → fertilisation → foetus"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H8",
+          "chapter": "Reaching the Age of Adolescence",
+          "type": "mcq",
+          "question": "Which of the following is the healthiest combination of habits during adolescence?",
+          "options": [
+            "Taking drugs, skipping meals, and avoiding sleep.",
+            "Balanced diet, regular exercise, and good personal hygiene.",
+            "Eating only junk food and avoiding vaccines.",
+            "Never talking about health issues with elders."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H9",
+          "chapter": "Force and Pressure",
+          "type": "mcq",
+          "question": "Why are camels able to walk easily on desert sand while humans sink more?",
+          "options": [
+            "Camels are heavier so they press the sand more.",
+            "Camels have broader feet, so their weight is distributed over a larger area, reducing pressure.",
+            "Camels do not exert any force on sand.",
+            "Humans have hollow bones."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H10",
+          "chapter": "Friction",
+          "type": "mcq",
+          "question": "Ball bearings are used between moving parts of machines mainly to:",
+          "options": [
+            "Increase friction and heating.",
+            "Reduce friction by rolling instead of sliding.",
+            "Stop motion completely.",
+            "Increase the weight of the machine."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H11",
+          "chapter": "Sound",
+          "type": "mcq",
+          "question": "Why is it dangerous to listen to very loud music through headphones for a long time?",
+          "options": [
+            "It makes sound travel faster.",
+            "It can damage the delicate parts of the ear and reduce hearing ability.",
+            "It improves concentration always.",
+            "It cools the ear."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H12",
+          "chapter": "Chemical Effects of Electric Current",
+          "type": "mcq",
+          "question": "Which observation shows that a chemical change has occurred due to passage of electric current through a solution?",
+          "options": [
+            "No change in colour, temperature, or gas.",
+            "Only wire becomes warm.",
+            "Deposition of metal on the electrode and change in colour of the solution.",
+            "Battery gets discharged."
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H13",
+          "chapter": "Some Natural Phenomena",
+          "type": "mcq",
+          "question": "Which safety measure is most important during a thunderstorm with lightning?",
+          "options": [
+            "Standing under a tall isolated tree.",
+            "Using a wired telephone outside.",
+            "Staying indoors away from metal objects and not using corded electrical devices.",
+            "Swimming in an open pond."
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H14",
+          "chapter": "Light",
+          "type": "mcq",
+          "question": "A ray of light passes from air into glass; which statement best describes its path?",
+          "options": [
+            "It goes straight without any change.",
+            "It bends towards the normal because glass is denser than air.",
+            "It bends away from the normal.",
+            "It gets completely absorbed."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H15",
+          "chapter": "Light",
+          "type": "odd_one_out",
+          "question": "Find the odd one out as a device mainly working on reflection of light.",
+          "options": [
+            "Plane mirror",
+            "Periscope",
+            "Magnifying glass",
+            "Kaleidoscope"
+          ],
+          "answer_index": 2
+        }
+      ]
+    }
+  }
+  

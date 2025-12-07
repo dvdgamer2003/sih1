@@ -1,0 +1,730 @@
+{
+    "class": "9",
+    "board": "CBSE (NCERT)",
+    "subject": "Science",
+    "textbook": "Science – Textbook for Class IX (Rationalised Edition)",
+    "quiz": {
+      "easy": [
+        {
+          "id": "E1",
+          "chapter": "Matter in Our Surroundings",
+          "type": "mcq",
+          "question": "Which of the following is not a state of matter commonly discussed in Class 9?",
+          "options": [
+            "Solid",
+            "Liquid",
+            "Gas",
+            "Vacuum"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "E2",
+          "chapter": "Matter in Our Surroundings",
+          "type": "mcq",
+          "question": "Particles of matter are always in motion; which observation supports this best?",
+          "options": [
+            "Diffusion of perfume in a room",
+            "A stone lying on the ground",
+            "A book kept on a table",
+            "A piece of chalk"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E3",
+          "chapter": "Is Matter Around Us Pure?",
+          "type": "mcq",
+          "question": "Air is best described as which of the following?",
+          "options": [
+            "Element",
+            "Compound",
+            "Mixture",
+            "Pure substance"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E4",
+          "chapter": "Is Matter Around Us Pure?",
+          "type": "mcq",
+          "question": "A solution that has the same composition throughout is called:",
+          "options": [
+            "Heterogeneous mixture",
+            "Homogeneous mixture",
+            "Suspension",
+            "Colloid"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E5",
+          "chapter": "Atoms and Molecules",
+          "type": "mcq",
+          "question": "The chemical symbol for sodium is:",
+          "options": [
+            "So",
+            "Na",
+            "S",
+            "Sn"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E6",
+          "chapter": "Atoms and Molecules",
+          "type": "mcq",
+          "question": "Which of the following is the smallest unit that takes part in a chemical reaction?",
+          "options": [
+            "Compound",
+            "Atom",
+            "Molecule",
+            "Mixture"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E7",
+          "chapter": "Structure of the Atom",
+          "type": "mcq",
+          "question": "The negatively charged particles present in an atom are called:",
+          "options": [
+            "Protons",
+            "Neutrons",
+            "Electrons",
+            "Nuclei"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E8",
+          "chapter": "The Fundamental Unit of Life",
+          "type": "mcq",
+          "question": "The basic structural and functional unit of life is:",
+          "options": [
+            "Tissue",
+            "Organ",
+            "Cell",
+            "Organ system"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E9",
+          "chapter": "Tissues",
+          "type": "mcq",
+          "question": "Xylem in plants is mainly responsible for the transport of:",
+          "options": [
+            "Food",
+            "Water and minerals",
+            "Oxygen",
+            "Carbon dioxide"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E10",
+          "chapter": "Motion",
+          "type": "mcq",
+          "question": "The total path length travelled by an object is called:",
+          "options": [
+            "Displacement",
+            "Velocity",
+            "Distance",
+            "Speed"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E11",
+          "chapter": "Force and Laws of Motion",
+          "type": "mcq",
+          "question": "Which of the following is a vector quantity?",
+          "options": [
+            "Mass",
+            "Speed",
+            "Distance",
+            "Force"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "E12",
+          "chapter": "Gravitation",
+          "type": "mcq",
+          "question": "The SI unit of force is:",
+          "options": [
+            "Kilogram",
+            "Newton",
+            "Joule",
+            "Metre"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E13",
+          "chapter": "Work and Energy",
+          "type": "mcq",
+          "question": "Work is said to be done when a force produces:",
+          "options": [
+            "Heat",
+            "Light",
+            "Sound",
+            "Displacement"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "E14",
+          "chapter": "Work and Energy",
+          "type": "mcq",
+          "question": "The energy possessed by a body due to its motion is called:",
+          "options": [
+            "Potential energy",
+            "Kinetic energy",
+            "Heat energy",
+            "Chemical energy"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E15",
+          "chapter": "Sound",
+          "type": "mcq",
+          "question": "Sound is produced by:",
+          "options": [
+            "Burning",
+            "Vibrating bodies",
+            "Melting",
+            "Freezing"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E16",
+          "chapter": "Sound",
+          "type": "mcq",
+          "question": "Sound cannot travel through:",
+          "options": [
+            "Solids",
+            "Liquids",
+            "Gases",
+            "Vacuum"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "E17",
+          "chapter": "Improvement in Food Resources",
+          "type": "mcq",
+          "question": "Growing fish in ponds and lakes for food is called:",
+          "options": [
+            "Apiculture",
+            "Pisciculture",
+            "Sericulture",
+            "Horticulture"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E18",
+          "chapter": "Improvement in Food Resources",
+          "type": "mcq",
+          "question": "Animals reared at home or on farms for milk, meat, wool or other products are called:",
+          "options": [
+            "Wildlife",
+            "Pet animals",
+            "Livestock",
+            "Endangered animals"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E19",
+          "chapter": "The Fundamental Unit of Life",
+          "type": "mcq",
+          "question": "The outermost boundary of an animal cell is the:",
+          "options": [
+            "Cell wall",
+            "Plasma membrane",
+            "Nuclear membrane",
+            "Cytoplasm"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E20",
+          "chapter": "Tissues",
+          "type": "odd_one_out",
+          "question": "Find the odd one out with respect to plant conducting tissues.",
+          "options": [
+            "Xylem",
+            "Phloem",
+            "Parenchyma",
+            "Vessels"
+          ],
+          "answer_index": 2
+        }
+      ],
+      "medium": [
+        {
+          "id": "M1",
+          "chapter": "Matter in Our Surroundings",
+          "type": "mcq",
+          "question": "Which factor will increase the rate of evaporation of water kept in a shallow tray?",
+          "options": [
+            "Decreasing temperature and increasing humidity",
+            "Increasing surface area and blowing air over the surface",
+            "Keeping the tray in a closed box",
+            "Placing it in a refrigerator"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M2",
+          "chapter": "Matter in Our Surroundings",
+          "type": "mcq",
+          "question": "Latent heat of fusion of ice is the heat required to:",
+          "options": [
+            "Raise the temperature of ice from 0 °C to 10 °C",
+            "Convert ice at 0 °C to water at 0 °C without temperature change",
+            "Convert water at 100 °C to steam at 100 °C",
+            "Cool water from 10 °C to 0 °C"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M3",
+          "chapter": "Is Matter Around Us Pure?",
+          "type": "mcq",
+          "question": "Which method is most suitable to separate salt from sea‑water on a large scale?",
+          "options": [
+            "Filtration",
+            "Evaporation",
+            "Sublimation",
+            "Chromatography"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M4",
+          "chapter": "Is Matter Around Us Pure?",
+          "type": "odd_one_out",
+          "question": "Choose the odd one out as a colloid.",
+          "options": [
+            "Milk",
+            "Fog",
+            "Sugar solution",
+            "Face cream"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M5",
+          "chapter": "Atoms and Molecules",
+          "type": "mcq",
+          "question": "Which law states that mass can neither be created nor destroyed in a chemical reaction?",
+          "options": [
+            "Law of constant proportions",
+            "Law of conservation of mass",
+            "Law of multiple proportions",
+            "Avogadro’s law"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M6",
+          "chapter": "Atoms and Molecules",
+          "type": "mcq",
+          "question": "What is the formula of water if it contains two hydrogen atoms and one oxygen atom per molecule?",
+          "options": [
+            "HO",
+            "H₂O",
+            "H₂O₂",
+            "OH"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M7",
+          "chapter": "Structure of the Atom",
+          "type": "mcq",
+          "question": "Which pair of subatomic particles are present inside the nucleus of an atom?",
+          "options": [
+            "Protons and neutrons",
+            "Protons and electrons",
+            "Neutrons and electrons",
+            "Only electrons"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M8",
+          "chapter": "Structure of the Atom",
+          "type": "mcq",
+          "question": "Atoms of the same element having different mass numbers are called:",
+          "options": [
+            "Isobars",
+            "Isotopes",
+            "Isomers",
+            "Isotones"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M9",
+          "chapter": "The Fundamental Unit of Life",
+          "type": "mcq",
+          "question": "Which structure controls the movement of materials into and out of the cell?",
+          "options": [
+            "Cytoplasm",
+            "Cell wall",
+            "Plasma membrane",
+            "Nucleus"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M10",
+          "chapter": "Tissues",
+          "type": "mcq",
+          "question": "Which plant tissue is responsible for growth at the tips of roots and shoots?",
+          "options": [
+            "Meristematic tissue",
+            "Parenchyma",
+            "Collenchyma",
+            "Sclerenchyma"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M11",
+          "chapter": "Motion",
+          "type": "mcq",
+          "question": "An object moves 100 m in 20 s in a straight line; its average speed is:",
+          "options": [
+            "2 m/s",
+            "4 m/s",
+            "5 m/s",
+            "20 m/s"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M12",
+          "chapter": "Motion",
+          "type": "odd_one_out",
+          "question": "Choose the odd one out as an example of uniform motion.",
+          "options": [
+            "Ceiling fan rotating at constant speed",
+            "Earth revolving around the Sun at nearly constant speed",
+            "Car moving in heavy traffic",
+            "Train moving on a straight track at constant speed"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M13",
+          "chapter": "Force and Laws of Motion",
+          "type": "mcq",
+          "question": "Which law of motion explains why passengers tend to fall forward when a moving bus suddenly stops?",
+          "options": [
+            "Newton’s first law",
+            "Newton’s second law",
+            "Newton’s third law",
+            "Law of gravitation"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M14",
+          "chapter": "Gravitation",
+          "type": "mcq",
+          "question": "The force with which Earth attracts an object towards its centre is called:",
+          "options": [
+            "Magnetic force",
+            "Electrostatic force",
+            "Gravitational force",
+            "Nuclear force"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M15",
+          "chapter": "Work and Energy",
+          "type": "mcq",
+          "question": "When a body is raised to a certain height, the energy stored in it due to its position is:",
+          "options": [
+            "Kinetic energy",
+            "Potential energy",
+            "Chemical energy",
+            "Sound energy"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M16",
+          "chapter": "Work and Energy",
+          "type": "mcq",
+          "question": "Power is defined as:",
+          "options": [
+            "Work done × time taken",
+            "Work done ÷ time taken",
+            "Force ÷ time taken",
+            "Energy × time"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M17",
+          "chapter": "Sound",
+          "type": "mcq",
+          "question": "Pitch of a sound depends on its:",
+          "options": [
+            "Amplitude",
+            "Frequency",
+            "Speed",
+            "Medium"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M18",
+          "chapter": "Sound",
+          "type": "mcq",
+          "question": "Echo is best heard when the reflected sound reaches the ear after a minimum time gap of about:",
+          "options": [
+            "0.01 s",
+            "0.1 s",
+            "0.2 s",
+            "1 s"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M19",
+          "chapter": "Improvement in Food Resources",
+          "type": "mcq",
+          "question": "Which practice involves growing two or more crops simultaneously on the same field in a definite pattern?",
+          "options": [
+            "Monocropping",
+            "Mixed cropping",
+            "Intercropping",
+            "Crop rotation"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M20",
+          "chapter": "Improvement in Food Resources",
+          "type": "odd_one_out",
+          "question": "Find the odd one out as a livestock product.",
+          "options": [
+            "Milk",
+            "Eggs",
+            "Wool",
+            "Coal"
+          ],
+          "answer_index": 3
+        }
+      ],
+      "hard": [
+        {
+          "id": "H1",
+          "chapter": "Matter in Our Surroundings",
+          "type": "mcq",
+          "question": "Which change of state combination correctly matches the process and energy change for water at 0 °C?",
+          "options": [
+            "Freezing: water to ice by releasing latent heat",
+            "Melting: ice to water by releasing latent heat",
+            "Evaporation: water to vapour by releasing heat",
+            "Condensation: vapour to water by absorbing heat"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H2",
+          "chapter": "Is Matter Around Us Pure?",
+          "type": "mcq",
+          "question": "A mixture of sand and ammonium chloride is best separated by the sequence:",
+          "options": [
+            "Sublimation to remove ammonium chloride, then filtration to remove sand",
+            "Filtration then sublimation",
+            "Evaporation then crystallisation",
+            "Distillation then sedimentation"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H3",
+          "chapter": "Atoms and Molecules",
+          "type": "mcq",
+          "question": "Which of the following correctly represents one mole of water?",
+          "options": [
+            "6.022 × 10²³ molecules of water",
+            "1 gram of water",
+            "6.022 × 10²³ hydrogen atoms",
+            "6.022 × 10²³ oxygen atoms"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H4",
+          "chapter": "Structure of the Atom",
+          "type": "mcq",
+          "question": "Which statement about isotopes of an element is correct?",
+          "options": [
+            "They have same atomic number and same mass number.",
+            "They have same atomic number but different mass numbers.",
+            "They have different atomic numbers but same mass number.",
+            "They have different atomic numbers and different mass numbers."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H5",
+          "chapter": "The Fundamental Unit of Life",
+          "type": "mcq",
+          "question": "Plasmolysis in a plant cell placed in a strong salt solution is due to:",
+          "options": [
+            "Endosmosis causing the cell to swell",
+            "Exosmosis causing the cell membrane to shrink away from the cell wall",
+            "No movement of water",
+            "Cell wall dissolving in the solution"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H6",
+          "chapter": "Tissues",
+          "type": "mcq",
+          "question": "Which combination of tissues mainly provides mechanical strength to a young dicot stem?",
+          "options": [
+            "Parenchyma and collenchyma",
+            "Collenchyma and sclerenchyma",
+            "Xylem and phloem",
+            "Epidermis and parenchyma"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H7",
+          "chapter": "Motion",
+          "type": "mcq",
+          "question": "If the displacement of an object is zero after a certain time but the distance travelled is not zero, which is the best example?",
+          "options": [
+            "Car moving on a straight road and stopping ahead",
+            "Runner going around a circular track and coming back to start point",
+            "Object falling freely under gravity",
+            "Body at rest on a table"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H8",
+          "chapter": "Force and Laws of Motion",
+          "type": "mcq",
+          "question": "When a gun is fired, the recoiling of the gun is an illustration of which law?",
+          "options": [
+            "Newton’s first law",
+            "Newton’s second law",
+            "Newton’s third law",
+            "Law of gravitation"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H9",
+          "chapter": "Gravitation",
+          "type": "mcq",
+          "question": "An object weighs 10 N on the surface of Earth; if taken to the Moon, its mass will:",
+          "options": [
+            "Become one‑sixth",
+            "Become six times",
+            "Remain the same",
+            "Become zero"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H10",
+          "chapter": "Work and Energy",
+          "type": "mcq",
+          "question": "Which of the following statements about energy conversion is correct for a body freely falling from a height (ignoring air resistance)?",
+          "options": [
+            "Kinetic energy decreases and potential energy increases",
+            "Kinetic energy increases and potential energy decreases while total mechanical energy remains constant",
+            "Both kinetic and potential energy increase",
+            "Both kinetic and potential energy decrease"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H11",
+          "chapter": "Sound",
+          "type": "mcq",
+          "question": "Which change will increase the pitch of a sound produced by a vibrating string?",
+          "options": [
+            "Decreasing the frequency of vibration",
+            "Increasing the frequency of vibration",
+            "Increasing the amplitude only",
+            "Decreasing the tension in the string"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H12",
+          "chapter": "Sound",
+          "type": "odd_one_out",
+          "question": "Find the odd one out with respect to human hearing range.",
+          "options": [
+            "500 Hz",
+            "5,000 Hz",
+            "25 Hz",
+            "50,000 Hz"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "H13",
+          "chapter": "Improvement in Food Resources",
+          "type": "mcq",
+          "question": "Which integrated approach gives the best long‑term improvement in crop yield?",
+          "options": [
+            "Using only chemical fertilisers every season",
+            "Using a mix of high‑yielding varieties, proper irrigation, nutrient management, and pest control",
+            "Using only more water and no fertiliser",
+            "Using only pesticides in large quantity"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H14",
+          "chapter": "Improvement in Food Resources",
+          "type": "mcq",
+          "question": "Which combination is most suitable for sustainable fish production in a composite fish culture system?",
+          "options": [
+            "Only surface‑feeding fish species",
+            "Only bottom‑feeding fish species",
+            "Combination of surface, middle, and bottom‑feeding species to use all niches",
+            "Only one fast‑growing species"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H15",
+          "chapter": "Force and Laws of Motion",
+          "type": "odd_one_out",
+          "question": "Choose the odd one out for systems where momentum of the system is conserved (neglecting external forces).",
+          "options": [
+            "Two ice skaters pushing each other apart on a frictionless surface",
+            "Explosion of a bomb into fragments in space",
+            "Car hitting a wall fixed to the ground",
+            "Two billiard balls colliding on a smooth table"
+          ],
+          "answer_index": 2
+        }
+      ]
+    }
+  }
+  

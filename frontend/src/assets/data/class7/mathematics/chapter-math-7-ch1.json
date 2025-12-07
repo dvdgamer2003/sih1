@@ -1,0 +1,150 @@
+{
+    "id": "math-7-ch1",
+    "title": "Integers",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Introduction to Integers",
+            "readingTime": 5,
+            "content": "# Integers\n\nIntegers include positive numbers, negative numbers, and zero.\n\n## Number Line\n- Positive numbers are to the right of zero\n- Negative numbers are to the left of zero\n- Zero is neither positive nor negative"
+        },
+        {
+            "id": "l2",
+            "title": "Operations on Integers",
+            "readingTime": 6,
+            "content": "# Operations on Integers\n\n## Addition and Subtraction\n- Adding two positive integers gives a positive integer\n- Adding two negative integers gives a negative integer\n- Subtracting a negative is the same as adding a positive"
+        },
+        {
+            "id": "l3",
+            "title": "Multiplication and Division",
+            "readingTime": 6,
+            "content": "# Multiplication and Division of Integers\n\n## Rules\n- Positive × Positive = Positive\n- Negative × Negative = Positive\n- Positive × Negative = Negative\n- Same rules apply for division"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Integers",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "Which of these is an integer?",
+                "options": [
+                    "-5",
+                    "2.5",
+                    "1/2",
+                    "√2"
+                ],
+                "correctAnswer": 0,
+                "explanation": "-5 is an integer. Integers include all whole numbers and their negatives."
+            },
+            {
+                "id": "q1_2",
+                "question": "What is -8 + 5?",
+                "options": [
+                    "-13",
+                    "-3",
+                    "3",
+                    "13"
+                ],
+                "correctAnswer": 1,
+                "explanation": "-8 + 5 = -3"
+            },
+            {
+                "id": "q1_3",
+                "question": "What is (-4) × (-3)?",
+                "options": [
+                    "-12",
+                    "-7",
+                    "7",
+                    "12"
+                ],
+                "correctAnswer": 3,
+                "explanation": "Negative × Negative = Positive, so (-4) × (-3) = 12"
+            },
+            {
+                "id": "q1_4",
+                "question": "What is 0 - 7?",
+                "options": [
+                    "-7",
+                    "0",
+                    "7",
+                    "-14"
+                ],
+                "correctAnswer": 0,
+                "explanation": "0 - 7 = -7"
+            },
+            {
+                "id": "q1_5",
+                "question": "Which is greater: -5 or -10?",
+                "options": [
+                    "-10",
+                    "-5",
+                    "Both equal",
+                    "Cannot compare"
+                ],
+                "correctAnswer": 1,
+                "explanation": "-5 is greater than -10 because it is closer to zero on the number line."
+            },
+            {
+                "id": "q1_6",
+                "question": "What is (-15) ÷ 3?",
+                "options": [
+                    "-5",
+                    "-18",
+                    "5",
+                    "18"
+                ],
+                "correctAnswer": 0,
+                "explanation": "(-15) ÷ 3 = -5"
+            },
+            {
+                "id": "q1_7",
+                "question": "What is the additive inverse of 8?",
+                "options": [
+                    "8",
+                    "-8",
+                    "0",
+                    "1/8"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The additive inverse of 8 is -8 because 8 + (-8) = 0"
+            },
+            {
+                "id": "q1_8",
+                "question": "What is 6 × (-2)?",
+                "options": [
+                    "-12",
+                    "-8",
+                    "8",
+                    "12"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Positive × Negative = Negative, so 6 × (-2) = -12"
+            },
+            {
+                "id": "q1_9",
+                "question": "Which number is neither positive nor negative?",
+                "options": [
+                    "1",
+                    "-1",
+                    "0",
+                    "All integers"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Zero is neither positive nor negative."
+            },
+            {
+                "id": "q1_10",
+                "question": "What is (-20) ÷ (-4)?",
+                "options": [
+                    "-5",
+                    "-24",
+                    "5",
+                    "24"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Negative ÷ Negative = Positive, so (-20) ÷ (-4) = 5"
+            }
+        ]
+    }
+}

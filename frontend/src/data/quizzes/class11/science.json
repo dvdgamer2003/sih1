@@ -1,0 +1,784 @@
+{
+    "class": "11",
+    "board": "CBSE (NCERT)",
+    "stream": "Science",
+    "quiz": {
+      "easy": [
+        {
+          "id": "E1",
+          "subject": "Physics",
+          "chapter": "Physical World",
+          "type": "mcq",
+          "question": "Which of the following is considered a physical science?",
+          "options": [
+            "Chemistry",
+            "Physics",
+            "Biology",
+            "All of these"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "E2",
+          "subject": "Physics",
+          "chapter": "Units and Measurements",
+          "type": "mcq",
+          "question": "The SI unit of length is:",
+          "options": [
+            "Gram",
+            "Kilogram",
+            "Metre",
+            "Litre"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E3",
+          "subject": "Physics",
+          "chapter": "Motion in a Straight Line",
+          "type": "mcq",
+          "question": "Constant velocity means:",
+          "options": [
+            "Constant speed and direction",
+            "Constant speed but changing direction",
+            "Constant acceleration",
+            "Non-uniform motion"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E4",
+          "subject": "Physics",
+          "chapter": "Laws of Motion",
+          "type": "mcq",
+          "question": "Which law explains why passengers lurch forward when a car stops suddenly?",
+          "options": [
+            "Newton’s Second Law",
+            "Newton’s First Law",
+            "Newton’s Third Law",
+            "Law of Gravitation"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E5",
+          "subject": "Chemistry",
+          "chapter": "Some Basic Concepts of Chemistry",
+          "type": "mcq",
+          "question": "1 mole of a substance contains how many particles?",
+          "options": [
+            "6.02 × 10^23",
+            "1000",
+            "10^6",
+            "1"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E6",
+          "subject": "Chemistry",
+          "chapter": "Structure of Atom",
+          "type": "mcq",
+          "question": "Which subatomic particle was discovered by J.J. Thomson?",
+          "options": [
+            "Proton",
+            "Neutron",
+            "Electron",
+            "Positron"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E7",
+          "subject": "Chemistry",
+          "chapter": "Classification of Elements and Periodicity in Properties",
+          "type": "mcq",
+          "question": "The horizontal rows in the Modern Periodic Table are called:",
+          "options": [
+            "Groups",
+            "Periods",
+            "Series",
+            "Blocks"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E8",
+          "subject": "Chemistry",
+          "chapter": "Chemical Bonding and Molecular Structure",
+          "type": "mcq",
+          "question": "The chemical bond formed by sharing of electrons is called:",
+          "options": [
+            "Ionic bond",
+            "Covalent bond",
+            "Metallic bond",
+            "Hydrogen bond"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E9",
+          "subject": "Biology",
+          "chapter": "The Living World",
+          "type": "mcq",
+          "question": "Which is the basic unit of classification?",
+          "options": [
+            "Family",
+            "Order",
+            "Species",
+            "Class"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E10",
+          "subject": "Biology",
+          "chapter": "Biological Classification",
+          "type": "mcq",
+          "question": "Which kingdom includes bacteria?",
+          "options": [
+            "Protista",
+            "Plantae",
+            "Monera",
+            "Fungi"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E11",
+          "subject": "Biology",
+          "chapter": "Plant Kingdom",
+          "type": "mcq",
+          "question": "Bryophytes are known as:",
+          "options": [
+            "Flowering plants",
+            "Amphibians of the plant kingdom",
+            "Desert plants",
+            "Marine plants"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E12",
+          "subject": "Biology",
+          "chapter": "Animal Kingdom",
+          "type": "mcq",
+          "question": "Humans belong to which phylum?",
+          "options": [
+            "Arthropoda",
+            "Chordata",
+            "Mollusca",
+            "Porifera"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E13",
+          "subject": "Physics",
+          "chapter": "Thermal Properties of Matter",
+          "type": "mcq",
+          "question": "Water boils at 100°C under:",
+          "options": [
+            "High pressure",
+            "Standard atmospheric pressure",
+            "Low temperature",
+            "No pressure"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E14",
+          "subject": "Physics",
+          "chapter": "Gravitation",
+          "type": "mcq",
+          "question": "Value of acceleration due to gravity (g) on Earth’s surface is approximately:",
+          "options": [
+            "0.98 m/s²",
+            "9.8 m/s²",
+            "98 m/s²",
+            "1.8 m/s²"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E15",
+          "subject": "Chemistry",
+          "chapter": "States of Matter: Gases and Liquids",
+          "type": "mcq",
+          "question": "The SI unit of pressure is:",
+          "options": [
+            "atm",
+            "bar",
+            "pascal",
+            "torr"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E16",
+          "subject": "Chemistry",
+          "chapter": "Thermodynamics",
+          "type": "mcq",
+          "question": "First law of thermodynamics is related to conservation of:",
+          "options": [
+            "Mass",
+            "Energy",
+            "Momentum",
+            "Volume"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E17",
+          "subject": "Biology",
+          "chapter": "Morphology of Flowering Plants",
+          "type": "mcq",
+          "question": "The food material in seeds of monocots is stored in:",
+          "options": [
+            "Cotyledon",
+            "Endosperm",
+            "Radicle",
+            "Plumule"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E18",
+          "subject": "Biology",
+          "chapter": "Cell: The Unit of Life",
+          "type": "mcq",
+          "question": "Prokaryotic cells lack:",
+          "options": [
+            "DNA",
+            "Cell wall",
+            "Nucleus",
+            "Plasma membrane"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E19",
+          "subject": "Physics",
+          "chapter": "Work, Energy and Power",
+          "type": "mcq",
+          "question": "SI unit of work is:",
+          "options": [
+            "Erg",
+            "Joule",
+            "Watt",
+            "Calorie"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E20",
+          "subject": "Chemistry",
+          "chapter": "Redox Reactions",
+          "type": "mcq",
+          "question": "An oxidizing agent is a substance that:",
+          "options": [
+            "Loses electrons",
+            "Gains electrons",
+            "Donates protons",
+            "Gains neutrons"
+          ],
+          "answer_index": 1
+        }
+      ],
+      "medium": [
+        {
+          "id": "M1",
+          "subject": "Physics",
+          "chapter": "Units and Measurements",
+          "type": "mcq",
+          "question": "Which device is commonly used to measure very small mass accurately?",
+          "options": [
+            "Measuring cylinder",
+            "Spring balance",
+            "Electronic balance",
+            "Ruler"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M2",
+          "subject": "Physics",
+          "chapter": "Motion in a Plane",
+          "type": "mcq",
+          "question": "Projectile motion is a result of:",
+          "options": [
+            "Uniform motion only",
+            "Uniform motion and accelerated motion perpendicular to it",
+            "Accelerated motion only",
+            "No acceleration"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M3",
+          "subject": "Physics",
+          "chapter": "System of Particles and Rotational Motion",
+          "type": "mcq",
+          "question": "The rotational analog of force is:",
+          "options": [
+            "Energy",
+            "Torque",
+            "Velocity",
+            "Power"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M4",
+          "subject": "Physics",
+          "chapter": "Thermodynamics",
+          "type": "mcq",
+          "question": "The value of ΔU (change in internal energy) is positive for:",
+          "options": [
+            "Isothermal expansion",
+            "Exothermic process",
+            "Endothermic process",
+            "Adiabatic compression"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M5",
+          "subject": "Chemistry",
+          "chapter": "Chemical Bonding and Molecular Structure",
+          "type": "mcq",
+          "question": "Number of lone pairs of electrons in water molecule is:",
+          "options": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M6",
+          "subject": "Chemistry",
+          "chapter": "Hydrogen",
+          "type": "mcq",
+          "question": "Hydrogen combines with nitrogen to form:",
+          "options": [
+            "Ammonia",
+            "Methane",
+            "Water",
+            "Hydrogen chloride"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M7",
+          "subject": "Chemistry",
+          "chapter": "Organic Chemistry – Some Basic Principles and Techniques",
+          "type": "mcq",
+          "question": "A compound containing –COOH group is called:",
+          "options": [
+            "Alcohol",
+            "Aldehyde",
+            "Carboxylic acid",
+            "Ketone"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M8",
+          "subject": "Chemistry",
+          "chapter": "Hybridisation (structure & bonding)",
+          "type": "mcq",
+          "question": "In methane, the type of hybridisation of carbon atom is:",
+          "options": [
+            "sp",
+            "sp2",
+            "sp3",
+            "sp3d"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M9",
+          "subject": "Biology",
+          "chapter": "Plant Kingdom",
+          "type": "mcq",
+          "question": "Which group contains non-vascular plants?",
+          "options": [
+            "Algae",
+            "Bryophytes",
+            "Ferns",
+            "Gymnosperms"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M10",
+          "subject": "Biology",
+          "chapter": "Structural Organisation in Animals",
+          "type": "mcq",
+          "question": "The structural and functional unit of nervous tissue is:",
+          "options": [
+            "Neuron",
+            "Squamous cell",
+            "Fibroblast",
+            "Osteocyte"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M11",
+          "subject": "Biology",
+          "chapter": "Biomolecules",
+          "type": "mcq",
+          "question": "Cellulose is a:",
+          "options": [
+            "Monosaccharide",
+            "Disaccharide",
+            "Polysaccharide",
+            "Amino acid"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M12",
+          "subject": "Biology",
+          "chapter": "Transport in Plants",
+          "type": "mcq",
+          "question": "What helps in the upward movement of water in xylem?",
+          "options": [
+            "Transpiration pull",
+            "Root cap",
+            "Starch",
+            "Guttation"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M13",
+          "subject": "Physics",
+          "chapter": "Oscillations",
+          "type": "mcq",
+          "question": "Which of these is an example of simple harmonic motion?",
+          "options": [
+            "Motion of a ball thrown up",
+            "Vibration of a tuning fork",
+            "Uniform circular motion",
+            "Free fall"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M14",
+          "subject": "Physics",
+          "chapter": "Waves",
+          "type": "mcq",
+          "question": "Sound in air is a:",
+          "options": [
+            "Transverse wave",
+            "Longitudinal wave",
+            "Electromagnetic wave",
+            "Stationary wave"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M15",
+          "subject": "Chemistry",
+          "chapter": "Equilibrium",
+          "type": "mcq",
+          "question": "Le Chatelier’s Principle is related to:",
+          "options": [
+            "Direction of spontaneous reaction only",
+            "Shift of equilibrium due to changes in external conditions",
+            "Rate of reaction only",
+            "Energy of activation"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M16",
+          "subject": "Chemistry",
+          "chapter": "The s-block Elements",
+          "type": "mcq",
+          "question": "Which alkali metal is stored under kerosene?",
+          "options": [
+            "Calcium",
+            "Potassium",
+            "Magnesium",
+            "Barium"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M17",
+          "subject": "Biology",
+          "chapter": "Photosynthesis in Higher Plants",
+          "type": "mcq",
+          "question": "Which pigment is necessary for photosynthesis?",
+          "options": [
+            "Haemoglobin",
+            "Chlorophyll",
+            "Anthocyanin",
+            "Keratin"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M18",
+          "subject": "Biology",
+          "chapter": "Cell Cycle and Cell Division",
+          "type": "mcq",
+          "question": "In which stage of mitosis do chromosomes line up at the equator?",
+          "options": [
+            "Metaphase",
+            "Anaphase",
+            "Prophase",
+            "Telophase"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M19",
+          "subject": "Physics",
+          "chapter": "Gravitation",
+          "type": "mcq",
+          "question": "Who proposed the Universal Law of Gravitation?",
+          "options": [
+            "Galileo",
+            "Newton",
+            "Kepler",
+            "Archimedes"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M20",
+          "subject": "Chemistry",
+          "chapter": "Environmental Chemistry",
+          "type": "mcq",
+          "question": "The main component of acid rain is:",
+          "options": [
+            "Carbonic acid",
+            "Sulphuric acid",
+            "Hydrochloric acid",
+            "Hydrofluoric acid"
+          ],
+          "answer_index": 1
+        }
+      ],
+      "hard": [
+        {
+          "id": "H1",
+          "subject": "Physics",
+          "chapter": "System of Particles and Rotational Motion",
+          "type": "mcq",
+          "question": "A uniform rod of length L is pivoted at one end and is released from rest horizontally. The initial angular acceleration is:",
+          "options": [
+            "3g/(2L)",
+            "g/L",
+            "g/(2L)",
+            "2g/L"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H2",
+          "subject": "Physics",
+          "chapter": "Thermal Properties of Matter",
+          "type": "mcq",
+          "question": "The temperature at which the vapour pressure of a liquid becomes equal to external pressure is called:",
+          "options": [
+            "Melting point",
+            "Sublimation point",
+            "Boiling point",
+            "Freezing point"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H3",
+          "subject": "Chemistry",
+          "chapter": "Classification of Elements and Periodicity",
+          "type": "mcq",
+          "question": "Which group contains elements known as inert gases?",
+          "options": [
+            "Group 1",
+            "Group 2",
+            "Group 17",
+            "Group 18"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "H4",
+          "subject": "Chemistry",
+          "chapter": "Equilibrium",
+          "type": "mcq",
+          "question": "A decrease in volume of a gaseous reaction at equilibrium shifts the equilibrium towards:",
+          "options": [
+            "Side with more moles",
+            "Side with fewer moles",
+            "It remains unchanged",
+            "None"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H5",
+          "subject": "Chemistry",
+          "chapter": "States of Matter",
+          "type": "mcq",
+          "question": "Which gas will diffuse fastest through a pinhole if all are at the same temperature?",
+          "options": [
+            "O₂",
+            "CO₂",
+            "H₂",
+            "N₂"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H6",
+          "subject": "Biology",
+          "chapter": "Structure Organisation in Animals",
+          "type": "mcq",
+          "question": "The Malpighian tubules are excretory organs in which animal?",
+          "options": [
+            "Earthworm",
+            "Cockroach",
+            "Frog",
+            "Human"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H7",
+          "subject": "Biology",
+          "chapter": "Mineral Nutrition",
+          "type": "mcq",
+          "question": "Which element is essential for the synthesis of chlorophyll?",
+          "options": [
+            "Iron",
+            "Magnesium",
+            "Calcium",
+            "Phosphorus"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H8",
+          "subject": "Physics",
+          "chapter": "Oscillations",
+          "type": "mcq",
+          "question": "The energy of a simple harmonic oscillator is:",
+          "options": [
+            "Constant",
+            "Increasing",
+            "Decreasing",
+            "Zero"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H9",
+          "subject": "Physics",
+          "chapter": "Waves",
+          "type": "mcq",
+          "question": "On increasing temperature, the speed of sound in air:",
+          "options": [
+            "Increases",
+            "Decreases",
+            "Remains constant",
+            "Becomes zero"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H10",
+          "subject": "Chemistry",
+          "chapter": "Thermodynamics",
+          "type": "mcq",
+          "question": "For an isolated system (internal changes only), the change in entropy is:",
+          "options": [
+            "Always positive for all natural (spontaneous) changes",
+            "Zero",
+            "Always negative",
+            "Infinity"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H11",
+          "subject": "Chemistry",
+          "chapter": "Organic Chemistry",
+          "type": "mcq",
+          "question": "But-2-ene and But-1-ene are:",
+          "options": [
+            "Chain isomers",
+            "Position isomers",
+            "Functional isomers",
+            "Metamers"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H12",
+          "subject": "Biology",
+          "chapter": "Photosynthesis in Higher Plants",
+          "type": "mcq",
+          "question": "Photorespiration in C3 plants is mainly due to the enzyme:",
+          "options": [
+            "Rubisco",
+            "PEP carboxylase",
+            "Hexokinase",
+            "ATPase"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H13",
+          "subject": "Biology",
+          "chapter": "Excretory Products and their Elimination",
+          "type": "mcq",
+          "question": "Which part of human nephron is mainly responsible for the reabsorption of glucose?",
+          "options": [
+            "Loop of Henle",
+            "Bowman’s capsule",
+            "Proximal convoluted tubule",
+            "Distal convoluted tubule"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H14",
+          "subject": "Physics",
+          "chapter": "Laws of Motion",
+          "type": "mcq",
+          "question": "The coefficient of friction is dimensionless because:",
+          "options": [
+            "It is a ratio of two forces",
+            "It is always less than 1",
+            "It has units of length",
+            "It varies with weight"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H15",
+          "subject": "Biology",
+          "chapter": "Chemical Coordination and Integration",
+          "type": "odd_one_out",
+          "question": "Odd one out (not an endocrine gland):",
+          "options": [
+            "Pituitary",
+            "Thyroid",
+            "Sweat gland",
+            "Adrenal"
+          ],
+          "answer_index": 2
+        }
+      ]
+    }
+  }
+  

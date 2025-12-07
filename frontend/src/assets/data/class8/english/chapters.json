@@ -1,0 +1,34 @@
+[
+    {
+        "id": "eng-8-ch1",
+        "title": "A Time to Believe",
+        "description": "A poem about hope, faith, and new beginnings.",
+        "units": 2,
+        "icon": "book-open-page-variant",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-8-ch2",
+        "title": "Dick Whittington and his Cat",
+        "description": "The famous story of a poor boy who became the Mayor of London.",
+        "units": 3,
+        "icon": "cat",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-8-ch3",
+        "title": "The Pilgrim",
+        "description": "A poem about helping others who follow in our footsteps.",
+        "units": 2,
+        "icon": "walk",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-8-ch4",
+        "title": "Revathi's Musical Plants",
+        "description": "A story about a girl and her love for music and plants.",
+        "units": 3,
+        "icon": "music-note",
+        "color": "#A78BFA"
+    }
+]

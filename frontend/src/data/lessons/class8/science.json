@@ -1,0 +1,392 @@
+{
+    "class": "8",
+    "board": "CBSE (NCERT)",
+    "subject": "Science",
+    "textbook": "Science – Textbook for Class VIII (Rationalised Edition)",
+    "academic_year": "2025-26",
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Crop Production and Management",
+        "topics": [
+          "Agricultural practices and crops",
+          "Basic steps of crop production: preparation of soil, sowing, adding manure and fertilisers, irrigation, weeding, harvesting, storage",
+          "Types of crops: Rabi and Kharif",
+          "Traditional and modern tools for sowing and irrigation",
+          "Manure and fertilisers; crop rotation and replenishing soil nutrients",
+          "Basics of animal husbandry"
+        ],
+        "notes": {
+          "summary": "The chapter explains how crops are grown on a large scale, step by step, and highlights good farming practices that increase yield and maintain soil fertility.",
+          "key_points": [
+            "Growing plants of the same kind on a large scale is called a crop, and different crops are grown in different seasons.",
+            "Main agricultural steps include preparing the soil, sowing seeds, adding manure or fertilisers, irrigating, removing weeds, and harvesting.",
+            "Manure is an organic fertiliser made from decomposed plant and animal waste, while chemical fertilisers are factory-made and nutrient-rich.",
+            "Crop rotation and proper manuring help maintain soil fertility and reduce the need for excessive chemical fertilisers.",
+            "Animal husbandry involves rearing animals like cows, buffaloes, and poultry for milk, eggs, meat, and other products."
+          ],
+          "keywords": [
+            "crop",
+            "agricultural practices",
+            "manure",
+            "fertiliser",
+            "crop rotation",
+            "animal husbandry"
+          ]
+        }
+      },
+      {
+        "number": 2,
+        "title": "Microorganisms: Friend and Foe",
+        "topics": [
+          "Types of microorganisms: bacteria, fungi, protozoa, algae, viruses",
+          "Where microorganisms live",
+          "Useful microorganisms in food, industry, and agriculture",
+          "Harmful microorganisms and diseases in humans, animals, and plants",
+          "Food spoilage and food preservation methods",
+          "Nitrogen fixation and nitrogen cycle"
+        ],
+        "notes": {
+          "summary": "This chapter introduces microorganisms, showing how they can be helpful in food production, industry, and soil fertility, and also harmful by causing diseases and food spoilage.",
+          "key_points": [
+            "Microorganisms are tiny living organisms that are usually seen only under a microscope and are found in air, water, soil, and inside living bodies.",
+            "Certain microbes are useful for making curd, bread, and medicines like antibiotics and vaccines.",
+            "Some microorganisms cause diseases such as tuberculosis, cholera, and plant diseases, and can spoil food.",
+            "Food can be preserved by methods such as refrigeration, drying, salting, sugar, oil and vinegar, and using chemical preservatives.",
+            "Bacteria in soil and in root nodules of leguminous plants help fix nitrogen, completing the nitrogen cycle in nature."
+          ],
+          "keywords": [
+            "microorganism",
+            "bacteria",
+            "virus",
+            "food preservation",
+            "nitrogen cycle"
+          ]
+        }
+      },
+      {
+        "number": 3,
+        "title": "Coal and Petroleum",
+        "topics": [
+          "Coal and petroleum as fossil fuels",
+          "Formation of coal and petroleum in nature",
+          "Types and uses of coal products (coke, coal tar, coal gas)",
+          "Refining of petroleum and petroleum products",
+          "Natural gas and its uses",
+          "Need for judicious use and conservation of fossil fuels"
+        ],
+        "notes": {
+          "summary": "The chapter describes coal, petroleum, and natural gas as fossil fuels formed over millions of years, their important uses, and the need to use them carefully.",
+          "key_points": [
+            "Coal and petroleum are fossil fuels formed from the remains of dead plants and animals buried and compressed over long geological periods.",
+            "Coal is used as a fuel and to obtain products like coke, coal tar, and coal gas, each with specific industrial uses.",
+            "Petroleum is refined in refineries to produce fuels like petrol, diesel, kerosene, LPG, and other useful fractions.",
+            "Natural gas is a clean fuel, often supplied in cylinders or pipelines, and used for cooking, industry, and power generation.",
+            "Since fossil fuels are non-renewable and cause pollution, they must be used judiciously, and alternative energy sources should be promoted."
+          ],
+          "keywords": [
+            "fossil fuel",
+            "coal",
+            "petroleum",
+            "natural gas",
+            "refinery",
+            "non-renewable"
+          ]
+        }
+      },
+      {
+        "number": 4,
+        "title": "Combustion and Flame",
+        "topics": [
+          "What is combustion",
+          "Conditions necessary for combustion (fuel, air, ignition temperature)",
+          "Types of combustion: rapid, spontaneous, explosion",
+          "Structure of a flame and its zones",
+          "Characteristics of a good fuel",
+          "Harmful effects of burning fuels and controlling fire"
+        ],
+        "notes": {
+          "summary": "This chapter explains the process of combustion, different types of combustion, flame structure, and criteria for choosing safe and efficient fuels.",
+          "key_points": [
+            "Combustion is a chemical process in which a substance reacts with oxygen to produce heat and often light.",
+            "A fuel must reach its ignition temperature in the presence of oxygen for combustion to begin.",
+            "The flame of a candle has different zones: a dark zone, a luminous (yellow) zone, and a non-luminous blue zone.",
+            "A good fuel is cheap, readily available, burns easily at a moderate rate, and does not produce harmful smoke.",
+            "Burning fuels can cause air pollution and health problems, so fire must be controlled using appropriate methods and safety practices."
+          ],
+          "keywords": [
+            "combustion",
+            "fuel",
+            "ignition temperature",
+            "flame",
+            "pollution"
+          ]
+        }
+      },
+      {
+        "number": 5,
+        "title": "Conservation of Plants and Animals",
+        "topics": [
+          "Deforestation and its causes",
+          "Consequences of deforestation: soil erosion, floods, loss of biodiversity, climate change",
+          "Conservation methods: biosphere reserves, national parks, wildlife sanctuaries",
+          "Flora and fauna, endemic species",
+          "Endangered and extinct species, Red Data Book",
+          "Reforestation and sustainable use of resources"
+        ],
+        "notes": {
+          "summary": "The chapter focuses on the importance of forests and wildlife, the threats they face from human activities, and measures to conserve biodiversity.",
+          "key_points": [
+            "Deforestation is the large-scale removal of trees, often for agriculture, urbanisation, or timber, and it destabilises ecosystems.",
+            "Loss of forests leads to soil erosion, frequent floods, reduced rainfall, and decline of plant and animal species.",
+            "Protected areas like wildlife sanctuaries, national parks, and biosphere reserves help conserve habitats and species.",
+            "Endangered species are at risk of extinction and are listed in resources like the Red Data Book.",
+            "Reforestation and responsible use of forest products are essential to conserve plants and animals for future generations."
+          ],
+          "keywords": [
+            "deforestation",
+            "biodiversity",
+            "wildlife sanctuary",
+            "national park",
+            "endangered species",
+            "reforestation"
+          ]
+        }
+      },
+      {
+        "number": 6,
+        "title": "Reproduction in Animals",
+        "topics": [
+          "Modes of reproduction: sexual and asexual (brief idea)",
+          "Male and female reproductive systems in humans",
+          "Fertilisation: internal and external",
+          "Development of embryo and foetus",
+          "Viviparous and oviparous animals",
+          "Metamorphosis in animals (e.g., frog, insects)"
+        ],
+        "notes": {
+          "summary": "This chapter explains how animals reproduce, focusing on human reproductive systems, fertilisation, and development of the embryo, along with examples from other animals.",
+          "key_points": [
+            "In sexual reproduction, male and female gametes fuse during fertilisation to form a zygote, which develops into a new individual.",
+            "Humans have separate male and female reproductive systems, each with organs specialised for producing gametes and supporting development.",
+            "Internal fertilisation occurs inside the female body, whereas external fertilisation happens outside, as in many aquatic animals.",
+            "Viviparous animals give birth to young ones, while oviparous animals lay eggs that develop outside the mother’s body.",
+            "Some animals undergo metamorphosis, where the young form looks very different from the adult."
+          ],
+          "keywords": [
+            "sexual reproduction",
+            "fertilisation",
+            "zygote",
+            "embryo",
+            "viviparous",
+            "oviparous",
+            "metamorphosis"
+          ]
+        }
+      },
+      {
+        "number": 7,
+        "title": "Reaching the Age of Adolescence",
+        "topics": [
+          "Adolescence and puberty",
+          "Secondary sexual characters",
+          "Role of hormones in changes at puberty",
+          "Reproductive health and personal hygiene",
+          "Balanced diet and exercise during adolescence",
+          "Social and emotional aspects; avoiding substance abuse"
+        ],
+        "notes": {
+          "summary": "The chapter describes the physical and emotional changes during adolescence, explains the role of hormones, and emphasises healthy habits and responsible behaviour.",
+          "key_points": [
+            "Adolescence is the transitional stage between childhood and adulthood, marked by rapid growth and development.",
+            "Puberty brings physical changes such as increase in height, body hair, voice changes, and development of reproductive organs.",
+            "Hormones like testosterone and oestrogen control many of these changes and are produced by endocrine glands.",
+            "Good personal hygiene, balanced nutrition, and regular exercise are crucial for healthy development during adolescence.",
+            "Adolescents must be aware of peer pressure, avoid harmful substances, and develop respect for self and others."
+          ],
+          "keywords": [
+            "adolescence",
+            "puberty",
+            "hormone",
+            "endocrine gland",
+            "reproductive health"
+          ]
+        }
+      },
+      {
+        "number": 8,
+        "title": "Force and Pressure",
+        "topics": [
+          "Concept of force as a push or pull",
+          "Effects of force (change in shape, state of motion, direction)",
+          "Types of forces: contact and non-contact",
+          "Concept of pressure and its formula",
+          "Pressure in solids and liquids",
+          "Atmospheric pressure and its effects"
+        ],
+        "notes": {
+          "summary": "This chapter introduces force and pressure, explains how they act on objects, and shows real-life examples of pressure in fluids and the atmosphere.",
+          "key_points": [
+            "A force is a push or pull that can change the state of rest or motion of an object or alter its shape.",
+            "Contact forces (like muscular force and friction) require physical contact, while non-contact forces (like gravitational and magnetic forces) act from a distance.",
+            "Pressure is defined as force per unit area, and the same force produces more pressure on a smaller area.",
+            "Liquids exert pressure in all directions, increasing with depth, which explains why dams are thicker at the bottom.",
+            "Atmospheric pressure acts on all objects on Earth, and its effects can be observed in activities like using a straw or a suction cup."
+          ],
+          "keywords": [
+            "force",
+            "contact force",
+            "non-contact force",
+            "pressure",
+            "atmospheric pressure"
+          ]
+        }
+      },
+      {
+        "number": 9,
+        "title": "Friction",
+        "topics": [
+          "Friction as a force opposing motion",
+          "Causes of friction (irregularities on surfaces)",
+          "Factors affecting friction",
+          "Friction: a necessary evil (advantages and disadvantages)",
+          "Methods to increase and reduce friction",
+          "Rolling friction, sliding friction, and fluid friction"
+        ],
+        "notes": {
+          "summary": "The chapter explains friction as a force that resists motion, discusses when it is useful or harmful, and suggests ways to control it.",
+          "key_points": [
+            "Friction arises due to irregularities in the contact surfaces and opposes relative motion between them.",
+            "Friction helps in walking, holding objects, writing, and stopping vehicles, so it is often useful.",
+            "Excessive friction causes wear and tear and wastes energy as heat, which is undesirable in many machines.",
+            "Friction can be reduced by lubrication, polishing, using ball bearings, and streamlining shapes.",
+            "Friction in air and water is called fluid friction and affects the motion of vehicles, ships, and aircraft."
+          ],
+          "keywords": [
+            "friction",
+            "sliding friction",
+            "rolling friction",
+            "lubricant",
+            "fluid friction"
+          ]
+        }
+      },
+      {
+        "number": 10,
+        "title": "Sound",
+        "topics": [
+          "Production of sound by vibrating bodies",
+          "Propagation of sound through a medium",
+          "Characteristics of sound: loudness, pitch, quality",
+          "Human voice and structure of the human ear",
+          "Noise and music; noise pollution",
+          "Harmful effects and control of noise pollution"
+        ],
+        "notes": {
+          "summary": "This chapter introduces sound as a form of energy produced by vibrations, explains how we hear, and discusses noise pollution and its control.",
+          "key_points": [
+            "Sound is produced when objects vibrate and requires a medium such as air, water, or solids to travel.",
+            "Loudness depends on the amplitude of vibration, while pitch depends on the frequency of vibration.",
+            "The human ear has outer, middle, and inner parts that work together to convert sound vibrations into signals for the brain.",
+            "Pleasant, regular patterns of sound are often called music, while unpleasant, irregular sounds are considered noise.",
+            "Prolonged exposure to loud noise can damage hearing and health, so noise pollution should be reduced by measures like using silencers and planting trees."
+          ],
+          "keywords": [
+            "vibration",
+            "loudness",
+            "pitch",
+            "noise",
+            "noise pollution"
+          ]
+        }
+      },
+      {
+        "number": 11,
+        "title": "Chemical Effects of Electric Current",
+        "topics": [
+          "Electric current through liquids",
+          "Good and poor conductors among liquids",
+          "Electrolysis and chemical reactions due to current",
+          "Electroplating and its uses",
+          "Practical applications of chemical effects of current",
+          "Safety considerations"
+        ],
+        "notes": {
+          "summary": "The chapter deals with how electric current can cause chemical changes in liquids, leading to processes like electrolysis and electroplating.",
+          "key_points": [
+            "Some liquids allow electric current to pass through them and are called good conductors, while others are poor conductors.",
+            "When electric current passes through a conducting solution, it may cause chemical reactions such as gas formation, metal deposition, or colour change.",
+            "Electroplating is the process of depositing a thin layer of one metal over another using electric current.",
+            "Electroplating improves appearance and prevents corrosion of objects like taps, bicycle parts, and jewellery.",
+            "Care is needed when working with electric circuits and solutions to avoid shocks and damage to equipment."
+          ],
+          "keywords": [
+            "electric current",
+            "electrolyte",
+            "electrolysis",
+            "electroplating",
+            "conductor"
+          ]
+        }
+      },
+      {
+        "number": 12,
+        "title": "Some Natural Phenomena",
+        "topics": [
+          "Lightning and its causes",
+          "Lightning safety measures",
+          "Electric charges and their interaction",
+          "Earthquakes and seismic waves (basic idea)",
+          "Causes and effects of earthquakes",
+          "Preparedness and safety during earthquakes"
+        ],
+        "notes": {
+          "summary": "This chapter explains natural phenomena like lightning and earthquakes, describes their causes, and suggests ways to stay safe.",
+          "key_points": [
+            "Lightning is a huge electric spark caused by charge separation in clouds, leading to discharge between clouds or between cloud and ground.",
+            "Lightning conductors are used to protect tall buildings from damage during lightning strikes.",
+            "Objects can become electrically charged by rubbing, and like charges repel while unlike charges attract.",
+            "Earthquakes are sudden shaking of the Earth’s surface caused by movements within the Earth’s crust.",
+            "Following safety measures and being prepared can reduce loss of life and property during earthquakes."
+          ],
+          "keywords": [
+            "lightning",
+            "electric charge",
+            "earthquake",
+            "seismic wave",
+            "safety"
+          ]
+        }
+      },
+      {
+        "number": 13,
+        "title": "Light",
+        "topics": [
+          "Rectilinear propagation of light",
+          "Reflection of light by plane mirrors",
+          "Laws of reflection",
+          "Multiple images and kaleidoscope",
+          "Regular and diffused reflection",
+          "Human eye and care of the eyes"
+        ],
+        "notes": {
+          "summary": "The chapter explores how light travels and reflects from surfaces, forms images in mirrors, and how the human eye enables vision.",
+          "key_points": [
+            "Light travels in straight lines, which explains the formation of shadows and the working of pinhole cameras.",
+            "When light falls on a smooth, shiny surface like a plane mirror, it is reflected according to the laws of reflection.",
+            "Regular reflection produces clear images, while diffused reflection from rough surfaces scatters light in many directions.",
+            "Multiple reflections can produce many images of an object, as seen in two mirrors placed at an angle or in a kaleidoscope.",
+            "The human eye focuses light on the retina to form images, and proper eye care and lighting are important for good vision."
+          ],
+          "keywords": [
+            "reflection",
+            "plane mirror",
+            "regular reflection",
+            "diffused reflection",
+            "human eye"
+          ]
+        }
+      }
+    ]
+  }
+  

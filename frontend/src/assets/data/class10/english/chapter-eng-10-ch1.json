@@ -1,0 +1,120 @@
+{
+    "id": "eng-10-ch1",
+    "title": "Advanced Grammar",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Active and Passive Voice",
+            "readingTime": 5,
+            "content": "# Voice\n\n## Active Voice\nSubject performs the action\nExample: She writes a letter.\n\n## Passive Voice\nSubject receives the action\nExample: A letter is written by her."
+        },
+        {
+            "id": "l2",
+            "title": "Direct and Indirect Speech",
+            "readingTime": 5,
+            "content": "# Speech\n\n## Direct Speech\nExact words in quotes\nExample: He said, \"I am busy.\"\n\n## Indirect Speech\nReported without quotes\nExample: He said that he was busy."
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Advanced Grammar",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "In active voice, who performs the action?",
+                "options": [
+                    "Object",
+                    "Subject",
+                    "Verb",
+                    "Adverb"
+                ],
+                "correctAnswer": 1,
+                "explanation": "In active voice, the subject performs the action."
+            },
+            {
+                "id": "q1_2",
+                "question": "Convert to passive: 'She sings a song'",
+                "options": [
+                    "A song sings by her",
+                    "A song is sung by her",
+                    "A song was sung by her",
+                    "She is singing a song"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The passive form is 'A song is sung by her'."
+            },
+            {
+                "id": "q1_3",
+                "question": "Which uses direct speech?",
+                "options": [
+                    "He said he was tired",
+                    "He said, 'I am tired'",
+                    "He told that he was tired",
+                    "He mentioned being tired"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Direct speech uses exact words in quotation marks."
+            },
+            {
+                "id": "q1_4",
+                "question": "In passive voice, what receives the action?",
+                "options": [
+                    "Subject",
+                    "Object",
+                    "Verb",
+                    "Adverb"
+                ],
+                "correctAnswer": 0,
+                "explanation": "In passive voice, the subject receives the action."
+            },
+            {
+                "id": "q1_5",
+                "question": "Convert to indirect: He said, 'I am happy'",
+                "options": [
+                    "He said I am happy",
+                    "He said that he was happy",
+                    "He says he is happy",
+                    "He told I am happy"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Indirect speech: He said that he was happy (tense changes)."
+            },
+            {
+                "id": "q1_6",
+                "question": "Which is passive?",
+                "options": [
+                    "The cat chased the mouse",
+                    "The mouse was chased by the cat",
+                    "The cat is chasing",
+                    "The cat will chase"
+                ],
+                "correctAnswer": 1,
+                "explanation": "'The mouse was chased by the cat' is in passive voice."
+            },
+            {
+                "id": "q1_7",
+                "question": "In indirect speech, 'today' becomes:",
+                "options": [
+                    "Today",
+                    "That day",
+                    "Tomorrow",
+                    "Yesterday"
+                ],
+                "correctAnswer": 1,
+                "explanation": "In indirect speech, 'today' changes to 'that day'."
+            },
+            {
+                "id": "q1_8",
+                "question": "Which tense is used in passive: 'is written'?",
+                "options": [
+                    "Past",
+                    "Present",
+                    "Future",
+                    "Perfect"
+                ],
+                "correctAnswer": 1,
+                "explanation": "'is written' is present tense passive voice."
+            }
+        ]
+    }
+}

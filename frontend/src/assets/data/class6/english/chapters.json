@@ -1,0 +1,82 @@
+[
+    {
+        "id": "eng-6-ch1",
+        "title": "Don't Give Up!",
+        "description": "A poem about perseverance and resilience.",
+        "icon": "book-open-page-variant",
+        "color": "#A78BFA",
+        "units": 1
+    },
+    {
+        "id": "eng-6-ch2",
+        "title": "Who's the Greatest?",
+        "description": "A story about Emperor Akbar and Birbal.",
+        "icon": "crown",
+        "color": "#F472B6",
+        "units": 2
+    },
+    {
+        "id": "eng-6-ch3",
+        "title": "Autobiography of a Great Indian Bustard",
+        "description": "Learn about this endangered bird species.",
+        "icon": "bird",
+        "color": "#34D399",
+        "units": 2
+    },
+    {
+        "id": "eng-6-ch4",
+        "title": "Children are Going to School",
+        "description": "A poem describing the beauty of morning.",
+        "icon": "school",
+        "color": "#60A5FA",
+        "units": 1
+    },
+    {
+        "id": "eng-6-ch5",
+        "title": "A Kabaddi Match",
+        "description": "Read about an exciting Kabaddi match.",
+        "icon": "run-fast",
+        "color": "#FBBF24",
+        "units": 2
+    },
+    {
+        "id": "eng-6-ch6",
+        "title": "The Peacock and the Crane",
+        "description": "A fable about vanity and utility.",
+        "icon": "feather",
+        "color": "#818CF8",
+        "units": 1
+    },
+    {
+        "id": "eng-6-ch7",
+        "title": "Param Vir Chakra : Our Heroes",
+        "description": "Stories of India's bravest soldiers.",
+        "icon": "medal",
+        "color": "#F87171",
+        "units": 2
+    },
+    {
+        "id": "eng-6-ch8",
+        "title": "The Clothesline",
+        "description": "A poem about clothes drying on a line.",
+        "icon": "tshirt-crew",
+        "color": "#C084FC",
+        "units": 1
+    },
+    {
+        "id": "eng-6-ch9",
+        "title": "The Worth of a Fabric",
+        "description": "A story about Thiruvalluvar.",
+        "icon": "hanger",
+        "color": "#2DD4BF",
+        "units": 2
+    },
+    {
+        "id": "eng-6-ch10",
+        "title": "A Wall Magazine for your Class!",
+        "description": "Learn how to create a wall magazine.",
+        "icon": "newspaper-variant",
+        "color": "#FB923C",
+        "units": 2
+    }
+]

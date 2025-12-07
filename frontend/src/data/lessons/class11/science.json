@@ -1,0 +1,1243 @@
+{
+    "class": "11",
+    "board": "CBSE (NCERT)",
+    "stream": "Science",
+    "academic_year": "2025-26",
+    "subjects": [
+      {
+        "subject": "Physics",
+        "textbook": "Physics – Textbook for Class XI (Part I & II)",
+        "chapters": [
+          {
+            "number": 1,
+            "title": "Physical World",
+            "topics": [
+              "What is physics and its scope",
+              "Physics, technology, and society",
+              "Nature of physical laws"
+            ],
+            "notes": {
+              "summary": "Introduces physics as a study of nature, its vast scope from sub-atomic to cosmic scales, and the role of physical laws in technology and society.",
+              "key_points": [
+                "Physics explains natural phenomena using a small set of fundamental laws.",
+                "Applications of physics drive technological development, which in turn impacts society.",
+                "Physical laws are universal, expressed mathematically, and are based on experimental evidence."
+              ],
+              "keywords": [
+                "physics",
+                "nature of science",
+                "physical law"
+              ]
+            }
+          },
+          {
+            "number": 2,
+            "title": "Units and Measurements",
+            "topics": [
+              "Need for measurement and units",
+              "SI system of units",
+              "Dimensional analysis",
+              "Errors, significant figures"
+            ],
+            "notes": {
+              "summary": "Covers standard units, measurement techniques, error types, and dimensional analysis as tools to check and derive physical relations.",
+              "key_points": [
+                "Physical quantities are expressed as a numerical value and a unit, preferably from the SI system.",
+                "Measurements are affected by systematic and random errors, so results are reported with significant figures.",
+                "Dimensional analysis helps verify equations and obtain relations between physical quantities approximately."
+              ],
+              "keywords": [
+                "SI units",
+                "measurement",
+                "error",
+                "significant figures",
+                "dimensions"
+              ]
+            }
+          },
+          {
+            "number": 3,
+            "title": "Motion in a Straight Line",
+            "topics": [
+              "Position, path length, displacement",
+              "Average and instantaneous velocity and speed",
+              "Acceleration",
+              "Graphs of motion"
+            ],
+            "notes": {
+              "summary": "Describes one-dimensional motion using displacement, velocity, and acceleration, and represents motion through graphs.",
+              "key_points": [
+                "Distance is a scalar path length while displacement is a vector joining initial and final positions.",
+                "Velocity is the rate of change of displacement; speed is the rate of change of distance.",
+                "Graphs of position–time and velocity–time are powerful tools to visualise and analyse motion."
+              ],
+              "keywords": [
+                "displacement",
+                "velocity",
+                "acceleration",
+                "kinematics"
+              ]
+            }
+          },
+          {
+            "number": 4,
+            "title": "Motion in a Plane",
+            "topics": [
+              "Scalars and vectors",
+              "Vector addition and subtraction",
+              "Projectile motion",
+              "Uniform circular motion"
+            ],
+            "notes": {
+              "summary": "Extends motion to two dimensions using vectors, explaining projectiles and circular motion.",
+              "key_points": [
+                "Vectors have both magnitude and direction and follow rules of vector addition and resolution.",
+                "Projectile motion is analysed as independent horizontal and vertical motions under gravity.",
+                "Uniform circular motion involves constant speed but continuously changing velocity due to centripetal acceleration."
+              ],
+              "keywords": [
+                "vector",
+                "projectile",
+                "circular motion",
+                "centripetal acceleration"
+              ]
+            }
+          },
+          {
+            "number": 5,
+            "title": "Laws of Motion",
+            "topics": [
+              "Concept of force and inertia",
+              "Newton’s three laws of motion",
+              "Momentum and impulse",
+              "Conservation of momentum and applications"
+            ],
+            "notes": {
+              "summary": "Presents Newton’s laws that relate forces to motion, introducing inertia, momentum, and their conservation.",
+              "key_points": [
+                "First law defines inertia and conditions for uniform motion or rest.",
+                "Second law relates net force to rate of change of momentum and gives F = ma for constant mass.",
+                "Third law explains mutual forces between interacting bodies and underlies conservation of momentum."
+              ],
+              "keywords": [
+                "inertia",
+                "Newton’s laws",
+                "momentum",
+                "impulse"
+              ]
+            }
+          },
+          {
+            "number": 6,
+            "title": "Work, Energy and Power",
+            "topics": [
+              "Work done by constant and variable forces",
+              "Kinetic and potential energy",
+              "Conservation of mechanical energy",
+              "Power"
+            ],
+            "notes": {
+              "summary": "Connects force and motion to work and energy, and introduces power as the rate of doing work.",
+              "key_points": [
+                "Work is non-zero when a component of force acts along the displacement.",
+                "Kinetic energy depends on speed; potential energy depends on configuration or position in a field.",
+                "Total mechanical energy is conserved in absence of non-conservative forces like friction."
+              ],
+              "keywords": [
+                "work",
+                "energy",
+                "kinetic energy",
+                "potential energy",
+                "power"
+              ]
+            }
+          },
+          {
+            "number": 7,
+            "title": "System of Particles and Rotational Motion",
+            "topics": [
+              "Centre of mass",
+              "Torque and angular momentum",
+              "Equilibrium of rigid bodies",
+              "Moment of inertia and rotational dynamics"
+            ],
+            "notes": {
+              "summary": "Extends mechanics to systems of particles and rotating rigid bodies using torque, angular momentum, and moment of inertia.",
+              "key_points": [
+                "Centre of mass describes the average position of mass of a system and follows Newton’s laws.",
+                "Torque is the rotational analogue of force and causes change in angular momentum.",
+                "Rotational motion obeys equations similar to linear motion, with moment of inertia playing the role of mass."
+              ],
+              "keywords": [
+                "centre of mass",
+                "torque",
+                "angular momentum",
+                "moment of inertia"
+              ]
+            }
+          },
+          {
+            "number": 8,
+            "title": "Gravitation",
+            "topics": [
+              "Universal law of gravitation",
+              "Acceleration due to gravity",
+              "Motion of objects under gravity",
+              "Satellites and orbital motion"
+            ],
+            "notes": {
+              "summary": "Describes gravitational attraction between masses, free fall, and motion of planets and satellites.",
+              "key_points": [
+                "Gravitational force is attractive, acts between any two masses, and decreases with square of distance.",
+                "Acceleration due to gravity near Earth is approximately constant but varies with height and depth.",
+                "Satellites move in orbits due to balance between gravitational pull and their tangential velocity."
+              ],
+              "keywords": [
+                "gravitation",
+                "free fall",
+                "g",
+                "satellite",
+                "orbit"
+              ]
+            }
+          },
+          {
+            "number": 9,
+            "title": "Mechanical Properties of Solids",
+            "topics": [
+              "Stress and strain",
+              "Hooke’s law and Young’s modulus",
+              "Elastic behaviour and elastic constants",
+              "Applications of elasticity"
+            ],
+            "notes": {
+              "summary": "Explains how solids deform under external forces and introduces stress–strain relations and elastic constants.",
+              "key_points": [
+                "Stress is force per unit area; strain is fractional change in dimension.",
+                "Within elastic limit, stress is proportional to strain (Hooke’s law).",
+                "Different moduli quantify resistance to stretching, compression, and shearing."
+              ],
+              "keywords": [
+                "stress",
+                "strain",
+                "Young’s modulus",
+                "elasticity"
+              ]
+            }
+          },
+          {
+            "number": 10,
+            "title": "Mechanical Properties of Fluids",
+            "topics": [
+              "Pressure in fluids",
+              "Pascal’s law and applications",
+              "Buoyancy and Archimedes’ principle",
+              "Viscosity and surface tension (basic ideas)"
+            ],
+            "notes": {
+              "summary": "Covers how fluids exert pressure, cause buoyant forces, and show resistance to flow and surface phenomena.",
+              "key_points": [
+                "Fluid pressure increases with depth and acts equally in all directions at a point.",
+                "Archimedes’ principle explains buoyancy and conditions for floating and sinking.",
+                "Viscosity measures internal friction in liquids and gases; surface tension governs droplet and capillary behaviour."
+              ],
+              "keywords": [
+                "fluid pressure",
+                "buoyancy",
+                "Archimedes’ principle",
+                "viscosity",
+                "surface tension"
+              ]
+            }
+          },
+          {
+            "number": 11,
+            "title": "Thermal Properties of Matter",
+            "topics": [
+              "Heat and temperature",
+              "Specific heat capacity and calorimetry",
+              "Thermal expansion",
+              "Change of state and latent heat"
+            ],
+            "notes": {
+              "summary": "Relates heat transfer to changes in temperature, size, and state of matter.",
+              "key_points": [
+                "Temperature measures degree of hotness; heat is energy in transit due to temperature difference.",
+                "Different materials have different specific heat capacities, affecting how they warm up or cool down.",
+                "Thermal expansion of solids, liquids, and gases has many engineering and everyday applications."
+              ],
+              "keywords": [
+                "heat",
+                "temperature",
+                "specific heat",
+                "thermal expansion",
+                "latent heat"
+              ]
+            }
+          },
+          {
+            "number": 12,
+            "title": "Thermodynamics",
+            "topics": [
+              "System and surroundings",
+              "Zeroth, first, and second laws of thermodynamics (basic level)",
+              "Internal energy and work",
+              "Heat engines and efficiency (qualitative)"
+            ],
+            "notes": {
+              "summary": "Introduces the laws of thermodynamics governing heat, work, and internal energy in macroscopic systems.",
+              "key_points": [
+                "The zeroth law defines thermal equilibrium and underlies the concept of temperature.",
+                "The first law is a statement of energy conservation including heat and work transfers.",
+                "The second law introduces directionality in processes and explains why some processes are irreversible."
+              ],
+              "keywords": [
+                "thermodynamics",
+                "internal energy",
+                "first law",
+                "second law"
+              ]
+            }
+          },
+          {
+            "number": 13,
+            "title": "Kinetic Theory",
+            "topics": [
+              "Molecular nature of matter",
+              "Kinetic theory of an ideal gas",
+              "Pressure of a gas and molecular motion",
+              "Temperature and kinetic energy"
+            ],
+            "notes": {
+              "summary": "Explains macroscopic properties of gases using microscopic motion of particles.",
+              "key_points": [
+                "Gases are composed of molecules in constant random motion obeying simple postulates.",
+                "Pressure arises from molecular collisions with container walls.",
+                "Average kinetic energy of gas molecules is directly proportional to absolute temperature."
+              ],
+              "keywords": [
+                "ideal gas",
+                "molecular motion",
+                "kinetic theory"
+              ]
+            }
+          },
+          {
+            "number": 14,
+            "title": "Oscillations",
+            "topics": [
+              "Periodic and oscillatory motion",
+              "Simple harmonic motion (SHM)",
+              "Energy in SHM",
+              "Examples: spring–mass system, simple pendulum (small-angle)"
+            ],
+            "notes": {
+              "summary": "Describes periodic motions with emphasis on simple harmonic motion and its energy changes.",
+              "key_points": [
+                "Oscillatory motion repeats itself about an equilibrium position after fixed time intervals.",
+                "In SHM, restoring force is proportional to displacement and directed towards equilibrium.",
+                "Kinetic and potential energies interchange during SHM while total energy remains constant."
+              ],
+              "keywords": [
+                "oscillation",
+                "simple harmonic motion",
+                "period",
+                "amplitude"
+              ]
+            }
+          },
+          {
+            "number": 15,
+            "title": "Waves",
+            "topics": [
+              "Types of waves: transverse and longitudinal",
+              "Wave parameters: wavelength, frequency, speed",
+              "Principle of superposition",
+              "Sound waves and basics of beats and Doppler (qualitative)"
+            ],
+            "notes": {
+              "summary": "Introduces mechanical waves, their characteristics, and basic ideas of sound propagation.",
+              "key_points": [
+                "Waves transfer energy without overall transfer of matter.",
+                "Wave speed is related to frequency and wavelength by a simple relation.",
+                "Superposition of waves explains interference patterns and phenomena like beats."
+              ],
+              "keywords": [
+                "wave",
+                "wavelength",
+                "frequency",
+                "superposition"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "subject": "Chemistry",
+        "textbook": "Chemistry – Textbook for Class XI (Part I & II)",
+        "chapters": [
+          {
+            "number": 1,
+            "title": "Some Basic Concepts of Chemistry",
+            "topics": [
+              "Importance and scope of chemistry",
+              "Laws of chemical combination",
+              "Dalton’s atomic theory",
+              "Mole concept and molar mass",
+              "Stoichiometric calculations (simple)"
+            ],
+            "notes": {
+              "summary": "Builds the quantitative foundation of chemistry using mole concept, stoichiometry, and basic laws.",
+              "key_points": [
+                "Matter is described using atoms, molecules, and moles for convenient counting.",
+                "Laws of chemical combination support the idea of definite and multiple proportions.",
+                "Stoichiometry relates masses, moles, and volumes of reactants and products in reactions."
+              ],
+              "keywords": [
+                "mole",
+                "stoichiometry",
+                "atomic mass",
+                "chemical combination"
+              ]
+            }
+          },
+          {
+            "number": 2,
+            "title": "Structure of Atom",
+            "topics": [
+              "Subatomic particles",
+              "Atomic models (Thomson, Rutherford, Bohr)",
+              "Quantum mechanical model (orbitals, quantum numbers)",
+              "Electronic configuration"
+            ],
+            "notes": {
+              "summary": "Traces development of atomic models and introduces quantum description of electrons in atoms.",
+              "key_points": [
+                "Experimental evidence led from indivisible atoms to a model with electrons, protons, and neutrons.",
+                "Bohr’s model explained hydrogen spectrum but failed for multi-electron atoms.",
+                "Quantum numbers and orbitals describe probable locations and energies of electrons."
+              ],
+              "keywords": [
+                "orbitals",
+                "quantum numbers",
+                "electronic configuration"
+              ]
+            }
+          },
+          {
+            "number": 3,
+            "title": "Classification of Elements and Periodicity in Properties",
+            "topics": [
+              "Modern periodic law and long form periodic table",
+              "Electronic configuration and periodic trends",
+              "Trends in atomic and ionic size, ionisation enthalpy, electronegativity",
+              "Anomalies and their reasons (brief)"
+            ],
+            "notes": {
+              "summary": "Explains the basis of the periodic table and trends in elemental properties across periods and groups.",
+              "key_points": [
+                "Periodic properties are periodic functions of atomic number.",
+                "Trends in size, ionisation enthalpy, electron gain enthalpy, and electronegativity help predict reactivity.",
+                "Position of an element in the table reflects its valence shell configuration and chemical behaviour."
+              ],
+              "keywords": [
+                "periodic table",
+                "periodicity",
+                "ionisation enthalpy",
+                "electronegativity"
+              ]
+            }
+          },
+          {
+            "number": 4,
+            "title": "Chemical Bonding and Molecular Structure",
+            "topics": [
+              "Ionic and covalent bonding",
+              "Lewis structures and octet rule",
+              "VSEPR theory and molecular shapes (basic)",
+              "Hybridisation (conceptual)",
+              "Bond parameters: length, angle, polarity"
+            ],
+            "notes": {
+              "summary": "Discusses how atoms combine to form molecules, predicting bond types and shapes from electronic structure.",
+              "key_points": [
+                "Chemical bonds result from electrostatic attraction or sharing of electrons.",
+                "Lewis structures visualise valence electrons and help predict simple molecular shapes.",
+                "VSEPR model and hybridisation explain real three-dimensional geometries and bond angles."
+              ],
+              "keywords": [
+                "ionic bond",
+                "covalent bond",
+                "VSEPR",
+                "hybridisation"
+              ]
+            }
+          },
+          {
+            "number": 5,
+            "title": "States of Matter: Gases and Liquids",
+            "topics": [
+              "Intermolecular forces",
+              "Gas laws and ideal gas equation",
+              "Kinetic molecular theory of gases (qualitative)",
+              "Liquid state: properties related to intermolecular forces"
+            ],
+            "notes": {
+              "summary": "Links microscopic interactions to macroscopic behaviour of gases and liquids.",
+              "key_points": [
+                "Gas behaviour is described by relationships between pressure, volume, temperature, and moles.",
+                "Ideal gas equation combines simple gas laws into one relation.",
+                "Deviation from ideality and properties of liquids arise from intermolecular attractions."
+              ],
+              "keywords": [
+                "gas laws",
+                "ideal gas",
+                "intermolecular forces"
+              ]
+            }
+          },
+          {
+            "number": 6,
+            "title": "Thermodynamics",
+            "topics": [
+              "System, surroundings, and types of systems",
+              "First law of thermodynamics",
+              "Enthalpy and enthalpy changes",
+              "Spontaneity, entropy (basic), and Gibbs energy (introductory)"
+            ],
+            "notes": {
+              "summary": "Deals with energy changes in chemical and physical processes using thermodynamic concepts.",
+              "key_points": [
+                "Internal energy and enthalpy track heat and work exchange in processes at different conditions.",
+                "The first law enforces conservation of energy in all processes.",
+                "Spontaneity depends on both enthalpy and entropy changes of the system."
+              ],
+              "keywords": [
+                "enthalpy",
+                "entropy",
+                "Gibbs free energy",
+                "first law"
+              ]
+            }
+          },
+          {
+            "number": 7,
+            "title": "Equilibrium",
+            "topics": [
+              "Dynamic nature of equilibrium",
+              "Equilibrium constant and its significance",
+              "Le Chatelier’s principle",
+              "Ionic equilibrium: strong and weak electrolytes, pH (basic level)"
+            ],
+            "notes": {
+              "summary": "Explains physical and chemical equilibria, equilibrium constants, and response to change in conditions.",
+              "key_points": [
+                "At equilibrium, forward and reverse reaction rates are equal though molecules keep reacting.",
+                "Equilibrium constants indicate the extent of reaction under given conditions.",
+                "Le Chatelier’s principle predicts how equilibrium shifts to counter imposed changes."
+              ],
+              "keywords": [
+                "equilibrium",
+                "equilibrium constant",
+                "Le Chatelier’s principle",
+                "pH"
+              ]
+            }
+          },
+          {
+            "number": 8,
+            "title": "Redox Reactions",
+            "topics": [
+              "Oxidation–reduction in terms of oxygen, hydrogen, and electrons",
+              "Oxidising and reducing agents",
+              "Balancing redox equations (basic methods)",
+              "Redox reactions in everyday life"
+            ],
+            "notes": {
+              "summary": "Covers oxidation–reduction concepts and identifies redox processes in chemical and biological systems.",
+              "key_points": [
+                "Redox reactions involve simultaneous oxidation and reduction processes.",
+                "Oxidation states help track electron transfer in complex molecules and ions.",
+                "Many industrial, biological, and environmental processes are fundamentally redox in nature."
+              ],
+              "keywords": [
+                "oxidation state",
+                "oxidising agent",
+                "reducing agent",
+                "redox"
+              ]
+            }
+          },
+          {
+            "number": 9,
+            "title": "Hydrogen",
+            "topics": [
+              "Position of hydrogen in periodic table",
+              "Isotopes of hydrogen",
+              "Hydrides: ionic, covalent, and metallic",
+              "Water and hydrogen peroxide (basic properties and uses)"
+            ],
+            "notes": {
+              "summary": "Focuses on hydrogen’s unique position and its compounds, including water and hydrogen peroxide.",
+              "key_points": [
+                "Hydrogen resembles both alkali metals and halogens but forms its own category.",
+                "Different hydrides show varying bonding and properties depending on the partner element.",
+                "Water and hydrogen peroxide play central roles in chemistry, environment, and industry."
+              ],
+              "keywords": [
+                "hydrogen",
+                "hydride",
+                "isotope",
+                "water"
+              ]
+            }
+          },
+          {
+            "number": 10,
+            "title": "The s-Block Elements",
+            "topics": [
+              "General trends in Group 1 and 2 elements",
+              "Common physical and chemical properties",
+              "Important compounds: NaCl, NaOH, CaO, CaCO3 (etc.)",
+              "Biological and industrial importance"
+            ],
+            "notes": {
+              "summary": "Describes alkali and alkaline earth metals, their trends, and key compounds.",
+              "key_points": [
+                "s-Block elements are highly reactive metals with characteristic flame colours and soft textures.",
+                "Their oxides and hydroxides are basic and widely used in industry.",
+                "Sodium, potassium, calcium, and magnesium ions are crucial in biological systems."
+              ],
+              "keywords": [
+                "alkali metal",
+                "alkaline earth metal",
+                "s-block",
+                "NaCl",
+                "CaCO3"
+              ]
+            }
+          },
+          {
+            "number": 11,
+            "title": "The p-Block Elements (Group 13 and 14)",
+            "topics": [
+              "General trends in Group 13 and 14",
+              "Important compounds of boron, aluminium, carbon, and silicon",
+              "Anomalous behaviour of first elements",
+              "Allotropes of carbon (introductory)"
+            ],
+            "notes": {
+              "summary": "Covers trends in Groups 13 and 14 with emphasis on boron, aluminium, carbon, and silicon chemistry.",
+              "key_points": [
+                "p-Block elements show variable oxidation states and covalent bonding.",
+                "Boron and carbon display anomalous behaviour compared to heavier group members.",
+                "Carbon’s allotropes and silicon-based materials underpin modern materials science."
+              ],
+              "keywords": [
+                "p-block",
+                "boron",
+                "carbon",
+                "silicon",
+                "allotrope"
+              ]
+            }
+          },
+          {
+            "number": 12,
+            "title": "Organic Chemistry – Some Basic Principles and Techniques",
+            "topics": [
+              "Classification and nomenclature of organic compounds",
+              "Electronic effects: inductive, resonance (introductory)",
+              "Isomerism (basic structural ideas)",
+              "Methods of purification of organic compounds"
+            ],
+            "notes": {
+              "summary": "Lays foundations of organic chemistry language, structure, and purification methods.",
+              "key_points": [
+                "Systematic IUPAC rules name organic compounds based on parent chain, substituents, and functional groups.",
+                "Electron-distribution effects help explain reactivity patterns in organic molecules.",
+                "Organic compounds are purified by distillation, crystallisation, chromatography, and related techniques."
+              ],
+              "keywords": [
+                "IUPAC nomenclature",
+                "functional group",
+                "isomerism",
+                "chromatography"
+              ]
+            }
+          },
+          {
+            "number": 13,
+            "title": "Hydrocarbons",
+            "topics": [
+              "Alkanes, alkenes, and alkynes: preparation and properties",
+              "Aromatic hydrocarbons (benzene basics)",
+              "Characteristic reactions",
+              "Uses and environmental aspects (brief)"
+            ],
+            "notes": {
+              "summary": "Deals with the major classes of hydrocarbons and their typical reactions.",
+              "key_points": [
+                "Hydrocarbons differ in saturation and structure, leading to substitution, addition, and aromatic reactions.",
+                "Benzene and related compounds have special stability and substitution chemistry.",
+                "Hydrocarbons are primary fuels and feedstocks but must be managed responsibly due to pollution concerns."
+              ],
+              "keywords": [
+                "alkane",
+                "alkene",
+                "alkyne",
+                "benzene",
+                "hydrocarbon"
+              ]
+            }
+          },
+          {
+            "number": 14,
+            "title": "Environmental Chemistry",
+            "topics": [
+              "Pollution of air, water, and soil (overview)",
+              "Chemical nature and effects of common pollutants",
+              "Green chemistry (introductory ideas)"
+            ],
+            "notes": {
+              "summary": "Introduces chemical aspects of environmental issues and basic concepts of green chemistry.",
+              "key_points": [
+                "Industrial and domestic activities release pollutants affecting air, water, and soil quality.",
+                "Understanding chemical behaviour of pollutants helps design control and remediation strategies.",
+                "Green chemistry aims to design processes that minimise hazardous substances and waste."
+              ],
+              "keywords": [
+                "pollution",
+                "smog",
+                "green chemistry",
+                "remediation"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "subject": "Biology",
+        "textbook": "Biology – Textbook for Class XI",
+        "chapters": [
+          {
+            "number": 1,
+            "title": "The Living World",
+            "topics": [
+              "What is living",
+              "Diversity of living organisms",
+              "Taxonomy and systematics (basic)",
+              "Binomial nomenclature and classification hierarchy"
+            ],
+            "notes": {
+              "summary": "Introduces features of living organisms and the need for scientific classification and naming.",
+              "key_points": [
+                "Living systems show organisation, metabolism, growth, reproduction, and response to stimuli.",
+                "Huge diversity of life is organised using taxonomic categories like species, genus, and family.",
+                "Binomial nomenclature gives each species a unique, universally accepted scientific name."
+              ],
+              "keywords": [
+                "living",
+                "taxonomy",
+                "systematics",
+                "binomial nomenclature"
+              ]
+            }
+          },
+          {
+            "number": 2,
+            "title": "Biological Classification",
+            "topics": [
+              "Need for classification",
+              "Five-kingdom concept (Monera, Protista, Fungi, Plantae, Animalia)",
+              "Viruses and viroids (introductory)"
+            ],
+            "notes": {
+              "summary": "Describes major groups of organisms and criteria used to classify them.",
+              "key_points": [
+                "Classification reflects evolutionary relationships and simplifies study of organisms.",
+                "Kingdoms differ in cell type, body organisation, mode of nutrition, and reproduction.",
+                "Viruses are acellular entities requiring host cells for replication."
+              ],
+              "keywords": [
+                "kingdom",
+                "Monera",
+                "Protista",
+                "Fungi",
+                "virus"
+              ]
+            }
+          },
+          {
+            "number": 3,
+            "title": "Plant Kingdom",
+            "topics": [
+              "Algae, bryophytes, pteridophytes, gymnosperms, angiosperms",
+              "General features and life cycles (overview)",
+              "Alternation of generations (basic idea)"
+            ],
+            "notes": {
+              "summary": "Covers major plant groups and broad patterns in their structure and reproduction.",
+              "key_points": [
+                "Plant groups show increasing complexity from simple algae to flowering plants.",
+                "Life cycles alternate between haploid gametophyte and diploid sporophyte phases.",
+                "Each group occupies specific ecological niches and has economic importance."
+              ],
+              "keywords": [
+                "algae",
+                "bryophyte",
+                "pteridophyte",
+                "gymnosperm",
+                "angiosperm"
+              ]
+            }
+          },
+          {
+            "number": 4,
+            "title": "Animal Kingdom",
+            "topics": [
+              "Basis of animal classification",
+              "Non-chordate phyla up to examples",
+              "Chordate groups up to class level"
+            ],
+            "notes": {
+              "summary": "Introduces animal diversity and classification based on body organisation and key features.",
+              "key_points": [
+                "Animals are grouped by body symmetry, germ layers, coelom type, and segmentation.",
+                "Non-chordates range from simple sponges to arthropods and molluscs.",
+                "Chordates share notochord, dorsal nerve cord, and are divided into major vertebrate classes."
+              ],
+              "keywords": [
+                "invertebrate",
+                "chordate",
+                "phylum",
+                "vertebrate"
+              ]
+            }
+          },
+          {
+            "number": 5,
+            "title": "Morphology of Flowering Plants",
+            "topics": [
+              "Root, stem, leaf: types and modifications",
+              "Inflorescence and flower structure",
+              "Fruits and seeds (brief)",
+              "Examples of families (elementary characters)"
+            ],
+            "notes": {
+              "summary": "Describes external features and modifications of angiosperms with common examples.",
+              "key_points": [
+                "Roots, stems, and leaves show structural variations suited to support, storage, and reproduction.",
+                "Flower parts are organised in whorls and may be used to identify plant families.",
+                "Fruits and seeds protect and help disperse the next generation."
+              ],
+              "keywords": [
+                "root",
+                "stem",
+                "leaf",
+                "flower",
+                "fruit"
+              ]
+            }
+          },
+          {
+            "number": 6,
+            "title": "Anatomy of Flowering Plants",
+            "topics": [
+              "Tissues in roots, stems, and leaves",
+              "Primary and secondary growth",
+              "Differences in dicot and monocot structures"
+            ],
+            "notes": {
+              "summary": "Looks at internal structure of plant organs and patterns of tissue organisation.",
+              "key_points": [
+                "Dermal, ground, and vascular tissues are arranged in characteristic ways in organs.",
+                "Secondary growth increases girth through activity of lateral meristems.",
+                "Dicots and monocots differ in vascular bundle arrangement and root–stem anatomy."
+              ],
+              "keywords": [
+                "xylem",
+                "phloem",
+                "secondary growth",
+                "dicot",
+                "monocot"
+              ]
+            }
+          },
+          {
+            "number": 7,
+            "title": "Structural Organisation in Animals",
+            "topics": [
+              "Animal tissues (epithelial, connective, muscular, nervous)",
+              "Morphology and anatomy of representatives (e.g., earthworm, cockroach, frog) – overview"
+            ],
+            "notes": {
+              "summary": "Explores how animal cells form tissues and organs in representative organisms.",
+              "key_points": [
+                "Different tissues specialise in protection, support, movement, and coordination.",
+                "Simple animals show basic organ systems that become more complex in higher forms.",
+                "Study of standard organisms provides models for understanding body organisation."
+              ],
+              "keywords": [
+                "epithelium",
+                "connective tissue",
+                "muscle",
+                "nervous tissue"
+              ]
+            }
+          },
+          {
+            "number": 8,
+            "title": "Cell: The Unit of Life",
+            "topics": [
+              "Cell theory",
+              "Prokaryotic and eukaryotic cells",
+              "Cell organelles and their functions"
+            ],
+            "notes": {
+              "summary": "Reinforces the idea of the cell as the basic unit and surveys structures shared across life.",
+              "key_points": [
+                "All living organisms are built from one or more cells.",
+                "Prokaryotic cells lack membrane-bound organelles; eukaryotic cells possess them.",
+                "Organelles like nucleus, mitochondria, and chloroplasts coordinate cell functions."
+              ],
+              "keywords": [
+                "cell theory",
+                "prokaryote",
+                "eukaryote",
+                "organelle"
+              ]
+            }
+          },
+          {
+            "number": 9,
+            "title": "Biomolecules",
+            "topics": [
+              "Carbohydrates, proteins, lipids, nucleic acids (basic structures and roles)",
+              "Enzymes: properties and action (introductory)"
+            ],
+            "notes": {
+              "summary": "Introduces major classes of biological molecules and how enzymes catalyse life’s reactions.",
+              "key_points": [
+                "Biomolecules form the structural and functional basis of cells.",
+                "Proteins perform diverse tasks from catalysis to transport and signalling.",
+                "Enzymes lower activation energy and are highly specific for substrates."
+              ],
+              "keywords": [
+                "carbohydrate",
+                "protein",
+                "lipid",
+                "enzyme",
+                "DNA"
+              ]
+            }
+          },
+          {
+            "number": 10,
+            "title": "Cell Cycle and Cell Division",
+            "topics": [
+              "Cell cycle phases",
+              "Mitosis and its significance",
+              "Meiosis and its role in sexual reproduction"
+            ],
+            "notes": {
+              "summary": "Explains how cells divide for growth and reproduction, and how meiosis creates variation.",
+              "key_points": [
+                "The cell cycle alternates between growth (interphase) and division.",
+                "Mitosis produces genetically identical daughter cells for growth and repair.",
+                "Meiosis reduces chromosome number by half and generates genetic diversity."
+              ],
+              "keywords": [
+                "cell cycle",
+                "mitosis",
+                "meiosis",
+                "chromosome"
+              ]
+            }
+          },
+          {
+            "number": 11,
+            "title": "Transport in Plants",
+            "topics": [
+              "Diffusion, osmosis, and active transport",
+              "Water movement: root pressure, transpiration pull",
+              "Translocation of food in phloem (overview)"
+            ],
+            "notes": {
+              "summary": "Describes mechanisms by which water and nutrients move through plant bodies.",
+              "key_points": [
+                "Water enters roots by osmosis and moves upwards through xylem.",
+                "Transpiration from leaves helps pull water up the plant column.",
+                "Phloem transports sugars from sources to sinks by pressure flow."
+              ],
+              "keywords": [
+                "osmosis",
+                "xylem",
+                "phloem",
+                "transpiration"
+              ]
+            }
+          },
+          {
+            "number": 12,
+            "title": "Mineral Nutrition",
+            "topics": [
+              "Essential mineral elements",
+              "Deficiency symptoms",
+              "Nitrogen metabolism and fixation (introductory)"
+            ],
+            "notes": {
+              "summary": "Covers mineral requirements of plants and basic nitrogen assimilation.",
+              "key_points": [
+                "Plants require macro and micro-nutrients for normal growth.",
+                "Deficiencies cause characteristic visual symptoms in leaves and stems.",
+                "Nitrogen is made available through biological and industrial fixation pathways."
+              ],
+              "keywords": [
+                "macro-nutrient",
+                "micro-nutrient",
+                "nitrogen fixation"
+              ]
+            }
+          },
+          {
+            "number": 13,
+            "title": "Photosynthesis in Higher Plants",
+            "topics": [
+              "Site of photosynthesis",
+              "Light and dark reactions (overview)",
+              "C3 and C4 pathways (introductory)"
+            ],
+            "notes": {
+              "summary": "Explains how plants convert light energy into chemical energy in chloroplasts.",
+              "key_points": [
+                "Chlorophyll pigments capture light in chloroplast membranes.",
+                "Light reactions produce ATP and NADPH; dark reactions fix CO2 using these.",
+                "Different pathways allow plants to adapt to varied environmental conditions."
+              ],
+              "keywords": [
+                "photosynthesis",
+                "chloroplast",
+                "Calvin cycle",
+                "C3",
+                "C4"
+              ]
+            }
+          },
+          {
+            "number": 14,
+            "title": "Respiration in Plants",
+            "topics": [
+              "Aerobic and anaerobic respiration",
+              "Glycolysis, Krebs cycle, ETC (introductory overview)",
+              "Energy yield and significance"
+            ],
+            "notes": {
+              "summary": "Shows how plants break down food molecules to release usable energy.",
+              "key_points": [
+                "Cellular respiration oxidises organic substrates to produce ATP.",
+                "Different stages occur in cytoplasm and mitochondria.",
+                "Aerobic pathways yield more energy than anaerobic routes."
+              ],
+              "keywords": [
+                "cellular respiration",
+                "glycolysis",
+                "Krebs cycle",
+                "ATP"
+              ]
+            }
+          },
+          {
+            "number": 15,
+            "title": "Plant Growth and Development",
+            "topics": [
+              "Phases of growth",
+              "Plant growth regulators (hormones)",
+              "Photoperiodism and seed dormancy (introductory)"
+            ],
+            "notes": {
+              "summary": "Describes how plants grow and respond to internal hormones and external cues.",
+              "key_points": [
+                "Growth involves cell division, enlargement, and differentiation.",
+                "Plant hormones coordinate processes like elongation, branching, and senescence.",
+                "Environmental signals like light duration can trigger flowering or dormancy."
+              ],
+              "keywords": [
+                "auxin",
+                "gibberellin",
+                "cytokinin",
+                "photoperiodism",
+                "dormancy"
+              ]
+            }
+          },
+          {
+            "number": 16,
+            "title": "Digestion and Absorption",
+            "topics": [
+              "Human digestive system",
+              "Digestive glands and enzymes",
+              "Absorption of nutrients",
+              "Disorders related to digestion (basic)"
+            ],
+            "notes": {
+              "summary": "Explains how humans process food into absorbable units and utilise nutrients.",
+              "key_points": [
+                "Digestive tract organs perform mechanical and chemical breakdown of food.",
+                "Enzymes act on carbohydrates, proteins, and lipids in successive regions.",
+                "Absorbed nutrients are transported and used for energy, growth, and repair."
+              ],
+              "keywords": [
+                "digestion",
+                "enzyme",
+                "absorption",
+                "alimentary canal"
+              ]
+            }
+          },
+          {
+            "number": 17,
+            "title": "Breathing and Exchange of Gases",
+            "topics": [
+              "Human respiratory system",
+              "Mechanism of breathing",
+              "Transport of oxygen and carbon dioxide",
+              "Regulation of respiration"
+            ],
+            "notes": {
+              "summary": "Covers structures and processes ensuring gas exchange for cellular respiration.",
+              "key_points": [
+                "Air passages and lungs provide large surface area for gas exchange.",
+                "Breathing is driven by pressure changes from diaphragm and intercostal muscle activity.",
+                "Oxygen and carbon dioxide are transported mainly bound to haemoglobin or dissolved in plasma."
+              ],
+              "keywords": [
+                "respiration",
+                "alveoli",
+                "haemoglobin",
+                "ventilation"
+              ]
+            }
+          },
+          {
+            "number": 18,
+            "title": "Body Fluids and Circulation",
+            "topics": [
+              "Composition of blood and lymph",
+              "Structure and working of the heart",
+              "Types of circulation",
+              "Blood pressure and clotting (introductory)"
+            ],
+            "notes": {
+              "summary": "Explains transport of substances in humans through blood, heart, and vessels.",
+              "key_points": [
+                "Blood contains cells and plasma carrying gases, nutrients, and wastes.",
+                "The heart pumps blood through pulmonary and systemic circuits.",
+                "Homeostatic mechanisms maintain pressure and composition within safe limits."
+              ],
+              "keywords": [
+                "blood",
+                "heart",
+                "artery",
+                "vein",
+                "lymph"
+              ]
+            }
+          },
+          {
+            "number": 19,
+            "title": "Excretory Products and their Elimination",
+            "topics": [
+              "Human excretory system",
+              "Nephron structure and urine formation",
+              "Regulation of kidney function (basic)"
+            ],
+            "notes": {
+              "summary": "Describes how the body removes nitrogenous and other wastes to maintain internal balance.",
+              "key_points": [
+                "Kidneys filter blood and regulate water and salt balance.",
+                "Nephrons perform filtration, reabsorption, and secretion steps.",
+                "Hormonal control adjusts urine volume and concentration."
+              ],
+              "keywords": [
+                "kidney",
+                "nephron",
+                "urine",
+                "osmoregulation"
+              ]
+            }
+          },
+          {
+            "number": 20,
+            "title": "Locomotion and Movement",
+            "topics": [
+              "Types of movement",
+              "Human skeletal system",
+              "Muscle structure and contraction (introductory)"
+            ],
+            "notes": {
+              "summary": "Explores how the musculoskeletal system enables body movements.",
+              "key_points": [
+                "Skeletal muscles attach to bones and work in antagonistic pairs.",
+                "Bones and joints provide leverage and support for movement.",
+                "Muscle fibres contract through sliding of protein filaments using ATP."
+              ],
+              "keywords": [
+                "skeleton",
+                "joint",
+                "muscle",
+                "contraction"
+              ]
+            }
+          },
+          {
+            "number": 21,
+            "title": "Neural Control and Coordination",
+            "topics": [
+              "Structure of neuron",
+              "Transmission of nerve impulse",
+              "Central and peripheral nervous systems (overview)"
+            ],
+            "notes": {
+              "summary": "Shows how the nervous system rapidly coordinates body functions.",
+              "key_points": [
+                "Neurons carry electrical impulses along axons and between synapses.",
+                "Brain and spinal cord integrate sensory inputs and produce responses.",
+                "Reflex arcs provide quick protective reactions without full conscious control."
+              ],
+              "keywords": [
+                "neuron",
+                "synapse",
+                "brain",
+                "spinal cord"
+              ]
+            }
+          },
+          {
+            "number": 22,
+            "title": "Chemical Coordination and Integration",
+            "topics": [
+              "Endocrine glands and hormones",
+              "Major human hormones and their roles",
+              "Feedback mechanisms (introductory)"
+            ],
+            "notes": {
+              "summary": "Explains hormonal control of slower, long-term processes complementing nervous control.",
+              "key_points": [
+                "Endocrine glands secrete hormones directly into blood without ducts.",
+                "Hormones regulate growth, metabolism, reproduction, and stress responses.",
+                "Feedback loops maintain hormone levels within narrow ranges."
+              ],
+              "keywords": [
+                "endocrine gland",
+                "hormone",
+                "homeostasis",
+                "feedback"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

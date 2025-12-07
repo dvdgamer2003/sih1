@@ -1,0 +1,241 @@
+{
+    "class": 6,
+    "subject": "Computer",
+    "chapters": [
+        {
+            "name": "Computer Fundamentals",
+            "subchapters": [
+                {
+                    "name": "Introduction to Computers",
+                    "content": {
+                        "explanation": "A computer is an electronic device that processes data and performs tasks according to instructions. It consists of hardware (physical parts) and software (programs and applications). Computers help us in education, communication, entertainment, and work."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "What are the two main components of a computer?",
+                                "options": [
+                                    "Mouse and Keyboard",
+                                    "Hardware and Software",
+                                    "Monitor and CPU",
+                                    "Input and Output"
+                                ],
+                                "answer": "Hardware and Software"
+                            },
+                            {
+                                "q": "Which of these is an input device?",
+                                "options": [
+                                    "Monitor",
+                                    "Printer",
+                                    "Keyboard",
+                                    "Speaker"
+                                ],
+                                "answer": "Keyboard"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Parts of a Computer",
+                    "content": {
+                        "explanation": "Main parts of a computer include: CPU (brain of computer), Monitor (display screen), Keyboard (for typing), Mouse (for pointing), and Storage devices (to save data). Input devices send data to the computer, output devices receive data from the computer."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "Which part is called the 'brain' of the computer?",
+                                "options": [
+                                    "Monitor",
+                                    "CPU",
+                                    "Keyboard",
+                                    "Mouse"
+                                ],
+                                "answer": "CPU"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Operating Systems",
+            "subchapters": [
+                {
+                    "name": "What is an Operating System?",
+                    "content": {
+                        "explanation": "An Operating System (OS) is system software that manages computer hardware and software resources. Popular operating systems include Windows, macOS, and Linux. The OS provides a user interface and manages files, programs, and devices."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "Which of these is an operating system?",
+                                "options": [
+                                    "Microsoft Word",
+                                    "Windows",
+                                    "Google Chrome",
+                                    "Paint"
+                                ],
+                                "answer": "Windows"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "File Management",
+                    "content": {
+                        "explanation": "Files are stored in folders (also called directories). We can create, rename, move, copy, and delete files and folders. Organizing files properly helps us find them easily. Common file types include documents (.doc, .pdf), images (.jpg, .png), and videos (.mp4)."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "What is a folder used for?",
+                                "options": [
+                                    "To delete files",
+                                    "To organize and store files",
+                                    "To create documents",
+                                    "To browse internet"
+                                ],
+                                "answer": "To organize and store files"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "MS Office Basics",
+            "subchapters": [
+                {
+                    "name": "Microsoft Word",
+                    "content": {
+                        "explanation": "Microsoft Word is a word processing application used to create, edit, and format text documents. Basic features include typing text, changing fonts, adding images, and saving documents. We can create letters, reports, and assignments using Word."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "What is Microsoft Word used for?",
+                                "options": [
+                                    "Creating spreadsheets",
+                                    "Creating documents",
+                                    "Browsing internet",
+                                    "Playing games"
+                                ],
+                                "answer": "Creating documents"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Microsoft Paint",
+                    "content": {
+                        "explanation": "Microsoft Paint is a simple graphics program for creating and editing images. We can draw shapes, add colors, use brushes, and create simple artwork. Paint tools include pencil, brush, eraser, fill, and text."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "What can you do in Microsoft Paint?",
+                                "options": [
+                                    "Write documents",
+                                    "Create drawings",
+                                    "Send emails",
+                                    "Browse websites"
+                                ],
+                                "answer": "Create drawings"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Internet & Web",
+            "subchapters": [
+                {
+                    "name": "Introduction to Internet",
+                    "content": {
+                        "explanation": "The Internet is a global network of computers connected together. It allows us to access information, communicate with others, and use online services. The World Wide Web (WWW) is a collection of websites accessed through the Internet."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "What is the Internet?",
+                                "options": [
+                                    "A single computer",
+                                    "A global network of computers",
+                                    "A software program",
+                                    "A type of file"
+                                ],
+                                "answer": "A global network of computers"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Web Browsers",
+                    "content": {
+                        "explanation": "A web browser is software used to access and view websites. Popular browsers include Google Chrome, Mozilla Firefox, and Microsoft Edge. We use browsers to search for information, watch videos, and access online services."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "Which of these is a web browser?",
+                                "options": [
+                                    "Microsoft Word",
+                                    "Google Chrome",
+                                    "Windows",
+                                    "Paint"
+                                ],
+                                "answer": "Google Chrome"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Digital Safety",
+            "subchapters": [
+                {
+                    "name": "Internet Safety",
+                    "content": {
+                        "explanation": "Internet safety means protecting yourself online. Important rules: never share personal information (name, address, phone number) with strangers, use strong passwords, don't click on suspicious links, and tell an adult if something makes you uncomfortable online."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "What should you NOT share online?",
+                                "options": [
+                                    "Your favorite color",
+                                    "Your home address",
+                                    "Your favorite game",
+                                    "Your hobby"
+                                ],
+                                "answer": "Your home address"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Cyber Etiquette",
+                    "content": {
+                        "explanation": "Cyber etiquette (netiquette) means being polite and respectful online. Be kind in messages, don't use ALL CAPS (it's like shouting), respect others' opinions, and think before you post. Treat others online as you would in person."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "What is cyber etiquette?",
+                                "options": [
+                                    "Computer hardware",
+                                    "Being polite online",
+                                    "Internet speed",
+                                    "A type of software"
+                                ],
+                                "answer": "Being polite online"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

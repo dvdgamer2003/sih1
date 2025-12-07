@@ -1,0 +1,42 @@
+[
+    {
+        "id": "sci-10-ch1",
+        "title": "Gravitation",
+        "description": "Study Newton's law of gravitation, Kepler's laws and escape velocity.",
+        "units": 3,
+        "icon": "earth",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-10-ch2",
+        "title": "Periodic Classification of Elements",
+        "description": "Learn about Dobereiner's Triads, Newlands' Law of Octaves and Mendeleev's Periodic Table.",
+        "units": 3,
+        "icon": "periodic-table",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-10-ch3",
+        "title": "Chemical Reactions and Equations",
+        "description": "Types of chemical reactions and balancing chemical equations.",
+        "units": 3,
+        "icon": "flask",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-10-ch4",
+        "title": "Effects of Electric Current",
+        "description": "Heating effect of electric current and magnetic effect of electric current.",
+        "units": 3,
+        "icon": "flash",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-10-ch5",
+        "title": "Heat",
+        "description": "Latent heat, anomalous behavior of water and specific heat capacity.",
+        "units": 2,
+        "icon": "fire",
+        "color": "#4ECDC4"
+    }
+]

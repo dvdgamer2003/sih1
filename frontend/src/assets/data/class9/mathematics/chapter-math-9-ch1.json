@@ -1,0 +1,144 @@
+{
+    "id": "math-9-ch1",
+    "title": "Number Systems",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Real Numbers",
+            "readingTime": 5,
+            "content": "# Real Numbers\n\nReal numbers include rational and irrational numbers.\n\n## Types\n- Rational: Can be expressed as p/q\n- Irrational: Cannot be expressed as p/q (√2, π)"
+        },
+        {
+            "id": "l2",
+            "title": "Laws of Exponents",
+            "readingTime": 5,
+            "content": "# Laws of Exponents\n\n## Important Laws\n- a^m × a^n = a^(m+n)\n- a^m ÷ a^n = a^(m-n)\n- (a^m)^n = a^(mn)\n- a^0 = 1"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Number Systems",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "Which is irrational?",
+                "options": [
+                    "1/2",
+                    "√4",
+                    "π",
+                    "0.5"
+                ],
+                "correctAnswer": 2,
+                "explanation": "π (pi) is an irrational number."
+            },
+            {
+                "id": "q1_2",
+                "question": "What is 2^3 × 2^2?",
+                "options": [
+                    "2^5",
+                    "2^6",
+                    "4^5",
+                    "2^1"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Using a^m × a^n = a^(m+n), we get 2^(3+2) = 2^5"
+            },
+            {
+                "id": "q1_3",
+                "question": "What is any number raised to power 0?",
+                "options": [
+                    "0",
+                    "1",
+                    "The number itself",
+                    "Undefined"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Any non-zero number raised to power 0 equals 1."
+            },
+            {
+                "id": "q1_4",
+                "question": "√16 is:",
+                "options": [
+                    "Rational",
+                    "Irrational",
+                    "Not a real number",
+                    "Complex"
+                ],
+                "correctAnswer": 0,
+                "explanation": "√16 = 4, which is a rational number."
+            },
+            {
+                "id": "q1_5",
+                "question": "What is (3^2)^3?",
+                "options": [
+                    "3^5",
+                    "3^6",
+                    "9^3",
+                    "6^3"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Using (a^m)^n = a^(mn), we get 3^(2×3) = 3^6"
+            },
+            {
+                "id": "q1_6",
+                "question": "Which is NOT a real number?",
+                "options": [
+                    "√2",
+                    "π",
+                    "√-1",
+                    "0"
+                ],
+                "correctAnswer": 2,
+                "explanation": "√-1 is an imaginary number, not a real number."
+            },
+            {
+                "id": "q1_7",
+                "question": "What is 5^4 ÷ 5^2?",
+                "options": [
+                    "5^2",
+                    "5^6",
+                    "5^8",
+                    "25"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Using a^m ÷ a^n = a^(m-n), we get 5^(4-2) = 5^2"
+            },
+            {
+                "id": "q1_8",
+                "question": "Is 0 rational or irrational?",
+                "options": [
+                    "Rational",
+                    "Irrational",
+                    "Neither",
+                    "Both"
+                ],
+                "correctAnswer": 0,
+                "explanation": "0 can be written as 0/1, making it rational."
+            },
+            {
+                "id": "q1_9",
+                "question": "Between which integers does √10 lie?",
+                "options": [
+                    "2 and 3",
+                    "3 and 4",
+                    "4 and 5",
+                    "1 and 2"
+                ],
+                "correctAnswer": 1,
+                "explanation": "√10 ≈ 3.16, which lies between 3 and 4."
+            },
+            {
+                "id": "q1_10",
+                "question": "What is 2^-2?",
+                "options": [
+                    "1/4",
+                    "-4",
+                    "4",
+                    "1/2"
+                ],
+                "correctAnswer": 0,
+                "explanation": "2^-2 = 1/2^2 = 1/4"
+            }
+        ]
+    }
+}

@@ -1,0 +1,34 @@
+[
+    {
+        "id": "comp-8-ch1",
+        "title": "Networking Concepts",
+        "description": "Introduction to computer networks and their types.",
+        "units": 2,
+        "icon": "lan",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-8-ch2",
+        "title": "Introduction to HTML",
+        "description": "Learn the basics of Hyper Text Markup Language for web design.",
+        "units": 4,
+        "icon": "language-html5",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-8-ch3",
+        "title": "Cyber Ethics and Safety",
+        "description": "Understanding safe and ethical use of the internet.",
+        "units": 2,
+        "icon": "shield-lock",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-8-ch4",
+        "title": "Introduction to Photoshop",
+        "description": "Basics of image editing using Photoshop.",
+        "units": 3,
+        "icon": "image-edit",
+        "color": "#60A5FA"
+    }
+]

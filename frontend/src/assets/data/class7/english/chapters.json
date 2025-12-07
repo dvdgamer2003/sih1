@@ -1,0 +1,34 @@
+[
+    {
+        "id": "eng-7-ch1",
+        "title": "It's a Small World",
+        "description": "A poem about unity and friendship across the world.",
+        "units": 2,
+        "icon": "book-open-page-variant",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-7-ch2",
+        "title": "Warm up with Tara and Friends",
+        "description": "Introduction to characters and basic conversation skills.",
+        "units": 2,
+        "icon": "account-group",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-7-ch3",
+        "title": "In Time of Silver Rain",
+        "description": "A poem describing the beauty of nature during rain.",
+        "units": 2,
+        "icon": "weather-rainy",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-7-ch4",
+        "title": "The King's Choice",
+        "description": "A story about a lion and his courtiers.",
+        "units": 3,
+        "icon": "crown",
+        "color": "#A78BFA"
+    }
+]

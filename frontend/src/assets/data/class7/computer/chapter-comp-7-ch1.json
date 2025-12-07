@@ -1,0 +1,144 @@
+{
+    "id": "comp-7-ch1",
+    "title": "Computer Fundamentals",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Computer Generations",
+            "readingTime": 5,
+            "content": "# Computer Generations\n\nComputers have evolved through five generations.\n\n## First Generation (1940-1956)\n- Used vacuum tubes\n- Very large and expensive\n\n## Second Generation (1956-1963)\n- Used transistors\n- Smaller and more reliable"
+        },
+        {
+            "id": "l2",
+            "title": "Computer Languages",
+            "readingTime": 5,
+            "content": "# Computer Languages\n\n## Types of Languages\n- **Machine Language**: Binary code (0s and 1s)\n- **Assembly Language**: Uses mnemonics\n- **High-Level Language**: English-like (Python, Java, C++)"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Computer Fundamentals",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "Which generation used vacuum tubes?",
+                "options": [
+                    "First",
+                    "Second",
+                    "Third",
+                    "Fourth"
+                ],
+                "correctAnswer": 0,
+                "explanation": "First generation computers used vacuum tubes."
+            },
+            {
+                "id": "q1_2",
+                "question": "What replaced vacuum tubes in second generation?",
+                "options": [
+                    "ICs",
+                    "Transistors",
+                    "Microprocessors",
+                    "Vacuum tubes"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Transistors replaced vacuum tubes in second generation."
+            },
+            {
+                "id": "q1_3",
+                "question": "Which language uses only 0s and 1s?",
+                "options": [
+                    "Assembly",
+                    "Machine",
+                    "High-level",
+                    "Python"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Machine language uses binary code (0s and 1s)."
+            },
+            {
+                "id": "q1_4",
+                "question": "Which is a high-level language?",
+                "options": [
+                    "Binary",
+                    "Machine code",
+                    "Python",
+                    "Assembly"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Python is a high-level programming language."
+            },
+            {
+                "id": "q1_5",
+                "question": "What does IC stand for?",
+                "options": [
+                    "Internet Connection",
+                    "Integrated Circuit",
+                    "Internal Computer",
+                    "Input Control"
+                ],
+                "correctAnswer": 1,
+                "explanation": "IC stands for Integrated Circuit."
+            },
+            {
+                "id": "q1_6",
+                "question": "Which generation computers were smallest?",
+                "options": [
+                    "First",
+                    "Second",
+                    "Third",
+                    "Fifth"
+                ],
+                "correctAnswer": 3,
+                "explanation": "Fifth generation computers are the smallest with advanced technology."
+            },
+            {
+                "id": "q1_7",
+                "question": "Assembly language uses:",
+                "options": [
+                    "Only numbers",
+                    "Mnemonics",
+                    "English sentences",
+                    "Pictures"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Assembly language uses mnemonics (short codes)."
+            },
+            {
+                "id": "q1_8",
+                "question": "Which language is easiest for humans?",
+                "options": [
+                    "Machine",
+                    "Assembly",
+                    "High-level",
+                    "Binary"
+                ],
+                "correctAnswer": 2,
+                "explanation": "High-level languages are easiest for humans as they use English-like syntax."
+            },
+            {
+                "id": "q1_9",
+                "question": "First generation computers were:",
+                "options": [
+                    "Small",
+                    "Very large",
+                    "Portable",
+                    "Wireless"
+                ],
+                "correctAnswer": 1,
+                "explanation": "First generation computers were very large and occupied entire rooms."
+            },
+            {
+                "id": "q1_10",
+                "question": "Which component made third generation computers?",
+                "options": [
+                    "Vacuum tubes",
+                    "Transistors",
+                    "ICs",
+                    "Microprocessors"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Third generation computers used Integrated Circuits (ICs)."
+            }
+        ]
+    }
+}

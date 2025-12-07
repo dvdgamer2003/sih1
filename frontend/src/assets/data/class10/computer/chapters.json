@@ -1,0 +1,34 @@
+[
+    {
+        "id": "comp-10-ch1",
+        "title": "Advanced Web Designing",
+        "description": "HTML5 forms, CSS3, and Meta tags.",
+        "units": 4,
+        "icon": "web",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-10-ch2",
+        "title": "Introduction to SEO",
+        "description": "Search Engine Optimization techniques.",
+        "units": 3,
+        "icon": "magnify",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-10-ch3",
+        "title": "Advanced JavaScript",
+        "description": "DOM manipulation, events, and validation.",
+        "units": 4,
+        "icon": "language-javascript",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-10-ch4",
+        "title": "Emerging Technologies",
+        "description": "IoT, Cloud Computing, AI, and 5G.",
+        "units": 3,
+        "icon": "robot",
+        "color": "#60A5FA"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "id": "math-12-ch1",
+        "title": "Relations and Functions",
+        "description": "Types of relations, types of functions, composition of functions.",
+        "units": 5,
+        "icon": "calculator",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-12-ch2",
+        "title": "Inverse Trigonometric Functions",
+        "description": "Definition, range, domain, principal value branch.",
+        "units": 4,
+        "icon": "calculator",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-12-ch3",
+        "title": "Matrices",
+        "description": "Concept, notation, order, equality, types of matrices.",
+        "units": 6,
+        "icon": "calculator",
+        "color": "#FF6B6B"
+    }
+]

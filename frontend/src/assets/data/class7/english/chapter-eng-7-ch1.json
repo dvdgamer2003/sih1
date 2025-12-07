@@ -1,0 +1,120 @@
+{
+    "id": "eng-7-ch1",
+    "title": "Grammar and Composition",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Parts of Speech",
+            "readingTime": 5,
+            "content": "# Parts of Speech\n\nWords are classified into different categories based on their function.\n\n## Main Parts of Speech\n- **Noun**: Names of people, places, things\n- **Pronoun**: Words that replace nouns\n- **Verb**: Action or state words\n- **Adjective**: Describes nouns\n- **Adverb**: Describes verbs, adjectives, or other adverbs"
+        },
+        {
+            "id": "l2",
+            "title": "Sentence Structure",
+            "readingTime": 5,
+            "content": "# Sentence Structure\n\nA sentence must have a subject and a predicate.\n\n## Types of Sentences\n- **Declarative**: Makes a statement\n- **Interrogative**: Asks a question\n- **Imperative**: Gives a command\n- **Exclamatory**: Shows strong emotion"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Grammar",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What part of speech is the word 'quickly'?",
+                "options": [
+                    "Noun",
+                    "Verb",
+                    "Adjective",
+                    "Adverb"
+                ],
+                "correctAnswer": 3,
+                "explanation": "'Quickly' is an adverb as it describes how an action is done."
+            },
+            {
+                "id": "q1_2",
+                "question": "Which is a noun?",
+                "options": [
+                    "Run",
+                    "Beautiful",
+                    "Book",
+                    "Slowly"
+                ],
+                "correctAnswer": 2,
+                "explanation": "'Book' is a noun as it names a thing."
+            },
+            {
+                "id": "q1_3",
+                "question": "What type of sentence is 'Close the door'?",
+                "options": [
+                    "Declarative",
+                    "Interrogative",
+                    "Imperative",
+                    "Exclamatory"
+                ],
+                "correctAnswer": 2,
+                "explanation": "It is an imperative sentence as it gives a command."
+            },
+            {
+                "id": "q1_4",
+                "question": "Which word is a pronoun?",
+                "options": [
+                    "Table",
+                    "She",
+                    "Happy",
+                    "Jump"
+                ],
+                "correctAnswer": 1,
+                "explanation": "'She' is a pronoun that replaces a noun."
+            },
+            {
+                "id": "q1_5",
+                "question": "What describes a noun?",
+                "options": [
+                    "Verb",
+                    "Adverb",
+                    "Adjective",
+                    "Pronoun"
+                ],
+                "correctAnswer": 2,
+                "explanation": "An adjective describes a noun."
+            },
+            {
+                "id": "q1_6",
+                "question": "Which sentence asks a question?",
+                "options": [
+                    "I am happy.",
+                    "Are you happy?",
+                    "Be happy!",
+                    "How happy!"
+                ],
+                "correctAnswer": 1,
+                "explanation": "'Are you happy?' is an interrogative sentence."
+            },
+            {
+                "id": "q1_7",
+                "question": "What is the verb in 'The cat sleeps'?",
+                "options": [
+                    "The",
+                    "cat",
+                    "sleeps",
+                    "No verb"
+                ],
+                "correctAnswer": 2,
+                "explanation": "'Sleeps' is the verb showing the action."
+            },
+            {
+                "id": "q1_8",
+                "question": "Which shows strong emotion?",
+                "options": [
+                    "I won the race.",
+                    "Did I win?",
+                    "Win the race.",
+                    "I won the race!"
+                ],
+                "correctAnswer": 3,
+                "explanation": "The exclamation mark shows strong emotion, making it an exclamatory sentence."
+            }
+        ]
+    }
+}

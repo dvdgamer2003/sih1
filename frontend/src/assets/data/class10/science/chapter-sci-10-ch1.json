@@ -1,0 +1,144 @@
+{
+    "id": "sci-10-ch1",
+    "title": "Chemical Reactions and Equations",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Chemical Reactions",
+            "readingTime": 5,
+            "content": "# Chemical Reactions\n\nA chemical reaction is a process where substances (reactants) are transformed into different substances (products).\n\n## Types\n- Combination\n- Decomposition\n- Displacement\n- Double displacement"
+        },
+        {
+            "id": "l2",
+            "title": "Chemical Equations",
+            "readingTime": 5,
+            "content": "# Chemical Equations\n\nA chemical equation represents a chemical reaction using symbols and formulas.\n\n## Balancing\n- Law of conservation of mass\n- Equal atoms on both sides"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Chemical Reactions",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What is a chemical reaction?",
+                "options": [
+                    "Physical change",
+                    "Transformation of substances",
+                    "Mixing of substances",
+                    "Heating"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A chemical reaction transforms reactants into different products."
+            },
+            {
+                "id": "q1_2",
+                "question": "In a balanced equation, what is conserved?",
+                "options": [
+                    "Energy only",
+                    "Mass",
+                    "Volume",
+                    "Color"
+                ],
+                "correctAnswer": 1,
+                "explanation": "According to the law of conservation of mass, mass is conserved in chemical reactions."
+            },
+            {
+                "id": "q1_3",
+                "question": "What type is 2H₂ + O₂ → 2H₂O?",
+                "options": [
+                    "Decomposition",
+                    "Combination",
+                    "Displacement",
+                    "Double displacement"
+                ],
+                "correctAnswer": 1,
+                "explanation": "This is a combination reaction where two elements combine to form a compound."
+            },
+            {
+                "id": "q1_4",
+                "question": "What indicates a chemical reaction?",
+                "options": [
+                    "Change in color",
+                    "Change in shape",
+                    "Change in size",
+                    "Change in position"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Change in color is one indicator of a chemical reaction."
+            },
+            {
+                "id": "q1_5",
+                "question": "What is decomposition?",
+                "options": [
+                    "Combining substances",
+                    "Breaking down compounds",
+                    "Replacing elements",
+                    "Mixing solutions"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Decomposition is breaking down a compound into simpler substances."
+            },
+            {
+                "id": "q1_6",
+                "question": "Which is a displacement reaction?",
+                "options": [
+                    "AB → A + B",
+                    "A + B → AB",
+                    "A + BC → AC + B",
+                    "AB + CD → AD + CB"
+                ],
+                "correctAnswer": 2,
+                "explanation": "In displacement, one element replaces another in a compound."
+            },
+            {
+                "id": "q1_7",
+                "question": "What does → represent in equations?",
+                "options": [
+                    "Equals",
+                    "Yields/Produces",
+                    "Plus",
+                    "Minus"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The arrow (→) means 'yields' or 'produces' in chemical equations."
+            },
+            {
+                "id": "q1_8",
+                "question": "Rusting of iron is:",
+                "options": [
+                    "Physical change",
+                    "Chemical change",
+                    "No change",
+                    "Reversible change"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Rusting is a chemical change where iron reacts with oxygen."
+            },
+            {
+                "id": "q1_9",
+                "question": "What is an exothermic reaction?",
+                "options": [
+                    "Absorbs heat",
+                    "Releases heat",
+                    "No heat change",
+                    "Requires light"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Exothermic reactions release heat energy."
+            },
+            {
+                "id": "q1_10",
+                "question": "Photosynthesis is:",
+                "options": [
+                    "Exothermic",
+                    "Endothermic",
+                    "No energy change",
+                    "Spontaneous"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Photosynthesis is endothermic as it absorbs light energy."
+            }
+        ]
+    }
+}

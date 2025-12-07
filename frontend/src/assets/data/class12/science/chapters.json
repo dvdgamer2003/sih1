@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sci-12-ch1",
+    "title": "Physics: Electric Charges and Fields",
+    "description": "Electric charges, conservation of charge, Coulomb's law.",
+    "units": 5,
+    "icon": "flask",
+    "color": "#4ECDC4"
+  },
+  {
+    "id": "sci-12-ch2",
+    "title": "Chemistry: Solutions",
+    "description": "Types of solutions, expression of concentration of solutions.",
+    "units": 5,
+    "icon": "flask",
+    "color": "#4ECDC4"
+  },
+  {
+    "id": "sci-12-ch3",
+    "title": "Biology: Reproduction in Organisms",
+    "description": "Asexual and sexual reproduction in organisms.",
+    "units": 3,
+    "icon": "leaf",
+    "color": "#4ECDC4"
+  }
+]

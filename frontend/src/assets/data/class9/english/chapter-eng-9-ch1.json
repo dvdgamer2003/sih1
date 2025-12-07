@@ -1,0 +1,120 @@
+{
+    "id": "eng-9-ch1",
+    "title": "Literature and Poetry",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Understanding Poetry",
+            "readingTime": 5,
+            "content": "# Poetry\n\nPoetry uses rhythm, rhyme, and figurative language to express ideas.\n\n## Elements\n- Rhyme\n- Rhythm\n- Metaphor\n- Simile"
+        },
+        {
+            "id": "l2",
+            "title": "Literary Devices",
+            "readingTime": 5,
+            "content": "# Literary Devices\n\n## Common Devices\n- **Simile**: Comparison using 'like' or 'as'\n- **Metaphor**: Direct comparison\n- **Personification**: Giving human qualities to non-human things\n- **Alliteration**: Repetition of initial sounds"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Literature",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What is a simile?",
+                "options": [
+                    "Direct comparison",
+                    "Comparison using 'like' or 'as'",
+                    "Exaggeration",
+                    "Sound repetition"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A simile compares two things using 'like' or 'as'."
+            },
+            {
+                "id": "q1_2",
+                "question": "Which is a metaphor?",
+                "options": [
+                    "He runs like wind",
+                    "He is a lion",
+                    "The sun smiled",
+                    "Peter Piper picked"
+                ],
+                "correctAnswer": 1,
+                "explanation": "'He is a lion' is a metaphor - a direct comparison."
+            },
+            {
+                "id": "q1_3",
+                "question": "What is personification?",
+                "options": [
+                    "Comparing with 'like'",
+                    "Giving human qualities to non-human things",
+                    "Exaggeration",
+                    "Repetition"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Personification gives human qualities to non-human things."
+            },
+            {
+                "id": "q1_4",
+                "question": "Which shows alliteration?",
+                "options": [
+                    "He is brave",
+                    "Peter Piper picked peppers",
+                    "The sun is bright",
+                    "She sings well"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Alliteration is repetition of initial sounds: 'Peter Piper picked peppers'."
+            },
+            {
+                "id": "q1_5",
+                "question": "What creates rhythm in poetry?",
+                "options": [
+                    "Rhyme only",
+                    "Pattern of stressed syllables",
+                    "Long words",
+                    "Punctuation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Rhythm is created by the pattern of stressed and unstressed syllables."
+            },
+            {
+                "id": "q1_6",
+                "question": "'The wind whispered' is an example of:",
+                "options": [
+                    "Simile",
+                    "Metaphor",
+                    "Personification",
+                    "Alliteration"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Giving the wind the human ability to whisper is personification."
+            },
+            {
+                "id": "q1_7",
+                "question": "What is rhyme?",
+                "options": [
+                    "Similar sounds at line ends",
+                    "Repetition of words",
+                    "Long sentences",
+                    "No pattern"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Rhyme is the repetition of similar sounds at the end of lines."
+            },
+            {
+                "id": "q1_8",
+                "question": "Which is hyperbole?",
+                "options": [
+                    "I'm so hungry I could eat a horse",
+                    "He is tall",
+                    "The sky is blue",
+                    "She walks slowly"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Hyperbole is exaggeration for effect."
+            }
+        ]
+    }
+}

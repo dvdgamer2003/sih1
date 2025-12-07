@@ -1,0 +1,144 @@
+{
+    "id": "math-10-ch1",
+    "title": "Real Numbers",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Euclid's Division Algorithm",
+            "readingTime": 5,
+            "content": "# Euclid's Division Algorithm\n\nFor any two positive integers a and b, there exist unique integers q and r such that:\na = bq + r, where 0 ≤ r < b\n\n## Applications\n- Finding HCF\n- Proving properties"
+        },
+        {
+            "id": "l2",
+            "title": "Fundamental Theorem of Arithmetic",
+            "readingTime": 5,
+            "content": "# Fundamental Theorem\n\nEvery composite number can be expressed as a product of primes, and this factorization is unique.\n\n## Prime Factorization\n- Used to find HCF and LCM\n- Unique for each number"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Real Numbers",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What does Euclid's algorithm find?",
+                "options": [
+                    "LCM",
+                    "HCF",
+                    "Prime numbers",
+                    "Square roots"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Euclid's algorithm is used to find the HCF (Highest Common Factor)."
+            },
+            {
+                "id": "q1_2",
+                "question": "In a = bq + r, what is the range of r?",
+                "options": [
+                    "r > b",
+                    "r = b",
+                    "0 ≤ r < b",
+                    "r < 0"
+                ],
+                "correctAnswer": 2,
+                "explanation": "The remainder r must satisfy 0 ≤ r < b."
+            },
+            {
+                "id": "q1_3",
+                "question": "What is a prime number?",
+                "options": [
+                    "Divisible by many numbers",
+                    "Has only 1 and itself as factors",
+                    "Even number",
+                    "Odd number"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A prime number has exactly two factors: 1 and itself."
+            },
+            {
+                "id": "q1_4",
+                "question": "The prime factorization of a number is:",
+                "options": [
+                    "Not unique",
+                    "Unique",
+                    "Sometimes unique",
+                    "Never possible"
+                ],
+                "correctAnswer": 1,
+                "explanation": "According to the Fundamental Theorem of Arithmetic, prime factorization is unique."
+            },
+            {
+                "id": "q1_5",
+                "question": "HCF of 12 and 18 is:",
+                "options": [
+                    "2",
+                    "3",
+                    "6",
+                    "9"
+                ],
+                "correctAnswer": 2,
+                "explanation": "HCF of 12 and 18 is 6."
+            },
+            {
+                "id": "q1_6",
+                "question": "Which is NOT prime?",
+                "options": [
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "correctAnswer": 2,
+                "explanation": "4 is not prime as it has factors 1, 2, and 4."
+            },
+            {
+                "id": "q1_7",
+                "question": "LCM of 4 and 6 is:",
+                "options": [
+                    "2",
+                    "12",
+                    "24",
+                    "4"
+                ],
+                "correctAnswer": 1,
+                "explanation": "LCM of 4 and 6 is 12."
+            },
+            {
+                "id": "q1_8",
+                "question": "What is a composite number?",
+                "options": [
+                    "Has only 2 factors",
+                    "Has more than 2 factors",
+                    "Is always even",
+                    "Is always odd"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A composite number has more than two factors."
+            },
+            {
+                "id": "q1_9",
+                "question": "Is 1 prime or composite?",
+                "options": [
+                    "Prime",
+                    "Composite",
+                    "Neither",
+                    "Both"
+                ],
+                "correctAnswer": 2,
+                "explanation": "1 is neither prime nor composite."
+            },
+            {
+                "id": "q1_10",
+                "question": "HCF × LCM of two numbers equals:",
+                "options": [
+                    "Sum of numbers",
+                    "Product of numbers",
+                    "Difference",
+                    "Quotient"
+                ],
+                "correctAnswer": 1,
+                "explanation": "For two numbers, HCF × LCM = Product of the two numbers."
+            }
+        ]
+    }
+}

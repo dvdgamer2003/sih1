@@ -1,0 +1,108 @@
+const Quiz = require('../models/Quiz');
+const QuizResult = require('../models/QuizResult');
+const User = require('../models/User');
+
+// @desc    Get random quiz
+// @route   GET /api/quizzes/random
+// @access  Public
+const getRandomQuiz = async (req, res) => {
+    try {
+        const count = await Quiz.countDocuments();
+        const random = Math.floor(Math.random() * count);
+        const quiz = await Quiz.findOne().skip(random);
+
+        if (quiz) {
+            res.json(quiz);
+        } else {
+            res.status(404).json({ message: 'No quizzes found' });
+        }
+    } catch (error) {
+        console.error('Error in getRandomQuiz:', error);
+        res.status(500).json({ message: 'Failed to fetch quiz', error: error.message });
+    }
+};
+
+// @desc    Submit quiz result
+// @route   POST /api/quizzes/submit
+// @access  Private
+const submitQuizResult = async (req, res) => {
+    try {
+        const { quizId, score, totalQuestions, correctAnswers } = req.body;
+        const userId = req.user._id;
+
+        const result = await QuizResult.create({
+            userId,
+            quizId,
+            score,
+            totalQuestions,
+            correctAnswers
+        });
+
+        // Update User XP
+        const user = await User.findById(userId);
+        if (user) {
+            user.xp += score; // Add score to XP
+            await user.save();
+        }
+
+        res.status(201).json(result);
+    } catch (error) {
+        console.error('Error in submitQuizResult:', error);
+        res.status(500).json({ message: 'Failed to submit quiz result', error: error.message });
+    }
+};
+
+const QuizQuestion = require('../models/QuizQuestion');
+
+// @desc    Get quiz by topic (class, subject, chapter, subchapter)
+// @route   GET /api/quizzes
+// @access  Public
+const getTopicQuiz = async (req, res) => {
+    try {
+        const { classNumber, subject, chapter, subchapter } = req.query;
+        let questions = [];
+
+        // 1. Try to get questions for specific subchapter
+        if (subchapter) {
+            questions = await QuizQuestion.find({
+                classNumber,
+                subject,
+                chapter,
+                subchapter
+            }).limit(15);
+        }
+
+        // 2. Fallback to chapter if not enough questions
+        if (questions.length < 10) {
+            const chapterQuestions = await QuizQuestion.find({
+                classNumber,
+                subject,
+                chapter,
+                _id: { $nin: questions.map(q => q._id) } // Exclude already selected
+            }).limit(15 - questions.length);
+
+            questions = [...questions, ...chapterQuestions];
+        }
+
+        // 3. Fallback to subject if still not enough
+        if (questions.length < 10) {
+            const subjectQuestions = await QuizQuestion.find({
+                classNumber,
+                subject,
+                _id: { $nin: questions.map(q => q._id) }
+            }).limit(15 - questions.length);
+
+            questions = [...questions, ...subjectQuestions];
+        }
+
+        // Shuffle questions
+        questions = questions.sort(() => Math.random() - 0.5);
+
+        res.json(questions);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+};
+
+module.exports = { getRandomQuiz, submitQuizResult, getTopicQuiz };

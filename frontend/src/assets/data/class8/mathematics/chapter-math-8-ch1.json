@@ -1,0 +1,144 @@
+{
+    "id": "math-8-ch1",
+    "title": "Rational Numbers",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Introduction to Rational Numbers",
+            "readingTime": 5,
+            "content": "# Rational Numbers\n\nA rational number is a number that can be expressed as p/q where p and q are integers and q ≠ 0.\n\n## Examples\n- 1/2, 3/4, -5/7\n- All integers are rational (can be written as n/1)"
+        },
+        {
+            "id": "l2",
+            "title": "Operations on Rational Numbers",
+            "readingTime": 6,
+            "content": "# Operations\n\n## Addition and Subtraction\n- Find LCM of denominators\n- Convert to equivalent fractions\n- Add or subtract numerators\n\n## Multiplication and Division\n- Multiply numerators and denominators\n- For division, multiply by reciprocal"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Rational Numbers",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "Which is a rational number?",
+                "options": [
+                    "√2",
+                    "π",
+                    "3/4",
+                    "√3"
+                ],
+                "correctAnswer": 2,
+                "explanation": "3/4 can be expressed as p/q form, so it's rational."
+            },
+            {
+                "id": "q1_2",
+                "question": "Is 0 a rational number?",
+                "options": [
+                    "Yes",
+                    "No",
+                    "Sometimes",
+                    "Cannot say"
+                ],
+                "correctAnswer": 0,
+                "explanation": "0 can be written as 0/1, so it is rational."
+            },
+            {
+                "id": "q1_3",
+                "question": "What is 1/2 + 1/3?",
+                "options": [
+                    "2/5",
+                    "5/6",
+                    "1/5",
+                    "3/6"
+                ],
+                "correctAnswer": 1,
+                "explanation": "1/2 + 1/3 = 3/6 + 2/6 = 5/6"
+            },
+            {
+                "id": "q1_4",
+                "question": "What is the reciprocal of 2/3?",
+                "options": [
+                    "2/3",
+                    "3/2",
+                    "-2/3",
+                    "1"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The reciprocal of 2/3 is 3/2."
+            },
+            {
+                "id": "q1_5",
+                "question": "Which is NOT rational?",
+                "options": [
+                    "5",
+                    "-3/7",
+                    "√4",
+                    "√5"
+                ],
+                "correctAnswer": 3,
+                "explanation": "√5 cannot be expressed as p/q, so it's irrational."
+            },
+            {
+                "id": "q1_6",
+                "question": "What is 2/5 × 3/4?",
+                "options": [
+                    "5/9",
+                    "6/20",
+                    "5/20",
+                    "6/9"
+                ],
+                "correctAnswer": 1,
+                "explanation": "2/5 × 3/4 = 6/20 = 3/10"
+            },
+            {
+                "id": "q1_7",
+                "question": "Between which integers does 7/3 lie?",
+                "options": [
+                    "1 and 2",
+                    "2 and 3",
+                    "3 and 4",
+                    "0 and 1"
+                ],
+                "correctAnswer": 1,
+                "explanation": "7/3 = 2.33..., which lies between 2 and 3."
+            },
+            {
+                "id": "q1_8",
+                "question": "What is -3/4 + 3/4?",
+                "options": [
+                    "-6/4",
+                    "0",
+                    "6/4",
+                    "3/2"
+                ],
+                "correctAnswer": 1,
+                "explanation": "-3/4 + 3/4 = 0 (additive inverse)"
+            },
+            {
+                "id": "q1_9",
+                "question": "Is every integer a rational number?",
+                "options": [
+                    "Yes",
+                    "No",
+                    "Sometimes",
+                    "Only positive"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Every integer n can be written as n/1, making it rational."
+            },
+            {
+                "id": "q1_10",
+                "question": "What is 1/2 ÷ 1/4?",
+                "options": [
+                    "1/8",
+                    "1/6",
+                    "2",
+                    "4"
+                ],
+                "correctAnswer": 2,
+                "explanation": "1/2 ÷ 1/4 = 1/2 × 4/1 = 2"
+            }
+        ]
+    }
+}

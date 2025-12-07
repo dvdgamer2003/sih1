@@ -1,0 +1,150 @@
+{
+    "id": "sci-7-ch1",
+    "title": "The Living World: Adaptations and Classification",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Adaptation",
+            "readingTime": 5,
+            "content": "# Adaptation\n\nGradual changes occur in the body parts and also in the behaviour of organisms which help them to adjust to their surroundings. Such changes are called adaptations. They take place over a long period of time.\n\n## Adaptation in Aquatic Plants\n\nSome of the aquatic plants are firmly rooted in the soil at the bottom of the water bodies. Their stems are submerged, while leaves and flowers float on the surface. However, some plants are entirely afloat. Their roots are not anchored in the soil.\n\nThe surfaces of leaves and stems of many aquatic plants are covered with a waxy layer. Leaves of some aquatic plants are thin and slender like a ribbon. This shape helps them to withstand fast currents of water. Air spaces in stems and petioles of aquatic plants are useful for floating in water."
+        },
+        {
+            "id": "l2",
+            "title": "Adaptation in Desert Plants",
+            "readingTime": 5,
+            "content": "# Adaptation in Desert Plants\n\nTake two potted plants - one a cactus and the other a leafy plant. Tie plastic bags loosely around the leaves of these plants and keep them in sunlight from early in the morning. In the afternoon, bring those pots into the classroom and observe them.\n\nHas the same quantity of water collected in both bags? Neither do desert plants have leaves or they are very small or they are modified into thorns. As a result, they lose very little water by evaporation. The stem stores water and food and is therefore fleshy. The stems are green as they perform photosynthesis in the absence of leaves. Their roots penetrate deep into the soil in search of water. There is a thick layer of a waxy substance on the stems of these plants, too."
+        },
+        {
+            "id": "l3",
+            "title": "Classification of Living Organisms",
+            "readingTime": 6,
+            "content": "# Classification of Living Organisms\n\nIt is difficult to study and remember all the organisms in this diverse living world at the same time. Classification helps in this respect. Different scientists have used different criteria and independently classified plants and animals. A hierarchy is formed in the classification that starts with Kingdom Animalia or Kingdom Plantae; further groups and sub-groups are formed depending upon basic similarities and differences. This is called the 'hierarchy of classification'.\n\n## Binomial Nomenclature by Carl Linnaeus\n\nImagine that there are four students with a name 'Kabir' or 'Kiran' in a classroom. If you talk about 'Kabir' or 'Kiran' in class, how will you ensure that others understand which one of them you are talking about? We shall mention their full names, i.e., the first name and the last name. This is similar to binomial nomenclature.\n\nBinomial nomenclature is used to identify each organism. Accordingly, a scientific name has been assigned to each organism. It consists of two parts - the first part is 'Genus' and the second, 'Species'. All identified organisms have been assigned a binomial name as per the guidelines of the International Code of Nomenclature."
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Adaptations",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What are gradual changes that help organisms adjust to their surroundings called?",
+                "options": [
+                    "Evolution",
+                    "Adaptation",
+                    "Mutation",
+                    "Classification"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Gradual changes that help organisms adjust to their surroundings are called adaptations."
+            },
+            {
+                "id": "q1_2",
+                "question": "Why do desert plants have thorns?",
+                "options": [
+                    "To protect from animals",
+                    "To look beautiful",
+                    "To reduce water loss",
+                    "To catch insects"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Leaves are modified into thorns to reduce water loss by evaporation."
+            },
+            {
+                "id": "q1_3",
+                "question": "Who introduced Binomial Nomenclature?",
+                "options": [
+                    "Charles Darwin",
+                    "Carl Linnaeus",
+                    "Gregor Mendel",
+                    "Louis Pasteur"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Binomial Nomenclature was introduced by Carl Linnaeus."
+            },
+            {
+                "id": "q1_4",
+                "question": "Why do aquatic plants have air spaces in their stems?",
+                "options": [
+                    "To store food",
+                    "To help them float",
+                    "To look bigger",
+                    "To absorb more sunlight"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Air spaces in stems help aquatic plants float in water."
+            },
+            {
+                "id": "q1_5",
+                "question": "What is the waxy layer on desert plants used for?",
+                "options": [
+                    "To attract insects",
+                    "To prevent water loss",
+                    "To absorb more sunlight",
+                    "To make them shiny"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The waxy layer helps prevent water loss through evaporation."
+            },
+            {
+                "id": "q1_6",
+                "question": "In binomial nomenclature, what does the first part represent?",
+                "options": [
+                    "Species",
+                    "Genus",
+                    "Family",
+                    "Kingdom"
+                ],
+                "correctAnswer": 1,
+                "explanation": "In binomial nomenclature, the first part represents the Genus."
+            },
+            {
+                "id": "q1_7",
+                "question": "Why are the stems of desert plants green?",
+                "options": [
+                    "To look attractive",
+                    "To perform photosynthesis",
+                    "To store water only",
+                    "To protect from heat"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Desert plant stems are green because they perform photosynthesis in the absence of leaves."
+            },
+            {
+                "id": "q1_8",
+                "question": "What shape are the leaves of some aquatic plants to withstand water currents?",
+                "options": [
+                    "Round",
+                    "Square",
+                    "Thin and ribbon-like",
+                    "Thick and broad"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Thin, ribbon-like leaves help aquatic plants withstand fast water currents."
+            },
+            {
+                "id": "q1_9",
+                "question": "Where do desert plant roots penetrate to find water?",
+                "options": [
+                    "Shallow in soil",
+                    "Deep into the soil",
+                    "Above the ground",
+                    "Into rocks"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Desert plant roots penetrate deep into the soil in search of water."
+            },
+            {
+                "id": "q1_10",
+                "question": "What is the purpose of classification of living organisms?",
+                "options": [
+                    "To make them look organized",
+                    "To study and remember them easily",
+                    "To count them",
+                    "To name them randomly"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Classification helps to study and remember organisms easily by organizing them into groups based on similarities."
+            }
+        ]
+    }
+}

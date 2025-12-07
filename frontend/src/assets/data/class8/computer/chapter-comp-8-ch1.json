@@ -1,0 +1,144 @@
+{
+    "id": "comp-8-ch1",
+    "title": "Introduction to Programming",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "What is Programming?",
+            "readingTime": 5,
+            "content": "# Programming\n\nProgramming is writing instructions for computers to follow.\n\n## Programming Languages\n- Python\n- Java\n- C++\n- JavaScript"
+        },
+        {
+            "id": "l2",
+            "title": "Algorithms and Flowcharts",
+            "readingTime": 6,
+            "content": "# Algorithms\n\nAn algorithm is a step-by-step procedure to solve a problem.\n\n## Flowcharts\n- Visual representation of algorithms\n- Uses symbols for different operations"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Programming Basics",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What is programming?",
+                "options": [
+                    "Playing games",
+                    "Writing instructions for computers",
+                    "Using internet",
+                    "Typing documents"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Programming is writing instructions that computers can execute."
+            },
+            {
+                "id": "q1_2",
+                "question": "Which is a programming language?",
+                "options": [
+                    "English",
+                    "Python",
+                    "Hindi",
+                    "French"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Python is a popular programming language."
+            },
+            {
+                "id": "q1_3",
+                "question": "What is an algorithm?",
+                "options": [
+                    "A computer",
+                    "Step-by-step procedure",
+                    "A program",
+                    "A language"
+                ],
+                "correctAnswer": 1,
+                "explanation": "An algorithm is a step-by-step procedure to solve a problem."
+            },
+            {
+                "id": "q1_4",
+                "question": "What represents algorithms visually?",
+                "options": [
+                    "Flowchart",
+                    "Paragraph",
+                    "Table",
+                    "Graph"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Flowcharts visually represent algorithms using symbols."
+            },
+            {
+                "id": "q1_5",
+                "question": "Which symbol starts a flowchart?",
+                "options": [
+                    "Rectangle",
+                    "Diamond",
+                    "Oval",
+                    "Arrow"
+                ],
+                "correctAnswer": 2,
+                "explanation": "An oval symbol represents start/end in flowcharts."
+            },
+            {
+                "id": "q1_6",
+                "question": "What does a diamond represent in flowchart?",
+                "options": [
+                    "Process",
+                    "Decision",
+                    "Start",
+                    "End"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A diamond represents a decision point in flowcharts."
+            },
+            {
+                "id": "q1_7",
+                "question": "Which language is easiest for beginners?",
+                "options": [
+                    "Assembly",
+                    "Machine",
+                    "Python",
+                    "Binary"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Python is considered beginner-friendly due to its simple syntax."
+            },
+            {
+                "id": "q1_8",
+                "question": "What connects flowchart symbols?",
+                "options": [
+                    "Lines",
+                    "Arrows",
+                    "Dots",
+                    "Colors"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Arrows show the flow of control between symbols."
+            },
+            {
+                "id": "q1_9",
+                "question": "A rectangle in flowchart represents:",
+                "options": [
+                    "Decision",
+                    "Process",
+                    "Start",
+                    "Input"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A rectangle represents a process or action step."
+            },
+            {
+                "id": "q1_10",
+                "question": "Why learn programming?",
+                "options": [
+                    "To play games",
+                    "To solve problems logically",
+                    "To browse internet",
+                    "To type faster"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Programming teaches logical problem-solving skills."
+            }
+        ]
+    }
+}

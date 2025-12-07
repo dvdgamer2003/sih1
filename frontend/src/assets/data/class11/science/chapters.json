@@ -1,0 +1,26 @@
+[
+    {
+        "id": "sci-11-ch1",
+        "title": "Physics: Physical World",
+        "description": "Introduction to the physical world, scope and excitement of physics.",
+        "units": 4,
+        "icon": "flask",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-11-ch2",
+        "title": "Chemistry: Some Basic Concepts of Chemistry",
+        "description": "Importance of chemistry, atomic mass, molecular mass.",
+        "units": 5,
+        "icon": "flask",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-11-ch3",
+        "title": "Biology: The Living World",
+        "description": "Diversity in the living world, taxonomic categories.",
+        "units": 3,
+        "icon": "leaf",
+        "color": "#4ECDC4"
+    }
+]

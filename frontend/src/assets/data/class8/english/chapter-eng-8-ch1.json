@@ -1,0 +1,120 @@
+{
+    "id": "eng-8-ch1",
+    "title": "Writing Skills",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Paragraph Writing",
+            "readingTime": 5,
+            "content": "# Paragraph Writing\n\nA paragraph is a group of sentences about one main idea.\n\n## Structure\n- Topic sentence\n- Supporting sentences\n- Concluding sentence"
+        },
+        {
+            "id": "l2",
+            "title": "Letter Writing",
+            "readingTime": 5,
+            "content": "# Letter Writing\n\n## Formal Letters\n- Business letters\n- Official correspondence\n\n## Informal Letters\n- Personal letters\n- Friendly tone"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Writing Skills",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What is the first sentence of a paragraph called?",
+                "options": [
+                    "Topic sentence",
+                    "Supporting sentence",
+                    "Concluding sentence",
+                    "Main sentence"
+                ],
+                "correctAnswer": 0,
+                "explanation": "The topic sentence introduces the main idea of the paragraph."
+            },
+            {
+                "id": "q1_2",
+                "question": "Which letter uses formal language?",
+                "options": [
+                    "Letter to friend",
+                    "Business letter",
+                    "Letter to cousin",
+                    "Invitation to party"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Business letters use formal language and structure."
+            },
+            {
+                "id": "q1_3",
+                "question": "What should a paragraph have?",
+                "options": [
+                    "Many ideas",
+                    "One main idea",
+                    "No idea",
+                    "Random thoughts"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A paragraph should focus on one main idea."
+            },
+            {
+                "id": "q1_4",
+                "question": "Which is informal?",
+                "options": [
+                    "Job application",
+                    "Complaint letter",
+                    "Letter to friend",
+                    "Official request"
+                ],
+                "correctAnswer": 2,
+                "explanation": "A letter to a friend is informal and uses casual language."
+            },
+            {
+                "id": "q1_5",
+                "question": "What ends a paragraph?",
+                "options": [
+                    "Topic sentence",
+                    "Supporting sentence",
+                    "Concluding sentence",
+                    "Title"
+                ],
+                "correctAnswer": 2,
+                "explanation": "The concluding sentence wraps up the paragraph."
+            },
+            {
+                "id": "q1_6",
+                "question": "Supporting sentences:",
+                "options": [
+                    "Introduce the topic",
+                    "Explain the main idea",
+                    "End the paragraph",
+                    "Have no purpose"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Supporting sentences provide details and explain the main idea."
+            },
+            {
+                "id": "q1_7",
+                "question": "Formal letters should be:",
+                "options": [
+                    "Casual",
+                    "Professional",
+                    "Funny",
+                    "Emotional"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Formal letters should maintain a professional tone."
+            },
+            {
+                "id": "q1_8",
+                "question": "What makes writing clear?",
+                "options": [
+                    "Long sentences",
+                    "Simple language",
+                    "Complex words",
+                    "No punctuation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Simple, clear language makes writing easy to understand."
+            }
+        ]
+    }
+}

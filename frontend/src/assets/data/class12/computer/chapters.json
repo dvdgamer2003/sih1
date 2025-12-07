@@ -1,0 +1,26 @@
+[
+    {
+        "id": "comp-12-ch1",
+        "title": "Python Revision Tour",
+        "description": "Review of Python basics, control structures, and functions.",
+        "units": 5,
+        "icon": "laptop",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-12-ch2",
+        "title": "File Handling",
+        "description": "Text files, binary files, and CSV files in Python.",
+        "units": 6,
+        "icon": "laptop",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-12-ch3",
+        "title": "Computer Networks",
+        "description": "Network types, topologies, protocols, and security.",
+        "units": 4,
+        "icon": "laptop",
+        "color": "#60A5FA"
+    }
+]

@@ -1,0 +1,144 @@
+{
+    "id": "comp-10-ch1",
+    "title": "Database Management",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Introduction to Databases",
+            "readingTime": 5,
+            "content": "# Databases\n\nA database is an organized collection of data.\n\n## DBMS\nDatabase Management System\n- MySQL\n- Oracle\n- MongoDB"
+        },
+        {
+            "id": "l2",
+            "title": "SQL Basics",
+            "readingTime": 5,
+            "content": "# SQL\n\nStructured Query Language for managing databases.\n\n## Commands\n- SELECT: Retrieve data\n- INSERT: Add data\n- UPDATE: Modify data\n- DELETE: Remove data"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Database Management",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What is a database?",
+                "options": [
+                    "A program",
+                    "Organized collection of data",
+                    "A website",
+                    "A language"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A database is an organized collection of data."
+            },
+            {
+                "id": "q1_2",
+                "question": "What does DBMS stand for?",
+                "options": [
+                    "Data Base Management System",
+                    "Database Management Software",
+                    "Digital Base Management",
+                    "Data Binary Management"
+                ],
+                "correctAnswer": 0,
+                "explanation": "DBMS stands for Database Management System."
+            },
+            {
+                "id": "q1_3",
+                "question": "Which SQL command retrieves data?",
+                "options": [
+                    "INSERT",
+                    "UPDATE",
+                    "SELECT",
+                    "DELETE"
+                ],
+                "correctAnswer": 2,
+                "explanation": "SELECT command is used to retrieve data from a database."
+            },
+            {
+                "id": "q1_4",
+                "question": "Which is a DBMS?",
+                "options": [
+                    "Python",
+                    "MySQL",
+                    "HTML",
+                    "CSS"
+                ],
+                "correctAnswer": 1,
+                "explanation": "MySQL is a popular Database Management System."
+            },
+            {
+                "id": "q1_5",
+                "question": "What does SQL stand for?",
+                "options": [
+                    "Simple Query Language",
+                    "Structured Query Language",
+                    "Standard Query Language",
+                    "System Query Language"
+                ],
+                "correctAnswer": 1,
+                "explanation": "SQL stands for Structured Query Language."
+            },
+            {
+                "id": "q1_6",
+                "question": "Which command adds data?",
+                "options": [
+                    "SELECT",
+                    "INSERT",
+                    "UPDATE",
+                    "DELETE"
+                ],
+                "correctAnswer": 1,
+                "explanation": "INSERT command adds new data to a database."
+            },
+            {
+                "id": "q1_7",
+                "question": "What is a table in database?",
+                "options": [
+                    "A chart",
+                    "Collection of related data in rows and columns",
+                    "A graph",
+                    "A formula"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A table stores related data in rows and columns."
+            },
+            {
+                "id": "q1_8",
+                "question": "Which command modifies existing data?",
+                "options": [
+                    "SELECT",
+                    "INSERT",
+                    "UPDATE",
+                    "CREATE"
+                ],
+                "correctAnswer": 2,
+                "explanation": "UPDATE command modifies existing data."
+            },
+            {
+                "id": "q1_9",
+                "question": "What is a primary key?",
+                "options": [
+                    "First column",
+                    "Unique identifier for records",
+                    "Last column",
+                    "Any column"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A primary key uniquely identifies each record in a table."
+            },
+            {
+                "id": "q1_10",
+                "question": "Which command removes data?",
+                "options": [
+                    "SELECT",
+                    "INSERT",
+                    "UPDATE",
+                    "DELETE"
+                ],
+                "correctAnswer": 3,
+                "explanation": "DELETE command removes data from a database."
+            }
+        ]
+    }
+}

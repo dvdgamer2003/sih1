@@ -1,0 +1,26 @@
+[
+    {
+        "id": "eng-11-ch1",
+        "title": "The Portrait of a Lady",
+        "description": "A touching story about the author's grandmother.",
+        "units": 3,
+        "icon": "book-alphabet",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-11-ch2",
+        "title": "We're Not Afraid to Die...",
+        "description": "A story of courage and resilience at sea.",
+        "units": 4,
+        "icon": "book-alphabet",
+        "color": "#A78BFA"
+    },
+    {
+        "id": "eng-11-ch3",
+        "title": "Discovering Tut: The Saga Continues",
+        "description": "Exploring the mystery of King Tutankhamun.",
+        "units": 3,
+        "icon": "book-alphabet",
+        "color": "#A78BFA"
+    }
+]

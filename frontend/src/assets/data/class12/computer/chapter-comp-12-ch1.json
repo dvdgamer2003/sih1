@@ -1,0 +1,144 @@
+{
+    "id": "comp-12-ch1",
+    "title": "Data Structures",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Arrays and Lists",
+            "readingTime": 6,
+            "content": "# Arrays and Lists\n\n## Array\n- Fixed size\n- Same data type\n- Contiguous memory\n\n## List\n- Dynamic size\n- Can store different types\n- Flexible"
+        },
+        {
+            "id": "l2",
+            "title": "Stacks and Queues",
+            "readingTime": 5,
+            "content": "# Stacks and Queues\n\n## Stack\n- LIFO (Last In First Out)\n- Operations: Push, Pop, Peek\n\n## Queue\n- FIFO (First In First Out)\n- Operations: Enqueue, Dequeue"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Data Structures",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "Array has:",
+                "options": [
+                    "Variable size",
+                    "Fixed size",
+                    "No size",
+                    "Infinite size"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Arrays have a fixed size that must be declared."
+            },
+            {
+                "id": "q1_2",
+                "question": "Stack follows:",
+                "options": [
+                    "FIFO",
+                    "LIFO",
+                    "Random",
+                    "Sorted"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Stack follows LIFO (Last In First Out) principle."
+            },
+            {
+                "id": "q1_3",
+                "question": "Queue follows:",
+                "options": [
+                    "FIFO",
+                    "LIFO",
+                    "Random",
+                    "Sorted"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Queue follows FIFO (First In First Out) principle."
+            },
+            {
+                "id": "q1_4",
+                "question": "Adding to stack is called:",
+                "options": [
+                    "Enqueue",
+                    "Push",
+                    "Insert",
+                    "Add"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Adding an element to a stack is called Push."
+            },
+            {
+                "id": "q1_5",
+                "question": "Removing from queue is called:",
+                "options": [
+                    "Pop",
+                    "Dequeue",
+                    "Delete",
+                    "Remove"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Removing an element from a queue is called Dequeue."
+            },
+            {
+                "id": "q1_6",
+                "question": "Linked list uses:",
+                "options": [
+                    "Continuous memory",
+                    "Pointers/References",
+                    "Arrays only",
+                    "No memory"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Linked list uses pointers/references to connect nodes."
+            },
+            {
+                "id": "q1_7",
+                "question": "Time complexity to access array element:",
+                "options": [
+                    "O(1)",
+                    "O(n)",
+                    "O(log n)",
+                    "O(n²)"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Array access by index is O(1) - constant time."
+            },
+            {
+                "id": "q1_8",
+                "question": "Binary tree node has maximum:",
+                "options": [
+                    "1 child",
+                    "2 children",
+                    "3 children",
+                    "Unlimited"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Binary tree node has at most 2 children."
+            },
+            {
+                "id": "q1_9",
+                "question": "Hash table provides:",
+                "options": [
+                    "Slow search",
+                    "Fast search",
+                    "No search",
+                    "Random search"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Hash table provides fast (average O(1)) search operations."
+            },
+            {
+                "id": "q1_10",
+                "question": "Graph consists of:",
+                "options": [
+                    "Only nodes",
+                    "Only edges",
+                    "Nodes and edges",
+                    "Arrays"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Graph consists of nodes (vertices) and edges connecting them."
+            }
+        ]
+    }
+}

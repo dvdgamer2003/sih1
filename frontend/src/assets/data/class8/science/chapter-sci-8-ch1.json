@@ -1,0 +1,150 @@
+{
+    "id": "sci-8-ch1",
+    "title": "Crop Production and Management",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Agricultural Practices",
+            "readingTime": 5,
+            "content": "# Agricultural Practices\n\nAgriculture involves growing crops and rearing animals for food and other products.\n\n## Steps in Crop Production\n1. Preparation of soil\n2. Sowing\n3. Adding manure and fertilizers\n4. Irrigation\n5. Protection from weeds\n6. Harvesting\n7. Storage"
+        },
+        {
+            "id": "l2",
+            "title": "Soil Preparation",
+            "readingTime": 4,
+            "content": "# Soil Preparation\n\nSoil is prepared by ploughing, leveling, and manuring.\n\n## Tools Used\n- Plough\n- Hoe\n- Cultivator"
+        },
+        {
+            "id": "l3",
+            "title": "Irrigation",
+            "readingTime": 5,
+            "content": "# Irrigation\n\nSupplying water to crops is called irrigation.\n\n## Methods\n- Sprinkler system\n- Drip irrigation\n- Traditional methods"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Crop Production",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What is the first step in crop production?",
+                "options": [
+                    "Sowing",
+                    "Irrigation",
+                    "Soil preparation",
+                    "Harvesting"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Soil preparation is the first step in crop production."
+            },
+            {
+                "id": "q1_2",
+                "question": "Which tool is used for ploughing?",
+                "options": [
+                    "Sickle",
+                    "Plough",
+                    "Sprinkler",
+                    "Combine"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A plough is used for turning and loosening soil."
+            },
+            {
+                "id": "q1_3",
+                "question": "What is supplying water to crops called?",
+                "options": [
+                    "Harvesting",
+                    "Irrigation",
+                    "Sowing",
+                    "Weeding"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Irrigation is the process of supplying water to crops."
+            },
+            {
+                "id": "q1_4",
+                "question": "Which irrigation method saves water?",
+                "options": [
+                    "Flooding",
+                    "Drip irrigation",
+                    "Canal",
+                    "Traditional"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Drip irrigation saves water by delivering it directly to plant roots."
+            },
+            {
+                "id": "q1_5",
+                "question": "What are unwanted plants in a crop field called?",
+                "options": [
+                    "Weeds",
+                    "Crops",
+                    "Manure",
+                    "Fertilizers"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Unwanted plants that grow along with crops are called weeds."
+            },
+            {
+                "id": "q1_6",
+                "question": "Which adds nutrients to soil?",
+                "options": [
+                    "Weeds",
+                    "Manure",
+                    "Water",
+                    "Plough"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Manure and fertilizers add nutrients to the soil."
+            },
+            {
+                "id": "q1_7",
+                "question": "What is the process of cutting crops called?",
+                "options": [
+                    "Sowing",
+                    "Threshing",
+                    "Harvesting",
+                    "Winnowing"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Harvesting is the process of cutting and gathering mature crops."
+            },
+            {
+                "id": "q1_8",
+                "question": "Which method is used for large-scale watering?",
+                "options": [
+                    "Drip",
+                    "Sprinkler",
+                    "Manual",
+                    "Bucket"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Sprinkler system is used for large-scale irrigation."
+            },
+            {
+                "id": "q1_9",
+                "question": "Why is soil preparation important?",
+                "options": [
+                    "To remove weeds",
+                    "To loosen soil for roots",
+                    "To add water",
+                    "To harvest crops"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Soil preparation loosens the soil, allowing roots to penetrate easily."
+            },
+            {
+                "id": "q1_10",
+                "question": "What separates grain from chaff?",
+                "options": [
+                    "Harvesting",
+                    "Sowing",
+                    "Winnowing",
+                    "Ploughing"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Winnowing separates grain from chaff using wind."
+            }
+        ]
+    }
+}

@@ -1,0 +1,156 @@
+{
+    "id": "comp-6-ch1",
+    "title": "Introduction to Computers",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "What is a Computer?",
+            "readingTime": 5,
+            "content": "# What is a Computer?\n\nA computer is an electronic device that processes data and performs tasks according to instructions.\n\n## Characteristics of Computers\n\n- **Speed**: Computers can perform millions of calculations per second\n- **Accuracy**: Computers rarely make mistakes if programmed correctly\n- **Storage**: Can store large amounts of data\n- **Automation**: Can work automatically once programmed\n\n## Uses of Computers\n\n- Education and learning\n- Communication\n- Entertainment\n- Business and banking\n- Scientific research"
+        },
+        {
+            "id": "l2",
+            "title": "Parts of a Computer",
+            "readingTime": 6,
+            "content": "# Parts of a Computer\n\nA computer system has several important parts that work together.\n\n## Input Devices\n- **Keyboard**: For typing text and numbers\n- **Mouse**: For pointing and clicking\n- **Microphone**: For recording sound\n\n## Output Devices\n- **Monitor**: Displays information\n- **Printer**: Prints on paper\n- **Speakers**: Produces sound\n\n## Processing Unit\n- **CPU (Central Processing Unit)**: The brain of the computer\n- Processes all instructions and data"
+        },
+        {
+            "id": "l3",
+            "title": "Computer Memory",
+            "readingTime": 5,
+            "content": "# Computer Memory\n\nComputers use memory to store information.\n\n## Types of Memory\n\n### Primary Memory (RAM)\n- Temporary storage\n- Data is lost when computer is turned off\n- Fast access\n\n### Secondary Memory\n- Permanent storage\n- Hard disk, USB drive, CD/DVD\n- Data remains even when computer is off"
+        },
+        {
+            "id": "l4",
+            "title": "Computer Software",
+            "readingTime": 4,
+            "content": "# Computer Software\n\nSoftware is a set of instructions that tells the computer what to do.\n\n## Types of Software\n\n### System Software\n- Operating System (Windows, Linux, macOS)\n- Controls the computer hardware\n\n### Application Software\n- Programs for specific tasks\n- MS Word, Paint, Games, Web browsers"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Introduction to Computers",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What is a computer?",
+                "options": [
+                    "A toy",
+                    "An electronic device that processes data",
+                    "A book",
+                    "A calculator only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A computer is an electronic device that processes data and performs tasks according to instructions."
+            },
+            {
+                "id": "q1_2",
+                "question": "Which of these is an input device?",
+                "options": [
+                    "Monitor",
+                    "Printer",
+                    "Keyboard",
+                    "Speaker"
+                ],
+                "correctAnswer": 2,
+                "explanation": "A keyboard is an input device used to enter data into the computer."
+            },
+            {
+                "id": "q1_3",
+                "question": "What does CPU stand for?",
+                "options": [
+                    "Computer Processing Unit",
+                    "Central Processing Unit",
+                    "Central Program Unit",
+                    "Computer Program Unit"
+                ],
+                "correctAnswer": 1,
+                "explanation": "CPU stands for Central Processing Unit, which is the brain of the computer."
+            },
+            {
+                "id": "q1_4",
+                "question": "Which memory loses data when the computer is turned off?",
+                "options": [
+                    "Hard disk",
+                    "RAM",
+                    "USB drive",
+                    "CD"
+                ],
+                "correctAnswer": 1,
+                "explanation": "RAM (Random Access Memory) is temporary memory that loses data when power is turned off."
+            },
+            {
+                "id": "q1_5",
+                "question": "Which is an output device?",
+                "options": [
+                    "Mouse",
+                    "Keyboard",
+                    "Monitor",
+                    "Microphone"
+                ],
+                "correctAnswer": 2,
+                "explanation": "A monitor is an output device that displays information from the computer."
+            },
+            {
+                "id": "q1_6",
+                "question": "What is system software?",
+                "options": [
+                    "Games",
+                    "MS Word",
+                    "Operating System",
+                    "Paint program"
+                ],
+                "correctAnswer": 2,
+                "explanation": "System software includes the Operating System which controls the computer hardware."
+            },
+            {
+                "id": "q1_7",
+                "question": "Which characteristic allows computers to work without human intervention?",
+                "options": [
+                    "Speed",
+                    "Accuracy",
+                    "Automation",
+                    "Storage"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Automation allows computers to work automatically once programmed."
+            },
+            {
+                "id": "q1_8",
+                "question": "Which device is used for permanent storage?",
+                "options": [
+                    "RAM",
+                    "Cache",
+                    "Hard disk",
+                    "Registers"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Hard disk is a secondary storage device that stores data permanently."
+            },
+            {
+                "id": "q1_9",
+                "question": "What type of software is MS Word?",
+                "options": [
+                    "System software",
+                    "Operating system",
+                    "Application software",
+                    "Hardware"
+                ],
+                "correctAnswer": 2,
+                "explanation": "MS Word is application software used for word processing tasks."
+            },
+            {
+                "id": "q1_10",
+                "question": "Which device converts computer output to paper?",
+                "options": [
+                    "Monitor",
+                    "Printer",
+                    "Scanner",
+                    "Speaker"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A printer is an output device that prints computer output on paper."
+            }
+        ]
+    }
+}

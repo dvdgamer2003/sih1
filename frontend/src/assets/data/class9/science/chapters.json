@@ -1,0 +1,42 @@
+[
+    {
+        "id": "sci-9-ch1",
+        "title": "Laws of Motion",
+        "description": "Study motion, distance, displacement, speed, velocity and acceleration.",
+        "units": 3,
+        "icon": "run-fast",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-9-ch2",
+        "title": "Work and Energy",
+        "description": "Understand the relationship between work and energy.",
+        "units": 3,
+        "icon": "flash",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-9-ch3",
+        "title": "Current Electricity",
+        "description": "Learn about electric current, potential difference and resistance.",
+        "units": 3,
+        "icon": "lightning-bolt",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-9-ch4",
+        "title": "Measurement of Matter",
+        "description": "Laws of chemical combination and atomic mass.",
+        "units": 2,
+        "icon": "scale-balance",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-9-ch5",
+        "title": "Acids, Bases and Salts",
+        "description": "Properties and types of acids, bases and salts.",
+        "units": 3,
+        "icon": "flask-outline",
+        "color": "#4ECDC4"
+    }
+]

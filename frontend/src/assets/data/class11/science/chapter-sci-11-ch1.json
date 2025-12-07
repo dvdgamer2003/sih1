@@ -1,0 +1,144 @@
+{
+    "id": "sci-11-ch1",
+    "title": "Thermodynamics",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Laws of Thermodynamics",
+            "readingTime": 6,
+            "content": "# Thermodynamics\n\nThermodynamics deals with heat, work, and energy.\n\n## Laws\n- **Zeroth Law**: Thermal equilibrium\n- **First Law**: Energy conservation\n- **Second Law**: Entropy increases\n- **Third Law**: Absolute zero"
+        },
+        {
+            "id": "l2",
+            "title": "Heat Transfer",
+            "readingTime": 5,
+            "content": "# Heat Transfer\n\n## Methods\n- Conduction: Through direct contact\n- Convection: Through fluid movement\n- Radiation: Through electromagnetic waves"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Thermodynamics",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What does the First Law state?",
+                "options": [
+                    "Energy is created",
+                    "Energy is conserved",
+                    "Energy is destroyed",
+                    "Energy is constant"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The First Law states that energy is conserved (cannot be created or destroyed)."
+            },
+            {
+                "id": "q1_2",
+                "question": "Which heat transfer needs a medium?",
+                "options": [
+                    "Radiation",
+                    "Conduction",
+                    "Both A and B",
+                    "None"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Conduction requires a medium for heat transfer."
+            },
+            {
+                "id": "q1_3",
+                "question": "What is entropy?",
+                "options": [
+                    "Energy",
+                    "Disorder",
+                    "Temperature",
+                    "Pressure"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Entropy is a measure of disorder in a system."
+            },
+            {
+                "id": "q1_4",
+                "question": "Which doesn't need a medium?",
+                "options": [
+                    "Conduction",
+                    "Convection",
+                    "Radiation",
+                    "All need medium"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Radiation doesn't need a medium and can travel through vacuum."
+            },
+            {
+                "id": "q1_5",
+                "question": "What is absolute zero?",
+                "options": [
+                    "0°C",
+                    "0°F",
+                    "0 K",
+                    "100 K"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Absolute zero is 0 Kelvin (-273.15°C)."
+            },
+            {
+                "id": "q1_6",
+                "question": "Convection occurs in:",
+                "options": [
+                    "Solids",
+                    "Fluids",
+                    "Vacuum",
+                    "Metals only"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Convection occurs in fluids (liquids and gases)."
+            },
+            {
+                "id": "q1_7",
+                "question": "Second Law states entropy:",
+                "options": [
+                    "Decreases",
+                    "Increases",
+                    "Stays same",
+                    "Becomes zero"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The Second Law states that entropy of an isolated system increases."
+            },
+            {
+                "id": "q1_8",
+                "question": "Heat flows from:",
+                "options": [
+                    "Cold to hot",
+                    "Hot to cold",
+                    "Both ways equally",
+                    "Doesn't flow"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Heat naturally flows from hot to cold objects."
+            },
+            {
+                "id": "q1_9",
+                "question": "Which is fastest heat transfer?",
+                "options": [
+                    "Conduction",
+                    "Convection",
+                    "Radiation",
+                    "All same"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Radiation is the fastest as it travels at the speed of light."
+            },
+            {
+                "id": "q1_10",
+                "question": "Thermal equilibrium means:",
+                "options": [
+                    "Different temperatures",
+                    "Same temperature",
+                    "No heat",
+                    "Maximum heat"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Thermal equilibrium means objects are at the same temperature."
+            }
+        ]
+    }
+}

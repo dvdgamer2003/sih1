@@ -1,0 +1,4 @@
+// Placeholder - Replace with actual sound files
+// This file exists to prevent import errors
+// Download actual sound files from the resources listed in README.md
+export default null;

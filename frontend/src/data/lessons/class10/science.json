@@ -1,0 +1,408 @@
+{
+    "class": "10",
+    "board": "CBSE (NCERT)",
+    "subject": "Science",
+    "textbook": "Science – Textbook for Class X (Rationalised Edition)",
+    "academic_year": "2025-26",
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Chemical Reactions and Equations",
+        "topics": [
+          "Introduction to chemical reactions",
+          "Writing chemical equations and balancing them",
+          "Types of chemical reactions: combination, decomposition, displacement, double displacement",
+          "Exothermic and endothermic reactions",
+          "Oxidation and reduction (redox reactions)",
+          "Effects of oxidation in everyday life (corrosion, rancidity)"
+        ],
+        "notes": {
+          "summary": "This chapter introduces chemical reactions and shows how to represent them using balanced equations, classify types of reactions, and understand oxidation and reduction in daily life.",
+          "key_points": [
+            "A chemical reaction involves chemical change in which reactants form new substances called products with different properties.",
+            "Chemical equations use symbols and formulae to represent reactions and must be balanced to obey the law of conservation of mass.",
+            "Important types of reactions include combination, decomposition, displacement, and double displacement, each with characteristic patterns.",
+            "Oxidation involves gain of oxygen or loss of hydrogen, while reduction is loss of oxygen or gain of hydrogen, and many reactions are redox in nature.",
+            "Corrosion of metals and rancidity of oils are practical examples of slow oxidation that cause damage to materials and food."
+          ],
+          "keywords": [
+            "chemical reaction",
+            "balanced equation",
+            "combination reaction",
+            "decomposition",
+            "oxidation",
+            "reduction",
+            "corrosion"
+          ]
+        }
+      },
+      {
+        "number": 2,
+        "title": "Acids, Bases and Salts",
+        "topics": [
+          "General properties of acids and bases",
+          "Indicators: litmus, phenolphthalein, methyl orange, natural indicators",
+          "Chemical reactions of acids and bases with metals, metal carbonates, and metal oxides",
+          "Neutralisation and formation of salts",
+          "pH scale and importance of pH in everyday life",
+          "Some important salts and their uses (e.g., baking soda, washing soda, plaster of paris)"
+        ],
+        "notes": {
+          "summary": "The chapter compares acids and bases, explains how they react with different substances, introduces the pH scale, and discusses important salts used in daily life.",
+          "key_points": [
+            "Acids turn blue litmus red and generally have sour taste, while bases turn red litmus blue and feel soapy.",
+            "Indicators change colour in acidic or basic solutions and help identify the nature of a substance.",
+            "Acids react with metals to produce hydrogen gas, with metal carbonates to give carbon dioxide, and with bases to form salts and water.",
+            "The pH scale (0–14) measures acidity or basicity of a solution; many biological and environmental processes depend on specific pH ranges.",
+            "Common salts like sodium chloride, baking soda, washing soda, and plaster of Paris have widespread household and industrial applications."
+          ],
+          "keywords": [
+            "acid",
+            "base",
+            "salt",
+            "indicator",
+            "neutralisation",
+            "pH"
+          ]
+        }
+      },
+      {
+        "number": 3,
+        "title": "Metals and Non-metals",
+        "topics": [
+          "Physical properties of metals and non-metals",
+          "Chemical properties: reaction with oxygen, water, acids, and bases",
+          "Reactivity series of metals and displacement reactions",
+          "Corrosion and its prevention",
+          "Alloys and their advantages",
+          "Occurrence of metals and basic ideas of metallurgy (ore, concentration, extraction)"
+        ],
+        "notes": {
+          "summary": "This chapter compares physical and chemical properties of metals and non-metals, introduces the reactivity series, and explains corrosion, prevention, and basic metallurgical processes.",
+          "key_points": [
+            "Metals are generally lustrous, malleable, ductile, good conductors of heat and electricity, while non-metals usually lack these properties.",
+            "Metals form basic oxides and react with dilute acids to produce hydrogen gas, whereas many non-metals form acidic or neutral oxides.",
+            "The reactivity series arranges metals in order of decreasing reactivity and helps predict displacement reactions and extraction methods.",
+            "Corrosion, such as rusting of iron, damages metal objects but can be controlled by painting, galvanising, alloying, or applying protective coatings.",
+            "Metals occur in nature as ores and are extracted using processes like roasting, calcination, reduction, and refining depending on reactivity."
+          ],
+          "keywords": [
+            "metal",
+            "non-metal",
+            "reactivity series",
+            "corrosion",
+            "alloy",
+            "metallurgy"
+          ]
+        }
+      },
+      {
+        "number": 4,
+        "title": "Carbon and its Compounds",
+        "topics": [
+          "Covalent bonding in carbon compounds",
+          "Versatile nature of carbon: catenation and tetravalency",
+          "Saturated and unsaturated hydrocarbons",
+          "Homologous series and functional groups",
+          "Nomenclature of simple carbon compounds",
+          "Important reactions of carbon compounds (combustion, oxidation, addition, substitution)",
+          "Ethanol and ethanoic acid: properties and uses",
+          "Soaps and detergents (basic idea)"
+        ],
+        "notes": {
+          "summary": "The chapter explores why carbon forms such a large number of compounds, explains covalent bonding and functional groups, and discusses common organic compounds and their reactions.",
+          "key_points": [
+            "Carbon shows tetravalency and catenation, allowing it to form long chains, branched, and ring structures with covalent bonds.",
+            "Hydrocarbons may be saturated (single bonds) or unsaturated (double or triple bonds), leading to different reactivities.",
+            "A homologous series is a family of organic compounds with the same functional group, similar chemical properties, and successive members differing by a CH₂ unit.",
+            "Functional groups like alcohol, carboxylic acid, aldehyde, and halogen determine many properties of organic molecules.",
+            "Common compounds such as ethanol and ethanoic acid have important everyday uses, and soaps and detergents help in cleaning by emulsifying oils and grease."
+          ],
+          "keywords": [
+            "carbon",
+            "covalent bond",
+            "hydrocarbon",
+            "functional group",
+            "homologous series",
+            "ethanol",
+            "soap"
+          ]
+        }
+      },
+      {
+        "number": 5,
+        "title": "Life Processes",
+        "topics": [
+          "What are life processes",
+          "Nutrition in plants and animals (autotrophic and heterotrophic)",
+          "Human digestive system: organs and functions",
+          "Respiration: aerobic and anaerobic; human respiratory system",
+          "Transportation in plants and animals (xylem, phloem, heart, blood vessels)",
+          "Excretion in humans and plants",
+          "Importance of these processes for maintaining life"
+        ],
+        "notes": {
+          "summary": "This chapter describes the basic life processes—nutrition, respiration, transport, and excretion—in plants and animals, focusing on human systems and their functions.",
+          "key_points": [
+            "Life processes are activities like nutrition, respiration, transport, and excretion that are necessary for organisms to stay alive.",
+            "Autotrophic organisms, such as green plants, prepare their own food by photosynthesis, while animals depend on other organisms for nutrition.",
+            "In humans, the digestive and respiratory systems break down food and supply oxygen so that energy can be released by cellular respiration.",
+            "The circulatory system transports nutrients, gases, and wastes using blood, the heart, and a network of blood vessels.",
+            "Excretory organs like kidneys remove metabolic wastes and maintain water and salt balance to keep the internal environment stable."
+          ],
+          "keywords": [
+            "life process",
+            "nutrition",
+            "respiration",
+            "circulation",
+            "excretion"
+          ]
+        }
+      },
+      {
+        "number": 6,
+        "title": "Control and Coordination",
+        "topics": [
+          "Need for control and coordination in organisms",
+          "Nervous system in animals: neurons, reflex action, central nervous system",
+          "Human brain: main parts and functions (cerebrum, cerebellum, medulla)",
+          "Chemical coordination in animals: role of hormones and endocrine glands",
+          "Coordination in plants: plant hormones and responses to stimuli (tropisms)",
+          "Comparison of control systems in plants and animals"
+        ],
+        "notes": {
+          "summary": "The chapter explains how animals and plants coordinate their activities using nervous and chemical control systems to respond to internal and external changes.",
+          "key_points": [
+            "Control and coordination ensure different body parts work together smoothly in response to stimuli from the environment or within the organism.",
+            "In animals, the nervous system carries electrical impulses through neurons to and from the brain and spinal cord, enabling quick responses.",
+            "Reflex actions are fast, automatic responses that protect the body from harm and are controlled by the spinal cord.",
+            "Hormones produced by endocrine glands regulate growth, metabolism, and many long-term processes such as puberty and sugar balance.",
+            "Plants use chemical messengers like auxins and other hormones to control movements and growth responses toward light, gravity, and touch."
+          ],
+          "keywords": [
+            "nervous system",
+            "neuron",
+            "reflex",
+            "hormone",
+            "endocrine gland",
+            "tropism"
+          ]
+        }
+      },
+      {
+        "number": 7,
+        "title": "How do Organisms Reproduce?",
+        "topics": [
+          "Importance of reproduction for continuity of species",
+          "Asexual reproduction: fission, budding, spore formation, regeneration, vegetative propagation",
+          "Sexual reproduction in flowering plants",
+          "Sexual reproduction in humans (basic idea)",
+          "Reproductive health and awareness (elementary)",
+          "Variation produced during sexual reproduction"
+        ],
+        "notes": {
+          "summary": "This chapter explains different modes of reproduction in organisms, from simple asexual methods to sexual reproduction in plants and humans, and highlights the role of variation.",
+          "key_points": [
+            "Reproduction produces new individuals of a species and helps maintain its continuity over generations.",
+            "Asexual reproduction involves a single parent and produces genetically identical offspring, as seen in binary fission or budding.",
+            "In flowering plants, sexual reproduction involves pollination, fertilisation, seed and fruit formation.",
+            "Human reproduction includes formation of gametes, fertilisation, development of the embryo, and birth, supported by reproductive organs and hormones.",
+            "Sexual reproduction introduces variation in offspring, which is important for adaptation and evolution."
+          ],
+          "keywords": [
+            "reproduction",
+            "asexual reproduction",
+            "sexual reproduction",
+            "pollination",
+            "fertilisation",
+            "variation"
+          ]
+        }
+      },
+      {
+        "number": 8,
+        "title": "Heredity and Evolution",
+        "topics": [
+          "Transmission of traits from parents to offspring",
+          "Mendel’s experiments and laws of inheritance (monohybrid crosses)",
+          "Dominant and recessive traits",
+          "Sex determination in humans",
+          "Role of variation and natural selection in evolution (elementary idea)",
+          "Fossils and evolutionary relationships (limited to basic concept)"
+        ],
+        "notes": {
+          "summary": "The chapter deals with heredity, explaining how traits are inherited according to Mendel’s principles, and introduces simple ideas about evolution and the role of variation.",
+          "key_points": [
+            "Heredity refers to the passing of characters from parents to offspring through genes located on chromosomes.",
+            "Mendel’s experiments with pea plants led to the laws of segregation and dominance, explaining predictable patterns in monohybrid crosses.",
+            "Traits that appear in the first generation are called dominant, while those that can reappear in later generations are recessive.",
+            "Sex of a child in humans is determined by the combination of sex chromosomes contributed by the parents.",
+            "Variations arising in populations, combined with natural selection over long periods, contribute to evolutionary change and diversity of life."
+          ],
+          "keywords": [
+            "heredity",
+            "gene",
+            "dominant",
+            "recessive",
+            "sex determination",
+            "evolution",
+            "variation"
+          ]
+        }
+      },
+      {
+        "number": 9,
+        "title": "Light – Reflection and Refraction",
+        "topics": [
+          "Reflection of light by plane and spherical mirrors",
+          "Image formation by concave and convex mirrors",
+          "Uses of spherical mirrors",
+          "Refraction of light and refractive index (basic concept)",
+          "Refraction through a rectangular glass slab",
+          "Image formation by convex and concave lenses",
+          "Lens formula and simple ray diagrams (conceptual use)",
+          "Applications of lenses in devices"
+        ],
+        "notes": {
+          "summary": "This chapter studies how light reflects from mirrors and refracts through lenses and glass slabs, and uses ray diagrams to understand image formation and applications.",
+          "key_points": [
+            "Reflection from plane and spherical mirrors follows the laws of reflection and produces images whose nature depends on object position.",
+            "Concave mirrors can form real or virtual images and are used in devices like reflectors, while convex mirrors give virtual, diminished images useful as rear-view mirrors.",
+            "Refraction is the bending of light when it passes from one transparent medium to another with different optical density.",
+            "Convex lenses can form real, inverted images or virtual, magnified images depending on object distance, while concave lenses always produce virtual, diminished images.",
+            "Mirror and lens formulas and ray diagrams help in predicting image position, size, and nature in optical instruments."
+          ],
+          "keywords": [
+            "reflection",
+            "concave mirror",
+            "convex mirror",
+            "refraction",
+            "convex lens",
+            "concave lens"
+          ]
+        }
+      },
+      {
+        "number": 10,
+        "title": "The Human Eye and the Colourful World",
+        "topics": [
+          "Structure and working of the human eye",
+          "Persistence of vision and defects of vision (myopia, hypermetropia, their correction)",
+          "Refraction of light through a prism",
+          "Dispersion of white light and formation of spectrum",
+          "Atmospheric refraction and its effects (e.g., twinkling of stars, advanced sunrise and delayed sunset)",
+          "Formation of rainbow (qualitative idea)"
+        ],
+        "notes": {
+          "summary": "The chapter explains how the human eye works, common vision defects and their correction, and discusses dispersion and atmospheric refraction leading to natural optical phenomena.",
+          "key_points": [
+            "The human eye uses a lens system to focus light on the retina, where sensitive cells convert light into nerve signals sent to the brain.",
+            "Defects like myopia and hypermetropia arise due to changes in eye lens shape or eyeball length and are corrected using suitable lenses.",
+            "A glass prism refracts light differently at its boundaries, causing deviation and dispersion of white light into its constituent colours.",
+            "Atmospheric refraction bends light from celestial objects, leading to phenomena like apparent star positions and early sunrise.",
+            "Rainbows form when sunlight is dispersed, reflected, and refracted by water droplets in the atmosphere, separating colours."
+          ],
+          "keywords": [
+            "human eye",
+            "myopia",
+            "hypermetropia",
+            "prism",
+            "dispersion",
+            "rainbow"
+          ]
+        }
+      },
+      {
+        "number": 11,
+        "title": "Electricity",
+        "topics": [
+          "Electric current and electric potential difference",
+          "Ohm’s law and its experimental verification",
+          "Resistance and factors affecting resistance of a conductor",
+          "Resistors in series and in parallel",
+          "Heating effect of electric current and electric power",
+          "Safe use of electricity in daily life"
+        ],
+        "notes": {
+          "summary": "This chapter introduces electric current, potential difference, resistance, and Ohm’s law, and explains power and heating effects with practical circuit arrangements.",
+          "key_points": [
+            "Electric current is the rate of flow of charge through a conductor and is driven by potential difference between two points.",
+            "Ohm’s law states that the current through a conductor is directly proportional to potential difference across it at constant temperature.",
+            "Resistance depends on length, area of cross-section, material, and temperature of the conductor.",
+            "Resistors connected in series and parallel combinations show different equivalent resistances and current-voltage distributions.",
+            "The heating effect of current, described by Joule’s law, is used in devices like heaters and fuses, while electrical power measures the rate of energy consumption."
+          ],
+          "keywords": [
+            "electric current",
+            "potential difference",
+            "Ohm’s law",
+            "resistance",
+            "electric power",
+            "heating effect"
+          ]
+        }
+      },
+      {
+        "number": 12,
+        "title": "Magnetic Effects of Electric Current",
+        "topics": [
+          "Magnetic field and its representation by field lines",
+          "Magnetic field due to a current-carrying straight conductor and coil",
+          "Right-hand thumb rule and factors affecting field strength",
+          "Magnetic field due to a current-carrying solenoid",
+          "Force on a current-carrying conductor in a magnetic field (concept)",
+          "Electric motor: principle and working (simple DC motor)",
+          "Electromagnetic induction and simple electric generator (basic idea)"
+        ],
+        "notes": {
+          "summary": "The chapter shows how electric current produces magnetic fields, explains the working of electric motors, and introduces electromagnetic induction and generators in qualitative terms.",
+          "key_points": [
+            "A current-carrying conductor produces a magnetic field around it, whose direction is given by the right-hand thumb rule.",
+            "Coils and solenoids concentrate magnetic fields and behave like bar magnets with distinct poles.",
+            "A current-carrying conductor placed in a magnetic field experiences a force, which is used in the working of electric motors.",
+            "A simple DC motor converts electrical energy into mechanical energy based on the interaction of current and magnetic field.",
+            "Changing magnetic field in a coil induces an electric current (electromagnetic induction), which is the basic principle of generators."
+          ],
+          "keywords": [
+            "magnetic field",
+            "field line",
+            "solenoid",
+            "electric motor",
+            "electromagnetic induction",
+            "generator"
+          ]
+        }
+      },
+      {
+        "number": 13,
+        "title": "Our Environment",
+        "topics": [
+          "Ecosystem and its components: biotic and abiotic",
+          "Food chains and food webs",
+          "Trophic levels and energy flow in an ecosystem",
+          "Ozone layer and its depletion (elementary idea)",
+          "Waste management: biodegradable and non-biodegradable substances",
+          "Human impact on the environment and need for sustainable practices"
+        ],
+        "notes": {
+          "summary": "This chapter looks at ecosystems, food chains, energy flow, and human impacts on the environment, stressing the importance of managing waste and protecting natural systems.",
+          "key_points": [
+            "An ecosystem consists of living organisms interacting with each other and with the non-living environment in a balanced way.",
+            "Food chains and food webs show how energy and matter move between producers, consumers, and decomposers.",
+            "Only a fraction of energy is transferred from one trophic level to the next, limiting the number of levels in an ecosystem.",
+            "Human activities like overuse of resources, pollution, and improper waste disposal disturb ecological balance and contribute to issues such as ozone depletion.",
+            "Segregation and reduction of waste, recycling, and sustainable use of resources help protect the environment for future generations."
+          ],
+          "keywords": [
+            "ecosystem",
+            "food chain",
+            "trophic level",
+            "ozone depletion",
+            "biodegradable",
+            "sustainability"
+          ]
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,1083 @@
+{
+    "class": "12",
+    "board": "CBSE (NCERT)",
+    "stream": "Science",
+    "academic_year": "2025-26",
+    "subjects": [
+      {
+        "subject": "Physics",
+        "textbook": "Physics – Textbook for Class XII (Part I & II)",
+        "chapters": [
+          {
+            "number": 1,
+            "title": "Electric Charges and Fields",
+            "topics": [
+              "Electric charge: properties and types",
+              "Coulomb’s law and superposition principle",
+              "Electric field and field lines",
+              "Electric flux and Gauss’s law (applications to simple symmetric cases)"
+            ],
+            "notes": {
+              "summary": "Introduces electric charge, the inverse‑square law of interaction, and electric fields; uses Gauss’s law to compute fields in symmetric charge distributions.",
+              "key_points": [
+                "Like charges repel and unlike charges attract; charge is conserved and quantized.",
+                "Coulomb’s law gives the force between point charges and combines using superposition for many charges.",
+                "Electric field describes force per unit positive test charge and is visualised with field lines.",
+                "Gauss’s law relates electric flux through a closed surface to enclosed charge and simplifies field calculations for high symmetry."
+              ],
+              "keywords": [
+                "electric charge",
+                "Coulomb’s law",
+                "electric field",
+                "Gauss’s law"
+              ]
+            }
+          },
+          {
+            "number": 2,
+            "title": "Electrostatic Potential and Capacitance",
+            "topics": [
+              "Electric potential and potential difference",
+              "Relation between field and potential",
+              "Equipotential surfaces",
+              "Capacitors and capacitance; series and parallel combinations",
+              "Energy stored in a capacitor"
+            ],
+            "notes": {
+              "summary": "Connects electric field to potential energy per unit charge and develops the concept of capacitance and energy storage in electric fields.",
+              "key_points": [
+                "Potential difference is work done per unit charge in moving a test charge between two points.",
+                "Field is the negative gradient of potential; equipotential surfaces are perpendicular to field lines.",
+                "Capacitance measures the ability to store charge per unit potential, enhanced by dielectrics and geometry.",
+                "Capacitors in series and parallel combine with reciprocal and direct addition rules respectively."
+              ],
+              "keywords": [
+                "electric potential",
+                "capacitance",
+                "capacitor",
+                "dielectric"
+              ]
+            }
+          },
+          {
+            "number": 3,
+            "title": "Current Electricity",
+            "topics": [
+              "Electric current and drift of electrons",
+              "Ohm’s law and microscopic form",
+              "Resistivity and its temperature dependence",
+              "Series and parallel combinations of resistors",
+              "Wheatstone bridge and meter bridge",
+              "Kirchhoff’s laws and their applications",
+              "Potentiometer (principle and uses)"
+            ],
+            "notes": {
+              "summary": "Develops current flow in conductors, circuit laws, and practical bridge and potentiometer techniques for precise measurements.",
+              "key_points": [
+                "Current is due to drift motion of electrons under an applied electric field; resistivity depends on material and temperature.",
+                "Ohm’s law relates current to potential difference at constant temperature; deviations occur in some materials.",
+                "Kirchhoff’s laws allow analysis of complex networks using conservation of charge and energy.",
+                "Bridge circuits and potentiometers achieve accurate resistance and emf measurements."
+              ],
+              "keywords": [
+                "Ohm’s law",
+                "resistivity",
+                "Kirchhoff’s laws",
+                "Wheatstone bridge",
+                "potentiometer"
+              ]
+            }
+          },
+          {
+            "number": 4,
+            "title": "Moving Charges and Magnetism",
+            "topics": [
+              "Magnetic force on a moving charge and current‑carrying conductor",
+              "Biot–Savart law and Ampere’s circuital law",
+              "Magnetic field of a straight wire, circular loop, and solenoid",
+              "Torque on a current loop and moving coil galvanometer"
+            ],
+            "notes": {
+              "summary": "Relates motion of charges to magnetic fields and forces; derives fields for simple current geometries and explains galvanometer operation.",
+              "key_points": [
+                "A moving charge experiences a force perpendicular to both velocity and magnetic field.",
+                "Biot–Savart and Ampere’s laws compute magnetic fields for symmetric conductor arrangements.",
+                "Solenoids and toroids create nearly uniform internal magnetic fields with controllable strength.",
+                "A current loop behaves as a magnetic dipole and experiences torque in a field, enabling galvanometer design."
+              ],
+              "keywords": [
+                "Lorentz force",
+                "Biot–Savart law",
+                "Ampere’s law",
+                "solenoid",
+                "galvanometer"
+              ]
+            }
+          },
+          {
+            "number": 5,
+            "title": "Magnetism and Matter",
+            "topics": [
+              "Magnetisation and magnetic susceptibility",
+              "Dia-, para-, and ferromagnetic materials",
+              "Earth’s magnetism (elements and magnetic field)",
+              "Bar magnet as an equivalent solenoid"
+            ],
+            "notes": {
+              "summary": "Discusses magnetic response of materials, Earth’s magnetic field, and models a bar magnet as a solenoid.",
+              "key_points": [
+                "Material response to magnetic field is quantified by magnetisation and susceptibility.",
+                "Diamagnets are weakly repelled, paramagnets weakly attracted, and ferromagnets strongly attracted and can be permanently magnetised.",
+                "Earth behaves like a giant magnet with inclination, declination, and horizontal component of field."
+              ],
+              "keywords": [
+                "magnetisation",
+                "susceptibility",
+                "diamagnetism",
+                "paramagnetism",
+                "ferromagnetism"
+              ]
+            }
+          },
+          {
+            "number": 6,
+            "title": "Electromagnetic Induction",
+            "topics": [
+              "Faraday’s laws of electromagnetic induction",
+              "Lenz’s law and conservation of energy",
+              "Motional emf",
+              "Self and mutual induction; inductors and energy in magnetic field",
+              "AC generator (principle)"
+            ],
+            "notes": {
+              "summary": "Explains how changing magnetic fields induce emf and current, leading to generators and inductors.",
+              "key_points": [
+                "An emf is induced when magnetic flux through a circuit changes with time.",
+                "Lenz’s law gives direction of induced current to oppose flux change, ensuring energy conservation.",
+                "Inductors store energy in magnetic fields and oppose changes in current."
+              ],
+              "keywords": [
+                "Faraday’s law",
+                "Lenz’s law",
+                "inductance",
+                "generator"
+              ]
+            }
+          },
+          {
+            "number": 7,
+            "title": "Alternating Current",
+            "topics": [
+              "AC voltage and current; RMS values",
+              "Reactance and impedance of L, C, and RLC circuits",
+              "Resonance and power factor",
+              "Transformers (principle and ideal relations)"
+            ],
+            "notes": {
+              "summary": "Introduces AC circuits and resonance, and shows how transformers step voltages up or down efficiently.",
+              "key_points": [
+                "AC quantities vary sinusoidally; RMS values represent effective heating equivalents.",
+                "Capacitors and inductors oppose changes in voltage/current, introducing phase differences.",
+                "At resonance, an RLC circuit draws maximum current; power factor influences real power delivered.",
+                "Transformers use electromagnetic induction to change AC voltages with minimal losses."
+              ],
+              "keywords": [
+                "RMS",
+                "impedance",
+                "resonance",
+                "power factor",
+                "transformer"
+              ]
+            }
+          },
+          {
+            "number": 8,
+            "title": "Electromagnetic Waves",
+            "topics": [
+              "Maxwell’s equations (qualitative) and prediction of EM waves",
+              "Nature and properties of EM waves",
+              "Electromagnetic spectrum and uses of different bands"
+            ],
+            "notes": {
+              "summary": "Shows that time‑varying electric and magnetic fields propagate as electromagnetic waves across the spectrum.",
+              "key_points": [
+                "Changing electric fields generate magnetic fields and vice versa, allowing self‑sustaining waves.",
+                "EM waves are transverse, travel at speed of light in vacuum, and carry energy and momentum.",
+                "Different frequency bands (radio to gamma) have distinct applications and interactions with matter."
+              ],
+              "keywords": [
+                "electromagnetic wave",
+                "spectrum",
+                "Maxwell"
+              ]
+            }
+          },
+          {
+            "number": 9,
+            "title": "Ray Optics and Optical Instruments",
+            "topics": [
+              "Refraction and total internal reflection",
+              "Lens maker’s formula (concept) and thin lens formula",
+              "Refraction through prisms; dispersion and deviation",
+              "Optical instruments: microscope and telescope (basic ideas)"
+            ],
+            "notes": {
+              "summary": "Uses the ray model to analyse image formation by lenses and prisms and introduces basic optical instruments.",
+              "key_points": [
+                "Snell’s law governs refraction; total internal reflection enables devices like optical fibres.",
+                "Thin lens formula relates object distance, image distance, and focal length.",
+                "Prisms deviate and disperse light based on wavelength dependence of refractive index.",
+                "Compound microscopes and astronomical telescopes magnify small or distant objects using lens combinations."
+              ],
+              "keywords": [
+                "refraction",
+                "total internal reflection",
+                "lens formula",
+                "microscope",
+                "telescope"
+              ]
+            }
+          },
+          {
+            "number": 10,
+            "title": "Wave Optics",
+            "topics": [
+              "Huygens’ principle and interference",
+              "Young’s double slit experiment and fringe width",
+              "Diffraction (single slit) and resolving power",
+              "Polarisation of light and its applications"
+            ],
+            "notes": {
+              "summary": "Treats light as a wave to explain interference, diffraction, and polarisation phenomena.",
+              "key_points": [
+                "Superposition of coherent waves leads to constructive and destructive interference patterns.",
+                "Diffraction limits resolution of optical instruments and depends on aperture size and wavelength.",
+                "Polarisation reveals transverse nature of light and is used in glare reduction and stress analysis."
+              ],
+              "keywords": [
+                "interference",
+                "diffraction",
+                "polarisation",
+                "coherence"
+              ]
+            }
+          },
+          {
+            "number": 11,
+            "title": "Dual Nature of Radiation and Matter",
+            "topics": [
+              "Photoelectric effect and Einstein’s equation",
+              "Particle–wave duality: de Broglie hypothesis",
+              "Matter waves and electron diffraction"
+            ],
+            "notes": {
+              "summary": "Introduces quantum ideas showing that light and matter exhibit both wave and particle properties.",
+              "key_points": [
+                "Photoelectric effect demonstrates particle aspects of light with energy quantised in photons.",
+                "de Broglie suggested all matter has associated wavelength inversely proportional to momentum.",
+                "Electron diffraction confirms wave nature of particles at small scales."
+              ],
+              "keywords": [
+                "photoelectric effect",
+                "de Broglie wavelength",
+                "photon",
+                "matter wave"
+              ]
+            }
+          },
+          {
+            "number": 12,
+            "title": "Atoms",
+            "topics": [
+              "Rutherford model and its limitations",
+              "Bohr’s model and hydrogen spectra",
+              "Energy levels and spectral lines"
+            ],
+            "notes": {
+              "summary": "Summarises early atomic models and Bohr’s quantised orbits explaining hydrogen’s line spectrum.",
+              "key_points": [
+                "Rutherford’s nuclear atom could not explain atomic stability and discrete spectra.",
+                "Bohr postulated quantised angular momentum and allowed orbits with fixed energies.",
+                "Transitions between levels emit or absorb photons of specific frequencies."
+              ],
+              "keywords": [
+                "Bohr model",
+                "hydrogen spectrum",
+                "energy levels"
+              ]
+            }
+          },
+          {
+            "number": 13,
+            "title": "Nuclei",
+            "topics": [
+              "Nuclear composition and size",
+              "Radioactivity: alpha, beta, gamma",
+              "Binding energy and mass defect",
+              "Nuclear fission and fusion (basic ideas)"
+            ],
+            "notes": {
+              "summary": "Explores structure and stability of nuclei and energy processes in radioactivity and nuclear reactions.",
+              "key_points": [
+                "Nuclei consist of protons and neutrons bound by strong nuclear forces.",
+                "Radioactive decay follows probabilistic laws characterised by half‑life.",
+                "Mass defect corresponds to binding energy that holds the nucleus together."
+              ],
+              "keywords": [
+                "radioactivity",
+                "binding energy",
+                "half-life",
+                "fission",
+                "fusion"
+              ]
+            }
+          },
+          {
+            "number": 14,
+            "title": "Semiconductor Electronics",
+            "topics": [
+              "Intrinsic and extrinsic semiconductors",
+              "p–n junction diode and I–V characteristics",
+              "Diode as rectifier; Zener diode as voltage regulator",
+              "Basic transistor action and simple applications"
+            ],
+            "notes": {
+              "summary": "Covers semiconductor physics leading to diodes and transistors with basic electronic applications.",
+              "key_points": [
+                "Doping modifies semiconductor conductivity creating n‑type and p‑type materials.",
+                "p–n junctions allow current more easily in one direction enabling rectification.",
+                "Zener diodes maintain nearly constant output voltage in regulation circuits."
+              ],
+              "keywords": [
+                "semiconductor",
+                "p–n junction",
+                "rectifier",
+                "transistor",
+                "Zener diode"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "subject": "Chemistry",
+        "textbook": "Chemistry – Textbook for Class XII (Part I & II)",
+        "chapters": [
+          {
+            "number": 1,
+            "title": "Solid State",
+            "topics": [
+              "Classification of solids: crystalline and amorphous",
+              "Crystal lattices and unit cells",
+              "Packing efficiency and voids",
+              "Imperfections in solids",
+              "Electrical properties of solids (introductory)"
+            ],
+            "notes": {
+              "summary": "Describes arrangement of particles in solids, types of unit cells, and defects that influence properties.",
+              "key_points": [
+                "Crystalline solids have long‑range order while amorphous solids lack regularity.",
+                "Unit cells repeat in three dimensions to form crystal lattices; packing determines density.",
+                "Point defects like vacancies and interstitials affect conductivity and mechanical strength."
+              ],
+              "keywords": [
+                "crystal lattice",
+                "unit cell",
+                "packing efficiency",
+                "defect"
+              ]
+            }
+          },
+          {
+            "number": 2,
+            "title": "Solutions",
+            "topics": [
+              "Types of solutions and concentration terms",
+              "Raoult’s law and ideal/non‑ideal solutions",
+              "Colligative properties and abnormal molar masses",
+              "Van’t Hoff factor"
+            ],
+            "notes": {
+              "summary": "Studies properties depending on number of solute particles and deviations from ideal behaviour.",
+              "key_points": [
+                "Concentration can be expressed as mole fraction, molarity, molality, etc.",
+                "Vapour pressure lowering and colligative effects depend on solute particle count.",
+                "Association or dissociation leads to abnormal molar masses captured by van’t Hoff factor."
+              ],
+              "keywords": [
+                "colligative property",
+                "Raoult’s law",
+                "molarity",
+                "van’t Hoff factor"
+              ]
+            }
+          },
+          {
+            "number": 3,
+            "title": "Electrochemistry",
+            "topics": [
+              "Electrochemical cells: galvanic and electrolytic",
+              "Nernst equation and electrode potentials",
+              "Electrolysis and Faraday’s laws",
+              "Batteries, fuel cells, and corrosion"
+            ],
+            "notes": {
+              "summary": "Relates redox chemistry to electricity generation and storage, and explains corrosion processes.",
+              "key_points": [
+                "EMF of a cell arises from redox reactions at electrodes and depends on concentrations and temperature.",
+                "Nernst equation quantifies potential under non‑standard conditions.",
+                "Industrial electrolysis and protective methods control corrosion and deposit metals."
+              ],
+              "keywords": [
+                "galvanic cell",
+                "Nernst equation",
+                "electrolysis",
+                "corrosion"
+              ]
+            }
+          },
+          {
+            "number": 4,
+            "title": "Chemical Kinetics",
+            "topics": [
+              "Rate of reaction and rate laws",
+              "Order and molecularity",
+              "Integrated rate equations (zero and first order)",
+              "Temperature dependence and Arrhenius equation",
+              "Activation energy and catalyst"
+            ],
+            "notes": {
+              "summary": "Explains how fast reactions proceed, how rates depend on concentration and temperature, and the role of catalysts.",
+              "key_points": [
+                "Rate laws express dependence of rate on reactant concentrations.",
+                "First‑order reactions have constant half‑life independent of initial concentration.",
+                "Catalysts lower activation energy and increase reaction rate without being consumed."
+              ],
+              "keywords": [
+                "rate law",
+                "order",
+                "Arrhenius equation",
+                "activation energy",
+                "catalyst"
+              ]
+            }
+          },
+          {
+            "number": 5,
+            "title": "Surface Chemistry",
+            "topics": [
+              "Adsorption and its types",
+              "Colloids and emulsions",
+              "Catalysis and surface reactions",
+              "Applications of colloids"
+            ],
+            "notes": {
+              "summary": "Deals with phenomena at surfaces, including adsorption, colloidal stability, and catalytic action.",
+              "key_points": [
+                "Adsorption is accumulation at surfaces and can be physical or chemical in nature.",
+                "Colloids consist of dispersed phase and dispersion medium showing Tyndall effect.",
+                "Surface area and active sites control catalytic efficiency in many industrial processes."
+              ],
+              "keywords": [
+                "adsorption",
+                "colloid",
+                "emulsion",
+                "catalysis"
+              ]
+            }
+          },
+          {
+            "number": 6,
+            "title": "General Principles and Processes of Isolation of Elements",
+            "topics": [
+              "Metallurgy: concentration, calcination, roasting",
+              "Reduction methods and refining",
+              "Thermodynamic and electrochemical principles",
+              "Examples of metal extraction"
+            ],
+            "notes": {
+              "summary": "Outlines metallurgical steps to obtain metals from ores using chemical and electrochemical methods.",
+              "key_points": [
+                "Choice of extraction method depends on metal reactivity and ore nature.",
+                "Ellingham diagrams guide selection of reducing agents based on Gibbs energy.",
+                "Electrolytic refining gives high‑purity metals for technology applications."
+              ],
+              "keywords": [
+                "metallurgy",
+                "roasting",
+                "refining",
+                "Ellingham diagram"
+              ]
+            }
+          },
+          {
+            "number": 7,
+            "title": "The p‑Block Elements",
+            "topics": [
+              "Group 15, 16, 17, and 18 elements overview",
+              "Important oxides, oxyacids, and halides",
+              "Anomalous behaviour of first elements",
+              "Trends in properties and reactivity"
+            ],
+            "notes": {
+              "summary": "Surveys trends and important compounds of Groups 15–18 including nitrogen, oxygen, halogens, and noble gases.",
+              "key_points": [
+                "Variations in oxidation state and bonding result in diverse chemistry across the p‑block.",
+                "First-row anomalies arise from small size, high electronegativity, and lack of d‑orbitals.",
+                "Industrial and environmental relevance includes oxoacids, halogenation, and inert gases."
+              ],
+              "keywords": [
+                "p‑block",
+                "oxoacid",
+                "halide",
+                "noble gas"
+              ]
+            }
+          },
+          {
+            "number": 8,
+            "title": "The d‑ and f‑Block Elements",
+            "topics": [
+              "Transition metals: characteristics and trends",
+              "Colour, variable oxidation states, and catalytic behaviour",
+              "Lanthanides and actinides (brief survey)",
+              "Important compounds and applications"
+            ],
+            "notes": {
+              "summary": "Discusses unique features of transition and inner transition elements and their technological roles.",
+              "key_points": [
+                "Partially filled d/f orbitals lead to colour, magnetism, and catalytic activity.",
+                "Lanthanide contraction affects properties across the series.",
+                "d‑block complexes are central to materials, catalysis, and bioinorganic chemistry."
+              ],
+              "keywords": [
+                "transition metal",
+                "lanthanide",
+                "actinide",
+                "catalysis"
+              ]
+            }
+          },
+          {
+            "number": 9,
+            "title": "Coordination Compounds",
+            "topics": [
+              "Ligands, coordination number, and geometry",
+              "Nomenclature of complexes",
+              "Bonding theories (valence bond and crystal field basics)",
+              "Isomerism in complexes",
+              "Applications of coordination compounds"
+            ],
+            "notes": {
+              "summary": "Introduces the structure, bonding, and properties of metal–ligand complexes with real-life applications.",
+              "key_points": [
+                "Ligand type and arrangement determine complex geometry and properties.",
+                "Crystal field splitting explains colour and magnetism in many complexes.",
+                "Coordination compounds feature in metalloproteins, analytical reagents, and catalysis."
+              ],
+              "keywords": [
+                "ligand",
+                "coordination number",
+                "crystal field",
+                "isomerism"
+              ]
+            }
+          },
+          {
+            "number": 10,
+            "title": "Haloalkanes and Haloarenes",
+            "topics": [
+              "Nomenclature and classification",
+              "Nature of C–X bond",
+              "Substitution and elimination reactions (SN1/SN2 basics)",
+              "Environmental aspects (brief)"
+            ],
+            "notes": {
+              "summary": "Covers preparation and reactivity of halo derivatives of alkanes and arenes with focus on substitution mechanisms.",
+              "key_points": [
+                "Reactivity depends on substrate structure, leaving group ability, and solvent effects.",
+                "Aryl halides differ from alkyl halides due to resonance and partial double bond character.",
+                "Some halogenated compounds pose environmental risks and require careful handling."
+              ],
+              "keywords": [
+                "haloalkane",
+                "haloarene",
+                "SN1",
+                "SN2",
+                "elimination"
+              ]
+            }
+          },
+          {
+            "number": 11,
+            "title": "Alcohols, Phenols and Ethers",
+            "topics": [
+              "Nomenclature and preparation",
+              "Physical and chemical properties",
+              "Reaction mechanisms (selected)",
+              "Uses and industrial relevance"
+            ],
+            "notes": {
+              "summary": "Details structures and reactions of oxygen‑containing organic compounds central to synthesis and industry.",
+              "key_points": [
+                "Acidity of phenols arises from resonance‑stabilised phenoxide ion.",
+                "Alcohols undergo substitution and oxidation to yield aldehydes, ketones, or acids.",
+                "Ethers are relatively inert but useful as solvents and protective groups."
+              ],
+              "keywords": [
+                "alcohol",
+                "phenol",
+                "ether",
+                "oxidation"
+              ]
+            }
+          },
+          {
+            "number": 12,
+            "title": "Aldehydes, Ketones and Carboxylic Acids",
+            "topics": [
+              "Carbonyl group structure and reactivity",
+              "Nucleophilic addition to C=O",
+              "Oxidation–reduction transformations",
+              "Acidity of carboxylic acids and derivatives"
+            ],
+            "notes": {
+              "summary": "Explores electrophilic carbonyl chemistry and acidity trends in related functional groups.",
+              "key_points": [
+                "Polarised C=O bond makes carbonyl carbon susceptible to nucleophilic attack.",
+                "Reactivity patterns enable key synthetic transformations and tests.",
+                "Carboxylic acids show resonance‑stabilised conjugate bases explaining acidity."
+              ],
+              "keywords": [
+                "carbonyl",
+                "nucleophilic addition",
+                "carboxylic acid",
+                "oxidation"
+              ]
+            }
+          },
+          {
+            "number": 13,
+            "title": "Amines",
+            "topics": [
+              "Classification and nomenclature",
+              "Basicity and factors affecting it",
+              "Preparation and reactions",
+              "Diazonium salts and their synthetic utility"
+            ],
+            "notes": {
+              "summary": "Covers nitrogen‑containing organics, their basic character, and versatile transformations via diazonium chemistry.",
+              "key_points": [
+                "Amines act as bases and nucleophiles, with basicity influenced by substituents and solvation.",
+                "Diazonium salts enable formation of diverse functional groups on aromatic rings.",
+                "Amines appear in biomolecules, drugs, dyes, and polymers."
+              ],
+              "keywords": [
+                "amine",
+                "basicity",
+                "diazonium",
+                "coupling"
+              ]
+            }
+          },
+          {
+            "number": 14,
+            "title": "Biomolecules",
+            "topics": [
+              "Carbohydrates, proteins, and nucleic acids",
+              "Amino acids and peptides (basics)",
+              "Enzymes and vitamins (introductory)"
+            ],
+            "notes": {
+              "summary": "Introduces organic molecules central to life and their functional roles.",
+              "key_points": [
+                "Structure of biomolecules informs their roles in energy storage, catalysis, and heredity.",
+                "Proteins are polymers of amino acids with complex folding patterns.",
+                "Nucleic acids store genetic information and control protein synthesis."
+              ],
+              "keywords": [
+                "carbohydrate",
+                "protein",
+                "DNA",
+                "enzyme"
+              ]
+            }
+          },
+          {
+            "number": 15,
+            "title": "Polymers",
+            "topics": [
+              "Classification of polymers",
+              "Addition and condensation polymerisation",
+              "Copolymers and biodegradable polymers",
+              "Uses and environmental impact"
+            ],
+            "notes": {
+              "summary": "Discusses macromolecules formed by polymerisation and their applications and sustainability issues.",
+              "key_points": [
+                "Monomer structure determines polymer properties and processing.",
+                "Copolymers tune material properties for specific applications.",
+                "Biodegradable polymers aim to reduce environmental burden."
+              ],
+              "keywords": [
+                "polymer",
+                "polymerisation",
+                "copolymer",
+                "biodegradable"
+              ]
+            }
+          },
+          {
+            "number": 16,
+            "title": "Chemistry in Everyday Life",
+            "topics": [
+              "Drugs and their classification",
+              "Food additives and cleansing agents",
+              "Impact and safe use of chemicals"
+            ],
+            "notes": {
+              "summary": "Shows how chemical principles underlie pharmaceuticals, food additives, and detergents used daily.",
+              "key_points": [
+                "Drug action often involves specific interactions with biological targets.",
+                "Preservatives, sweeteners, and antioxidants must meet safety standards.",
+                "Surfactants emulsify oils and aid cleaning but require responsible disposal."
+              ],
+              "keywords": [
+                "drug",
+                "preservative",
+                "detergent",
+                "surfactant"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "subject": "Biology",
+        "textbook": "Biology – Textbook for Class XII",
+        "chapters": [
+          {
+            "number": 1,
+            "title": "Reproduction in Organisms",
+            "topics": [
+              "Asexual and sexual reproduction",
+              "Life span and reproductive strategies"
+            ],
+            "notes": {
+              "summary": "Overviews how organisms reproduce and how life cycles are organised across taxa.",
+              "key_points": [
+                "Asexual reproduction produces clones; sexual reproduction generates variation.",
+                "Life span and timing of reproduction reflect evolutionary adaptations."
+              ],
+              "keywords": [
+                "asexual",
+                "sexual reproduction",
+                "life cycle"
+              ]
+            }
+          },
+          {
+            "number": 2,
+            "title": "Sexual Reproduction in Flowering Plants",
+            "topics": [
+              "Flower structure and gametophytes",
+              "Pollination, fertilisation, and double fertilisation",
+              "Seed and fruit formation"
+            ],
+            "notes": {
+              "summary": "Explains reproductive structures and processes unique to angiosperms.",
+              "key_points": [
+                "Male and female gametophytes develop within anthers and ovules.",
+                "Double fertilisation forms zygote and endosperm, characteristic of flowering plants."
+              ],
+              "keywords": [
+                "pollination",
+                "double fertilisation",
+                "seed"
+              ]
+            }
+          },
+          {
+            "number": 3,
+            "title": "Human Reproduction",
+            "topics": [
+              "Male and female reproductive systems",
+              "Gamete formation",
+              "Fertilisation, implantation, and pregnancy",
+              "Parturition and lactation (introductory)"
+            ],
+            "notes": {
+              "summary": "Describes human reproductive anatomy and physiology from gametogenesis to birth.",
+              "key_points": [
+                "Hormones regulate gamete production and reproductive cycles.",
+                "Embryo development occurs in stages supported by maternal tissues."
+              ],
+              "keywords": [
+                "gametogenesis",
+                "implantation",
+                "hormone"
+              ]
+            }
+          },
+          {
+            "number": 4,
+            "title": "Reproductive Health",
+            "topics": [
+              "Importance of reproductive health",
+              "Contraception methods (overview)",
+              "STDs and their prevention",
+              "Infertility and assisted reproduction (introductory)"
+            ],
+            "notes": {
+              "summary": "Promotes informed choices and awareness for healthy reproduction and disease prevention.",
+              "key_points": [
+                "Education and access to healthcare improve reproductive outcomes.",
+                "Safe practices and timely treatment prevent transmission of infections."
+              ],
+              "keywords": [
+                "contraception",
+                "STD",
+                "ART"
+              ]
+            }
+          },
+          {
+            "number": 5,
+            "title": "Principles of Inheritance and Variation",
+            "topics": [
+              "Mendelian inheritance and deviations",
+              "Chromosomal theory of inheritance",
+              "Gene interaction and linkage",
+              "Mutation and chromosomal aberrations (introductory)"
+            ],
+            "notes": {
+              "summary": "Explores genetic principles that determine trait transmission and variation.",
+              "key_points": [
+                "Monohybrid and dihybrid crosses illustrate segregation and independent assortment.",
+                "Linkage and crossing over modify expected ratios and map gene positions."
+              ],
+              "keywords": [
+                "Mendel",
+                "linkage",
+                "crossing over",
+                "mutation"
+              ]
+            }
+          },
+          {
+            "number": 6,
+            "title": "Molecular Basis of Inheritance",
+            "topics": [
+              "DNA as genetic material",
+              "DNA replication, transcription, and translation",
+              "Genetic code and regulation of gene expression",
+              "Human genome (introductory)"
+            ],
+            "notes": {
+              "summary": "Describes how genetic information is stored, copied, and expressed into functional products.",
+              "key_points": [
+                "Complementary base pairing underlies replication fidelity and information transfer.",
+                "Gene expression is regulated at multiple steps to meet cellular needs."
+              ],
+              "keywords": [
+                "DNA",
+                "replication",
+                "transcription",
+                "translation"
+              ]
+            }
+          },
+          {
+            "number": 7,
+            "title": "Evolution",
+            "topics": [
+              "Origin of life and evolutionary evidence",
+              "Mechanisms of evolution: variation, selection, drift",
+              "Speciation and human evolution (brief)"
+            ],
+            "notes": {
+              "summary": "Outlines processes that drive biological evolution and the evidence supporting them.",
+              "key_points": [
+                "Natural selection acts on heritable variation to shape populations over time.",
+                "Genetic drift and gene flow also change allele frequencies, especially in small populations."
+              ],
+              "keywords": [
+                "natural selection",
+                "genetic drift",
+                "speciation"
+              ]
+            }
+          },
+          {
+            "number": 8,
+            "title": "Human Health and Disease",
+            "topics": [
+              "Common infectious diseases and immunity",
+              "Vaccination and immunisation",
+              "Lifestyle diseases and prevention"
+            ],
+            "notes": {
+              "summary": "Covers pathogens, body defence mechanisms, and public health measures against disease.",
+              "key_points": [
+                "Innate and adaptive immunity protect against infections.",
+                "Vaccines prime immune memory and reduce disease incidence."
+              ],
+              "keywords": [
+                "immunity",
+                "vaccine",
+                "pathogen"
+              ]
+            }
+          },
+          {
+            "number": 9,
+            "title": "Strategies for Enhancement in Food Production",
+            "topics": [
+              "Plant and animal breeding",
+              "Tissue culture and single‑cell protein",
+              "Apiculture and pisciculture (overview)"
+            ],
+            "notes": {
+              "summary": "Explains methods to increase yield and quality of food resources sustainably.",
+              "key_points": [
+                "Selective breeding and biotechnology produce improved crop varieties and livestock.",
+                "Microbial and tissue culture techniques supplement conventional agriculture."
+              ],
+              "keywords": [
+                "breeding",
+                "tissue culture",
+                "SCP"
+              ]
+            }
+          },
+          {
+            "number": 10,
+            "title": "Microbes in Human Welfare",
+            "topics": [
+              "Industrial production (beverages, antibiotics, enzymes)",
+              "Sewage treatment and biogas",
+              "Biocontrol and biofertilisers"
+            ],
+            "notes": {
+              "summary": "Highlights beneficial roles of microbes in industry, environment, and agriculture.",
+              "key_points": [
+                "Fermentation and microbial synthesis produce valuable products.",
+                "Microbial processes clean wastewater and generate renewable energy."
+              ],
+              "keywords": [
+                "fermentation",
+                "antibiotic",
+                "biogas"
+              ]
+            }
+          },
+          {
+            "number": 11,
+            "title": "Biotechnology: Principles and Processes",
+            "topics": [
+              "Tools of recombinant DNA technology",
+              "Cloning vectors and host cells",
+              "Steps in gene cloning and selection"
+            ],
+            "notes": {
+              "summary": "Introduces genetic engineering techniques enabling targeted modification of organisms.",
+              "key_points": [
+                "Restriction enzymes, ligases, and vectors underpin rDNA methods.",
+                "Selection markers identify recombinant clones for further use."
+              ],
+              "keywords": [
+                "restriction enzyme",
+                "vector",
+                "cloning"
+              ]
+            }
+          },
+          {
+            "number": 12,
+            "title": "Biotechnology and its Applications",
+            "topics": [
+              "Agricultural biotechnology (Bt crops)",
+              "Medical applications (insulin, gene therapy – introductory)",
+              "Transgenic organisms and biosafety"
+            ],
+            "notes": {
+              "summary": "Surveys real‑world applications of biotech in health and agriculture, noting ethical and safety concerns.",
+              "key_points": [
+                "Transgenic crops can resist pests and improve yield.",
+                "Biopharmaceuticals and diagnostics rely on recombinant DNA methods."
+              ],
+              "keywords": [
+                "transgenic",
+                "gene therapy",
+                "biosafety"
+              ]
+            }
+          },
+          {
+            "number": 13,
+            "title": "Organisms and Populations",
+            "topics": [
+              "Habitat and niche",
+              "Population attributes and growth",
+              "Interactions: competition, predation, mutualism"
+            ],
+            "notes": {
+              "summary": "Begins ecology with organism–environment interactions and population dynamics.",
+              "key_points": [
+                "Environmental factors and niches determine distribution and survival.",
+                "Population growth models describe changes over time with limiting factors."
+              ],
+              "keywords": [
+                "niche",
+                "population growth",
+                "interaction"
+              ]
+            }
+          },
+          {
+            "number": 14,
+            "title": "Ecosystem",
+            "topics": [
+              "Structure and function of ecosystems",
+              "Energy flow and nutrient cycles",
+              "Ecological pyramids"
+            ],
+            "notes": {
+              "summary": "Explains energy and material movement through ecosystems and their organisation.",
+              "key_points": [
+                "Producers, consumers, and decomposers form functional components.",
+                "Energy flows unidirectionally while nutrients cycle through biogeochemical loops."
+              ],
+              "keywords": [
+                "trophic level",
+                "food web",
+                "biogeochemical cycle"
+              ]
+            }
+          },
+          {
+            "number": 15,
+            "title": "Biodiversity and Conservation",
+            "topics": [
+              "Levels and patterns of biodiversity",
+              "Threats to biodiversity",
+              "Conservation strategies: in situ and ex situ"
+            ],
+            "notes": {
+              "summary": "Emphasises value of biodiversity and methods to protect it at genetic, species, and ecosystem levels.",
+              "key_points": [
+                "Species richness and endemism vary with geography and climate.",
+                "Protected areas and community participation are key to conservation."
+              ],
+              "keywords": [
+                "endemism",
+                "in situ conservation",
+                "ex situ conservation"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

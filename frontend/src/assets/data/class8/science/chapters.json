@@ -1,0 +1,42 @@
+[
+    {
+        "id": "sci-8-ch1",
+        "title": "Living World and Classification of Microbes",
+        "description": "Study the classification of living organisms and microbes.",
+        "units": 3,
+        "icon": "microscope",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-8-ch2",
+        "title": "Health and Diseases",
+        "description": "Understand different types of diseases and their prevention.",
+        "units": 3,
+        "icon": "hospital-box",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-8-ch3",
+        "title": "Force and Pressure",
+        "description": "Learn about force, pressure, and their effects.",
+        "units": 2,
+        "icon": "weight",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-8-ch4",
+        "title": "Current Electricity and Magnetism",
+        "description": "Explore the concepts of electricity and magnetism.",
+        "units": 3,
+        "icon": "flash",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": "sci-8-ch5",
+        "title": "Inside the Atom",
+        "description": "Discover the structure of an atom.",
+        "units": 2,
+        "icon": "atom",
+        "color": "#4ECDC4"
+    }
+]

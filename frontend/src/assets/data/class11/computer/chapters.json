@@ -1,0 +1,26 @@
+[
+    {
+        "id": "comp-11-ch1",
+        "title": "Computer Systems and Organisation",
+        "description": "Basic computer organization, hardware, software, and memory.",
+        "units": 4,
+        "icon": "laptop",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-11-ch2",
+        "title": "Computational Thinking and Programming",
+        "description": "Problem solving, algorithms, flowcharts, and Python basics.",
+        "units": 6,
+        "icon": "laptop",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-11-ch3",
+        "title": "Society, Law and Ethics",
+        "description": "Cyber safety, cyber crime, and ethical issues.",
+        "units": 3,
+        "icon": "laptop",
+        "color": "#60A5FA"
+    }
+]

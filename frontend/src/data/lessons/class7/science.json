@@ -1,0 +1,345 @@
+{
+    "class": "7",
+    "board": "CBSE (NCERT)",
+    "subject": "Science",
+    "textbook": "Curiosity – Science for Class 7",
+    "academic_year": "2025-26",
+    "chapters": [
+      {
+        "number": 1,
+        "title": "The Ever-Evolving World of Science",
+        "topics": [
+          "Introduction to Science",
+          "Science in everyday life",
+          "Role of observation and questioning",
+          "Simple investigations and experiments",
+          "Ethics and safety in doing science"
+        ],
+        "notes": {
+          "summary": "This chapter introduces science as a dynamic and evolving way of understanding the natural world, with a focus on observation, curiosity, and real-life applications.",
+          "key_points": [
+            "Science is a systematic process of learning about the world through observation, questioning, and experimentation.",
+            "Everyday objects and technologies such as phones, electricity, and medicines are outcomes of scientific ideas.",
+            "Good scientific work needs careful recording of data, clear communication, and honest reporting of results.",
+            "Following safety rules and respecting living beings and the environment are essential parts of doing science."
+          ],
+          "keywords": [
+            "science",
+            "observation",
+            "experiment",
+            "evidence",
+            "scientific attitude"
+          ]
+        }
+      },
+      {
+        "number": 2,
+        "title": "Exploring Substances: Acidic, Basic, Neutral",
+        "topics": [
+          "Acids and bases",
+          "Natural and synthetic indicators",
+          "Neutralisation",
+          "Everyday examples of acids, bases, and salts",
+          "Safety while handling acidic and basic substances"
+        ],
+        "notes": {
+          "summary": "This chapter explains acids, bases, and neutral substances, how to identify them using indicators, and how neutralisation is used in daily life.",
+          "key_points": [
+            "Acids have a sour taste, bases often feel soapy, while neutral substances are neither acidic nor basic.",
+            "Indicators such as litmus, turmeric, and other natural dyes change colour in the presence of acids or bases.",
+            "In neutralisation, an acid reacts with a base to form a salt and water, often reducing the effect of both.",
+            "Neutralisation is used in real-life situations like treating ant bites, reducing soil acidity, and managing acidity in the stomach.",
+            "Strong acids and bases can be harmful and should be handled with care using proper safety measures."
+          ],
+          "keywords": [
+            "acid",
+            "base",
+            "neutral",
+            "indicator",
+            "neutralisation"
+          ]
+        }
+      },
+      {
+        "number": 3,
+        "title": "Electricity: Circuits and their Components",
+        "topics": [
+          "Introduction to electricity",
+          "Electric circuit and its representation",
+          "Symbols of electrical components",
+          "Conductors and insulators",
+          "Simple circuit activities and safety"
+        ],
+        "notes": {
+          "summary": "The chapter introduces electric circuits, common circuit components, and the difference between conductors and insulators using simple activities.",
+          "key_points": [
+            "An electric circuit is a closed path through which electric current can flow from a source like a cell.",
+            "Standard symbols are used to represent components such as cells, bulbs, switches, and wires in circuit diagrams.",
+            "Materials that allow current to pass through them are called conductors, while those that do not are insulators.",
+            "Everyday objects can be tested to see whether they behave as conductors or insulators in a simple circuit.",
+            "Safe use of electricity includes avoiding wet hands, damaged wires, and overloading sockets."
+          ],
+          "keywords": [
+            "electric current",
+            "circuit",
+            "conductor",
+            "insulator",
+            "circuit diagram"
+          ]
+        }
+      },
+      {
+        "number": 4,
+        "title": "The World of Metals and Non-metals",
+        "topics": [
+          "Common metals and non-metals",
+          "Physical properties of metals and non-metals",
+          "Reactions with air and water",
+          "Corrosion and its prevention",
+          "Uses of metals and non-metals"
+        ],
+        "notes": {
+          "summary": "This chapter compares metals and non-metals based on their properties, reactions, and everyday uses, including the problem of corrosion.",
+          "key_points": [
+            "Metals are usually hard, shiny, good conductors of heat and electricity, and can be beaten into sheets or drawn into wires.",
+            "Non-metals often appear dull, are poor conductors, and are found as solids, liquids, or gases in nature.",
+            "Exposure to air and moisture can cause some metals like iron to rust, a process known as corrosion.",
+            "Painting, galvanising, and oiling are methods used to protect metals from corrosion.",
+            "Metals and non-metals are essential in daily life, from construction and transport to fertilisers and medicines."
+          ],
+          "keywords": [
+            "metal",
+            "non-metal",
+            "property",
+            "corrosion",
+            "rusting"
+          ]
+        }
+      },
+      {
+        "number": 5,
+        "title": "Changes Around Us: Physical and Chemical",
+        "topics": [
+          "Types of changes",
+          "Physical changes and their features",
+          "Chemical changes and their features",
+          "Chemical changes in daily life",
+          "Natural changes in the environment"
+        ],
+        "notes": {
+          "summary": "The chapter helps students distinguish between physical and chemical changes with simple examples from daily life and nature.",
+          "key_points": [
+            "A physical change affects the shape, size, or state of a substance but usually does not form a new substance.",
+            "A chemical change produces one or more new substances with different properties from the original materials.",
+            "Examples of chemical changes include rusting of iron, burning of paper, and setting of curd from milk.",
+            "Some changes in nature, such as the formation of clouds or decomposition of leaves, involve complex combinations of physical and chemical changes.",
+            "Many changes can be reversed, but some chemical changes are difficult or impossible to reverse easily."
+          ],
+          "keywords": [
+            "physical change",
+            "chemical change",
+            "reversible",
+            "irreversible",
+            "reaction"
+          ]
+        }
+      },
+      {
+        "number": 6,
+        "title": "Adolescence: A Stage of Growth and Change",
+        "topics": [
+          "Puberty and growth",
+          "Physical changes during adolescence",
+          "Emotional and social changes",
+          "Menstruation and reproductive health",
+          "Myths, taboos, and well-being"
+        ],
+        "notes": {
+          "summary": "This chapter explains the physical, emotional, and social changes during adolescence and promotes healthy and respectful attitudes.",
+          "key_points": [
+            "Adolescence is the period of transition from childhood to adulthood during which the body grows rapidly and matures.",
+            "Physical changes at puberty include increase in height, change in body shape, development of secondary sexual characters, and voice changes.",
+            "Menstruation is a natural and regular process in girls and is related to reproductive health, hygiene, and nutrition.",
+            "Adolescents may experience strong emotions and peer pressure, so positive support and open communication are important.",
+            "Scientific understanding helps to challenge myths and taboos and encourages respect for self and others."
+          ],
+          "keywords": [
+            "adolescence",
+            "puberty",
+            "menstruation",
+            "hormone",
+            "emotional health"
+          ]
+        }
+      },
+      {
+        "number": 7,
+        "title": "Heat Transfer in Nature",
+        "topics": [
+          "Heat and temperature (basic idea)",
+          "Conduction of heat",
+          "Convection of heat",
+          "Radiation of heat",
+          "Water cycle and seepage of water"
+        ],
+        "notes": {
+          "summary": "The chapter describes how heat is transferred by conduction, convection, and radiation and connects these processes to natural phenomena like the water cycle.",
+          "key_points": [
+            "Heat is a form of energy that flows from a hotter body to a colder body until both reach the same temperature.",
+            "In conduction, heat is transferred through solids without the movement of the material as a whole, as in a metal rod being heated at one end.",
+            "Convection involves the movement of warmer and cooler parts of a fluid, such as air or water, leading to currents.",
+            "Radiation allows heat to travel without a medium, for example from the Sun to Earth through space.",
+            "Processes like evaporation, condensation, cloud formation, rainfall, and groundwater seepage are linked to heat transfer in nature."
+          ],
+          "keywords": [
+            "heat",
+            "conduction",
+            "convection",
+            "radiation",
+            "water cycle"
+          ]
+        }
+      },
+      {
+        "number": 8,
+        "title": "Measurement of Time and Motion",
+        "topics": [
+          "Types of motion",
+          "Measurement of time",
+          "Measurement of speed",
+          "Time-speed relationship",
+          "Graphs and simple numerical examples"
+        ],
+        "notes": {
+          "summary": "This chapter discusses different kinds of motion and shows how to measure time and speed using simple methods and instruments.",
+          "key_points": [
+            "Objects can show different types of motion such as rectilinear, circular, periodic, and random motion.",
+            "Time can be measured using clocks, stopwatches, and other devices that count repeated events regularly.",
+            "Speed tells how fast an object moves and is calculated as distance travelled divided by time taken.",
+            "Understanding the relationship between distance, time, and speed helps describe and compare motions in daily life.",
+            "Simple distance–time or speed–time graphs can be used to visualise how motion changes over a period."
+          ],
+          "keywords": [
+            "motion",
+            "time",
+            "speed",
+            "uniform motion",
+            "graph"
+          ]
+        }
+      },
+      {
+        "number": 9,
+        "title": "Life Processes in Animals",
+        "topics": [
+          "Nutrition in animals",
+          "Alimentary canal",
+          "Human digestive system",
+          "Breathing and respiration",
+          "Importance of life processes for survival"
+        ],
+        "notes": {
+          "summary": "The chapter focuses on major life processes in animals, especially digestion, breathing, and respiration, using the human body as a key example.",
+          "key_points": [
+            "Animals obtain food in different ways, but all need to break it down into simpler substances for energy and growth.",
+            "The human alimentary canal includes organs such as mouth, oesophagus, stomach, small intestine, large intestine, and anus.",
+            "Digestion involves mechanical and chemical processes, with enzymes helping to convert complex food into absorbable forms.",
+            "Breathing brings oxygen into the body and removes carbon dioxide, while respiration releases energy from food using oxygen.",
+            "Healthy nutrition, clean food and water, and good habits such as regular exercise support these life processes."
+          ],
+          "keywords": [
+            "nutrition",
+            "digestion",
+            "alimentary canal",
+            "breathing",
+            "respiration"
+          ]
+        }
+      },
+      {
+        "number": 10,
+        "title": "Life Processes in Plants",
+        "topics": [
+          "Plant growth and parts involved",
+          "Photosynthesis",
+          "Transportation of water and nutrients",
+          "Respiration in plants",
+          "Importance of plants in ecosystems"
+        ],
+        "notes": {
+          "summary": "This chapter explains how plants carry out life processes such as making food, transporting materials, and respiring.",
+          "key_points": [
+            "Plants prepare their own food through photosynthesis using carbon dioxide, water, sunlight, and chlorophyll.",
+            "Roots absorb water and minerals from the soil, and stems transport these materials to leaves and other parts.",
+            "Vessels like xylem and phloem help in the movement of water, minerals, and prepared food within the plant.",
+            "Plants also respire, taking in oxygen and releasing carbon dioxide to obtain energy from the food they produce.",
+            "By providing oxygen, food, and habitats, plants are central to sustaining life and maintaining balance in ecosystems."
+          ],
+          "keywords": [
+            "photosynthesis",
+            "chlorophyll",
+            "xylem",
+            "phloem",
+            "plant respiration"
+          ]
+        }
+      },
+      {
+        "number": 11,
+        "title": "Light: Shadows and Reflections",
+        "topics": [
+          "Basic properties of light",
+          "Formation of shadows",
+          "Characteristics of shadows",
+          "Reflection of light and plane mirrors",
+          "Simple optical devices and applications"
+        ],
+        "notes": {
+          "summary": "The chapter explores how light behaves, how shadows and reflections are formed, and how simple optical devices work.",
+          "key_points": [
+            "Light travels in straight lines and enables us to see objects when it enters our eyes after reflecting from them.",
+            "Shadows are formed when an opaque object blocks light, and their size and shape depend on the light source and object position.",
+            "In reflection, light bounces off a surface, with the angle of incidence equal to the angle of reflection for smooth mirrors.",
+            "Plane mirrors form virtual, upright images of objects placed in front of them.",
+            "Simple devices like periscopes and kaleidoscopes use reflection of light to produce useful or interesting effects."
+          ],
+          "keywords": [
+            "light",
+            "shadow",
+            "reflection",
+            "plane mirror",
+            "optical device"
+          ]
+        }
+      },
+      {
+        "number": 12,
+        "title": "Earth, Moon, and the Sun",
+        "topics": [
+          "Shape and motions of the Earth",
+          "Earth's rotation and revolution",
+          "Day and night",
+          "Seasons",
+          "Solar and lunar eclipses"
+        ],
+        "notes": {
+          "summary": "This chapter describes the relationship between the Earth, Moon, and Sun and explains phenomena such as day–night, seasons, and eclipses.",
+          "key_points": [
+            "The Earth is nearly spherical and rotates about its axis while revolving around the Sun in an orbit.",
+            "Rotation of the Earth causes day and night, as different parts of the planet face towards or away from the Sun.",
+            "Revolution of the Earth along with the tilt of its axis leads to changing seasons during the year.",
+            "The Moon is Earth’s natural satellite and reflects sunlight, going through different phases as its position changes.",
+            "Solar and lunar eclipses occur when the Sun, Earth, and Moon align in specific ways, temporarily blocking light."
+          ],
+          "keywords": [
+            "rotation",
+            "revolution",
+            "season",
+            "eclipse",
+            "satellite"
+          ]
+        }
+      }
+    ]
+  }
+  

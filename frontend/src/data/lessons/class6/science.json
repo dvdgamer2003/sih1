@@ -1,0 +1,339 @@
+{
+  "class": "6",
+  "board": "CBSE (NCERT)",
+  "subject": "Science",
+  "textbook": "Curiosity – Science for Class 6",
+  "academic_year": "2025-26",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "The Wonderful World of Science",
+      "topics": [
+        "Meaning and scope of science in everyday life",
+        "Observation, curiosity and asking questions",
+        "Simple activities that show scientific thinking",
+        "Role of scientists and inventions in improving life",
+        "Safety and ethics in doing experiments"
+      ],
+      "notes": {
+        "summary": "This chapter introduces science as a way to understand the world through observation, questioning, and simple activities connected to daily life.",
+        "key_points": [
+          "Science is a systematic way of studying natural phenomena using observations and experiments.",
+          "Curiosity, asking good questions, and careful note‑making are the starting points of scientific learning.",
+          "Many tools and technologies used in homes, schools, and farms are results of scientific work.",
+          "Following safety rules and handling materials carefully are essential while doing science activities."
+        ],
+        "keywords": [
+          "observation",
+          "experiment",
+          "inference",
+          "scientific method",
+          "technology"
+        ]
+      }
+    },
+    {
+      "number": 2,
+      "title": "Diversity in the Living World",
+      "topics": [
+        "Living and non‑living things: basic differences",
+        "Classification based on visible features (plants, animals, micro‑organisms)",
+        "Habitats: terrestrial and aquatic environments",
+        "Adaptations of organisms to their surroundings (examples)",
+        "Importance of biodiversity and need to protect it"
+      ],
+      "notes": {
+        "summary": "The chapter explains how living things differ from non‑living things and how the huge variety of organisms can be grouped based on features and habitats.",
+        "key_points": [
+          "Living things grow, respire, move on their own, respond to stimuli, reproduce, and need food whereas non‑living things do not show all these characteristics.",
+          "Organisms can be broadly grouped as plants, animals, and micro‑organisms based on structure and mode of nutrition.",
+          "Habitats such as forests, deserts, mountains, ponds, and seas influence body features and behavior of organisms.",
+          "Adaptations like thick fur, streamlined bodies, or special roots help organisms survive in their specific habitats.",
+          "Biodiversity provides stability to ecosystems and needs to be conserved through responsible human actions."
+        ],
+        "keywords": [
+          "living",
+          "non‑living",
+          "habitat",
+          "adaptation",
+          "biodiversity"
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "title": "Mindful Eating: A Path to a Healthy Body",
+      "topics": [
+        "Different types of food we eat (cereals, pulses, fruits, vegetables, milk, fats)",
+        "Nutrients: carbohydrates, proteins, fats, vitamins, minerals, water, roughage",
+        "Balanced diet and its importance for growth and health",
+        "Health problems due to deficiency and excess of nutrients",
+        "Food hygiene, safe storage, and avoiding food wastage"
+      ],
+      "notes": {
+        "summary": "This chapter relates daily food habits to nutrients and health, highlighting balanced diet, deficiencies, and the idea of eating mindfully.",
+        "key_points": [
+          "Different foods provide different nutrients, so variety in meals is necessary for good health.",
+          "A balanced diet contains proper amounts of all nutrients, water, and roughage according to age and activity level.",
+          "Deficiency of nutrients can cause diseases like anemia or weak bones, while overeating junk food may lead to obesity.",
+          "Mindful eating means choosing nutritious food, eating at regular times, and avoiding overeating and too much processed food.",
+          "Clean cooking, safe storage, and proper hand‑washing help prevent food‑borne diseases."
+        ],
+        "keywords": [
+          "nutrient",
+          "balanced diet",
+          "deficiency disease",
+          "hygiene",
+          "mindful eating"
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "title": "Exploring Magnets",
+      "topics": [
+        "Natural and artificial magnets",
+        "Magnetic and non‑magnetic materials",
+        "Poles of a magnet and their interactions",
+        "Finding directions using magnets",
+        "Uses of magnets in everyday life and safety with magnets"
+      ],
+      "notes": {
+        "summary": "The chapter introduces magnets, their poles, and the idea of magnetic and non‑magnetic materials with simple hands‑on activities.",
+        "key_points": [
+          "Magnets attract objects made of iron, nickel, or cobalt but do not attract materials like wood or plastic.",
+          "Every magnet has two poles, and like poles repel while unlike poles attract each other.",
+          "A freely suspended bar magnet comes to rest roughly in the north–south direction, which helps in finding directions.",
+          "Magnets are used in toys, doors, speakers, and many devices, so they should be stored properly to avoid damage."
+        ],
+        "keywords": [
+          "magnet",
+          "magnetic material",
+          "poles",
+          "repulsion",
+          "compass"
+        ]
+      }
+    },
+    {
+      "number": 5,
+      "title": "Measurement of Length and Motion",
+      "topics": [
+        "Need for standard units of measurement",
+        "SI unit of length and commonly used units (mm, cm, m, km)",
+        "Correct way of using a scale and avoiding errors",
+        "Types of motion: rectilinear, circular, periodic",
+        "Examples of motion from daily life (vehicles, clock, swing)"
+      ],
+      "notes": {
+        "summary": "This chapter discusses measuring length accurately and recognizes different types of motion in the surroundings.",
+        "key_points": [
+          "Standard units avoid confusion when comparing measurements between people and places.",
+          "The metre is the SI unit of length, and rulers or measuring tapes are used carefully to avoid parallax errors.",
+          "Rectilinear motion is along a straight line, circular motion around a fixed point, and periodic motion repeats after equal intervals.",
+          "Everyday objects like buses, fans, and pendulums show different kinds of motion that can be observed and described."
+        ],
+        "keywords": [
+          "length",
+          "SI unit",
+          "rectilinear motion",
+          "circular motion",
+          "periodic motion"
+        ]
+      }
+    },
+    {
+      "number": 6,
+      "title": "Materials Around Us",
+      "topics": [
+        "Objects and materials in the surroundings",
+        "Grouping materials based on properties like appearance and hardness",
+        "Soluble and insoluble substances in water",
+        "Transparency: opaque, transparent, and translucent materials",
+        "Choosing suitable materials for different uses"
+      ],
+      "notes": {
+        "summary": "This chapter helps students observe and group materials based on properties like luster, hardness, solubility, and transparency.",
+        "key_points": [
+          "Things around us are made of different materials such as wood, metal, plastic, glass, and cotton.",
+          "Materials can be grouped using properties like shiny or dull, hard or soft, and heavy or light.",
+          "Some substances dissolve in water and are called soluble, while others do not dissolve and are called insoluble.",
+          "Transparent materials allow light to pass completely, translucent allow some light, and opaque do not allow light.",
+          "The choice of material for any object depends on the properties required for that use."
+        ],
+        "keywords": [
+          "material",
+          "property",
+          "soluble",
+          "insoluble",
+          "transparent"
+        ]
+      }
+    },
+    {
+      "number": 7,
+      "title": "Temperature and its Measurement",
+      "topics": [
+        "Hot and cold objects: feeling vs measurement",
+        "Thermometers and their basic parts",
+        "Units of temperature (degree Celsius)",
+        "Reading a thermometer correctly and precautions",
+        "Everyday examples of temperature (fever, weather, boiling water)"
+      ],
+      "notes": {
+        "summary": "The chapter introduces temperature as a measurable quantity and explains how thermometers are used in daily life.",
+        "key_points": [
+          "Our sense of hot and cold is not always reliable, so temperature is measured using instruments.",
+          "A thermometer has a glass tube and a liquid column with a scale marked in degree Celsius.",
+          "Clinical thermometers measure body temperature, while laboratory and room thermometers are used for other purposes.",
+          "Thermometers must be handled carefully and read at eye level to avoid wrong readings."
+        ],
+        "keywords": [
+          "temperature",
+          "thermometer",
+          "degree Celsius",
+          "clinical thermometer"
+        ]
+      }
+    },
+    {
+      "number": 8,
+      "title": "A Journey through States of Water",
+      "topics": [
+        "Three states of water: solid, liquid, gas",
+        "Melting, freezing, evaporation, condensation",
+        "Factors affecting evaporation (surface area, wind, temperature)",
+        "Water cycle in nature",
+        "Importance of conserving water"
+      ],
+      "notes": {
+        "summary": "This chapter explains how water changes its state and moves through the environment in the water cycle.",
+        "key_points": [
+          "Water exists as ice, liquid water, and water vapour depending on temperature and conditions.",
+          "Heating and cooling cause changes of state such as melting, freezing, evaporation, and condensation.",
+          "Evaporation is faster when the surface area is large, the air is dry, or the temperature and wind speed are higher.",
+          "The water cycle involves evaporation, condensation, and precipitation, which continuously recycle water on Earth.",
+          "Saving water in homes, schools, and farms is essential because usable freshwater is limited."
+        ],
+        "keywords": [
+          "evaporation",
+          "condensation",
+          "water cycle",
+          "melting",
+          "freezing"
+        ]
+      }
+    },
+    {
+      "number": 9,
+      "title": "Methods of Separation in Everyday Life",
+      "topics": [
+        "Need for separating mixtures in daily life",
+        "Handpicking, winnowing, sieving",
+        "Sedimentation, decantation, filtration",
+        "Evaporation and condensation for separation",
+        "Applications like cleaning rice, purifying water, making common salt"
+      ],
+      "notes": {
+        "summary": "The chapter links common household tasks to scientific methods of separating components of mixtures.",
+        "key_points": [
+          "Mixtures are separated to remove harmful or unwanted substances and to obtain useful components.",
+          "Handpicking, winnowing, and sieving are used for solid–solid separation when particles differ in size or weight.",
+          "Sedimentation, decantation, and filtration help separate an insoluble solid from a liquid.",
+          "Evaporation is used to recover a solid dissolved in a liquid, such as common salt from seawater.",
+          "Different methods may be combined to achieve effective separation in real‑life situations."
+        ],
+        "keywords": [
+          "mixture",
+          "sedimentation",
+          "filtration",
+          "evaporation",
+          "winnowing"
+        ]
+      }
+    },
+    {
+      "number": 10,
+      "title": "Living Creatures: Exploring their Characteristics",
+      "topics": [
+        "Basic characteristics of living organisms",
+        "Breathing and respiration in different organisms",
+        "Movement in plants and animals",
+        "Response to stimuli, growth, reproduction",
+        "Habitats and adaptations (link back to diversity chapter)"
+      ],
+      "notes": {
+        "summary": "This chapter revisits what makes an organism living and studies life processes through simple examples.",
+        "key_points": [
+          "Living beings show movement, need food, respire, excrete, grow, reproduce, and respond to changes around them.",
+          "Different animals breathe through lungs, gills, or moist skin, while plants exchange gases through stomata.",
+          "Plants also show slow movements such as bending towards light or closing of leaves on touch.",
+          "Habitats provide organisms with food, water, air, and shelter, and body features are adapted to these conditions."
+        ],
+        "keywords": [
+          "life processes",
+          "respiration",
+          "stimulus",
+          "response",
+          "adaptation"
+        ]
+      }
+    },
+    {
+      "number": 11,
+      "title": "Nature’s Treasures",
+      "topics": [
+        "Air and its composition",
+        "Water as a resource and its forms",
+        "Soil, rocks, and minerals (basic ideas)",
+        "Energy from the Sun and its importance",
+        "Need for conservation of natural resources"
+      ],
+      "notes": {
+        "summary": "The chapter highlights air, water, soil, rocks, minerals, and sunlight as valuable natural resources that support life.",
+        "key_points": [
+          "Air is a mixture of gases like nitrogen, oxygen, carbon dioxide, and water vapour, each with specific roles.",
+          "Water exists in rivers, lakes, groundwater, ice, and as vapour, and is essential for all living beings.",
+          "Soil forms from rocks over long periods and contains minerals, air, water, and organic matter.",
+          "The Sun is the main source of energy on Earth, driving the water cycle and supporting plant life through photosynthesis.",
+          "Careful use and protection of air, water, and soil are necessary for sustainable life on Earth."
+        ],
+        "keywords": [
+          "natural resource",
+          "atmosphere",
+          "groundwater",
+          "mineral",
+          "conservation"
+        ]
+      }
+    },
+    {
+      "number": 12,
+      "title": "Beyond Earth",
+      "topics": [
+        "Earth as a planet in the solar system",
+        "The Moon and its features (phases, surface)",
+        "Other planets and basic idea of the solar system",
+        "Day and night due to rotation of Earth",
+        "Introduction to stars and constellations"
+      ],
+      "notes": {
+        "summary": "This chapter introduces the solar system, Earth’s place in it, and simple ideas about the Moon, planets, and stars.",
+        "key_points": [
+          "The solar system consists of the Sun, eight planets, their moons, and many smaller objects.",
+          "Earth supports life because of suitable air, water, and temperature conditions.",
+          "The Moon is Earth’s natural satellite and shows different phases due to changing positions of the Moon, Earth, and Sun.",
+          "Rotation of Earth on its axis causes day and night, while revolution around the Sun leads to change of seasons.",
+          "Stars are very distant suns, and some appear as patterns in the sky called constellations."
+        ],
+        "keywords": [
+          "solar system",
+          "planet",
+          "satellite",
+          "rotation",
+          "constellation"
+        ]
+      }
+    }
+  ]
+}

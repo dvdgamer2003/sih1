@@ -1,0 +1,862 @@
+{
+    "class": 6,
+    "subject": "Science",
+    "chapters": [
+        {
+            "name": "Food: Where Does It Come From?",
+            "subchapters": [
+                {
+                    "name": "Food Variety",
+                    "content": {
+                        "explanation": "Food is essential for all living beings to survive and grow. Different regions of the world have different types of food based on climate, culture, and availability. In India, we eat rice, wheat, dal, vegetables, and fruits. Some people prefer vegetarian food while others eat non-vegetarian food. The variety in food makes our meals interesting and provides different nutrients our body needs.",
+                        "definitions": [
+                            "Food: Any nutritious substance that living beings eat or drink to maintain life and growth",
+                            "Ingredients: The items or materials that are mixed together to prepare a particular dish",
+                            "Vegetarian: Food that comes from plants and does not include meat, fish, or eggs",
+                            "Non-vegetarian: Food that includes meat, fish, eggs, or other animal products"
+                        ],
+                        "keyPoints": [
+                            "Food provides energy and nutrients necessary for growth and health",
+                            "Different cultures have different food habits and preferences",
+                            "Food can be classified as vegetarian and non-vegetarian",
+                            "The same ingredient can be used to make different dishes",
+                            "Food variety depends on geographical location and climate"
+                        ],
+                        "examples": [
+                            "Rice is a staple food in South India while wheat is common in North India",
+                            "Coconut is widely used in coastal areas",
+                            "Milk can be used to make curd, paneer, butter, and cheese",
+                            "Potato can be cooked as curry, chips, or mashed"
+                        ],
+                        "diagramExplanation": "A food plate showing different food groups: cereals (rice, wheat), pulses (dal), vegetables (spinach, carrot), fruits (apple, banana), dairy products (milk, curd), and proteins (eggs, meat). Each group is color-coded to show variety.",
+                        "formula": "",
+                        "activity": "Activity: Food Survey - Ask 10 friends about their favorite food. Make a chart showing which foods are most popular. Classify them as vegetarian or non-vegetarian.",
+                        "misconceptions": [
+                            "Misconception: All food comes from plants. Reality: Food comes from both plants and animals",
+                            "Misconception: Expensive food is always more nutritious. Reality: Simple, local food can be very nutritious"
+                        ],
+                        "summary": "Food is essential for survival and comes in great variety. Different regions have different food habits based on availability and culture. Food can be vegetarian or non-vegetarian, and the same ingredients can be used in multiple ways."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "Which of the following is a plant-based food?",
+                                "options": [
+                                    "Rice",
+                                    "Egg",
+                                    "Fish",
+                                    "Chicken"
+                                ],
+                                "answer": "Rice"
+                            },
+                            {
+                                "q": "What do we call food that does not include any animal products?",
+                                "options": [
+                                    "Non-vegetarian",
+                                    "Vegetarian",
+                                    "Junk food",
+                                    "Fast food"
+                                ],
+                                "answer": "Vegetarian"
+                            },
+                            {
+                                "q": "Which food item is commonly eaten in coastal areas?",
+                                "options": [
+                                    "Wheat",
+                                    "Coconut",
+                                    "Millet",
+                                    "Corn"
+                                ],
+                                "answer": "Coconut"
+                            },
+                            {
+                                "q": "Milk is obtained from which source?",
+                                "options": [
+                                    "Plants",
+                                    "Animals",
+                                    "Minerals",
+                                    "Water"
+                                ],
+                                "answer": "Animals"
+                            },
+                            {
+                                "q": "Which of these can be made from milk?",
+                                "options": [
+                                    "Curd",
+                                    "Rice",
+                                    "Wheat",
+                                    "Potato"
+                                ],
+                                "answer": "Curd"
+                            },
+                            {
+                                "q": "What is the main food crop in South India?",
+                                "options": [
+                                    "Wheat",
+                                    "Rice",
+                                    "Maize",
+                                    "Barley"
+                                ],
+                                "answer": "Rice"
+                            },
+                            {
+                                "q": "Which food group does dal belong to?",
+                                "options": [
+                                    "Cereals",
+                                    "Pulses",
+                                    "Vegetables",
+                                    "Fruits"
+                                ],
+                                "answer": "Pulses"
+                            },
+                            {
+                                "q": "Honey is produced by which creature?",
+                                "options": [
+                                    "Bees",
+                                    "Ants",
+                                    "Butterflies",
+                                    "Birds"
+                                ],
+                                "answer": "Bees"
+                            },
+                            {
+                                "q": "Which vitamin is mainly found in citrus fruits?",
+                                "options": [
+                                    "Vitamin A",
+                                    "Vitamin B",
+                                    "Vitamin C",
+                                    "Vitamin D"
+                                ],
+                                "answer": "Vitamin C"
+                            },
+                            {
+                                "q": "What do we call the materials used to prepare food?",
+                                "options": [
+                                    "Nutrients",
+                                    "Ingredients",
+                                    "Minerals",
+                                    "Vitamins"
+                                ],
+                                "answer": "Ingredients"
+                            }
+                        ],
+                        "short": [
+                            "Name three vegetarian food items.",
+                            "Why do different regions have different food habits?",
+                            "Give two examples of food obtained from animals.",
+                            "What is the difference between vegetarian and non-vegetarian food?",
+                            "Name any two products that can be made from milk."
+                        ],
+                        "long": [
+                            "Explain the variety of food available in India with examples from different regions.",
+                            "Describe how the same ingredient can be used to prepare different dishes. Give at least three examples.",
+                            "Why is it important to have variety in our food? Explain with reasons."
+                        ],
+                        "hots": [
+                            "If you had to design a balanced meal using only five ingredients, what would you choose and why?",
+                            "How do you think climate affects the type of food grown and eaten in a region? Explain with examples."
+                        ]
+                    }
+                },
+                {
+                    "name": "Food Materials and Sources",
+                    "content": {
+                        "explanation": "Every food item we eat comes from either plants or animals. Plants give us fruits, vegetables, grains, and pulses. Animals provide us with milk, eggs, meat, and honey. Some foods like bread and biscuits are made by processing plant materials. Understanding food sources helps us appreciate nature and make healthy food choices.",
+                        "definitions": [
+                            "Source: The origin or place from where something comes",
+                            "Plant products: Food items obtained from different parts of plants",
+                            "Animal products: Food items obtained from animals",
+                            "Edible: Safe and suitable for eating"
+                        ],
+                        "keyPoints": [
+                            "Food comes from two main sources: plants and animals",
+                            "Different parts of plants are edible: roots, stems, leaves, flowers, fruits, and seeds",
+                            "Animals provide milk, eggs, meat, and honey",
+                            "Some foods are processed from raw materials",
+                            "Knowing food sources helps in understanding nutrition"
+                        ],
+                        "examples": [
+                            "Roots: Carrot, radish, beetroot, turnip",
+                            "Stems: Potato, ginger, onion",
+                            "Leaves: Spinach, cabbage, lettuce",
+                            "Flowers: Cauliflower, broccoli",
+                            "Fruits: Apple, mango, banana",
+                            "Seeds: Rice, wheat, pulses",
+                            "Animal products: Milk from cow, eggs from hen, honey from bees"
+                        ],
+                        "diagramExplanation": "A tree diagram showing food sources branching into Plants and Animals. Under Plants: roots (carrot), stems (potato), leaves (spinach), flowers (cauliflower), fruits (mango), seeds (rice). Under Animals: milk (cow/buffalo), eggs (hen), meat (goat/chicken), honey (bees).",
+                        "formula": "",
+                        "activity": "Activity: Food Source Chart - Collect pictures of 20 different food items. Paste them in your notebook and write whether each comes from plants or animals. For plant foods, mention which part of the plant.",
+                        "misconceptions": [
+                            "Misconception: Potato is a root. Reality: Potato is a modified stem that grows underground",
+                            "Misconception: All animal products are non-vegetarian. Reality: Milk and honey are considered vegetarian by many",
+                            "Misconception: Mushrooms are plants. Reality: Mushrooms are fungi, not plants"
+                        ],
+                        "summary": "Food comes from plants and animals. Different parts of plants (roots, stems, leaves, flowers, fruits, seeds) are edible. Animals provide milk, eggs, meat, and honey. Understanding food sources helps us make informed dietary choices."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "Which part of the plant is potato?",
+                                "options": [
+                                    "Root",
+                                    "Stem",
+                                    "Leaf",
+                                    "Fruit"
+                                ],
+                                "answer": "Stem"
+                            },
+                            {
+                                "q": "Carrot is which part of the plant?",
+                                "options": [
+                                    "Root",
+                                    "Stem",
+                                    "Leaf",
+                                    "Flower"
+                                ],
+                                "answer": "Root"
+                            },
+                            {
+                                "q": "Which of these is obtained from bees?",
+                                "options": [
+                                    "Milk",
+                                    "Honey",
+                                    "Eggs",
+                                    "Meat"
+                                ],
+                                "answer": "Honey"
+                            },
+                            {
+                                "q": "Spinach is which part of the plant?",
+                                "options": [
+                                    "Root",
+                                    "Stem",
+                                    "Leaf",
+                                    "Seed"
+                                ],
+                                "answer": "Leaf"
+                            },
+                            {
+                                "q": "Rice is obtained from which part of the plant?",
+                                "options": [
+                                    "Root",
+                                    "Stem",
+                                    "Leaf",
+                                    "Seed"
+                                ],
+                                "answer": "Seed"
+                            },
+                            {
+                                "q": "Which animal gives us eggs?",
+                                "options": [
+                                    "Cow",
+                                    "Hen",
+                                    "Goat",
+                                    "Buffalo"
+                                ],
+                                "answer": "Hen"
+                            },
+                            {
+                                "q": "Cauliflower is which part of the plant?",
+                                "options": [
+                                    "Root",
+                                    "Stem",
+                                    "Flower",
+                                    "Fruit"
+                                ],
+                                "answer": "Flower"
+                            },
+                            {
+                                "q": "Which of these is a plant product?",
+                                "options": [
+                                    "Milk",
+                                    "Apple",
+                                    "Egg",
+                                    "Meat"
+                                ],
+                                "answer": "Apple"
+                            },
+                            {
+                                "q": "Ginger is which part of the plant?",
+                                "options": [
+                                    "Root",
+                                    "Stem",
+                                    "Leaf",
+                                    "Fruit"
+                                ],
+                                "answer": "Stem"
+                            },
+                            {
+                                "q": "Which food comes from animals?",
+                                "options": [
+                                    "Rice",
+                                    "Wheat",
+                                    "Milk",
+                                    "Potato"
+                                ],
+                                "answer": "Milk"
+                            }
+                        ],
+                        "short": [
+                            "Name three food items obtained from plant roots.",
+                            "List four products we get from animals.",
+                            "Which part of the plant do we eat in the case of: (a) Spinach (b) Cauliflower (c) Carrot?",
+                            "Why is it important to know the source of our food?",
+                            "Give two examples of food obtained from plant seeds."
+                        ],
+                        "long": [
+                            "Explain with examples how different parts of plants serve as food for humans.",
+                            "Describe the various food products obtained from animals and their importance in our diet.",
+                            "Make a list of ten food items and classify them based on their source (plant or animal) and the part of the plant if applicable."
+                        ],
+                        "hots": [
+                            "Some people say we should only eat plant-based food. What would be the advantages and disadvantages of this?",
+                            "If plants disappeared from Earth, how would it affect our food supply? Explain your reasoning."
+                        ]
+                    }
+                },
+                {
+                    "name": "What Do Animals Eat?",
+                    "content": {
+                        "explanation": "Just like humans, animals also need food to survive. Different animals eat different types of food. Some animals eat only plants (herbivores), some eat only other animals (carnivores), and some eat both plants and animals (omnivores). Birds have different types of beaks suited to the food they eat. Understanding what animals eat helps us learn about food chains and ecosystems.",
+                        "definitions": [
+                            "Herbivores: Animals that eat only plants and plant products",
+                            "Carnivores: Animals that eat only other animals (meat)",
+                            "Omnivores: Animals that eat both plants and animals",
+                            "Beak: The hard, pointed part of a bird's mouth used for eating",
+                            "Food chain: A series showing who eats whom in nature"
+                        ],
+                        "keyPoints": [
+                            "Animals are classified based on their food habits",
+                            "Herbivores have flat teeth for grinding plants",
+                            "Carnivores have sharp teeth for tearing meat",
+                            "Omnivores have both types of teeth",
+                            "Birds have different beak shapes based on their food",
+                            "Food habits determine an animal's role in the ecosystem"
+                        ],
+                        "examples": [
+                            "Herbivores: Cow, goat, deer, elephant, rabbit",
+                            "Carnivores: Lion, tiger, leopard, eagle, snake",
+                            "Omnivores: Bear, crow, human, rat, dog",
+                            "Beaks: Sparrow (short, cone-shaped for seeds), Eagle (hooked for tearing meat), Duck (flat for filtering water), Hummingbird (long, thin for nectar)"
+                        ],
+                        "diagramExplanation": "Three columns showing: (1) Herbivores with flat grinding teeth eating grass, (2) Carnivores with sharp pointed teeth eating meat, (3) Omnivores with mixed teeth eating both plants and meat. Below, different bird beaks: hooked (eagle), cone-shaped (sparrow), flat (duck), long-thin (hummingbird).",
+                        "formula": "",
+                        "activity": "Activity: Animal Food Survey - Visit a zoo or watch animal videos. Observe 5 different animals and note what they eat. Classify them as herbivores, carnivores, or omnivores. Draw their teeth or beaks if possible.",
+                        "misconceptions": [
+                            "Misconception: All big animals are carnivores. Reality: Elephants and cows are large herbivores",
+                            "Misconception: Carnivores only eat meat. Reality: Some carnivores occasionally eat plants",
+                            "Misconception: All birds eat the same food. Reality: Different birds have different diets and beak shapes"
+                        ],
+                        "summary": "Animals are classified as herbivores (plant-eaters), carnivores (meat-eaters), and omnivores (both). Their teeth and beaks are adapted to their food. Understanding animal diets helps us understand ecosystems and food chains."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "Which animal is a herbivore?",
+                                "options": [
+                                    "Lion",
+                                    "Cow",
+                                    "Tiger",
+                                    "Eagle"
+                                ],
+                                "answer": "Cow"
+                            },
+                            {
+                                "q": "Animals that eat both plants and animals are called:",
+                                "options": [
+                                    "Herbivores",
+                                    "Carnivores",
+                                    "Omnivores",
+                                    "Insectivores"
+                                ],
+                                "answer": "Omnivores"
+                            },
+                            {
+                                "q": "Which bird has a hooked beak?",
+                                "options": [
+                                    "Sparrow",
+                                    "Eagle",
+                                    "Duck",
+                                    "Parrot"
+                                ],
+                                "answer": "Eagle"
+                            },
+                            {
+                                "q": "What type of teeth do herbivores have?",
+                                "options": [
+                                    "Sharp and pointed",
+                                    "Flat and broad",
+                                    "No teeth",
+                                    "Very small teeth"
+                                ],
+                                "answer": "Flat and broad"
+                            },
+                            {
+                                "q": "Which of these is a carnivore?",
+                                "options": [
+                                    "Deer",
+                                    "Rabbit",
+                                    "Lion",
+                                    "Elephant"
+                                ],
+                                "answer": "Lion"
+                            },
+                            {
+                                "q": "Humans are:",
+                                "options": [
+                                    "Herbivores",
+                                    "Carnivores",
+                                    "Omnivores",
+                                    "None of these"
+                                ],
+                                "answer": "Omnivores"
+                            },
+                            {
+                                "q": "Which bird has a beak suitable for eating nectar?",
+                                "options": [
+                                    "Eagle",
+                                    "Sparrow",
+                                    "Hummingbird",
+                                    "Crow"
+                                ],
+                                "answer": "Hummingbird"
+                            },
+                            {
+                                "q": "Carnivores have teeth that are:",
+                                "options": [
+                                    "Flat",
+                                    "Sharp and pointed",
+                                    "Absent",
+                                    "Very small"
+                                ],
+                                "answer": "Sharp and pointed"
+                            },
+                            {
+                                "q": "Which animal eats only plants?",
+                                "options": [
+                                    "Dog",
+                                    "Cat",
+                                    "Goat",
+                                    "Bear"
+                                ],
+                                "answer": "Goat"
+                            },
+                            {
+                                "q": "A duck's beak is:",
+                                "options": [
+                                    "Hooked",
+                                    "Flat and broad",
+                                    "Long and thin",
+                                    "Short and cone-shaped"
+                                ],
+                                "answer": "Flat and broad"
+                            }
+                        ],
+                        "short": [
+                            "Define herbivores with two examples.",
+                            "What is the difference between carnivores and omnivores?",
+                            "Why do different birds have different types of beaks?",
+                            "Name three omnivores.",
+                            "How are the teeth of herbivores different from carnivores?"
+                        ],
+                        "long": [
+                            "Explain the three types of animals based on their food habits with suitable examples.",
+                            "Describe how the beak shape of birds is related to the type of food they eat. Give at least three examples.",
+                            "Why is it important to understand what animals eat? Explain with reference to food chains."
+                        ],
+                        "hots": [
+                            "If all carnivores disappeared from Earth, what would happen to herbivores and plants? Explain your reasoning.",
+                            "Design an imaginary animal and describe what it would eat, what type of teeth or beak it would have, and why."
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Components of Food",
+            "subchapters": [
+                {
+                    "name": "Nutrients in Food",
+                    "content": {
+                        "explanation": "Food contains various components called nutrients that are essential for our body. The main nutrients are carbohydrates, proteins, fats, vitamins, and minerals. Each nutrient has a specific function. Carbohydrates and fats provide energy, proteins help in growth and repair, vitamins and minerals protect us from diseases. Water and roughage are also important components of food.",
+                        "definitions": [
+                            "Nutrients: Substances in food that provide nourishment essential for growth and health",
+                            "Carbohydrates: Energy-giving nutrients found in rice, wheat, and sugar",
+                            "Proteins: Body-building nutrients found in pulses, meat, and eggs",
+                            "Fats: Energy-storing nutrients found in oil, butter, and nuts",
+                            "Vitamins: Protective nutrients that help prevent diseases",
+                            "Minerals: Protective nutrients like iron and calcium needed in small amounts",
+                            "Roughage: Fibrous material in food that aids digestion",
+                            "Balanced diet: A diet containing all nutrients in proper proportions"
+                        ],
+                        "keyPoints": [
+                            "Food contains six main components: carbohydrates, proteins, fats, vitamins, minerals, and water",
+                            "Carbohydrates and fats are energy-giving foods",
+                            "Proteins are body-building foods",
+                            "Vitamins and minerals are protective foods",
+                            "Roughage helps in digestion",
+                            "Water is essential for all body processes",
+                            "A balanced diet contains all nutrients in right amounts"
+                        ],
+                        "examples": [
+                            "Carbohydrates: Rice, wheat, potato, sugar, bread",
+                            "Proteins: Pulses, eggs, fish, meat, milk, soybean",
+                            "Fats: Butter, ghee, oil, nuts, cheese",
+                            "Vitamins: Fruits (Vitamin C), carrots (Vitamin A), sunlight (Vitamin D)",
+                            "Minerals: Milk (calcium), spinach (iron), salt (iodine)",
+                            "Roughage: Whole grains, fruits, vegetables",
+                            "Water: Plain water, juices, soups"
+                        ],
+                        "diagramExplanation": "A pyramid showing food groups: Base - Carbohydrates (rice, wheat), Second level - Proteins (pulses, eggs), Third level - Fats (oil, nuts), Fourth level - Vitamins and minerals (fruits, vegetables), Top - Water. Each level shows portion sizes needed daily.",
+                        "formula": "",
+                        "activity": "Activity: Nutrient Testing - Test for starch: Put iodine solution on potato and bread. Blue-black color indicates starch (carbohydrate). Test for protein: Add copper sulfate and caustic soda to milk. Violet color indicates protein. Test for fats: Rub a food item on paper. An oily patch indicates fat.",
+                        "misconceptions": [
+                            "Misconception: Fats are always bad for health. Reality: Fats are essential but should be consumed in moderation",
+                            "Misconception: Only non-vegetarian food has protein. Reality: Pulses and soybean are rich in protein",
+                            "Misconception: Vitamins can replace food. Reality: Vitamins are supplements, not food replacements"
+                        ],
+                        "summary": "Food contains nutrients: carbohydrates and fats (energy), proteins (growth), vitamins and minerals (protection), water (body processes), and roughage (digestion). A balanced diet contains all nutrients in proper amounts for good health."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "Which nutrient provides energy to our body?",
+                                "options": [
+                                    "Proteins",
+                                    "Carbohydrates",
+                                    "Vitamins",
+                                    "Minerals"
+                                ],
+                                "answer": "Carbohydrates"
+                            },
+                            {
+                                "q": "Which nutrient helps in body building and growth?",
+                                "options": [
+                                    "Fats",
+                                    "Carbohydrates",
+                                    "Proteins",
+                                    "Water"
+                                ],
+                                "answer": "Proteins"
+                            },
+                            {
+                                "q": "Which food is rich in Vitamin C?",
+                                "options": [
+                                    "Rice",
+                                    "Milk",
+                                    "Orange",
+                                    "Egg"
+                                ],
+                                "answer": "Orange"
+                            },
+                            {
+                                "q": "Iodine solution turns blue-black in the presence of:",
+                                "options": [
+                                    "Protein",
+                                    "Fat",
+                                    "Starch",
+                                    "Vitamin"
+                                ],
+                                "answer": "Starch"
+                            },
+                            {
+                                "q": "Which mineral is important for strong bones?",
+                                "options": [
+                                    "Iron",
+                                    "Calcium",
+                                    "Iodine",
+                                    "Sodium"
+                                ],
+                                "answer": "Calcium"
+                            },
+                            {
+                                "q": "Roughage helps in:",
+                                "options": [
+                                    "Providing energy",
+                                    "Building muscles",
+                                    "Digestion",
+                                    "Fighting diseases"
+                                ],
+                                "answer": "Digestion"
+                            },
+                            {
+                                "q": "Which food is rich in protein?",
+                                "options": [
+                                    "Rice",
+                                    "Pulses",
+                                    "Potato",
+                                    "Sugar"
+                                ],
+                                "answer": "Pulses"
+                            },
+                            {
+                                "q": "Butter is rich in:",
+                                "options": [
+                                    "Carbohydrates",
+                                    "Proteins",
+                                    "Fats",
+                                    "Vitamins"
+                                ],
+                                "answer": "Fats"
+                            },
+                            {
+                                "q": "A diet containing all nutrients in right proportion is called:",
+                                "options": [
+                                    "Junk food",
+                                    "Fast food",
+                                    "Balanced diet",
+                                    "Heavy diet"
+                                ],
+                                "answer": "Balanced diet"
+                            },
+                            {
+                                "q": "Which vitamin is obtained from sunlight?",
+                                "options": [
+                                    "Vitamin A",
+                                    "Vitamin B",
+                                    "Vitamin C",
+                                    "Vitamin D"
+                                ],
+                                "answer": "Vitamin D"
+                            }
+                        ],
+                        "short": [
+                            "Name the six main components of food.",
+                            "What is the function of proteins in our body?",
+                            "Why is roughage important in our diet?",
+                            "Name two foods rich in carbohydrates.",
+                            "What is a balanced diet?"
+                        ],
+                        "long": [
+                            "Explain the different types of nutrients and their functions in our body with examples.",
+                            "Describe simple tests to detect the presence of starch, protein, and fats in food items.",
+                            "Why is it important to have a balanced diet? What happens if our diet lacks certain nutrients?"
+                        ],
+                        "hots": [
+                            "Design a one-day meal plan that includes all nutrients in balanced proportions. Justify your choices.",
+                            "If a person eats only rice and nothing else, what health problems might they face? Explain why."
+                        ]
+                    }
+                },
+                {
+                    "name": "Deficiency Diseases",
+                    "content": {
+                        "explanation": "When our diet lacks one or more nutrients over a long period, we may develop deficiency diseases. These diseases occur due to insufficient intake of specific nutrients. For example, lack of Vitamin C causes scurvy, lack of Vitamin D causes rickets, lack of iron causes anemia, and lack of iodine causes goiter. Eating a balanced diet prevents these diseases.",
+                        "definitions": [
+                            "Deficiency disease: A disease caused by lack of a particular nutrient in diet",
+                            "Scurvy: Disease caused by deficiency of Vitamin C, leading to bleeding gums",
+                            "Rickets: Disease caused by deficiency of Vitamin D, causing soft and bent bones",
+                            "Anemia: Disease caused by deficiency of iron, leading to weakness and fatigue",
+                            "Goiter: Disease caused by deficiency of iodine, causing swelling in neck",
+                            "Beriberi: Disease caused by deficiency of Vitamin B1, affecting nerves",
+                            "Night blindness: Inability to see in dim light due to Vitamin A deficiency"
+                        ],
+                        "keyPoints": [
+                            "Deficiency diseases occur due to lack of specific nutrients",
+                            "Vitamin C deficiency causes scurvy (bleeding gums, wounds don't heal)",
+                            "Vitamin D deficiency causes rickets (soft bones, bow legs)",
+                            "Iron deficiency causes anemia (weakness, pale skin)",
+                            "Iodine deficiency causes goiter (neck swelling)",
+                            "Vitamin A deficiency causes night blindness",
+                            "Vitamin B1 deficiency causes beriberi",
+                            "Balanced diet prevents all deficiency diseases"
+                        ],
+                        "examples": [
+                            "Scurvy prevention: Eat citrus fruits like orange, lemon, amla",
+                            "Rickets prevention: Get sunlight exposure, drink milk, eat fish",
+                            "Anemia prevention: Eat green leafy vegetables, jaggery, dates",
+                            "Goiter prevention: Use iodized salt in cooking",
+                            "Night blindness prevention: Eat carrots, papaya, mango (Vitamin A rich foods)",
+                            "Beriberi prevention: Eat whole grains, pulses, nuts"
+                        ],
+                        "diagramExplanation": "A table with columns: Disease Name | Nutrient Deficient | Symptoms | Prevention Foods. Rows showing: Scurvy (Vitamin C, bleeding gums, citrus fruits), Rickets (Vitamin D, bent bones, milk/sunlight), Anemia (Iron, weakness, green vegetables), Goiter (Iodine, neck swelling, iodized salt), Night blindness (Vitamin A, poor vision in dark, carrots).",
+                        "formula": "",
+                        "activity": "Activity: Deficiency Disease Chart - Create a colorful chart showing five deficiency diseases. For each disease, draw symptoms, write the deficient nutrient, and paste pictures of foods that prevent it. Display in classroom.",
+                        "misconceptions": [
+                            "Misconception: Deficiency diseases are contagious. Reality: They are not spread from person to person",
+                            "Misconception: Only poor people get deficiency diseases. Reality: Anyone with unbalanced diet can get them",
+                            "Misconception: Taking vitamin pills is better than eating food. Reality: Natural food sources are best"
+                        ],
+                        "summary": "Deficiency diseases occur when diet lacks specific nutrients. Common diseases include scurvy (Vitamin C), rickets (Vitamin D), anemia (iron), goiter (iodine), and night blindness (Vitamin A). Eating a balanced diet with variety prevents all deficiency diseases."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "Which disease is caused by deficiency of Vitamin C?",
+                                "options": [
+                                    "Rickets",
+                                    "Scurvy",
+                                    "Anemia",
+                                    "Goiter"
+                                ],
+                                "answer": "Scurvy"
+                            },
+                            {
+                                "q": "Lack of iron in diet causes:",
+                                "options": [
+                                    "Scurvy",
+                                    "Rickets",
+                                    "Anemia",
+                                    "Beriberi"
+                                ],
+                                "answer": "Anemia"
+                            },
+                            {
+                                "q": "Goiter is caused by deficiency of:",
+                                "options": [
+                                    "Vitamin C",
+                                    "Iron",
+                                    "Iodine",
+                                    "Calcium"
+                                ],
+                                "answer": "Iodine"
+                            },
+                            {
+                                "q": "Which vitamin deficiency causes night blindness?",
+                                "options": [
+                                    "Vitamin A",
+                                    "Vitamin B",
+                                    "Vitamin C",
+                                    "Vitamin D"
+                                ],
+                                "answer": "Vitamin A"
+                            },
+                            {
+                                "q": "Rickets affects:",
+                                "options": [
+                                    "Eyes",
+                                    "Bones",
+                                    "Blood",
+                                    "Skin"
+                                ],
+                                "answer": "Bones"
+                            },
+                            {
+                                "q": "Which food prevents scurvy?",
+                                "options": [
+                                    "Rice",
+                                    "Lemon",
+                                    "Milk",
+                                    "Egg"
+                                ],
+                                "answer": "Lemon"
+                            },
+                            {
+                                "q": "Swelling in the neck is a symptom of:",
+                                "options": [
+                                    "Scurvy",
+                                    "Rickets",
+                                    "Goiter",
+                                    "Anemia"
+                                ],
+                                "answer": "Goiter"
+                            },
+                            {
+                                "q": "Which nutrient deficiency causes weak bones in children?",
+                                "options": [
+                                    "Vitamin A",
+                                    "Vitamin C",
+                                    "Vitamin D",
+                                    "Iron"
+                                ],
+                                "answer": "Vitamin D"
+                            },
+                            {
+                                "q": "Eating green leafy vegetables prevents:",
+                                "options": [
+                                    "Scurvy",
+                                    "Anemia",
+                                    "Goiter",
+                                    "Rickets"
+                                ],
+                                "answer": "Anemia"
+                            },
+                            {
+                                "q": "Beriberi is caused by deficiency of:",
+                                "options": [
+                                    "Vitamin A",
+                                    "Vitamin B1",
+                                    "Vitamin C",
+                                    "Vitamin D"
+                                ],
+                                "answer": "Vitamin B1"
+                            }
+                        ],
+                        "short": [
+                            "What is a deficiency disease?",
+                            "Name the disease caused by lack of Vitamin D and its symptoms.",
+                            "How can we prevent goiter?",
+                            "List three symptoms of anemia.",
+                            "Which foods should be eaten to prevent scurvy?"
+                        ],
+                        "long": [
+                            "Explain any three deficiency diseases with their causes, symptoms, and prevention methods.",
+                            "Why is it important to use iodized salt? What disease does it prevent and how?",
+                            "Describe how a balanced diet helps in preventing deficiency diseases. Give examples."
+                        ],
+                        "hots": [
+                            "A child has weak bones and bow legs. Which deficiency disease might this be? What dietary changes would you suggest?",
+                            "Why do you think deficiency diseases are more common in areas where people eat the same food every day? How can this be prevented?"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Fibre to Fabric",
+            "subchapters": [
+                {
+                    "name": "Variety in Fabrics",
+                    "content": {
+                        "explanation": "Fabrics come in many varieties like cotton, silk, wool, and polyester. We choose fabrics based on the weather and occasion.",
+                        "keyPoints": [
+                            "Cotton is used in summer",
+                            "Wool is used in winter",
+                            "Silk is used for special occasions"
+                        ]
+                    }
+                },
+                {
+                    "name": "Fibre",
+                    "content": {
+                        "explanation": "Fibres are thin strands that are spun into yarns, which are then woven into fabrics. Fibres can be natural or synthetic.",
+                        "keyPoints": [
+                            "Natural fibres: Cotton, Jute, Silk, Wool",
+                            "Synthetic fibres: Polyester, Nylon, Acrylic",
+                            "Fibres -> Yarn -> Fabric"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Sorting Materials into Groups",
+            "subchapters": [
+                {
+                    "name": "Objects Around Us",
+                    "content": {
+                        "explanation": "We see many objects around us made of different materials. One object can be made of different materials, and one material can make different objects.",
+                        "keyPoints": [
+                            "Chair: Wood, Plastic, Iron",
+                            "Toy: Plastic, Wood, Electronic components",
+                            "Materials have different properties"
+                        ]
+                    }
+                },
+                {
+                    "name": "Properties of Materials",
+                    "content": {
+                        "explanation": "Materials are grouped based on properties like appearance (lustre), hardness, solubility, and transparency.",
+                        "keyPoints": [
+                            "Lustre: Shine (Metals)",
+                            "Hardness: Hard vs Soft",
+                            "Solubility: Soluble vs Insoluble in water",
+                            "Transparency: Transparent, Translucent, Opaque"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

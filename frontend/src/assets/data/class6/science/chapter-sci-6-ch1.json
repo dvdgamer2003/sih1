@@ -1,0 +1,150 @@
+{
+    "id": "sci-6-ch1",
+    "title": "Natural Resources – Air, Water and Land",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Air",
+            "readingTime": 5,
+            "content": "# Air\n\nThe air in the atmosphere around the earth contains nitrogen, oxygen, carbon dioxide, six inert gases, nitrogen dioxide, sulphur dioxide, water vapour and dust particles. The troposphere contains about 80% of the total mass of gases in the air, while this proportion is about 19% in the stratosphere.\n\n## Composition of Air\n\n- **Nitrogen (78%)**: Helps living things to build the necessary proteins. It is useful in the production of ammonia and in airtight packaging of foodstuffs.\n- **Oxygen (21%)**: Necessary for respiration in living things and for combustion.\n- **Argon (0.9%)**: Used in electric bulbs.\n- **Carbon dioxide (0.03%)**: Plants use it for producing their food. Used in fire extinguishers.\n- **Other constituents**: Helium, Neon, Krypton, Xenon.\n\n![Composition of Air](https://example.com/air_composition.png)\n\n## Air Pollution\n\nSmoke directly mixes with the atmosphere, disturbing the balance between the constituents of air. This is called air pollution. Harmful gases are given out through combustion of fuels in vehicles and in big industries and also through incomplete combustion of fuels like wood and coal."
+        },
+        {
+            "id": "l2",
+            "title": "Water",
+            "readingTime": 6,
+            "content": "# Water\n\nWater is a natural resource which is essential for the survival of all living organisms. It is found in oceans, seas, rivers, lakes, ponds, and underground.\n\n## Properties of Water\n\n- Water is a universal solvent.\n- It has no color, taste, or odor.\n- It exists in three states: solid (ice), liquid (water), and gas (water vapour).\n\n## Water Cycle\n\nThe continuous movement of water from the earth's surface to the atmosphere and back to the earth is called the water cycle."
+        },
+        {
+            "id": "l3",
+            "title": "Land",
+            "readingTime": 7,
+            "content": "# Land\n\nLand is seen in the form of stones, soil, big rocks. It is not flat everywhere. It is hilly in some places and flat in others. All terrestrial animals including man live on land.\n\n## Soil Formation\n\nThe soil on the land is formed by a natural process. The abiotic components of soil are supplied through the weathering of the bedrock. Due to the heat, cold and water of the sun, wind and rain respectively, the bedrock breaks down into pieces. Stones, sand and soil are formed from these pieces."
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Natural Resources",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "Which gas is most abundant in the air?",
+                "options": [
+                    "Oxygen",
+                    "Nitrogen",
+                    "Carbon Dioxide",
+                    "Argon"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Nitrogen makes up about 78% of the air."
+            },
+            {
+                "id": "q1_2",
+                "question": "Which layer of the atmosphere contains the ozone layer?",
+                "options": [
+                    "Troposphere",
+                    "Stratosphere",
+                    "Mesosphere",
+                    "Thermosphere"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The ozone layer is found in the lower part of the stratosphere."
+            },
+            {
+                "id": "q1_3",
+                "question": "What percentage of the Earth's surface is covered by water?",
+                "options": [
+                    "29%",
+                    "50%",
+                    "71%",
+                    "90%"
+                ],
+                "correctAnswer": 2,
+                "explanation": "About 71% of the Earth's surface is covered by water."
+            },
+            {
+                "id": "q1_4",
+                "question": "Which gas is essential for respiration in living things?",
+                "options": [
+                    "Nitrogen",
+                    "Oxygen",
+                    "Carbon Dioxide",
+                    "Helium"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Oxygen is necessary for respiration in living things and for combustion."
+            },
+            {
+                "id": "q1_5",
+                "question": "What is the main cause of air pollution?",
+                "options": [
+                    "Planting trees",
+                    "Combustion of fuels",
+                    "Water cycle",
+                    "Photosynthesis"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Harmful gases from combustion of fuels in vehicles and industries are the main cause of air pollution."
+            },
+            {
+                "id": "q1_6",
+                "question": "Which gas do plants use to produce their food?",
+                "options": [
+                    "Oxygen",
+                    "Nitrogen",
+                    "Carbon Dioxide",
+                    "Argon"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Plants use carbon dioxide for producing their food through photosynthesis."
+            },
+            {
+                "id": "q1_7",
+                "question": "What is water called when it exists as a gas?",
+                "options": [
+                    "Ice",
+                    "Steam",
+                    "Water vapour",
+                    "Liquid water"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Water in its gaseous state is called water vapour."
+            },
+            {
+                "id": "q1_8",
+                "question": "How is soil formed on land?",
+                "options": [
+                    "By planting trees",
+                    "By weathering of bedrock",
+                    "By rainfall only",
+                    "By animals digging"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Soil is formed by the weathering of bedrock due to heat, cold, water, wind and rain."
+            },
+            {
+                "id": "q1_9",
+                "question": "Which layer of the atmosphere contains about 80% of the total mass of gases?",
+                "options": [
+                    "Stratosphere",
+                    "Mesosphere",
+                    "Troposphere",
+                    "Thermosphere"
+                ],
+                "correctAnswer": 2,
+                "explanation": "The troposphere contains about 80% of the total mass of gases in the air."
+            },
+            {
+                "id": "q1_10",
+                "question": "Which property makes water a universal solvent?",
+                "options": [
+                    "It has color",
+                    "It can dissolve many substances",
+                    "It is always hot",
+                    "It never freezes"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Water is called a universal solvent because it can dissolve many substances."
+            }
+        ]
+    }
+}

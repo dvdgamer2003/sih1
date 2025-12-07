@@ -1,0 +1,42 @@
+[
+    {
+        "id": "comp-6-ch1",
+        "title": "Introduction to Computer",
+        "description": "Basics of computer system and its components.",
+        "icon": "desktop-classic",
+        "color": "#60A5FA",
+        "units": 2
+    },
+    {
+        "id": "comp-6-ch2",
+        "title": "Input and Output Devices",
+        "description": "Learn about keyboard, mouse, monitor, printer etc.",
+        "icon": "keyboard",
+        "color": "#34D399",
+        "units": 2
+    },
+    {
+        "id": "comp-6-ch3",
+        "title": "Operating System",
+        "description": "Understanding Windows and other OS.",
+        "icon": "microsoft-windows",
+        "color": "#A78BFA",
+        "units": 2
+    },
+    {
+        "id": "comp-6-ch4",
+        "title": "Microsoft Word",
+        "description": "Introduction to word processing.",
+        "icon": "file-document",
+        "color": "#2563EB",
+        "units": 3
+    },
+    {
+        "id": "comp-6-ch5",
+        "title": "Microsoft PowerPoint",
+        "description": "Creating presentations.",
+        "icon": "presentation",
+        "color": "#F97316",
+        "units": 3
+    }
+]

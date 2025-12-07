@@ -1,0 +1,372 @@
+{
+    "class": "9",
+    "board": "CBSE (NCERT)",
+    "subject": "Science",
+    "textbook": "Science – Textbook for Class IX (Rationalised Edition)",
+    "academic_year": "2025-26",
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Matter in Our Surroundings",
+        "topics": [
+          "Definition of matter and classification based on physical nature",
+          "Characteristics of particles of matter",
+          "States of matter: solid, liquid, gas",
+          "Interconversion of states of matter",
+          "Effect of temperature and pressure on state",
+          "Evaporation and factors affecting evaporation",
+          "Role of evaporation in everyday life (cooling, sweating etc.)"
+        ],
+        "notes": {
+          "summary": "This chapter introduces matter as anything that occupies space and has mass, explains its particle nature, and describes how matter exists and changes between different physical states.",
+          "key_points": [
+            "Matter is made up of tiny particles that have space between them, move continuously, and attract each other.",
+            "Solids have fixed shape and volume, liquids have fixed volume but no fixed shape, and gases have neither fixed shape nor fixed volume.",
+            "Change of state (solid, liquid, gas) can be brought about by changing temperature or pressure, as in melting of ice or liquefaction of gases.",
+            "Latent heat is the heat supplied or removed during change of state without change in temperature.",
+            "Evaporation is the surface phenomenon of slow vaporisation and depends on temperature, surface area, humidity, and wind speed."
+          ],
+          "keywords": [
+            "matter",
+            "states of matter",
+            "melting",
+            "boiling",
+            "evaporation",
+            "latent heat"
+          ]
+        }
+      },
+      {
+        "number": 2,
+        "title": "Is Matter Around Us Pure?",
+        "topics": [
+          "Pure substances and mixtures",
+          "Types of mixtures: homogeneous and heterogeneous",
+          "Solutions, suspensions, and colloids",
+          "Concentration of solutions (qualitative idea)",
+          "Physical and chemical changes",
+          "Methods of separation of components of mixtures"
+        ],
+        "notes": {
+          "summary": "The chapter explains that most substances around us are mixtures, compares types of mixtures and solutions, and describes common methods used to separate their components.",
+          "key_points": [
+            "A pure substance has a fixed composition and sharp melting and boiling points, whereas mixtures contain more than one substance physically combined.",
+            "Solutions are homogeneous mixtures, while suspensions and colloids are heterogeneous with different particle sizes and visibility.",
+            "Physical changes affect the form of a substance without forming a new one, while chemical changes produce new substances with different properties.",
+            "Mixtures can be separated using methods like filtration, evaporation, distillation, decantation, chromatography, and centrifugation depending on particle properties.",
+            "Air, seawater, and many food items are common examples of mixtures encountered in daily life."
+          ],
+          "keywords": [
+            "pure substance",
+            "mixture",
+            "solution",
+            "suspension",
+            "colloid",
+            "separation"
+          ]
+        }
+      },
+      {
+        "number": 3,
+        "title": "Atoms and Molecules",
+        "topics": [
+          "Laws of chemical combination (law of conservation of mass, law of constant proportions)",
+          "Dalton’s atomic theory (basic postulates)",
+          "Concept of atom and molecule",
+          "Symbols of elements",
+          "Writing chemical formulae of simple compounds",
+          "Idea of mole and atomic/molecular mass (restricted to simple problems)"
+        ],
+        "notes": {
+          "summary": "This chapter introduces the idea that matter is made of atoms and molecules, states basic laws of chemical combination, and shows how to write simple chemical formulae.",
+          "key_points": [
+            "The law of conservation of mass states that mass can neither be created nor destroyed in a chemical reaction.",
+            "The law of constant proportions states that a chemical compound always contains the same elements in the same fixed ratio by mass.",
+            "Dalton proposed that atoms are indivisible particles of an element that participate in chemical reactions and combine in simple whole-number ratios.",
+            "Molecules are groups of two or more atoms chemically bonded together and can be of elements or compounds.",
+            "Chemical formulae represent the composition of compounds using symbols and valencies of constituent elements."
+          ],
+          "keywords": [
+            "atom",
+            "molecule",
+            "law of conservation of mass",
+            "law of constant proportions",
+            "chemical formula"
+          ]
+        }
+      },
+      {
+        "number": 4,
+        "title": "Structure of the Atom",
+        "topics": [
+          "Discovery of subatomic particles: electron, proton, neutron",
+          "Thomson’s model of the atom",
+          "Rutherford’s alpha-particle scattering experiment and nuclear model",
+          "Bohr’s model of the atom (basic features)",
+          "Atomic number and mass number",
+          "Isotopes and isobars and their applications"
+        ],
+        "notes": {
+          "summary": "The chapter traces how the model of the atom developed through experiments, describes subatomic particles, and introduces atomic number, mass number, isotopes, and isobars.",
+          "key_points": [
+            "Cathode ray and canal ray experiments led to the discovery of negatively charged electrons and positively charged protons.",
+            "Thomson’s model pictured the atom as a positively charged sphere with electrons embedded in it like seeds in a watermelon.",
+            "Rutherford’s scattering experiment showed that most of the atom is empty space with a dense, positively charged nucleus at the centre.",
+            "Bohr proposed that electrons revolve in fixed orbits (shells) and each orbit has a fixed energy.",
+            "Isotopes are atoms of the same element with different mass numbers, while isobars have the same mass number but belong to different elements."
+          ],
+          "keywords": [
+            "electron",
+            "proton",
+            "neutron",
+            "nucleus",
+            "atomic number",
+            "isotope",
+            "isobar"
+          ]
+        }
+      },
+      {
+        "number": 5,
+        "title": "The Fundamental Unit of Life",
+        "topics": [
+          "Cell as the basic structural and functional unit of life",
+          "Discovery of the cell and cell theory",
+          "Prokaryotic and eukaryotic cells",
+          "Cell organelles: nucleus, mitochondria, plastids, vacuoles etc.",
+          "Plasma membrane and cell wall",
+          "Diffusion and osmosis (concept and simple examples)"
+        ],
+        "notes": {
+          "summary": "This chapter describes the cell as the fundamental unit of life, outlines major cell structures and organelles, and explains how materials move across the cell membrane.",
+          "key_points": [
+            "All living organisms are composed of cells, which may be unicellular or multicellular depending on the number of cells.",
+            "Prokaryotic cells lack a well-defined nucleus and membrane-bound organelles, while eukaryotic cells have them.",
+            "The plasma membrane is selectively permeable and controls the movement of substances into and out of the cell.",
+            "Cell organelles like mitochondria, plastids, endoplasmic reticulum, and Golgi apparatus perform specific functions.",
+            "Diffusion and osmosis are passive processes through which molecules and water move along concentration gradients."
+          ],
+          "keywords": [
+            "cell",
+            "prokaryote",
+            "eukaryote",
+            "plasma membrane",
+            "organelle",
+            "osmosis"
+          ]
+        }
+      },
+      {
+        "number": 6,
+        "title": "Tissues",
+        "topics": [
+          "Definition of tissue",
+          "Plant tissues: meristematic and permanent tissues",
+          "Types of simple and complex permanent tissue",
+          "Animal tissues: epithelial, connective, muscular, nervous",
+          "Structure and function relationship in tissues",
+          "Examples of tissues in organs"
+        ],
+        "notes": {
+          "summary": "The chapter explains how groups of similar cells form tissues, compares plant and animal tissues, and relates their structure to their functions.",
+          "key_points": [
+            "A tissue is a group of similar cells that work together to perform a specific function.",
+            "Meristematic tissue in plants is responsible for growth, while permanent tissues perform support, transport, and storage functions.",
+            "Xylem and phloem are complex permanent tissues that transport water, minerals, and food in plants.",
+            "Animal tissues include epithelial (covering), connective (supporting and binding), muscular (movement), and nervous (control and coordination) tissues.",
+            "Different organs in plants and animals contain characteristic arrangements of tissues suited to their roles."
+          ],
+          "keywords": [
+            "tissue",
+            "meristematic",
+            "xylem",
+            "phloem",
+            "epithelium",
+            "connective tissue"
+          ]
+        }
+      },
+      {
+        "number": 7,
+        "title": "Motion",
+        "topics": [
+          "Concepts of rest and motion",
+          "Distance and displacement",
+          "Speed and velocity",
+          "Average speed and average velocity",
+          "Acceleration and uniform/non-uniform motion",
+          "Distance–time and velocity–time graphs",
+          "Equations of uniformly accelerated motion (concept and use)"
+        ],
+        "notes": {
+          "summary": "This chapter introduces basic terms used to describe motion and uses graphs and simple equations to relate distance, time, speed, and acceleration.",
+          "key_points": [
+            "An object is in motion if its position changes with time relative to a chosen reference point.",
+            "Distance is the total path length travelled, while displacement is the shortest straight-line distance between initial and final positions with direction.",
+            "Speed is the rate of change of distance and velocity is the rate of change of displacement in a given direction.",
+            "Acceleration measures how quickly velocity changes with time and can be positive, negative, or zero.",
+            "Graphs and kinematic equations help to solve numerical problems involving uniformly accelerated motion."
+          ],
+          "keywords": [
+            "distance",
+            "displacement",
+            "speed",
+            "velocity",
+            "acceleration",
+            "graph"
+          ]
+        }
+      },
+      {
+        "number": 8,
+        "title": "Force and Laws of Motion",
+        "topics": [
+          "Concept of force and its effects",
+          "Balanced and unbalanced forces",
+          "Newton’s first law of motion and inertia",
+          "Newton’s second law of motion and momentum",
+          "Newton’s third law of motion",
+          "Applications of laws of motion in daily life"
+        ],
+        "notes": {
+          "summary": "The chapter develops the concept of force and momentum and states Newton’s three laws of motion with everyday examples and simple quantitative ideas.",
+          "key_points": [
+            "A force can change the state of motion or shape of an object and may act as a contact or non-contact interaction.",
+            "Balanced forces do not change the state of motion, whereas unbalanced forces produce acceleration.",
+            "Newton’s first law states that a body remains at rest or in uniform motion unless acted upon by an unbalanced external force, introducing the idea of inertia.",
+            "Newton’s second law relates the net force on an object to the rate of change of momentum and gives the familiar relation F = ma for constant mass.",
+            "Newton’s third law states that every action has an equal and opposite reaction, which explains phenomena like walking or recoil of a gun."
+          ],
+          "keywords": [
+            "force",
+            "inertia",
+            "momentum",
+            "Newton’s laws",
+            "action and reaction"
+          ]
+        }
+      },
+      {
+        "number": 9,
+        "title": "Gravitation",
+        "topics": [
+          "Universal law of gravitation (qualitative idea)",
+          "Free fall and acceleration due to gravity",
+          "Mass and weight and their difference",
+          "Thrust and pressure in fluids",
+          "Buoyancy and Archimedes’ principle",
+          "Relative density"
+        ],
+        "notes": {
+          "summary": "This chapter describes gravitational attraction between masses, distinguishes mass from weight, and explains buoyancy and fluid pressure using Archimedes’ principle.",
+          "key_points": [
+            "The universal law of gravitation states that every object in the universe attracts every other object with a force depending on their masses and distance between them.",
+            "Objects falling freely under gravity near Earth’s surface experience an almost constant acceleration called acceleration due to gravity.",
+            "Mass is the amount of matter in a body and remains constant, while weight is the gravitational force on it and can change with location.",
+            "Fluids exert pressure in all directions, leading to the upward buoyant force experienced by objects immersed in them.",
+            "Archimedes’ principle states that the buoyant force on a body equals the weight of the fluid displaced, which helps determine relative density."
+          ],
+          "keywords": [
+            "gravitation",
+            "free fall",
+            "mass",
+            "weight",
+            "buoyancy",
+            "Archimedes’ principle"
+          ]
+        }
+      },
+      {
+        "number": 10,
+        "title": "Work and Energy",
+        "topics": [
+          "Definition of work in physics",
+          "Positive, negative, and zero work",
+          "Concept of energy",
+          "Kinetic energy and potential energy",
+          "Law of conservation of energy",
+          "Power and commercial unit of energy (kilowatt-hour)"
+        ],
+        "notes": {
+          "summary": "The chapter defines work and energy in scientific terms, relates different forms of energy, and introduces power and the law of conservation of energy.",
+          "key_points": [
+            "Work is said to be done when a force acting on an object causes displacement in the direction of the force.",
+            "Kinetic energy is the energy possessed by a body due to its motion, while potential energy is due to its position or configuration.",
+            "The total mechanical energy of a system can transform between kinetic and potential forms without loss in ideal situations.",
+            "The law of conservation of energy states that energy can neither be created nor destroyed, only converted from one form to another.",
+            "Power is the rate at which work is done or energy is transferred, and electrical energy used in homes is often measured in kilowatt-hours."
+          ],
+          "keywords": [
+            "work",
+            "energy",
+            "kinetic energy",
+            "potential energy",
+            "power",
+            "conservation of energy"
+          ]
+        }
+      },
+      {
+        "number": 11,
+        "title": "Sound",
+        "topics": [
+          "Production of sound by vibrating objects",
+          "Propagation of sound as longitudinal waves",
+          "Speed of sound in different media (qualitative idea)",
+          "Characteristics of sound: amplitude, frequency, time period",
+          "Pitch and loudness; audible and inaudible sounds",
+          "Reflection of sound and echo",
+          "Basics of noise, music, and noise pollution"
+        ],
+        "notes": {
+          "summary": "This chapter introduces sound as a wave produced by vibrations, discusses its characteristics and hearing range, and explains echoes and noise pollution.",
+          "key_points": [
+            "Sound is produced when objects vibrate and the vibrations are transferred through a medium as longitudinal waves of compressions and rarefactions.",
+            "The speed of sound is greatest in solids, less in liquids, and least in gases because particle spacing and interactions differ.",
+            "Frequency of vibration determines pitch, amplitude determines loudness, and the human ear hears roughly a limited frequency range.",
+            "Sound reflects from hard surfaces following laws similar to light, giving rise to echoes and useful applications like SONAR in advanced study.",
+            "Unwanted, loud, or irregular sound is called noise and long-term exposure can cause health problems, so noise pollution must be controlled."
+          ],
+          "keywords": [
+            "vibration",
+            "longitudinal wave",
+            "frequency",
+            "pitch",
+            "echo",
+            "noise pollution"
+          ]
+        }
+      },
+      {
+        "number": 12,
+        "title": "Improvement in Food Resources",
+        "topics": [
+          "Need to improve food resources",
+          "Crop variety improvement (breeding for better traits)",
+          "Crop production management: nutrient management, irrigation, cropping patterns",
+          "Manures, fertilisers, and organic farming",
+          "Crop protection management: pests, weeds, and diseases",
+          "Animal husbandry: cattle, poultry, fishery, bee-keeping etc."
+        ],
+        "notes": {
+          "summary": "The chapter explains how crop and animal productivity can be improved using better varieties, management practices, and protection measures to meet growing food demands.",
+          "key_points": [
+            "Improvement in food resources aims to increase both quantity and quality of food for a growing population.",
+            "Crop variety improvement uses selection and breeding to develop plants with higher yield, disease resistance, and tolerance to stresses.",
+            "Nutrient management, proper irrigation, and planned cropping patterns like mixed and inter-cropping raise productivity and maintain soil health.",
+            "Pest and disease management uses mechanical, biological, and limited chemical methods to protect crops without excessive environmental harm.",
+            "Scientific animal husbandry practices improve milk, egg, meat, fish, and honey production while maintaining animal health and welfare."
+          ],
+          "keywords": [
+            "crop improvement",
+            "manure",
+            "fertiliser",
+            "pest control",
+            "animal husbandry",
+            "organic farming"
+          ]
+        }
+      }
+    ]
+  }
+  

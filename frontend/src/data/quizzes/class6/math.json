@@ -1,0 +1,236 @@
+{
+    "class": 6,
+    "subject": "Mathematics",
+    "quizzes": [
+        {
+            "id": "quiz1",
+            "chapterId": "ch1",
+            "title": "Knowing Our Numbers - Quiz",
+            "description": "Test your understanding of large numbers and place values",
+            "timeLimit": 300,
+            "passingScore": 60,
+            "questions": [
+                {
+                    "id": "q1",
+                    "question": "What is the place value of 5 in 45,678?",
+                    "type": "multiple-choice",
+                    "options": [
+                        "Ones",
+                        "Tens",
+                        "Hundreds",
+                        "Thousands"
+                    ],
+                    "correctAnswer": 3,
+                    "explanation": "The digit 5 is in the thousands place, so its place value is 5,000.",
+                    "points": 10
+                },
+                {
+                    "id": "q2",
+                    "question": "Which number is greater: 12,345 or 9,876?",
+                    "type": "multiple-choice",
+                    "options": [
+                        "12,345",
+                        "9,876",
+                        "Both are equal",
+                        "Cannot determine"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "12,345 has 5 digits while 9,876 has 4 digits. A number with more digits is always greater (when positive).",
+                    "points": 10
+                },
+                {
+                    "id": "q3",
+                    "question": "Write 'Three lakh twenty-one thousand' in numbers:",
+                    "type": "multiple-choice",
+                    "options": [
+                        "321,000",
+                        "3,21,000",
+                        "32,1000",
+                        "3,210,00"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "Three lakh = 3,00,000 and twenty-one thousand = 21,000. Adding them: 3,21,000",
+                    "points": 10
+                },
+                {
+                    "id": "q4",
+                    "question": "What is the successor of 9,999?",
+                    "type": "multiple-choice",
+                    "options": [
+                        "9,998",
+                        "10,000",
+                        "10,001",
+                        "9,000"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "The successor of a number is the number that comes immediately after it. 9,999 + 1 = 10,000",
+                    "points": 10
+                },
+                {
+                    "id": "q5",
+                    "question": "Arrange in ascending order: 5,432; 5,234; 5,342",
+                    "type": "multiple-choice",
+                    "options": [
+                        "5,234, 5,342, 5,432",
+                        "5,432, 5,342, 5,234",
+                        "5,342, 5,234, 5,432",
+                        "5,234, 5,432, 5,342"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Ascending order means smallest to largest. Comparing: 5,234 < 5,342 < 5,432",
+                    "points": 10
+                },
+                {
+                    "id": "q6",
+                    "question": "What is the smallest 4-digit number?",
+                    "type": "multiple-choice",
+                    "options": [
+                        "0",
+                        "1",
+                        "1000",
+                        "9999"
+                    ],
+                    "correctAnswer": 2,
+                    "explanation": "The smallest 4-digit number is 1000. Numbers less than 1000 have 3 or fewer digits.",
+                    "points": 10
+                },
+                {
+                    "id": "q7",
+                    "question": "How do you write 50,000 in words?",
+                    "type": "multiple-choice",
+                    "options": [
+                        "Five thousand",
+                        "Fifty thousand",
+                        "Five hundred thousand",
+                        "Five lakh"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "50,000 = Fifty thousand. Remember: 1 lakh = 1,00,000",
+                    "points": 10
+                },
+                {
+                    "id": "q8",
+                    "question": "What is the predecessor of 1,000?",
+                    "type": "multiple-choice",
+                    "options": [
+                        "999",
+                        "1001",
+                        "100",
+                        "10,000"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "The predecessor is the number that comes immediately before. 1,000 - 1 = 999",
+                    "points": 10
+                },
+                {
+                    "id": "q9",
+                    "question": "Which symbol is used to show 'greater than'?",
+                    "type": "multiple-choice",
+                    "options": [
+                        "<",
+                        ">",
+                        "=",
+                        "≠"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "The symbol > means 'greater than'. For example: 5 > 3 means 5 is greater than 3.",
+                    "points": 10
+                },
+                {
+                    "id": "q10",
+                    "question": "What is 1 lakh equal to?",
+                    "type": "multiple-choice",
+                    "options": [
+                        "10,000",
+                        "1,00,000",
+                        "10,00,000",
+                        "1,000"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "1 lakh = 1,00,000 (one hundred thousand)",
+                    "points": 10
+                }
+            ]
+        },
+        {
+            "id": "quiz2",
+            "chapterId": "ch2",
+            "title": "Whole Numbers - Quick Quiz",
+            "description": "Test your knowledge of whole numbers",
+            "timeLimit": 180,
+            "passingScore": 70,
+            "questions": [
+                {
+                    "id": "q1",
+                    "question": "Which of these is NOT a whole number?",
+                    "type": "multiple-choice",
+                    "options": [
+                        "0",
+                        "5",
+                        "-3",
+                        "100"
+                    ],
+                    "correctAnswer": 2,
+                    "explanation": "Whole numbers are 0, 1, 2, 3, ... Negative numbers are not whole numbers.",
+                    "points": 20
+                },
+                {
+                    "id": "q2",
+                    "question": "What is the smallest whole number?",
+                    "type": "multiple-choice",
+                    "options": [
+                        "1",
+                        "0",
+                        "-1",
+                        "There is no smallest"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "The smallest whole number is 0.",
+                    "points": 20
+                },
+                {
+                    "id": "q3",
+                    "question": "Are all natural numbers also whole numbers?",
+                    "type": "multiple-choice",
+                    "options": [
+                        "Yes",
+                        "No",
+                        "Sometimes",
+                        "Cannot say"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Yes! All natural numbers (1, 2, 3, ...) are whole numbers. Whole numbers = Natural numbers + 0",
+                    "points": 20
+                },
+                {
+                    "id": "q4",
+                    "question": "What is 0 + 25?",
+                    "type": "multiple-choice",
+                    "options": [
+                        "0",
+                        "25",
+                        "250",
+                        "Undefined"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "Adding 0 to any number gives the same number. This is called the additive identity property.",
+                    "points": 20
+                },
+                {
+                    "id": "q5",
+                    "question": "Which property states that a + b = b + a?",
+                    "type": "multiple-choice",
+                    "options": [
+                        "Associative",
+                        "Commutative",
+                        "Distributive",
+                        "Identity"
+                    ],
+                    "correctAnswer": 1,
+                    "explanation": "The commutative property of addition states that changing the order doesn't change the sum.",
+                    "points": 20
+                }
+            ]
+        }
+    ]
+}

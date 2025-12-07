@@ -1,0 +1,34 @@
+[
+    {
+        "id": "comp-9-ch1",
+        "title": "Basics of Information Technology",
+        "description": "Introduction to IT, data, information and computers.",
+        "units": 2,
+        "icon": "laptop",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-9-ch2",
+        "title": "Introduction to DBMS",
+        "description": "Learn about Database Management Systems.",
+        "units": 3,
+        "icon": "database",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-9-ch3",
+        "title": "Advanced HTML5",
+        "description": "Learn advanced features of HTML5.",
+        "units": 4,
+        "icon": "language-html5",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-9-ch4",
+        "title": "Cyber Security",
+        "description": "Understanding cyber threats and security measures.",
+        "units": 2,
+        "icon": "security",
+        "color": "#60A5FA"
+    }
+]

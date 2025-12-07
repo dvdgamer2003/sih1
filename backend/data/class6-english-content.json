@@ -1,0 +1,221 @@
+{
+    "class": 6,
+    "subject": "English",
+    "chapters": [
+        {
+            "name": "Grammar Fundamentals",
+            "subchapters": [
+                {
+                    "name": "Parts of Speech",
+                    "content": {
+                        "explanation": "Parts of speech are the building blocks of English grammar. There are eight main parts of speech: nouns, pronouns, verbs, adjectives, adverbs, prepositions, conjunctions, and interjections. Each part plays a unique role in sentence construction."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "Which part of speech is the word 'quickly'?",
+                                "options": [
+                                    "Noun",
+                                    "Verb",
+                                    "Adverb",
+                                    "Adjective"
+                                ],
+                                "answer": "Adverb"
+                            },
+                            {
+                                "q": "Identify the noun in: 'The cat sleeps peacefully'",
+                                "options": [
+                                    "The",
+                                    "cat",
+                                    "sleeps",
+                                    "peacefully"
+                                ],
+                                "answer": "cat"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Tenses",
+                    "content": {
+                        "explanation": "Tenses show the time of an action or state. English has three main tenses: past, present, and future. Each tense has four aspects: simple, continuous, perfect, and perfect continuous."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "Which tense is used in: 'She will be studying'?",
+                                "options": [
+                                    "Future Simple",
+                                    "Future Continuous",
+                                    "Future Perfect",
+                                    "Present Continuous"
+                                ],
+                                "answer": "Future Continuous"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Reading Comprehension",
+            "subchapters": [
+                {
+                    "name": "Understanding Main Ideas",
+                    "content": {
+                        "explanation": "The main idea is the central point or thought the author wants to communicate. It tells the reader what the paragraph is about. Supporting details provide information to clarify, prove, or explain the main idea."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "What is the main idea of a paragraph?",
+                                "options": [
+                                    "The first sentence",
+                                    "The central point",
+                                    "The longest sentence",
+                                    "The conclusion"
+                                ],
+                                "answer": "The central point"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Vocabulary in Context",
+                    "content": {
+                        "explanation": "Context clues help us understand the meaning of unfamiliar words. These clues can be found in the words, phrases, and sentences surrounding the unknown word."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "What are context clues?",
+                                "options": [
+                                    "Dictionary definitions",
+                                    "Hints in surrounding text",
+                                    "Grammar rules",
+                                    "Spelling patterns"
+                                ],
+                                "answer": "Hints in surrounding text"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Writing Skills",
+            "subchapters": [
+                {
+                    "name": "Paragraph Writing",
+                    "content": {
+                        "explanation": "A paragraph is a group of sentences that develop one main idea. A good paragraph has three parts: a topic sentence, supporting sentences, and a concluding sentence."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "What is the purpose of a topic sentence?",
+                                "options": [
+                                    "To conclude the paragraph",
+                                    "To introduce the main idea",
+                                    "To provide examples",
+                                    "To add details"
+                                ],
+                                "answer": "To introduce the main idea"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Letter Writing",
+                    "content": {
+                        "explanation": "Letters can be formal or informal. Formal letters follow a specific format and are used for official purposes. Informal letters are casual and personal, written to friends and family."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "Which greeting is appropriate for a formal letter?",
+                                "options": [
+                                    "Hi there!",
+                                    "Dear Sir/Madam",
+                                    "Hey!",
+                                    "What's up?"
+                                ],
+                                "answer": "Dear Sir/Madam"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Literature & Poetry",
+            "subchapters": [
+                {
+                    "name": "Story Elements",
+                    "content": {
+                        "explanation": "Every story has key elements: characters (who the story is about), setting (where and when), plot (what happens), conflict (the problem), and resolution (how the problem is solved)."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "What is the 'setting' of a story?",
+                                "options": [
+                                    "The main character",
+                                    "Where and when it happens",
+                                    "The problem",
+                                    "The ending"
+                                ],
+                                "answer": "Where and when it happens"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Poetry Basics",
+                    "content": {
+                        "explanation": "Poetry uses rhythm, rhyme, and imagery to express ideas and emotions. Common poetic devices include simile, metaphor, alliteration, and personification."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "What is a simile?",
+                                "options": [
+                                    "A comparison using 'like' or 'as'",
+                                    "A rhyming word",
+                                    "A repeated sound",
+                                    "A story in verse"
+                                ],
+                                "answer": "A comparison using 'like' or 'as'"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Speaking & Listening",
+            "subchapters": [
+                {
+                    "name": "Effective Communication",
+                    "content": {
+                        "explanation": "Effective communication involves speaking clearly, listening actively, and using appropriate body language. Good communication skills help us express our ideas and understand others better."
+                    },
+                    "quiz": {
+                        "mcq": [
+                            {
+                                "q": "What is active listening?",
+                                "options": [
+                                    "Talking loudly",
+                                    "Paying full attention to the speaker",
+                                    "Interrupting often",
+                                    "Looking away"
+                                ],
+                                "answer": "Paying full attention to the speaker"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

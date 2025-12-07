@@ -1,0 +1,144 @@
+{
+    "id": "math-11-ch1",
+    "title": "Sets and Functions",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Sets",
+            "readingTime": 5,
+            "content": "# Sets\n\nA set is a well-defined collection of distinct objects.\n\n## Types\n- Empty set\n- Finite set\n- Infinite set\n- Universal set"
+        },
+        {
+            "id": "l2",
+            "title": "Functions",
+            "readingTime": 6,
+            "content": "# Functions\n\nA function is a relation where each input has exactly one output.\n\n## Types\n- One-to-one\n- Onto\n- Bijective"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Sets and Functions",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What is an empty set?",
+                "options": [
+                    "Set with one element",
+                    "Set with no elements",
+                    "Set with all elements",
+                    "Infinite set"
+                ],
+                "correctAnswer": 1,
+                "explanation": "An empty set contains no elements, denoted by ∅ or {}."
+            },
+            {
+                "id": "q1_2",
+                "question": "Symbol for union is:",
+                "options": [
+                    "∩",
+                    "∪",
+                    "⊂",
+                    "∈"
+                ],
+                "correctAnswer": 1,
+                "explanation": "∪ represents union of sets."
+            },
+            {
+                "id": "q1_3",
+                "question": "What is a function?",
+                "options": [
+                    "Any relation",
+                    "Relation with one output per input",
+                    "Set of numbers",
+                    "Graph"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A function assigns exactly one output to each input."
+            },
+            {
+                "id": "q1_4",
+                "question": "Symbol for intersection is:",
+                "options": [
+                    "∩",
+                    "∪",
+                    "⊂",
+                    "∈"
+                ],
+                "correctAnswer": 0,
+                "explanation": "∩ represents intersection of sets."
+            },
+            {
+                "id": "q1_5",
+                "question": "If A ⊂ B, then A is:",
+                "options": [
+                    "Superset of B",
+                    "Subset of B",
+                    "Equal to B",
+                    "Disjoint from B"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A ⊂ B means A is a subset of B."
+            },
+            {
+                "id": "q1_6",
+                "question": "Domain of a function is:",
+                "options": [
+                    "Output values",
+                    "Input values",
+                    "Both",
+                    "Neither"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Domain is the set of all possible input values."
+            },
+            {
+                "id": "q1_7",
+                "question": "Range of a function is:",
+                "options": [
+                    "Input values",
+                    "Output values",
+                    "Both",
+                    "Neither"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Range is the set of all possible output values."
+            },
+            {
+                "id": "q1_8",
+                "question": "A ∩ A' equals:",
+                "options": [
+                    "A",
+                    "A'",
+                    "∅",
+                    "Universal set"
+                ],
+                "correctAnswer": 2,
+                "explanation": "A set and its complement have no common elements, so A ∩ A' = ∅."
+            },
+            {
+                "id": "q1_9",
+                "question": "One-to-one function means:",
+                "options": [
+                    "Many inputs to one output",
+                    "One input to one output",
+                    "One input to many outputs",
+                    "No relation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "One-to-one (injective) means each input maps to a unique output."
+            },
+            {
+                "id": "q1_10",
+                "question": "A ∪ ∅ equals:",
+                "options": [
+                    "∅",
+                    "A",
+                    "Universal set",
+                    "A'"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Union of any set with empty set gives the set itself: A ∪ ∅ = A."
+            }
+        ]
+    }
+}

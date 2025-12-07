@@ -1,0 +1,42 @@
+[
+    {
+        "id": "math-9-ch1",
+        "title": "Sets",
+        "description": "Introduction to sets, types of sets and operations on sets.",
+        "units": 3,
+        "icon": "set-all",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-9-ch2",
+        "title": "Real Numbers",
+        "description": "Properties of rational and irrational numbers, surds.",
+        "units": 3,
+        "icon": "numeric",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-9-ch3",
+        "title": "Polynomials",
+        "description": "Operations on polynomials, remainder theorem, factor theorem.",
+        "units": 4,
+        "icon": "function",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-9-ch4",
+        "title": "Ratio and Proportion",
+        "description": "Properties of ratios, operations on equal ratios.",
+        "units": 3,
+        "icon": "percent",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-9-ch5",
+        "title": "Linear Equations in Two Variables",
+        "description": "Solving simultaneous linear equations.",
+        "units": 3,
+        "icon": "equal",
+        "color": "#FF6B6B"
+    }
+]

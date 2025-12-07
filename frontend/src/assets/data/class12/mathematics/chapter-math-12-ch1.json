@@ -1,0 +1,144 @@
+{
+    "id": "math-12-ch1",
+    "title": "Relations and Functions",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Types of Relations",
+            "readingTime": 6,
+            "content": "# Relations\n\n## Types\n- **Reflexive**: (a,a) for all a\n- **Symmetric**: If (a,b) then (b,a)\n- **Transitive**: If (a,b) and (b,c) then (a,c)\n- **Equivalence**: Reflexive, symmetric, and transitive"
+        },
+        {
+            "id": "l2",
+            "title": "Types of Functions",
+            "readingTime": 5,
+            "content": "# Functions\n\n## Types\n- **Injective** (One-to-one)\n- **Surjective** (Onto)\n- **Bijective** (Both injective and surjective)\n- **Inverse functions**"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Relations and Functions",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "Reflexive relation has:",
+                "options": [
+                    "(a,b)",
+                    "(a,a)",
+                    "(b,a)",
+                    "No pairs"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Reflexive relation contains (a,a) for all elements a."
+            },
+            {
+                "id": "q1_2",
+                "question": "If (a,b) and (b,a) exist, relation is:",
+                "options": [
+                    "Reflexive",
+                    "Symmetric",
+                    "Transitive",
+                    "None"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Symmetric relation has both (a,b) and (b,a)."
+            },
+            {
+                "id": "q1_3",
+                "question": "Equivalence relation must be:",
+                "options": [
+                    "Only reflexive",
+                    "Only symmetric",
+                    "Reflexive, symmetric, and transitive",
+                    "None"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Equivalence relation must be reflexive, symmetric, and transitive."
+            },
+            {
+                "id": "q1_4",
+                "question": "Injective function is:",
+                "options": [
+                    "Many-to-one",
+                    "One-to-one",
+                    "One-to-many",
+                    "Many-to-many"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Injective (one-to-one) function maps distinct inputs to distinct outputs."
+            },
+            {
+                "id": "q1_5",
+                "question": "Surjective function means:",
+                "options": [
+                    "Every element in codomain is mapped",
+                    "Some elements not mapped",
+                    "One-to-one",
+                    "No mapping"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Surjective (onto) function maps to every element in the codomain."
+            },
+            {
+                "id": "q1_6",
+                "question": "Bijective function is:",
+                "options": [
+                    "Only injective",
+                    "Only surjective",
+                    "Both injective and surjective",
+                    "Neither"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Bijective function is both one-to-one and onto."
+            },
+            {
+                "id": "q1_7",
+                "question": "For inverse to exist, function must be:",
+                "options": [
+                    "Injective",
+                    "Surjective",
+                    "Bijective",
+                    "Any type"
+                ],
+                "correctAnswer": 2,
+                "explanation": "A function must be bijective to have an inverse."
+            },
+            {
+                "id": "q1_8",
+                "question": "Transitive relation: if (a,b) and (b,c) then:",
+                "options": [
+                    "(a,a)",
+                    "(c,a)",
+                    "(a,c)",
+                    "(b,b)"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Transitive relation implies if (a,b) and (b,c) then (a,c)."
+            },
+            {
+                "id": "q1_9",
+                "question": "Identity function f(x) = x is:",
+                "options": [
+                    "Not a function",
+                    "Injective only",
+                    "Surjective only",
+                    "Bijective"
+                ],
+                "correctAnswer": 3,
+                "explanation": "Identity function is bijective (both one-to-one and onto)."
+            },
+            {
+                "id": "q1_10",
+                "question": "Composition of functions (f∘g)(x) means:",
+                "options": [
+                    "f(x) + g(x)",
+                    "f(x) × g(x)",
+                    "f(g(x))",
+                    "g(f(x))"
+                ],
+                "correctAnswer": 2,
+                "explanation": "(f∘g)(x) means f(g(x)) - apply g first, then f."
+            }
+        ]
+    }
+}

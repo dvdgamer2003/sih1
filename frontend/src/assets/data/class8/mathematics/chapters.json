@@ -1,0 +1,42 @@
+[
+    {
+        "id": "math-8-ch1",
+        "title": "Rational and Irrational Numbers",
+        "description": "Understand the properties of rational and irrational numbers.",
+        "units": 3,
+        "icon": "numeric",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-8-ch2",
+        "title": "Parallel Lines and Transversal",
+        "description": "Study properties of angles formed by parallel lines and a transversal.",
+        "units": 2,
+        "icon": "vector-line",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-8-ch3",
+        "title": "Indices and Cube Root",
+        "description": "Learn about laws of indices and finding cube roots.",
+        "units": 3,
+        "icon": "exponent",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-8-ch4",
+        "title": "Altitudes and Medians of a Triangle",
+        "description": "Construct altitudes and medians of a triangle.",
+        "units": 2,
+        "icon": "triangle-outline",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-8-ch5",
+        "title": "Expansion Formulae",
+        "description": "Learn formulae for expansion of algebraic expressions.",
+        "units": 3,
+        "icon": "function-variant",
+        "color": "#FF6B6B"
+    }
+]

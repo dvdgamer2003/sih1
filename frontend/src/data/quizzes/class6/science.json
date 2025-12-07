@@ -1,0 +1,726 @@
+{
+    "class": "6",
+    "board": "CBSE (NCERT)",
+    "subject": "Science",
+    "textbook": "Curiosity – Science for Class 6",
+    "quiz": {
+      "easy": [
+        {
+          "id": "E1",
+          "chapter": "The Wonderful World of Science",
+          "type": "mcq",
+          "question": "Science mainly helps us to understand and explain which of the following?",
+          "options": [
+            "Stories and poems",
+            "Natural things and happenings around us",
+            "Only numbers and calculations",
+            "Only games and sports"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E2",
+          "chapter": "Diversity in the Living World",
+          "type": "mcq",
+          "question": "Which of these is a living thing?",
+          "options": [
+            "Stone",
+            "Plastic ball",
+            "Mango tree",
+            "Chair"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E3",
+          "chapter": "Mindful Eating: A Path to a Healthy Body",
+          "type": "mcq",
+          "question": "Which food item is a good source of proteins for our body?",
+          "options": [
+            "Boiled rice",
+            "Pulses (dal)",
+            "Sugar",
+            "Cooking oil"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E4",
+          "chapter": "Exploring Magnets",
+          "type": "mcq",
+          "question": "Magnets strongly attract which of the following materials?",
+          "options": [
+            "Paper",
+            "Glass",
+            "Iron nail",
+            "Rubber band"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E5",
+          "chapter": "Measurement of Length and Motion",
+          "type": "mcq",
+          "question": "The standard SI unit of length is:",
+          "options": [
+            "Centimetre",
+            "Metre",
+            "Kilometre",
+            "Millimetre"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E6",
+          "chapter": "Materials Around Us",
+          "type": "mcq",
+          "question": "Which material is transparent and allows most of the light to pass through it?",
+          "options": [
+            "Wood",
+            "Cardboard",
+            "Glass pane",
+            "Clay"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E7",
+          "chapter": "Temperature and its Measurement",
+          "type": "mcq",
+          "question": "Which instrument is used to measure temperature?",
+          "options": [
+            "Scale",
+            "Clock",
+            "Thermometer",
+            "Compass"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E8",
+          "chapter": "A Journey through States of Water",
+          "type": "mcq",
+          "question": "Ice kept in a plate is water in which state?",
+          "options": [
+            "Solid",
+            "Liquid",
+            "Gas",
+            "Plasma"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E9",
+          "chapter": "Methods of Separation in Everyday Life",
+          "type": "mcq",
+          "question": "Which method is best suited to separate sand from water?",
+          "options": [
+            "Evaporation",
+            "Filtration",
+            "Magnetic separation",
+            "Churning"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E10",
+          "chapter": "Living Creatures: Exploring their Characteristics",
+          "type": "mcq",
+          "question": "Which organ in our body pumps blood to all parts?",
+          "options": [
+            "Lungs",
+            "Stomach",
+            "Heart",
+            "Brain"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E11",
+          "chapter": "Nature’s Treasures",
+          "type": "mcq",
+          "question": "Which gas is present in the largest amount in the air around us?",
+          "options": [
+            "Oxygen",
+            "Nitrogen",
+            "Carbon dioxide",
+            "Water vapour"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E12",
+          "chapter": "Beyond Earth",
+          "type": "mcq",
+          "question": "Which planet is called the ‘Blue Planet’ because of the presence of water?",
+          "options": [
+            "Mars",
+            "Earth",
+            "Venus",
+            "Jupiter"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E13",
+          "chapter": "Materials Around Us",
+          "type": "mcq",
+          "question": "Which substance will dissolve in water to form a solution?",
+          "options": [
+            "Stone pieces",
+            "Sand",
+            "Sugar",
+            "Iron nails"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E14",
+          "chapter": "Temperature and its Measurement",
+          "type": "mcq",
+          "question": "Which thermometer is commonly used to measure human body temperature?",
+          "options": [
+            "Room thermometer",
+            "Laboratory thermometer",
+            "Clinical thermometer",
+            "Maximum–minimum thermometer"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E15",
+          "chapter": "Diversity in the Living World",
+          "type": "mcq",
+          "question": "Which of these is an example of an aquatic habitat?",
+          "options": [
+            "Desert",
+            "Pond",
+            "Mountain",
+            "Grassland"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E16",
+          "chapter": "Living Creatures: Exploring their Characteristics",
+          "type": "mcq",
+          "question": "Which of these is a herbivore animal?",
+          "options": [
+            "Lion",
+            "Tiger",
+            "Cow",
+            "Leopard"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E17",
+          "chapter": "Measurement of Length and Motion",
+          "type": "mcq",
+          "question": "The to‑and‑fro motion of a swing is an example of which kind of motion?",
+          "options": [
+            "Rectilinear motion",
+            "Circular motion",
+            "Periodic motion",
+            "Random motion"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E18",
+          "chapter": "Mindful Eating: A Path to a Healthy Body",
+          "type": "mcq",
+          "question": "Fruits and leafy vegetables are mainly rich in which nutrients?",
+          "options": [
+            "Fats only",
+            "Vitamins and minerals",
+            "Only carbohydrates",
+            "Only proteins"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E19",
+          "chapter": "A Journey through States of Water",
+          "type": "mcq",
+          "question": "The continuous circulation of water between land, water bodies, and air is called:",
+          "options": [
+            "Water table",
+            "Waterfall",
+            "Water cycle",
+            "Water level"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E20",
+          "chapter": "Exploring Magnets",
+          "type": "odd_one_out",
+          "question": "Find the odd one out based on attraction by a magnet.",
+          "options": [
+            "Iron key",
+            "Steel spoon",
+            "Paper clip",
+            "Rubber eraser"
+          ],
+          "answer_index": 3
+        }
+      ],
+      "medium": [
+        {
+          "id": "M1",
+          "chapter": "Materials Around Us",
+          "type": "mcq",
+          "question": "Why do we group materials based on properties like transparency, hardness, and solubility?",
+          "options": [
+            "To make them look beautiful",
+            "To easily choose suitable materials for different uses",
+            "To mix all materials together",
+            "To waste time in the classroom"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M2",
+          "chapter": "Living Creatures: Exploring their Characteristics",
+          "type": "mcq",
+          "question": "Which of the following correctly lists three basic characteristics of living beings?",
+          "options": [
+            "They breathe, grow, and respond to stimuli",
+            "They shine, melt, and evaporate",
+            "They rust, burn, and dissolve",
+            "They reflect light, break, and float"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M3",
+          "chapter": "Mindful Eating: A Path to a Healthy Body",
+          "type": "mcq",
+          "question": "Which one of these is the most balanced school lunch combination for a child?",
+          "options": [
+            "Chips and soft drink",
+            "Rice, dal, vegetables, and salad",
+            "Only sweets",
+            "Only fried pakoras"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M4",
+          "chapter": "Exploring Magnets",
+          "type": "mcq",
+          "question": "Which statement about the poles of a magnet is correct?",
+          "options": [
+            "Like poles attract and unlike poles repel",
+            "Like poles repel and unlike poles attract",
+            "Any pole attracts all other poles",
+            "Magnets have no poles"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M5",
+          "chapter": "Measurement of Length and Motion",
+          "type": "mcq",
+          "question": "Which of these is the best unit to measure the distance between two nearby cities?",
+          "options": [
+            "Millimetre",
+            "Centimetre",
+            "Metre",
+            "Kilometre"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "M6",
+          "chapter": "Measurement of Length and Motion",
+          "type": "mcq",
+          "question": "A bus moving along a straight road shows which type of motion?",
+          "options": [
+            "Circular motion",
+            "Rectilinear motion",
+            "Random motion",
+            "Oscillatory motion"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M7",
+          "chapter": "Temperature and its Measurement",
+          "type": "mcq",
+          "question": "On a hot day, which of these will make evaporation of water fastest from a wet cloth?",
+          "options": [
+            "Spreading the cloth in shade with no wind",
+            "Folding the cloth and keeping it indoors",
+            "Spreading the cloth in sunlight on a windy terrace",
+            "Keeping the cloth in a closed box"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M8",
+          "chapter": "Methods of Separation in Everyday Life",
+          "type": "mcq",
+          "question": "Which method is best to separate iron nails from a mixture of sand and iron nails?",
+          "options": [
+            "Sieving",
+            "Magnetic separation",
+            "Filtration",
+            "Evaporation"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M9",
+          "chapter": "A Journey through States of Water",
+          "type": "mcq",
+          "question": "Water droplets seen on the outer surface of a cold glass in summer are formed mainly due to:",
+          "options": [
+            "Melting",
+            "Freezing",
+            "Condensation of water vapour from air",
+            "Evaporation of water from glass"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M10",
+          "chapter": "The Wonderful World of Science",
+          "type": "true_false",
+          "question": "Science activities should always be done carefully by following safety rules in the classroom.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M11",
+          "chapter": "Diversity in the Living World",
+          "type": "odd_one_out",
+          "question": "Find the odd one out with respect to its main habitat.",
+          "options": [
+            "Fish",
+            "Frog",
+            "Lotus plant",
+            "Camel"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "M12",
+          "chapter": "Nature’s Treasures",
+          "type": "mcq",
+          "question": "Which combination correctly lists three natural resources?",
+          "options": [
+            "Air, water, soil",
+            "Plastic, glass, iron",
+            "Paper, bricks, cement",
+            "Table, chair, fan"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M13",
+          "chapter": "Living Creatures: Exploring their Characteristics",
+          "type": "mcq",
+          "question": "Which of these actions best shows that a plant is living?",
+          "options": [
+            "It is coloured green",
+            "It bends towards light over time",
+            "It stands on soil",
+            "It looks beautiful"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M14",
+          "chapter": "Materials Around Us",
+          "type": "mcq",
+          "question": "A cooking pan is usually made of metal but its handle is often made of wood or plastic because:",
+          "options": [
+            "Wood and plastic are heavier",
+            "Metals are weak",
+            "Wood and plastic do not conduct much heat and protect our hands",
+            "Handles cannot be made of metal"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M15",
+          "chapter": "Methods of Separation in Everyday Life",
+          "type": "mcq",
+          "question": "Which method is most suitable for getting pure salt from salty sea water?",
+          "options": [
+            "Filtration",
+            "Decantation",
+            "Evaporation",
+            "Magnetic separation"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M16",
+          "chapter": "Temperature and its Measurement",
+          "type": "mcq",
+          "question": "Normal human body temperature on the Celsius scale is closest to:",
+          "options": [
+            "0 °C",
+            "25 °C",
+            "37 °C",
+            "100 °C"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M17",
+          "chapter": "Beyond Earth",
+          "type": "mcq",
+          "question": "Day and night on Earth occur mainly because Earth:",
+          "options": [
+            "Revolves around the Sun",
+            "Rotates on its axis",
+            "Does not move at all",
+            "Changes its shape"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M18",
+          "chapter": "Diversity in the Living World",
+          "type": "mcq",
+          "question": "Which group contains only non‑living things?",
+          "options": [
+            "Rock, chair, air",
+            "Dog, cat, fish",
+            "Tree, insect, bird",
+            "Mango, leaf, flower"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M19",
+          "chapter": "A Journey through States of Water",
+          "type": "mcq",
+          "question": "On which of these days will wet clothes dry the slowest on a clothesline?",
+          "options": [
+            "Hot and windy day",
+            "Cool and windy day",
+            "Hot day with high humidity",
+            "Hot, dry day"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M20",
+          "chapter": "The Wonderful World of Science",
+          "type": "odd_one_out",
+          "question": "Find the odd one out as a tool of scientific study.",
+          "options": [
+            "Measuring scale",
+            "Thermometer",
+            "Magnifying glass",
+            "Football"
+          ],
+          "answer_index": 3
+        }
+      ],
+      "hard": [
+        {
+          "id": "H1",
+          "chapter": "Methods of Separation in Everyday Life",
+          "type": "mcq",
+          "question": "A shopkeeper has a mixture of iron pins, sand, and salt; which sequence of methods will best separate all three?",
+          "options": [
+            "Filtration → evaporation → magnetic separation",
+            "Magnetic separation → dissolve in water → filtration → evaporation",
+            "Evaporation → magnetic separation → filtration",
+            "Sieving → churning → filtration"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H2",
+          "chapter": "The Wonderful World of Science",
+          "type": "mcq",
+          "question": "Riya wants to test which soil type holds the most water; which plan shows a fair scientific test?",
+          "options": [
+            "Use different amounts of water for each soil and compare which looks wetter",
+            "Use equal masses of different soils, add equal water, then measure water that drips out through identical funnels",
+            "Use one soil type but different amounts and compare",
+            "Ask friends which soil they think is best and note their answers"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H3",
+          "chapter": "Measurement of Length and Motion",
+          "type": "mcq",
+          "question": "A student stands at the side of a straight road and notes that a car passes equal distances in equal time intervals; this motion is best described as:",
+          "options": [
+            "Uniform rectilinear motion",
+            "Non‑uniform circular motion",
+            "Random zig‑zag motion",
+            "Oscillatory motion"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H4",
+          "chapter": "A Journey through States of Water",
+          "type": "mcq",
+          "question": "Which change of state combination correctly matches the process and the energy change for water?",
+          "options": [
+            "Freezing: water to ice by releasing heat",
+            "Melting: ice to water by releasing heat",
+            "Evaporation: water to vapour by releasing heat",
+            "Condensation: vapour to water by absorbing heat"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H5",
+          "chapter": "Nature’s Treasures",
+          "type": "mcq",
+          "question": "Which sequence best represents the water cycle starting from water in a pond?",
+          "options": [
+            "Evaporation → condensation → precipitation → collection",
+            "Condensation → evaporation → precipitation → collection",
+            "Precipitation → evaporation → condensation → collection",
+            "Collection → condensation → precipitation → evaporation"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H6",
+          "chapter": "Diversity in the Living World",
+          "type": "mcq",
+          "question": "A new organism is found that breathes, grows, reproduces, and responds to light; which is the best conclusion?",
+          "options": [
+            "It is non‑living because it cannot talk",
+            "It is living because it shows main characteristics of life",
+            "It is non‑living because it cannot move like a car",
+            "It is just a toy with batteries"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H7",
+          "chapter": "Exploring Magnets",
+          "type": "mcq",
+          "question": "Two bar magnets are hung so they can turn freely; which arrangement will give the strongest attraction between them?",
+          "options": [
+            "North pole facing north pole of the other magnet",
+            "South pole facing south pole of the other magnet",
+            "North pole facing south pole of the other magnet",
+            "Middle of one magnet facing middle of the other"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H8",
+          "chapter": "Materials Around Us",
+          "type": "odd_one_out",
+          "question": "Choose the odd one out based on solubility in water.",
+          "options": [
+            "Common salt",
+            "Sugar",
+            "Detergent powder",
+            "Dry sand"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "H9",
+          "chapter": "Mindful Eating: A Path to a Healthy Body",
+          "type": "mcq",
+          "question": "A child often feels tired, has pale skin, and eats very little green vegetables or pulses; which deficiency is most likely?",
+          "options": [
+            "Protein deficiency only",
+            "Vitamin deficiency only",
+            "Mineral (like iron) deficiency leading to anaemia",
+            "Excess fat in food"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H10",
+          "chapter": "Living Creatures: Exploring their Characteristics",
+          "type": "mcq",
+          "question": "Which statement best explains why a wooden table is called non‑living even though it was once part of a tree?",
+          "options": [
+            "It has no colour",
+            "It does not show life processes like growth and respiration now",
+            "It feels cold to touch",
+            "It is heavier than air"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H11",
+          "chapter": "Measurement of Length and Motion",
+          "type": "mcq",
+          "question": "While measuring the length of a pencil with a ruler, which practice will give the most accurate result?",
+          "options": [
+            "Keeping the eye far above the scale",
+            "Starting measurement from the 1 cm mark if the zero end is damaged",
+            "Tilting the scale at an angle",
+            "Measuring along the curved edge of the pencil"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H12",
+          "chapter": "Temperature and its Measurement",
+          "type": "mcq",
+          "question": "A clinical thermometer should be held in which position while reading the temperature correctly?",
+          "options": [
+            "Above the head at any angle",
+            "At eye level with the scale facing you",
+            "On the table at a slant",
+            "Upside down with bulb at top"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H13",
+          "chapter": "Beyond Earth",
+          "type": "mcq",
+          "question": "A student says, “The Sun moves around the Earth once every day”; which is the correct scientific response?",
+          "options": [
+            "Correct, because we see the Sun going around us",
+            "Incorrect, day and night are due to rotation of Earth on its axis",
+            "Correct, because Earth never moves",
+            "Incorrect, because the Moon causes day and night"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H14",
+          "chapter": "Methods of Separation in Everyday Life",
+          "type": "mcq",
+          "question": "A mixture contains small stones and wheat grains; which pair of methods will best clean the wheat for use?",
+          "options": [
+            "Handpicking followed by winnowing",
+            "Filtration followed by evaporation",
+            "Magnetic separation followed by sieving",
+            "Decantation followed by churning"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H15",
+          "chapter": "The Wonderful World of Science",
+          "type": "true_false",
+          "question": "A good scientist changes conclusions to match what they wanted to prove, even if observations are different.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "answer_index": 1
+        }
+      ]
+    }
+  }
+  

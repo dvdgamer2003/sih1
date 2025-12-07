@@ -1,0 +1,82 @@
+[
+    {
+        "id": "math-6-ch1",
+        "title": "Basic Concepts in Geometry",
+        "description": "Learn about points, lines, and planes.",
+        "icon": "shape",
+        "color": "#FF6B6B",
+        "units": 2
+    },
+    {
+        "id": "math-6-ch2",
+        "title": "Angles",
+        "description": "Understanding different types of angles.",
+        "icon": "angle-acute",
+        "color": "#FF8E53",
+        "units": 2
+    },
+    {
+        "id": "math-6-ch3",
+        "title": "Integers",
+        "description": "Introduction to positive and negative numbers.",
+        "icon": "numeric",
+        "color": "#4ECDC4",
+        "units": 3
+    },
+    {
+        "id": "math-6-ch4",
+        "title": "Operations on Fractions",
+        "description": "Addition, subtraction, multiplication of fractions.",
+        "icon": "fraction-one-half",
+        "color": "#45B7D1",
+        "units": 3
+    },
+    {
+        "id": "math-6-ch5",
+        "title": "Decimal Fractions",
+        "description": "Working with decimal numbers.",
+        "icon": "decimal",
+        "color": "#96CEB4",
+        "units": 2
+    },
+    {
+        "id": "math-6-ch6",
+        "title": "Bar Graphs",
+        "description": "Reading and drawing bar graphs.",
+        "icon": "chart-bar",
+        "color": "#FFEEAD",
+        "units": 2
+    },
+    {
+        "id": "math-6-ch7",
+        "title": "Symmetry",
+        "description": "Understanding symmetrical shapes.",
+        "icon": "shape-outline",
+        "color": "#D4A5A5",
+        "units": 1
+    },
+    {
+        "id": "math-6-ch8",
+        "title": "Divisibility",
+        "description": "Tests for divisibility.",
+        "icon": "division",
+        "color": "#9B59B6",
+        "units": 2
+    },
+    {
+        "id": "math-6-ch9",
+        "title": "HCF and LCM",
+        "description": "Highest Common Factor and Least Common Multiple.",
+        "icon": "calculator-variant",
+        "color": "#3498DB",
+        "units": 3
+    },
+    {
+        "id": "math-6-ch10",
+        "title": "Equations",
+        "description": "Solving simple equations.",
+        "icon": "equal",
+        "color": "#E74C3C",
+        "units": 2
+    }
+]

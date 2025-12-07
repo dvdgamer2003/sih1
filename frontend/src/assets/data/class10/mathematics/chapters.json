@@ -1,0 +1,42 @@
+[
+    {
+        "id": "math-10-ch1",
+        "title": "Linear Equations in Two Variables",
+        "description": "Methods of solving linear equations in two variables.",
+        "units": 3,
+        "icon": "equal-box",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-10-ch2",
+        "title": "Quadratic Equations",
+        "description": "Solving quadratic equations by factorization and formula method.",
+        "units": 4,
+        "icon": "function-variant",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-10-ch3",
+        "title": "Arithmetic Progression",
+        "description": "Study sequence, arithmetic progression, nth term and sum of n terms.",
+        "units": 3,
+        "icon": "sigma",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-10-ch4",
+        "title": "Financial Planning",
+        "description": "GST, shares, mutual funds and SIP.",
+        "units": 2,
+        "icon": "finance",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-10-ch5",
+        "title": "Probability",
+        "description": "Random experiment, sample space, event and probability of an event.",
+        "units": 2,
+        "icon": "dice-5",
+        "color": "#FF6B6B"
+    }
+]

@@ -1,0 +1,120 @@
+{
+    "id": "eng-11-ch1",
+    "title": "Advanced Literature",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Literary Criticism",
+            "readingTime": 5,
+            "content": "# Literary Criticism\n\nAnalysis and interpretation of literature.\n\n## Approaches\n- Formalist\n- Feminist\n- Marxist\n- Psychoanalytic"
+        },
+        {
+            "id": "l2",
+            "title": "Poetry Analysis",
+            "readingTime": 5,
+            "content": "# Poetry Analysis\n\n## Elements to Analyze\n- Theme\n- Tone\n- Imagery\n- Structure\n- Sound devices"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Literature",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What is literary criticism?",
+                "options": [
+                    "Writing stories",
+                    "Analysis of literature",
+                    "Reading books",
+                    "Publishing"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Literary criticism is the analysis and interpretation of literature."
+            },
+            {
+                "id": "q1_2",
+                "question": "Theme in literature is:",
+                "options": [
+                    "The setting",
+                    "The main idea",
+                    "The characters",
+                    "The plot"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Theme is the central idea or message of a literary work."
+            },
+            {
+                "id": "q1_3",
+                "question": "Tone refers to:",
+                "options": [
+                    "Volume",
+                    "Author's attitude",
+                    "Length",
+                    "Genre"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Tone is the author's attitude toward the subject."
+            },
+            {
+                "id": "q1_4",
+                "question": "Imagery uses:",
+                "options": [
+                    "Numbers",
+                    "Sensory details",
+                    "Dates",
+                    "Names"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Imagery uses sensory details to create mental pictures."
+            },
+            {
+                "id": "q1_5",
+                "question": "Feminist criticism focuses on:",
+                "options": [
+                    "Grammar",
+                    "Gender roles",
+                    "Rhyme",
+                    "Plot"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Feminist criticism examines gender roles and representation."
+            },
+            {
+                "id": "q1_6",
+                "question": "What is a stanza?",
+                "options": [
+                    "A sentence",
+                    "A paragraph in poetry",
+                    "A chapter",
+                    "A word"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A stanza is a grouped set of lines in poetry, like a paragraph."
+            },
+            {
+                "id": "q1_7",
+                "question": "Allusion is:",
+                "options": [
+                    "Direct statement",
+                    "Reference to something",
+                    "Rhyme",
+                    "Repetition"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Allusion is an indirect reference to a person, place, or event."
+            },
+            {
+                "id": "q1_8",
+                "question": "What creates rhythm in poetry?",
+                "options": [
+                    "Colors",
+                    "Meter and stress patterns",
+                    "Length",
+                    "Punctuation"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Rhythm is created by meter and patterns of stressed/unstressed syllables."
+            }
+        ]
+    }
+}

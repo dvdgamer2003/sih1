@@ -1,0 +1,784 @@
+{
+    "class": "12",
+    "board": "CBSE (NCERT)",
+    "stream": "Science",
+    "quiz": {
+      "easy": [
+        {
+          "id": "E1",
+          "subject": "Physics",
+          "chapter": "Electric Charges and Fields",
+          "type": "mcq",
+          "question": "The SI unit of electric charge is:",
+          "options": [
+            "Ampere",
+            "Volt",
+            "Coulomb",
+            "Ohm"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E2",
+          "subject": "Physics",
+          "chapter": "Current Electricity",
+          "type": "mcq",
+          "question": "Which instrument is used to measure electric current?",
+          "options": [
+            "Voltmeter",
+            "Galvanometer",
+            "Ammeter",
+            "Potentiometer"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E3",
+          "subject": "Physics",
+          "chapter": "Moving Charges and Magnetism",
+          "type": "mcq",
+          "question": "A current-carrying wire produces:",
+          "options": [
+            "Electric field only",
+            "Magnetic field only",
+            "Both electric and magnetic fields",
+            "No field"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E4",
+          "subject": "Physics",
+          "chapter": "Electromagnetic Induction",
+          "type": "mcq",
+          "question": "Faraday’s law is related to:",
+          "options": [
+            "Heat and temperature",
+            "Induced EMF",
+            "Kinetic energy",
+            "Nuclear fusion"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E5",
+          "subject": "Physics",
+          "chapter": "Electromagnetic Waves",
+          "type": "mcq",
+          "question": "Which electromagnetic radiation has the shortest wavelength?",
+          "options": [
+            "Infrared",
+            "X-rays",
+            "Gamma rays",
+            "Microwaves"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E6",
+          "subject": "Physics",
+          "chapter": "Dual Nature of Radiation and Matter",
+          "type": "mcq",
+          "question": "Particle nature of light is evidenced by:",
+          "options": [
+            "Interference",
+            "Diffraction",
+            "Photoelectric effect",
+            "Polarisation"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E7",
+          "subject": "Physics",
+          "chapter": "Atoms",
+          "type": "mcq",
+          "question": "Bohr’s model was able to explain:",
+          "options": [
+            "Spectrum of hydrogen atom",
+            "Bond formation",
+            "Nuclear fission",
+            "Periodic law"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E8",
+          "subject": "Physics",
+          "chapter": "Nuclei",
+          "type": "mcq",
+          "question": "The atomic nucleus is composed of:",
+          "options": [
+            "Protons and electrons",
+            "Protons and neutrons",
+            "Neutrons and electrons",
+            "Only protons"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E9",
+          "subject": "Physics",
+          "chapter": "Semiconductor Electronics",
+          "type": "mcq",
+          "question": "The basic unit of a digital computer is:",
+          "options": [
+            "Diode",
+            "Transistor",
+            "Logic gate",
+            "Resistor"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E10",
+          "subject": "Chemistry",
+          "chapter": "Solid State",
+          "type": "mcq",
+          "question": "Which is a crystalline solid?",
+          "options": [
+            "Glass",
+            "Rubber",
+            "Ice",
+            "Plastic"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E11",
+          "subject": "Chemistry",
+          "chapter": "Solutions",
+          "type": "mcq",
+          "question": "The solvent in an aqueous solution is:",
+          "options": [
+            "Alcohol",
+            "Acetone",
+            "Water",
+            "Ether"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E12",
+          "subject": "Chemistry",
+          "chapter": "Electrochemistry",
+          "type": "mcq",
+          "question": "A galvanic cell converts:",
+          "options": [
+            "Electrical energy to chemical energy",
+            "Chemical energy to electrical energy",
+            "Mechanical energy to electric energy",
+            "Heat to work"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E13",
+          "subject": "Chemistry",
+          "chapter": "Chemical Kinetics",
+          "type": "mcq",
+          "question": "A catalyst speeds up a reaction by:",
+          "options": [
+            "Lowering activation energy",
+            "Raising temperature",
+            "Increasing reactant concentration",
+            "Changing the equilibrium constant"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E14",
+          "subject": "Chemistry",
+          "chapter": "d- and f-Block Elements",
+          "type": "mcq",
+          "question": "Which is a transition element?",
+          "options": [
+            "Sodium",
+            "Copper",
+            "Calcium",
+            "Potassium"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E15",
+          "subject": "Chemistry",
+          "chapter": "Haloalkanes and Haloarenes",
+          "type": "mcq",
+          "question": "C₂H₅Cl is an example of:",
+          "options": [
+            "Alkene",
+            "Haloalkane",
+            "Alcohol",
+            "Ester"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E16",
+          "subject": "Chemistry",
+          "chapter": "Alcohols, Phenols and Ethers",
+          "type": "mcq",
+          "question": "The functional group in alcohols is:",
+          "options": [
+            "-OH",
+            "-COOH",
+            "-CHO",
+            "-NH₂"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E17",
+          "subject": "Biology",
+          "chapter": "Reproduction in Organisms",
+          "type": "mcq",
+          "question": "Fusion of male and female gametes forms a:",
+          "options": [
+            "Zygote",
+            "Egg",
+            "Sperm",
+            "Spore"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E18",
+          "subject": "Biology",
+          "chapter": "Human Reproduction",
+          "type": "mcq",
+          "question": "Testes produce:",
+          "options": [
+            "Sperms and testosterone",
+            "Eggs only",
+            "Oestrogen",
+            "Insulin"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E19",
+          "subject": "Biology",
+          "chapter": "Principles of Inheritance and Variation",
+          "type": "mcq",
+          "question": "Who is known as father of genetics?",
+          "options": [
+            "Lamarck",
+            "Mendel",
+            "Darwin",
+            "Watson"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E20",
+          "subject": "Biology",
+          "chapter": "Human Health and Disease",
+          "type": "mcq",
+          "question": "Vaccines help prevent:",
+          "options": [
+            "Diseases",
+            "Growth",
+            "Respiration",
+            "Digestion"
+          ],
+          "answer_index": 0
+        }
+      ],
+      "medium": [
+        {
+          "id": "M1",
+          "subject": "Physics",
+          "chapter": "Electrostatic Potential and Capacitance",
+          "type": "mcq",
+          "question": "Two capacitors of 2μF and 4μF in parallel have an equivalent capacitance of:",
+          "options": [
+            "2 μF",
+            "6 μF",
+            "8 μF",
+            "1 μF"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M2",
+          "subject": "Physics",
+          "chapter": "Current Electricity",
+          "type": "mcq",
+          "question": "The resistance of a conductor depends on:",
+          "options": [
+            "Length",
+            "Area of cross-section",
+            "Material",
+            "All of these"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "M3",
+          "subject": "Physics",
+          "chapter": "Magnetism and Matter",
+          "type": "mcq",
+          "question": "Which is a paramagnetic material?",
+          "options": [
+            "Iron",
+            "Copper",
+            "Aluminium",
+            "Silver"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M4",
+          "subject": "Physics",
+          "chapter": "Alternating Current",
+          "type": "mcq",
+          "question": "The average value of AC over a full cycle is:",
+          "options": [
+            "Maximum value",
+            "Zero",
+            "Peak value",
+            "Infinity"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M5",
+          "subject": "Physics",
+          "chapter": "Ray Optics and Optical Instruments",
+          "type": "mcq",
+          "question": "The lens used in a magnifying glass is:",
+          "options": [
+            "Concave lens",
+            "Convex lens",
+            "Cylindrical lens",
+            "Planar lens"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M6",
+          "subject": "Physics",
+          "chapter": "Wave Optics",
+          "type": "mcq",
+          "question": "Young’s double slit experiment proves:",
+          "options": [
+            "Particle nature of light",
+            "Wave nature of light",
+            "Electric nature of light",
+            "None"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M7",
+          "subject": "Chemistry",
+          "chapter": "Solutions",
+          "type": "mcq",
+          "question": "A solution which obeys Raoult’s law at all concentrations is called:",
+          "options": [
+            "Ideal solution",
+            "Non-ideal solution",
+            "Dilute solution",
+            "Super-saturated"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M8",
+          "subject": "Chemistry",
+          "chapter": "Electrochemistry",
+          "type": "mcq",
+          "question": "The standard electrode potential of hydrogen electrode is taken as:",
+          "options": [
+            "1 V",
+            "-1 V",
+            "0 V",
+            "2 V"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M9",
+          "subject": "Chemistry",
+          "chapter": "Chemical Kinetics",
+          "type": "mcq",
+          "question": "The unit of rate constant for a first order reaction is:",
+          "options": [
+            "mol L^-1 s^-1",
+            "s^-1",
+            "L mol^-1 s^-1",
+            "mol^2 L^-2 s^-1"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M10",
+          "subject": "Chemistry",
+          "chapter": "Surface Chemistry",
+          "type": "mcq",
+          "question": "Tyndall effect is shown by:",
+          "options": [
+            "True solutions",
+            "Suspensions",
+            "Colloidal solutions",
+            "All"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M11",
+          "subject": "Chemistry",
+          "chapter": "Coordination Compounds",
+          "type": "mcq",
+          "question": "The geometry of [Cu(NH3)4]^2+ is:",
+          "options": [
+            "Tetrahedral",
+            "Square planar",
+            "Octahedral",
+            "Pyramidal"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M12",
+          "subject": "Chemistry",
+          "chapter": "Amines",
+          "type": "mcq",
+          "question": "Diazonium salts are important because they:",
+          "options": [
+            "Are good fuels",
+            "Readily form azo dyes",
+            "Act as catalysts",
+            "Form proteins"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M13",
+          "subject": "Biology",
+          "chapter": "Biotechnology: Principles and Processes",
+          "type": "mcq",
+          "question": "Restriction enzymes are popularly known as:",
+          "options": [
+            "Molecular glue",
+            "Molecular scissors",
+            "Hormones",
+            "Plasmids"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M14",
+          "subject": "Biology",
+          "chapter": "Human Reproduction",
+          "type": "mcq",
+          "question": "Fertilization in humans takes place in the:",
+          "options": [
+            "Ovary",
+            "Uterus",
+            "Fallopian tube",
+            "Vagina"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M15",
+          "subject": "Biology",
+          "chapter": "Molecular Basis of Inheritance",
+          "type": "mcq",
+          "question": "The enzyme required for DNA replication is:",
+          "options": [
+            "Polymerase",
+            "Ligase",
+            "Amylase",
+            "Helicase"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M16",
+          "subject": "Biology",
+          "chapter": "Evolution",
+          "type": "mcq",
+          "question": "The term 'Survival of the fittest' was proposed by:",
+          "options": [
+            "Darwin",
+            "Wallace",
+            "Lamarck",
+            "Mendel"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M17",
+          "subject": "Biology",
+          "chapter": "Human Health and Disease",
+          "type": "mcq",
+          "question": "AIDS is caused by a:",
+          "options": [
+            "Bacterium",
+            "Protozoan",
+            "Virus",
+            "Fungus"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M18",
+          "subject": "Biology",
+          "chapter": "Microbes in Human Welfare",
+          "type": "mcq",
+          "question": "Biofertilizers are:",
+          "options": [
+            "Chemical fertilizers",
+            "Bacteria and fungi",
+            "Synthetic drugs",
+            "Pesticides"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M19",
+          "subject": "Biology",
+          "chapter": "Strategies for Enhancement in Food Production",
+          "type": "mcq",
+          "question": "Tissue culture in plants is used to obtain:",
+          "options": [
+            "Seeds",
+            "Uniform plants quickly",
+            "Variable plants",
+            "Hybrid animals"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M20",
+          "subject": "Biology",
+          "chapter": "Ecosystem",
+          "type": "mcq",
+          "question": "Energy flow in an ecosystem is:",
+          "options": [
+            "Bidirectional",
+            "Cyclic",
+            "Unidirectional",
+            "Random"
+          ],
+          "answer_index": 2
+        }
+      ],
+      "hard": [
+        {
+          "id": "H1",
+          "subject": "Physics",
+          "chapter": "Electrostatic Potential and Capacitance",
+          "type": "mcq",
+          "question": "A parallel plate capacitor with air is connected to a battery. If the plates are pulled apart while connected, the:",
+          "options": [
+            "Capacitance increases",
+            "Capacitance decreases",
+            "Charge on plates decreases",
+            "Voltage decreases"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H2",
+          "subject": "Physics",
+          "chapter": "Current Electricity",
+          "type": "mcq",
+          "question": "A potentiometer is preferred over a voltmeter to measure emf of a cell because it:",
+          "options": [
+            "Is cheaper",
+            "Does not draw any current from the cell",
+            "Is more accurate",
+            "Both 2 and 3"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "H3",
+          "subject": "Physics",
+          "chapter": "Moving Charges and Magnetism",
+          "type": "mcq",
+          "question": "For a proton moving parallel to a uniform magnetic field, the force is:",
+          "options": [
+            "Maximum",
+            "Zero",
+            "Minimum but not zero",
+            "Infinity"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H4",
+          "subject": "Physics",
+          "chapter": "Alternating Current",
+          "type": "mcq",
+          "question": "A transformer works on the principle of:",
+          "options": [
+            "Electrostatic induction",
+            "Electromagnetic induction",
+            "Fleming's rule",
+            "Lens law"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H5",
+          "subject": "Physics",
+          "chapter": "Wave Optics",
+          "type": "mcq",
+          "question": "Resolving power of a microscope increases with:",
+          "options": [
+            "Increasing wavelength",
+            "Decreasing wavelength",
+            "Increasing aperture",
+            "Both 2 and 3"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "H6",
+          "subject": "Physics",
+          "chapter": "Dual Nature of Radiation and Matter",
+          "type": "mcq",
+          "question": "Which phenomenon supports the wave nature of electrons?",
+          "options": [
+            "Photoelectric effect",
+            "Electron diffraction",
+            "Compton effect",
+            "Pair production"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H7",
+          "subject": "Chemistry",
+          "chapter": "Electrochemistry",
+          "type": "mcq",
+          "question": "Electrolysis of concentrated NaCl solution produces at the cathode:",
+          "options": [
+            "Chlorine gas",
+            "Hydrogen gas",
+            "Oxygen gas",
+            "Sodium metal"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H8",
+          "subject": "Chemistry",
+          "chapter": "Chemical Kinetics",
+          "type": "mcq",
+          "question": "Half-life of a first order reaction depends on:",
+          "options": [
+            "Initial concentration",
+            "Rate constant only",
+            "Both concentration and rate",
+            "Temperature only"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H9",
+          "subject": "Chemistry",
+          "chapter": "Coordination Compounds",
+          "type": "mcq",
+          "question": "In [Fe(CN)6]^4−, the oxidation state of iron is:",
+          "options": [
+            "+2",
+            "+3",
+            "0",
+            "-2"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H10",
+          "subject": "Chemistry",
+          "chapter": "Polymers",
+          "type": "mcq",
+          "question": "Which is a biodegradable polymer?",
+          "options": [
+            "Nylon-6,6",
+            "Polythene",
+            "PHBV",
+            "Teflon"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H11",
+          "subject": "Biology",
+          "chapter": "Reproductive Health",
+          "type": "mcq",
+          "question": "Amniocentesis is used for:",
+          "options": [
+            "Detecting genetic disorders in the fetus",
+            "Artificial insemination",
+            "Inducing abortion",
+            "Determining blood group"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H12",
+          "subject": "Biology",
+          "chapter": "Molecular Basis of Inheritance",
+          "type": "mcq",
+          "question": "Okazaki fragments are formed during:",
+          "options": [
+            "Transcription",
+            "Translation",
+            "Replication of DNA",
+            "Splicing"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H13",
+          "subject": "Biology",
+          "chapter": "Evolution",
+          "type": "mcq",
+          "question": "Industrial melanism provides evidence for:",
+          "options": [
+            "Natural selection",
+            "Mutation",
+            "Genetic drift",
+            "Hybridization"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H14",
+          "subject": "Biology",
+          "chapter": "Biotechnology: Principles and Processes",
+          "type": "mcq",
+          "question": "Ti plasmid is used for:",
+          "options": [
+            "Gene transfer in plants",
+            "Gene transfer in animals",
+            "Gene therapy in humans",
+            "Making insulin"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H15",
+          "subject": "Biology",
+          "chapter": "Biodiversity and Conservation",
+          "type": "odd_one_out",
+          "question": "Odd one out (not an in-situ conservation method):",
+          "options": [
+            "National Park",
+            "Sanctuary",
+            "Botanical Garden",
+            "Biosphere Reserve"
+          ],
+          "answer_index": 2
+        }
+      ]
+    }
+  }
+  

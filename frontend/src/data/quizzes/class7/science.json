@@ -1,0 +1,730 @@
+{
+    "class": "7",
+    "board": "CBSE (NCERT)",
+    "subject": "Science",
+    "textbook": "Curiosity – Science for Class 7",
+    "quiz": {
+      "easy": [
+        {
+          "id": "E1",
+          "chapter": "The Ever-Evolving World of Science",
+          "type": "mcq",
+          "question": "Science mainly helps us to understand natural things and events happening around us.",
+          "options": [
+            "Stories and poems",
+            "Natural things and events",
+            "Only numbers and sums",
+            "Only games and sports"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E2",
+          "chapter": "Exploring Substances: Acidic, Basic, Neutral",
+          "type": "mcq",
+          "question": "Which taste is most common for many acids in our daily life?",
+          "options": [
+            "Bitter",
+            "Sour",
+            "Salty",
+            "Sweet"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E3",
+          "chapter": "Exploring Substances: Acidic, Basic, Neutral",
+          "type": "mcq",
+          "question": "Which of these is a natural indicator often used in the classroom?",
+          "options": [
+            "Litmus solution",
+            "Cooking oil",
+            "Tap water",
+            "Sugar solution"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E4",
+          "chapter": "Electricity: Circuits and their Components",
+          "type": "mcq",
+          "question": "Which device is used to open or close an electric circuit?",
+          "options": [
+            "Cell",
+            "Bulb",
+            "Switch",
+            "Wire"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E5",
+          "chapter": "Electricity: Circuits and their Components",
+          "type": "mcq",
+          "question": "In a simple circuit, the chemical energy is stored in which component?",
+          "options": [
+            "Torch bulb",
+            "Dry cell",
+            "Key or switch",
+            "Connecting wire"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E6",
+          "chapter": "The World of Metals and Non-metals",
+          "type": "mcq",
+          "question": "Which of these is a metal commonly used to make electric wires?",
+          "options": [
+            "Copper",
+            "Wood",
+            "Plastic",
+            "Glass"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E7",
+          "chapter": "The World of Metals and Non-metals",
+          "type": "mcq",
+          "question": "Which property is most typical of metals?",
+          "options": [
+            "They are soft and do not conduct heat.",
+            "They are good conductors of heat and electricity.",
+            "They always float on water.",
+            "They are always gases."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E8",
+          "chapter": "Changes Around Us: Physical and Chemical",
+          "type": "mcq",
+          "question": "The melting of ice into water is an example of which type of change?",
+          "options": [
+            "Chemical change",
+            "Physical change",
+            "Both physical and chemical",
+            "No change at all"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E9",
+          "chapter": "Changes Around Us: Physical and Chemical",
+          "type": "mcq",
+          "question": "Burning of paper is best described as a:",
+          "options": [
+            "Physical change",
+            "Chemical change",
+            "Reversible change",
+            "Slow cooling"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E10",
+          "chapter": "Adolescence: A Stage of Growth and Change",
+          "type": "mcq",
+          "question": "The period of life when the body undergoes many changes leading to reproductive maturity is called:",
+          "options": [
+            "Childhood",
+            "Old age",
+            "Adolescence",
+            "Infancy"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E11",
+          "chapter": "Heat Transfer in Nature",
+          "type": "mcq",
+          "question": "Which of these feels hotter in the Sun, even if both are at the same temperature?",
+          "options": [
+            "Metal chair",
+            "Wooden chair",
+            "Cotton cloth",
+            "Paper sheet"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E12",
+          "chapter": "Heat Transfer in Nature",
+          "type": "mcq",
+          "question": "Heat always flows from:",
+          "options": [
+            "Colder body to hotter body",
+            "Hotter body to colder body",
+            "Left to right",
+            "Bottom to top"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E13",
+          "chapter": "Measurement of Time and Motion",
+          "type": "mcq",
+          "question": "Which instrument is commonly used to measure short time intervals in the lab?",
+          "options": [
+            "Thermometer",
+            "Stopwatch",
+            "Measuring tape",
+            "Compass"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E14",
+          "chapter": "Measurement of Time and Motion",
+          "type": "mcq",
+          "question": "The distance travelled by an object in unit time is called:",
+          "options": [
+            "Speed",
+            "Acceleration",
+            "Force",
+            "Mass"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E15",
+          "chapter": "Life Processes in Animals",
+          "type": "mcq",
+          "question": "Which part of the human body mainly helps in pumping blood?",
+          "options": [
+            "Lungs",
+            "Heart",
+            "Kidneys",
+            "Stomach"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E16",
+          "chapter": "Life Processes in Animals",
+          "type": "mcq",
+          "question": "Food is finally absorbed into the blood mainly in which part of the alimentary canal?",
+          "options": [
+            "Mouth",
+            "Stomach",
+            "Small intestine",
+            "Large intestine"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E17",
+          "chapter": "Life Processes in Plants",
+          "type": "mcq",
+          "question": "Which process in plants uses sunlight to prepare food?",
+          "options": [
+            "Respiration",
+            "Photosynthesis",
+            "Transpiration",
+            "Germination"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E18",
+          "chapter": "Life Processes in Plants",
+          "type": "mcq",
+          "question": "Water is transported from roots to leaves mainly through:",
+          "options": [
+            "Phloem",
+            "Xylem",
+            "Epidermis",
+            "Cuticle"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E19",
+          "chapter": "Light: Shadows and Reflections",
+          "type": "mcq",
+          "question": "A shadow is formed when an object blocks:",
+          "options": [
+            "Sound",
+            "Heat",
+            "Light",
+            "Air"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E20",
+          "chapter": "Earth, Moon, and the Sun",
+          "type": "mcq",
+          "question": "Day and night on Earth occur mainly due to its:",
+          "options": [
+            "Revolution around the Sun",
+            "Rotation on its own axis",
+            "Changing shape",
+            "Changing distance from the Sun"
+          ],
+          "answer_index": 1
+        }
+      ],
+      "medium": [
+        {
+          "id": "M1",
+          "chapter": "Exploring Substances: Acidic, Basic, Neutral",
+          "type": "mcq",
+          "question": "When an acid reacts with a base, which two main products are usually formed in a neutralisation reaction?",
+          "options": [
+            "Salt and water",
+            "Only water",
+            "Salt and oxygen",
+            "Gas and water"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M2",
+          "chapter": "Exploring Substances: Acidic, Basic, Neutral",
+          "type": "mcq",
+          "question": "Which of the following will turn red litmus paper blue?",
+          "options": [
+            "Lemon juice",
+            "Vinegar",
+            "Soap solution",
+            "Carbonated soft drink"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M3",
+          "chapter": "Electricity: Circuits and their Components",
+          "type": "mcq",
+          "question": "In a simple circuit with one cell, one bulb, and a switch, the bulb will glow only when:",
+          "options": [
+            "The switch is open and air gap is present.",
+            "The switch is closed and the circuit is complete.",
+            "The bulb is kept on a wooden table.",
+            "The cell is removed."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M4",
+          "chapter": "Electricity: Circuits and their Components",
+          "type": "odd_one_out",
+          "question": "Choose the odd one out as a poor conductor of electricity.",
+          "options": [
+            "Iron nail",
+            "Copper wire",
+            "Rubber eraser",
+            "Aluminium strip"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M5",
+          "chapter": "The World of Metals and Non-metals",
+          "type": "mcq",
+          "question": "Which statement is true for most metals?",
+          "options": [
+            "They are brittle and break on hammering.",
+            "They are malleable and can be beaten into thin sheets.",
+            "They are all liquids at room temperature.",
+            "They do not conduct electricity."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M6",
+          "chapter": "The World of Metals and Non-metals",
+          "type": "mcq",
+          "question": "Which of these is a non‑metal that is essential for breathing?",
+          "options": [
+            "Oxygen",
+            "Iron",
+            "Copper",
+            "Aluminium"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M7",
+          "chapter": "Changes Around Us: Physical and Chemical",
+          "type": "mcq",
+          "question": "Rusting of iron is best described as:",
+          "options": [
+            "A physical change because no new substance is formed.",
+            "A chemical change because a new substance is formed.",
+            "A temporary change that can be easily reversed.",
+            "Just a change in colour only."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M8",
+          "chapter": "Changes Around Us: Physical and Chemical",
+          "type": "odd_one_out",
+          "question": "Find the odd one out as a physical change.",
+          "options": [
+            "Ice melting",
+            "Water boiling",
+            "Paper tearing",
+            "Wood burning"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "M9",
+          "chapter": "Adolescence: A Stage of Growth and Change",
+          "type": "mcq",
+          "question": "Which of these is not a good habit during adolescence?",
+          "options": [
+            "Eating a balanced diet",
+            "Doing regular exercise",
+            "Getting addicted to harmful substances",
+            "Maintaining personal hygiene"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M10",
+          "chapter": "Adolescence: A Stage of Growth and Change",
+          "type": "mcq",
+          "question": "The changes at puberty in our body are mainly controlled by:",
+          "options": [
+            "Water",
+            "Air",
+            "Hormones",
+            "Salts"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M11",
+          "chapter": "Heat Transfer in Nature",
+          "type": "mcq",
+          "question": "Heat from the Sun reaches Earth mainly by:",
+          "options": [
+            "Conduction",
+            "Convection",
+            "Radiation",
+            "Evaporation"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M12",
+          "chapter": "Heat Transfer in Nature",
+          "type": "mcq",
+          "question": "In which of the following is heat transferred mostly by convection?",
+          "options": [
+            "Heating a metal spoon in flame",
+            "Boiling water in a pot",
+            "Receiving heat from the Sun",
+            "Iron bar left in the Sun"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M13",
+          "chapter": "Measurement of Time and Motion",
+          "type": "mcq",
+          "question": "Which graph best represents uniform motion of an object?",
+          "options": [
+            "A straight line sloping upwards on a distance–time graph",
+            "A curved line on a distance–time graph",
+            "A vertical line on a distance–time graph",
+            "No line at all"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M14",
+          "chapter": "Measurement of Time and Motion",
+          "type": "mcq",
+          "question": "If a cyclist covers 10 km in 2 hours, the average speed is:",
+          "options": [
+            "2 km/h",
+            "5 km/h",
+            "10 km/h",
+            "20 km/h"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M15",
+          "chapter": "Life Processes in Animals",
+          "type": "mcq",
+          "question": "Which of these pairs correctly matches the organ and its main function in humans?",
+          "options": [
+            "Stomach – pumps blood",
+            "Heart – digestion of food",
+            "Lungs – exchange of gases",
+            "Kidneys – pumping air"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M16",
+          "chapter": "Life Processes in Animals",
+          "type": "odd_one_out",
+          "question": "Find the odd one out based on the organ system they mainly belong to.",
+          "options": [
+            "Heart",
+            "Blood vessels",
+            "Stomach",
+            "Blood"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M17",
+          "chapter": "Life Processes in Plants",
+          "type": "mcq",
+          "question": "Which gas is taken in by plants during photosynthesis?",
+          "options": [
+            "Oxygen",
+            "Carbon dioxide",
+            "Nitrogen",
+            "Hydrogen"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M18",
+          "chapter": "Life Processes in Plants",
+          "type": "mcq",
+          "question": "Loss of water vapour from leaves through stomata is called:",
+          "options": [
+            "Transpiration",
+            "Respiration",
+            "Condensation",
+            "Evaporation only"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M19",
+          "chapter": "Light: Shadows and Reflections",
+          "type": "mcq",
+          "question": "A shadow is always formed on the side of the object:",
+          "options": [
+            "Towards the light source",
+            "Opposite to the light source",
+            "Above the light source",
+            "Below the light source"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M20",
+          "chapter": "Earth, Moon, and the Sun",
+          "type": "odd_one_out",
+          "question": "Choose the odd one out based on being a natural satellite.",
+          "options": [
+            "Moon",
+            "Phobos",
+            "Deimos",
+            "Earth"
+          ],
+          "answer_index": 3
+        }
+      ],
+      "hard": [
+        {
+          "id": "H1",
+          "chapter": "Exploring Substances: Acidic, Basic, Neutral",
+          "type": "mcq",
+          "question": "A farmer’s soil has become too acidic for crops; which treatment will best help to neutralise the soil?",
+          "options": [
+            "Adding more acid to the soil",
+            "Adding a base like slaked lime to the soil",
+            "Adding only water to the soil",
+            "Covering the soil with plastic"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H2",
+          "chapter": "Exploring Substances: Acidic, Basic, Neutral",
+          "type": "mcq",
+          "question": "Which observation best shows that a neutralisation reaction is taking place between an acid and a base?",
+          "options": [
+            "Only the colour of solution changes but temperature remains same.",
+            "Only a gas is produced and the test tube becomes cold.",
+            "Salt and water are formed and the solution often becomes warmer.",
+            "A solid turns into a gas directly without heating."
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H3",
+          "chapter": "Electricity: Circuits and their Components",
+          "type": "mcq",
+          "question": "In a circuit with two identical bulbs connected in series to a cell, one bulb fuses; what will happen to the other bulb and why?",
+          "options": [
+            "It will glow brighter because more current flows.",
+            "It will glow dimmer because less current flows.",
+            "It will stop glowing because the circuit becomes open.",
+            "It will explode because voltage doubles."
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H4",
+          "chapter": "Electricity: Circuits and their Components",
+          "type": "odd_one_out",
+          "question": "Choose the odd one out based on use as an insulator in household wiring.",
+          "options": [
+            "Rubber coating on wires",
+            "Plastic covering of plugs",
+            "Copper core of wire",
+            "Porcelain holders"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H5",
+          "chapter": "The World of Metals and Non-metals",
+          "type": "mcq",
+          "question": "A metal M reacts with a dilute acid to produce hydrogen gas; which general property does this show?",
+          "options": [
+            "Metals are always soft.",
+            "Metals react with acids to form salt and hydrogen gas.",
+            "Metals do not react with any acid.",
+            "Metals react only with water."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H6",
+          "chapter": "Changes Around Us: Physical and Chemical",
+          "type": "mcq",
+          "question": "Which of the following is the best reason to call burning of a candle both a physical and a chemical change?",
+          "options": [
+            "Only wax melts.",
+            "Only new gases are formed.",
+            "Wax melts (physical) and new substances like gases and soot form (chemical).",
+            "Nothing changes at all."
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H7",
+          "chapter": "Adolescence: A Stage of Growth and Change",
+          "type": "mcq",
+          "question": "Which option combines two correct ways to stay healthy during adolescence?",
+          "options": [
+            "Balanced diet and regular exercise.",
+            "Skipping meals and avoiding sleep.",
+            "Using harmful drugs and avoiding sports.",
+            "Ignoring personal hygiene and eating junk food."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H8",
+          "chapter": "Heat Transfer in Nature",
+          "type": "mcq",
+          "question": "A metal spoon is placed with one end in hot water; after some time the other end also becomes hot mainly due to:",
+          "options": [
+            "Conduction of heat along the spoon.",
+            "Convection of heat in air.",
+            "Radiation from the Sun.",
+            "Evaporation of metal."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H9",
+          "chapter": "Measurement of Time and Motion",
+          "type": "mcq",
+          "question": "A car moves with non‑uniform speed; which statement describes its motion correctly?",
+          "options": [
+            "It covers equal distances in equal time intervals.",
+            "It covers unequal distances in equal time intervals.",
+            "It remains at rest all the time.",
+            "It moves only in a circle."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H10",
+          "chapter": "Life Processes in Animals",
+          "type": "mcq",
+          "question": "Which path shows the correct order of food movement in the human alimentary canal?",
+          "options": [
+            "Mouth → stomach → small intestine → large intestine → anus",
+            "Mouth → large intestine → stomach → anus → small intestine",
+            "Mouth → stomach → large intestine → small intestine → anus",
+            "Mouth → small intestine → stomach → large intestine → anus"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H11",
+          "chapter": "Life Processes in Plants",
+          "type": "mcq",
+          "question": "A plant kept in the dark for two days and then exposed to light with only one leaf section covered with black paper; which statement best explains the expected starch test result?",
+          "options": [
+            "Both covered and uncovered parts show starch because light is not needed.",
+            "Only the uncovered part shows starch because light is needed for photosynthesis.",
+            "Covered part shows more starch than uncovered part.",
+            "No part of the leaf shows starch."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H12",
+          "chapter": "Light: Shadows and Reflections",
+          "type": "mcq",
+          "question": "Which combination will produce the sharpest shadow on a screen?",
+          "options": [
+            "Extended light source and far object.",
+            "Point light source and opaque object close to screen.",
+            "Point light source and transparent object.",
+            "Diffuse light and translucent object."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H13",
+          "chapter": "Light: Shadows and Reflections",
+          "type": "odd_one_out",
+          "question": "Choose the odd one out based on ability to form clear images by reflection.",
+          "options": [
+            "Plane mirror",
+            "Still water surface",
+            "Steel spoon back surface",
+            "Rough wall"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "H14",
+          "chapter": "Earth, Moon, and the Sun",
+          "type": "mcq",
+          "question": "Which statement best explains why we always see the same face of the Moon from Earth?",
+          "options": [
+            "The Moon does not rotate on its axis.",
+            "The Moon rotates on its axis in the same time that it revolves around Earth.",
+            "The Earth does not rotate on its axis.",
+            "Clouds always hide the other side."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H15",
+          "chapter": "Earth, Moon, and the Sun",
+          "type": "mcq",
+          "question": "A solar eclipse occurs when:",
+          "options": [
+            "Earth comes between the Sun and the Moon.",
+            "Moon comes between the Sun and the Earth.",
+            "Sun comes between the Earth and another planet.",
+            "The Moon is at its farthest point from Earth."
+          ],
+          "answer_index": 1
+        }
+      ]
+    }
+  }
+  

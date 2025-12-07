@@ -1,0 +1,156 @@
+{
+    "id": "math-6-ch1",
+    "title": "Number System",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Place Value",
+            "readingTime": 5,
+            "content": "# Place Value\n\nIn our number system, the position of a digit determines its value. This is called place value.\n\n## Understanding Place Value\n\n- **Ones**: The rightmost digit\n- **Tens**: The second digit from right\n- **Hundreds**: The third digit from right\n- **Thousands**: The fourth digit from right\n\n### Example\nIn the number 3,456:\n- 6 is in the ones place (value = 6)\n- 5 is in the tens place (value = 50)\n- 4 is in the hundreds place (value = 400)\n- 3 is in the thousands place (value = 3000)\n\nTotal value = 3000 + 400 + 50 + 6 = 3,456"
+        },
+        {
+            "id": "l2",
+            "title": "Comparing Numbers",
+            "readingTime": 4,
+            "content": "# Comparing Numbers\n\nWe can compare numbers to find which is greater or smaller.\n\n## Rules for Comparison\n\n1. Compare the number of digits first\n2. If digits are same, compare from left to right\n3. Use symbols: > (greater than), < (less than), = (equal to)\n\n### Examples\n- 456 > 234 (4 hundreds > 2 hundreds)\n- 789 < 987 (7 hundreds < 9 hundreds)\n- 555 = 555 (equal)"
+        },
+        {
+            "id": "l3",
+            "title": "Addition and Subtraction",
+            "readingTime": 6,
+            "content": "# Addition and Subtraction\n\nAddition means combining numbers, while subtraction means taking away.\n\n## Addition\n- Start from the ones place\n- Add digits in each place\n- Carry over if sum is 10 or more\n\n## Subtraction\n- Start from the ones place\n- Subtract digits in each place\n- Borrow from next place if needed"
+        },
+        {
+            "id": "l4",
+            "title": "Multiplication and Division",
+            "readingTime": 7,
+            "content": "# Multiplication and Division\n\nMultiplication is repeated addition. Division is splitting into equal parts.\n\n## Multiplication Tables\n- Learn tables from 2 to 20\n- Use multiplication for faster calculation\n\n## Division\n- Division is the opposite of multiplication\n- Dividend ÷ Divisor = Quotient\n- Check: Quotient × Divisor = Dividend"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Number System",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What is the place value of 7 in the number 3,745?",
+                "options": [
+                    "7",
+                    "70",
+                    "700",
+                    "7000"
+                ],
+                "correctAnswer": 2,
+                "explanation": "7 is in the hundreds place, so its value is 700."
+            },
+            {
+                "id": "q1_2",
+                "question": "Which number is greater: 4,567 or 4,576?",
+                "options": [
+                    "4,567",
+                    "4,576",
+                    "Both are equal",
+                    "Cannot be determined"
+                ],
+                "correctAnswer": 1,
+                "explanation": "4,576 is greater because 7 tens is more than 6 tens."
+            },
+            {
+                "id": "q1_3",
+                "question": "What is 456 + 234?",
+                "options": [
+                    "680",
+                    "690",
+                    "700",
+                    "710"
+                ],
+                "correctAnswer": 1,
+                "explanation": "456 + 234 = 690"
+            },
+            {
+                "id": "q1_4",
+                "question": "What is 12 × 8?",
+                "options": [
+                    "84",
+                    "96",
+                    "104",
+                    "112"
+                ],
+                "correctAnswer": 1,
+                "explanation": "12 × 8 = 96"
+            },
+            {
+                "id": "q1_5",
+                "question": "What is 144 ÷ 12?",
+                "options": [
+                    "10",
+                    "11",
+                    "12",
+                    "13"
+                ],
+                "correctAnswer": 2,
+                "explanation": "144 ÷ 12 = 12"
+            },
+            {
+                "id": "q1_6",
+                "question": "Which symbol is used to show 'less than'?",
+                "options": [
+                    ">",
+                    "<",
+                    "=",
+                    "≠"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The symbol < means 'less than'."
+            },
+            {
+                "id": "q1_7",
+                "question": "What is the smallest 4-digit number?",
+                "options": [
+                    "999",
+                    "1000",
+                    "1001",
+                    "9999"
+                ],
+                "correctAnswer": 1,
+                "explanation": "1000 is the smallest 4-digit number."
+            },
+            {
+                "id": "q1_8",
+                "question": "If you subtract 567 from 1000, what do you get?",
+                "options": [
+                    "433",
+                    "443",
+                    "533",
+                    "543"
+                ],
+                "correctAnswer": 0,
+                "explanation": "1000 - 567 = 433"
+            },
+            {
+                "id": "q1_9",
+                "question": "What is the sum of the place values of all digits in 2,345?",
+                "options": [
+                    "2345",
+                    "14",
+                    "2000 + 300 + 40 + 5",
+                    "Both A and C"
+                ],
+                "correctAnswer": 3,
+                "explanation": "The sum of place values equals the number itself: 2000 + 300 + 40 + 5 = 2345"
+            },
+            {
+                "id": "q1_10",
+                "question": "Which operation should be done first: 5 + 3 × 2?",
+                "options": [
+                    "Addition",
+                    "Multiplication",
+                    "Both at same time",
+                    "Right to left"
+                ],
+                "correctAnswer": 1,
+                "explanation": "According to BODMAS/PEMDAS rules, multiplication should be done before addition. So 3 × 2 = 6, then 5 + 6 = 11."
+            }
+        ]
+    }
+}

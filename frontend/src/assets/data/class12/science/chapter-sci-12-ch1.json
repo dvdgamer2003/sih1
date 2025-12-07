@@ -1,0 +1,144 @@
+{
+    "id": "sci-12-ch1",
+    "title": "Electrostatics",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Electric Charge",
+            "readingTime": 6,
+            "content": "# Electric Charge\n\nElectric charge is a fundamental property of matter.\n\n## Types\n- Positive charge\n- Negative charge\n\n## Properties\n- Like charges repel\n- Unlike charges attract\n- Charge is conserved"
+        },
+        {
+            "id": "l2",
+            "title": "Coulomb's Law",
+            "readingTime": 5,
+            "content": "# Coulomb's Law\n\nForce between two point charges is directly proportional to the product of charges and inversely proportional to the square of distance.\n\nF = k(q₁q₂)/r²"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Electrostatics",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "Like charges:",
+                "options": [
+                    "Attract",
+                    "Repel",
+                    "Don't interact",
+                    "Neutralize"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Like charges (both positive or both negative) repel each other."
+            },
+            {
+                "id": "q1_2",
+                "question": "SI unit of charge is:",
+                "options": [
+                    "Ampere",
+                    "Coulomb",
+                    "Volt",
+                    "Ohm"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The SI unit of electric charge is Coulomb (C)."
+            },
+            {
+                "id": "q1_3",
+                "question": "Charge is:",
+                "options": [
+                    "Created",
+                    "Destroyed",
+                    "Conserved",
+                    "Variable"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Charge is conserved - it cannot be created or destroyed."
+            },
+            {
+                "id": "q1_4",
+                "question": "In Coulomb's law, force is proportional to:",
+                "options": [
+                    "Distance",
+                    "1/distance",
+                    "1/distance²",
+                    "distance²"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Force is inversely proportional to the square of distance (1/r²)."
+            },
+            {
+                "id": "q1_5",
+                "question": "Electron has:",
+                "options": [
+                    "Positive charge",
+                    "Negative charge",
+                    "No charge",
+                    "Variable charge"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Electron has a negative charge."
+            },
+            {
+                "id": "q1_6",
+                "question": "Proton has:",
+                "options": [
+                    "Positive charge",
+                    "Negative charge",
+                    "No charge",
+                    "Variable charge"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Proton has a positive charge."
+            },
+            {
+                "id": "q1_7",
+                "question": "If distance doubles, force becomes:",
+                "options": [
+                    "Double",
+                    "Half",
+                    "1/4",
+                    "4 times"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Force is proportional to 1/r², so if r doubles, force becomes 1/4."
+            },
+            {
+                "id": "q1_8",
+                "question": "Electric field direction is:",
+                "options": [
+                    "From negative to positive",
+                    "From positive to negative",
+                    "Random",
+                    "Circular"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Electric field lines go from positive to negative charge."
+            },
+            {
+                "id": "q1_9",
+                "question": "Charge on electron is:",
+                "options": [
+                    "1.6 × 10⁻¹⁹ C",
+                    "-1.6 × 10⁻¹⁹ C",
+                    "1.6 × 10¹⁹ C",
+                    "0 C"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Electron has charge of -1.6 × 10⁻¹⁹ Coulombs."
+            },
+            {
+                "id": "q1_10",
+                "question": "Neutral object has:",
+                "options": [
+                    "No charges",
+                    "Equal positive and negative charges",
+                    "Only positive",
+                    "Only negative"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Neutral objects have equal amounts of positive and negative charges."
+            }
+        ]
+    }
+}

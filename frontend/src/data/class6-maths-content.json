@@ -1,0 +1,141 @@
+{
+    "class": 6,
+    "subject": "Mathematics",
+    "chapters": [
+        {
+            "name": "Knowing Our Numbers",
+            "subchapters": [
+                {
+                    "name": "Comparing Numbers",
+                    "content": {
+                        "explanation": "Numbers can be compared to find which is greater or smaller. We use symbols like > (greater than), < (less than), and = (equal to) for comparison.",
+                        "keyPoints": [
+                            "Numbers can be compared using place value",
+                            "The number with more digits is usually greater",
+                            "Use > for greater than and < for less than"
+                        ]
+                    }
+                },
+                {
+                    "name": "Large Numbers",
+                    "content": {
+                        "explanation": "Large numbers are written using place value system. We use commas to separate periods like ones, thousands, lakhs, and crores.",
+                        "keyPoints": [
+                            "Indian system uses lakhs and crores",
+                            "International system uses millions and billions",
+                            "Place value helps in reading large numbers"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Whole Numbers",
+            "subchapters": [
+                {
+                    "name": "Number Line",
+                    "content": {
+                        "explanation": "A number line is a straight line with numbers placed at equal intervals. It helps visualize numbers and operations.",
+                        "keyPoints": [
+                            "Numbers increase from left to right",
+                            "Zero is in the middle",
+                            "Used for addition and subtraction"
+                        ]
+                    }
+                },
+                {
+                    "name": "Properties of Whole Numbers",
+                    "content": {
+                        "explanation": "Whole numbers have special properties like closure, commutative, and associative properties for addition and multiplication.",
+                        "keyPoints": [
+                            "Closure: Sum of two whole numbers is a whole number",
+                            "Commutative: a + b = b + a",
+                            "Associative: (a + b) + c = a + (b + c)"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Playing with Numbers",
+            "subchapters": [
+                {
+                    "name": "Factors and Multiples",
+                    "content": {
+                        "explanation": "A factor divides a number completely. A multiple is obtained by multiplying a number by any whole number.",
+                        "keyPoints": [
+                            "Every number is a factor of itself",
+                            "1 is a factor of every number",
+                            "Multiples are infinite"
+                        ]
+                    }
+                },
+                {
+                    "name": "Prime and Composite Numbers",
+                    "content": {
+                        "explanation": "Prime numbers have exactly two factors: 1 and the number itself. Composite numbers have more than two factors.",
+                        "keyPoints": [
+                            "2 is the smallest prime number",
+                            "1 is neither prime nor composite",
+                            "Every composite number can be expressed as product of primes"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Basic Geometrical Ideas",
+            "subchapters": [
+                {
+                    "name": "Points, Lines and Shapes",
+                    "content": {
+                        "explanation": "A point is an exact location. A line is a collection of points extending infinitely in both directions. Shapes are formed by lines and curves.",
+                        "keyPoints": [
+                            "A point has no dimensions",
+                            "A line has infinite length",
+                            "Line segment has two endpoints"
+                        ]
+                    }
+                },
+                {
+                    "name": "Angles",
+                    "content": {
+                        "explanation": "An angle is formed when two rays meet at a common point called vertex. Angles are measured in degrees.",
+                        "keyPoints": [
+                            "Right angle = 90 degrees",
+                            "Acute angle < 90 degrees",
+                            "Obtuse angle > 90 degrees"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Fractions",
+            "subchapters": [
+                {
+                    "name": "Understanding Fractions",
+                    "content": {
+                        "explanation": "A fraction represents a part of a whole. It has a numerator (top) and denominator (bottom).",
+                        "keyPoints": [
+                            "Numerator shows parts taken",
+                            "Denominator shows total parts",
+                            "Proper fraction: numerator < denominator"
+                        ]
+                    }
+                },
+                {
+                    "name": "Operations on Fractions",
+                    "content": {
+                        "explanation": "Fractions can be added, subtracted, multiplied, and divided. Like fractions have the same denominator.",
+                        "keyPoints": [
+                            "Add/subtract like fractions by adding/subtracting numerators",
+                            "For unlike fractions, find LCM of denominators",
+                            "Multiply fractions by multiplying numerators and denominators"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

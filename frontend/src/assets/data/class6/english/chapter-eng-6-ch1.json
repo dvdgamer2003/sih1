@@ -1,0 +1,126 @@
+{
+    "id": "eng-6-ch1",
+    "title": "Reading Comprehension",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Understanding Stories",
+            "readingTime": 5,
+            "content": "# Understanding Stories\n\nReading comprehension means understanding what you read. When you read a story, you should be able to answer questions about it.\n\n## Key Elements of a Story\n\n- **Characters**: The people or animals in the story\n- **Setting**: Where and when the story takes place\n- **Plot**: What happens in the story\n- **Theme**: The main idea or message\n\n## Tips for Better Comprehension\n\n1. Read slowly and carefully\n2. Picture the story in your mind\n3. Ask yourself questions while reading\n4. Summarize what you've read"
+        },
+        {
+            "id": "l2",
+            "title": "Main Idea and Details",
+            "readingTime": 4,
+            "content": "# Main Idea and Details\n\nThe main idea is what the passage is mostly about. Details support the main idea.\n\n## Finding the Main Idea\n\n- Look at the title\n- Read the first and last sentences\n- Ask: What is this mostly about?\n\n## Supporting Details\n\n- Facts, examples, and descriptions\n- Help explain the main idea\n- Answer who, what, when, where, why, how"
+        },
+        {
+            "id": "l3",
+            "title": "Making Inferences",
+            "readingTime": 6,
+            "content": "# Making Inferences\n\nAn inference is a conclusion you reach based on clues in the text and what you already know.\n\n## How to Make Inferences\n\n1. Look for clues in the text\n2. Think about what you already know\n3. Put the clues and your knowledge together\n4. Make a logical conclusion\n\n### Example\nIf the text says 'Sarah grabbed her umbrella before leaving,' you can infer it might be raining."
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Reading Comprehension",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What does 'comprehension' mean?",
+                "options": [
+                    "Writing",
+                    "Understanding",
+                    "Speaking",
+                    "Listening"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Comprehension means understanding what you read or hear."
+            },
+            {
+                "id": "q1_2",
+                "question": "Which of these is NOT a key element of a story?",
+                "options": [
+                    "Characters",
+                    "Setting",
+                    "Author's age",
+                    "Plot"
+                ],
+                "correctAnswer": 2,
+                "explanation": "The author's age is not a key element of the story itself."
+            },
+            {
+                "id": "q1_3",
+                "question": "The main idea of a passage is:",
+                "options": [
+                    "A small detail",
+                    "What the passage is mostly about",
+                    "The first sentence",
+                    "The longest sentence"
+                ],
+                "correctAnswer": 1,
+                "explanation": "The main idea is what the passage is mostly about."
+            },
+            {
+                "id": "q1_4",
+                "question": "If a story says 'The sun was setting and birds were returning to their nests,' what time of day is it?",
+                "options": [
+                    "Morning",
+                    "Afternoon",
+                    "Evening",
+                    "Night"
+                ],
+                "correctAnswer": 2,
+                "explanation": "The setting sun indicates it is evening time."
+            },
+            {
+                "id": "q1_5",
+                "question": "Supporting details help to:",
+                "options": [
+                    "Confuse the reader",
+                    "Explain the main idea",
+                    "Make the story longer",
+                    "Hide information"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Supporting details help explain and support the main idea."
+            },
+            {
+                "id": "q1_6",
+                "question": "What is an inference?",
+                "options": [
+                    "A fact stated in the text",
+                    "A conclusion based on clues",
+                    "The title of the story",
+                    "A character's name"
+                ],
+                "correctAnswer": 1,
+                "explanation": "An inference is a conclusion you make based on clues in the text and your own knowledge."
+            },
+            {
+                "id": "q1_7",
+                "question": "Where does a story take place?",
+                "options": [
+                    "Plot",
+                    "Theme",
+                    "Setting",
+                    "Character"
+                ],
+                "correctAnswer": 2,
+                "explanation": "The setting is where and when a story takes place."
+            },
+            {
+                "id": "q1_8",
+                "question": "If a passage says 'Tom's stomach growled loudly,' what can you infer?",
+                "options": [
+                    "Tom is angry",
+                    "Tom is hungry",
+                    "Tom is sleepy",
+                    "Tom is happy"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A growling stomach is a clue that someone is hungry."
+            }
+        ]
+    }
+}

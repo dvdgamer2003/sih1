@@ -1,0 +1,26 @@
+[
+    {
+        "id": "math-11-ch1",
+        "title": "Sets",
+        "description": "Introduction to sets, types of sets, and set operations.",
+        "units": 4,
+        "icon": "calculator",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-11-ch2",
+        "title": "Relations and Functions",
+        "description": "Cartesian product of sets, relations, and functions.",
+        "units": 5,
+        "icon": "calculator",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-11-ch3",
+        "title": "Trigonometric Functions",
+        "description": "Angles, trigonometric functions, and their properties.",
+        "units": 6,
+        "icon": "calculator",
+        "color": "#FF6B6B"
+    }
+]

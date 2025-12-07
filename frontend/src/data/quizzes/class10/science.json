@@ -1,0 +1,730 @@
+{
+    "class": "10",
+    "board": "CBSE (NCERT)",
+    "subject": "Science",
+    "textbook": "Science – Textbook for Class X (Rationalised Edition)",
+    "quiz": {
+      "easy": [
+        {
+          "id": "E1",
+          "chapter": "Chemical Reactions and Equations",
+          "type": "mcq",
+          "question": "The chemical reaction in which a substance combines with oxygen to release energy is called:",
+          "options": [
+            "Decomposition",
+            "Oxidation",
+            "Reduction",
+            "Double displacement"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E2",
+          "chapter": "Chemical Reactions and Equations",
+          "type": "mcq",
+          "question": "A balanced chemical equation obeys which law?",
+          "options": [
+            "Law of multiple proportions",
+            "Law of conservation of mass",
+            "Charles’ law",
+            "Boyle’s law"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E3",
+          "chapter": "Acids, Bases and Salts",
+          "type": "mcq",
+          "question": "Which indicator turns red in acid and blue in base?",
+          "options": [
+            "Litmus",
+            "Phenolphthalein",
+            "Methyl orange",
+            "Water"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E4",
+          "chapter": "Acids, Bases and Salts",
+          "type": "mcq",
+          "question": "Hydrochloric acid reacts with sodium hydroxide to form:",
+          "options": [
+            "Salt and acid",
+            "Salt and water",
+            "Base and air",
+            "Water only"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E5",
+          "chapter": "Metals and Non-metals",
+          "type": "mcq",
+          "question": "Which metal is liquid at room temperature?",
+          "options": [
+            "Iron",
+            "Copper",
+            "Mercury",
+            "Aluminium"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E6",
+          "chapter": "Metals and Non-metals",
+          "type": "mcq",
+          "question": "Corrosion of iron is commonly known as:",
+          "options": [
+            "Rusting",
+            "Melting",
+            "Welding",
+            "Burning"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E7",
+          "chapter": "Carbon and its Compounds",
+          "type": "mcq",
+          "question": "The simplest hydrocarbon is:",
+          "options": [
+            "Methane",
+            "Ethane",
+            "Propane",
+            "Butane"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E8",
+          "chapter": "Life Processes",
+          "type": "mcq",
+          "question": "The process by which green plants make their own food is called:",
+          "options": [
+            "Respiration",
+            "Transpiration",
+            "Photosynthesis",
+            "Fermentation"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E9",
+          "chapter": "Life Processes",
+          "type": "mcq",
+          "question": "Which organ in humans pumps blood to all parts of the body?",
+          "options": [
+            "Lungs",
+            "Liver",
+            "Heart",
+            "Brain"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E10",
+          "chapter": "Control and Coordination",
+          "type": "mcq",
+          "question": "The basic unit of the nervous system is:",
+          "options": [
+            "Neuron",
+            "Blood cell",
+            "Muscle fibre",
+            "Gland"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E11",
+          "chapter": "How do Organisms Reproduce?",
+          "type": "mcq",
+          "question": "Which process results in identical offspring from a single parent?",
+          "options": [
+            "Sexual reproduction",
+            "Asexual reproduction",
+            "Pollination",
+            "Fertilisation"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E12",
+          "chapter": "How do Organisms Reproduce?",
+          "type": "mcq",
+          "question": "What is the male reproductive cell called in humans?",
+          "options": [
+            "Ovum",
+            "Egg",
+            "Sperm",
+            "Zygote"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E13",
+          "chapter": "Heredity and Evolution",
+          "type": "mcq",
+          "question": "Who is known as the father of genetics?",
+          "options": [
+            "Isaac Newton",
+            "Gregor Mendel",
+            "Albert Einstein",
+            "Charles Darwin"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E14",
+          "chapter": "Light – Reflection and Refraction",
+          "type": "mcq",
+          "question": "Which type of mirror is used as a rear-view mirror in vehicles?",
+          "options": [
+            "Plane mirror",
+            "Concave mirror",
+            "Convex mirror",
+            "Parabolic mirror"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E15",
+          "chapter": "Light – Reflection and Refraction",
+          "type": "mcq",
+          "question": "Which phenomenon causes a stick partly immersed in water to appear bent?",
+          "options": [
+            "Reflection",
+            "Refraction",
+            "Dispersion",
+            "Scattering"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E16",
+          "chapter": "Electricity",
+          "type": "mcq",
+          "question": "The SI unit of electric current is:",
+          "options": [
+            "Volt",
+            "Ampere",
+            "Ohm",
+            "Watt"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E17",
+          "chapter": "Electricity",
+          "type": "mcq",
+          "question": "A device used to measure electric current is called:",
+          "options": [
+            "Voltmeter",
+            "Ammeter",
+            "Galvanometer",
+            "Resistor"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "E18",
+          "chapter": "Magnetic Effects of Electric Current",
+          "type": "mcq",
+          "question": "The instrument used to detect the presence of current in a circuit is the:",
+          "options": [
+            "Voltmeter",
+            "Ammeter",
+            "Galvanometer",
+            "Wattmeter"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "E19",
+          "chapter": "Magnetic Effects of Electric Current",
+          "type": "mcq",
+          "question": "The magnetic field lines always emerge from:",
+          "options": [
+            "North pole",
+            "South pole",
+            "Both poles",
+            "The center of the magnet"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "E20",
+          "chapter": "Our Environment",
+          "type": "mcq",
+          "question": "Which of the following is a biotic component of the environment?",
+          "options": [
+            "Water",
+            "Air",
+            "Grass",
+            "Soil"
+          ],
+          "answer_index": 2
+        }
+      ],
+      "medium": [
+        {
+          "id": "M1",
+          "chapter": "Chemical Reactions and Equations",
+          "type": "mcq",
+          "question": "Which reaction is represented by 2KClO₃ → 2KCl + 3O₂?",
+          "options": [
+            "Combination",
+            "Decomposition",
+            "Double displacement",
+            "Displacement"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M2",
+          "chapter": "Acids, Bases and Salts",
+          "type": "mcq",
+          "question": "The pH value of a neutral solution is:",
+          "options": [
+            "0",
+            "1",
+            "7",
+            "14"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M3",
+          "chapter": "Acids, Bases and Salts",
+          "type": "mcq",
+          "question": "Baking soda is chemically known as:",
+          "options": [
+            "Sodium carbonate",
+            "Sodium chloride",
+            "Sodium hydrogen carbonate",
+            "Calcium carbonate"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M4",
+          "chapter": "Metals and Non-metals",
+          "type": "mcq",
+          "question": "The property of metals by which they can be drawn into thin wires is called:",
+          "options": [
+            "Malleability",
+            "Ductility",
+            "Sonority",
+            "Conductivity"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M5",
+          "chapter": "Metals and Non-metals",
+          "type": "mcq",
+          "question": "Which non-metal is a good conductor of electricity?",
+          "options": [
+            "Sulphur",
+            "Oxygen",
+            "Diamond",
+            "Graphite"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "M6",
+          "chapter": "Carbon and its Compounds",
+          "type": "mcq",
+          "question": "Which of these is a functional group in ethanol?",
+          "options": [
+            "-COOH",
+            "-OH",
+            "-CHO",
+            "-CO"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M7",
+          "chapter": "Carbon and its Compounds",
+          "type": "mcq",
+          "question": "What is the product obtained when ethanoic acid reacts with sodium carbonate?",
+          "options": [
+            "Carbon dioxide",
+            "Ethene",
+            "Methane",
+            "Ethanol"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M8",
+          "chapter": "Life Processes",
+          "type": "mcq",
+          "question": "Which blood vessels carry blood away from the heart?",
+          "options": [
+            "Veins",
+            "Arteries",
+            "Capillaries",
+            "Lymph vessels"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M9",
+          "chapter": "Life Processes",
+          "type": "mcq",
+          "question": "The movement of food in the oesophagus takes place by:",
+          "options": [
+            "Diffusion",
+            "Active transport",
+            "Peristalsis",
+            "Osmosis"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M10",
+          "chapter": "Control and Coordination",
+          "type": "mcq",
+          "question": "Which hormone is released by the pancreas to lower blood sugar?",
+          "options": [
+            "Insulin",
+            "Adrenaline",
+            "Thyroxine",
+            "Oestrogen"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M11",
+          "chapter": "How do Organisms Reproduce?",
+          "type": "mcq",
+          "question": "Fission in Amoeba is an example of:",
+          "options": [
+            "Sexual reproduction",
+            "Budding",
+            "Asexual reproduction",
+            "Cloning"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "M12",
+          "chapter": "How do Organisms Reproduce?",
+          "type": "mcq",
+          "question": "Fusion of male and female gametes forms a:",
+          "options": [
+            "Zygote",
+            "Egg cell",
+            "Embryo",
+            "Sperm cell"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M13",
+          "chapter": "Heredity and Evolution",
+          "type": "mcq",
+          "question": "Which concept explains the appearance of new traits over generations?",
+          "options": [
+            "Inheritance",
+            "Cloning",
+            "Chromosomal aberration",
+            "Natural selection"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "M14",
+          "chapter": "Light – Reflection and Refraction",
+          "type": "mcq",
+          "question": "The image formed by a plane mirror is always:",
+          "options": [
+            "Real and inverted",
+            "Virtual and erect",
+            "Diminished",
+            "Magnified"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M15",
+          "chapter": "Light – Reflection and Refraction",
+          "type": "mcq",
+          "question": "The focal length of a concave mirror is:",
+          "options": [
+            "Always negative",
+            "Always positive",
+            "Zero",
+            "Sometimes positive, sometimes negative"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M16",
+          "chapter": "Electricity",
+          "type": "mcq",
+          "question": "A circuit has two identical resistors in series, the total resistance is:",
+          "options": [
+            "Twice the resistance of one",
+            "Half the resistance of one",
+            "Same as one",
+            "Zero"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M17",
+          "chapter": "Electricity",
+          "type": "mcq",
+          "question": "An electric fuse is based on the principle that:",
+          "options": [
+            "It has high melting point",
+            "It has low melting point",
+            "It has high resistance",
+            "It has zero resistance"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M18",
+          "chapter": "Magnetic Effects of Electric Current",
+          "type": "mcq",
+          "question": "The function of a split ring in a DC motor is to:",
+          "options": [
+            "Reverse the direction of current in the coil",
+            "Produce magnetic field",
+            "Increase the current",
+            "Stop the motor"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "M19",
+          "chapter": "Magnetic Effects of Electric Current",
+          "type": "mcq",
+          "question": "Electromagnetic induction was discovered by:",
+          "options": [
+            "Newton",
+            "Faraday",
+            "Rutherford",
+            "Darwin"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "M20",
+          "chapter": "Our Environment",
+          "type": "mcq",
+          "question": "Which level in an ecosystem food chain receives the least energy?",
+          "options": [
+            "Producers",
+            "Primary consumers",
+            "Secondary consumers",
+            "Tertiary consumers"
+          ],
+          "answer_index": 3
+        }
+      ],
+      "hard": [
+        {
+          "id": "H1",
+          "chapter": "Chemical Reactions and Equations",
+          "type": "mcq",
+          "question": "A white silver chloride turns grey in sunlight due to:",
+          "options": [
+            "Decomposition reaction",
+            "Combination reaction",
+            "Displacement reaction",
+            "Redox reaction"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "H2",
+          "chapter": "Acids, Bases and Salts",
+          "type": "mcq",
+          "question": "A solution turns red litmus blue and phenolphthalein pink. The solution is:",
+          "options": [
+            "Acidic",
+            "Neutral",
+            "Basic",
+            "Saline"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H3",
+          "chapter": "Acids, Bases and Salts",
+          "type": "odd_one_out",
+          "question": "Odd one out (not a salt):",
+          "options": [
+            "Sodium chloride",
+            "Sodium hydroxide",
+            "Potassium nitrate",
+            "Calcium sulphate"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H4",
+          "chapter": "Metals and Non-metals",
+          "type": "mcq",
+          "question": "A reddish brown coating formed on copper in moist air is:",
+          "options": [
+            "Copper nitrate",
+            "Copper hydroxide",
+            "Copper oxide",
+            "Copper carbonate"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "H5",
+          "chapter": "Metals and Non-metals",
+          "type": "mcq",
+          "question": "An alloy of copper and zinc is:",
+          "options": [
+            "Bronze",
+            "Brass",
+            "Steel",
+            "Solder"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H6",
+          "chapter": "Carbon and its Compounds",
+          "type": "mcq",
+          "question": "Which is NOT a property of homologous series?",
+          "options": [
+            "Same functional group",
+            "Same general formula",
+            "Gradation in physical properties",
+            "Different chemical properties"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "H7",
+          "chapter": "Life Processes",
+          "type": "mcq",
+          "question": "The major nitrogenous waste in human urine is:",
+          "options": [
+            "Ammonia",
+            "Uria",
+            "Urea",
+            "Creatinine"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H8",
+          "chapter": "Control and Coordination",
+          "type": "mcq",
+          "question": "Reflex actions are controlled by:",
+          "options": [
+            "Brain",
+            "Spinal cord",
+            "Heart",
+            "Kidney"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H9",
+          "chapter": "How do Organisms Reproduce?",
+          "type": "mcq",
+          "question": "Which process results in variation among offspring?",
+          "options": [
+            "Budding",
+            "Binary fission",
+            "Sexual reproduction",
+            "Grafting"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H10",
+          "chapter": "Heredity and Evolution",
+          "type": "mcq",
+          "question": "XY sex chromosomes in humans indicate:",
+          "options": [
+            "A girl child",
+            "A boy child",
+            "Twins",
+            "Inheritance"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H11",
+          "chapter": "Light – Reflection and Refraction",
+          "type": "mcq",
+          "question": "Critical angle is related to which phenomenon?",
+          "options": [
+            "Reflection",
+            "Total internal reflection",
+            "Refraction",
+            "Dispersion"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H12",
+          "chapter": "Electricity",
+          "type": "mcq",
+          "question": "A wire of resistance R is stretched to double its length. Its new resistance is:",
+          "options": [
+            "R/2",
+            "R",
+            "2R",
+            "4R"
+          ],
+          "answer_index": 3
+        },
+        {
+          "id": "H13",
+          "chapter": "Magnetic Effects of Electric Current",
+          "type": "mcq",
+          "question": "The direction of induced current is given by which rule?",
+          "options": [
+            "Fleming’s left hand rule",
+            "Fleming’s right hand rule",
+            "Right hand thumb rule",
+            "None"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "H14",
+          "chapter": "Our Environment",
+          "type": "mcq",
+          "question": "Ozone layer protects life from:",
+          "options": [
+            "Visible light",
+            "X-rays",
+            "UV rays",
+            "Infrared rays"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "H15",
+          "chapter": "Our Environment",
+          "type": "odd_one_out",
+          "question": "Odd one out (non-biodegradable):",
+          "options": [
+            "Vegetable peels",
+            "Plastic bag",
+            "Paper",
+            "Cotton cloth"
+          ],
+          "answer_index": 1
+        }
+      ]
+    }
+  }
+  

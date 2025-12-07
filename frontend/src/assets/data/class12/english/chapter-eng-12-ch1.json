@@ -1,0 +1,120 @@
+{
+    "id": "eng-12-ch1",
+    "title": "Advanced Composition",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "Essay Writing",
+            "readingTime": 6,
+            "content": "# Essay Writing\n\n## Types\n- **Argumentative**: Present and defend a position\n- **Expository**: Explain or inform\n- **Narrative**: Tell a story\n- **Descriptive**: Describe something\n\n## Structure\n- Introduction with thesis\n- Body paragraphs\n- Conclusion"
+        },
+        {
+            "id": "l2",
+            "title": "Research Writing",
+            "readingTime": 5,
+            "content": "# Research Writing\n\n## Steps\n1. Choose topic\n2. Research sources\n3. Create outline\n4. Write draft\n5. Cite sources\n6. Revise and edit"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: Composition",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "Argumentative essay:",
+                "options": [
+                    "Tells a story",
+                    "Defends a position",
+                    "Describes",
+                    "Lists facts"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Argumentative essay presents and defends a specific position."
+            },
+            {
+                "id": "q1_2",
+                "question": "Thesis statement appears in:",
+                "options": [
+                    "Conclusion",
+                    "Introduction",
+                    "Body",
+                    "Title"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Thesis statement typically appears in the introduction."
+            },
+            {
+                "id": "q1_3",
+                "question": "Expository writing:",
+                "options": [
+                    "Argues",
+                    "Explains",
+                    "Describes feelings",
+                    "Tells stories"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Expository writing explains or informs about a topic."
+            },
+            {
+                "id": "q1_4",
+                "question": "What is plagiarism?",
+                "options": [
+                    "Citing sources",
+                    "Using others' work without credit",
+                    "Research",
+                    "Editing"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Plagiarism is using others' work without proper attribution."
+            },
+            {
+                "id": "q1_5",
+                "question": "MLA and APA are:",
+                "options": [
+                    "Essay types",
+                    "Citation styles",
+                    "Writing tools",
+                    "Grading systems"
+                ],
+                "correctAnswer": 1,
+                "explanation": "MLA and APA are citation and formatting styles."
+            },
+            {
+                "id": "q1_6",
+                "question": "Body paragraphs should:",
+                "options": [
+                    "Introduce topic",
+                    "Support thesis",
+                    "Conclude essay",
+                    "List references"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Body paragraphs provide evidence and support for the thesis."
+            },
+            {
+                "id": "q1_7",
+                "question": "Conclusion should:",
+                "options": [
+                    "Introduce new ideas",
+                    "Summarize main points",
+                    "List sources",
+                    "Ask questions"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Conclusion summarizes main points and reinforces the thesis."
+            },
+            {
+                "id": "q1_8",
+                "question": "Primary source is:",
+                "options": [
+                    "Encyclopedia",
+                    "Original document",
+                    "Textbook",
+                    "Summary"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Primary source is an original, first-hand document or evidence."
+            }
+        ]
+    }
+}

@@ -1,0 +1,144 @@
+{
+    "id": "comp-11-ch1",
+    "title": "Object-Oriented Programming",
+    "lessons": [
+        {
+            "id": "l1",
+            "title": "OOP Concepts",
+            "readingTime": 6,
+            "content": "# OOP Concepts\n\n## Four Pillars\n- **Encapsulation**: Bundling data and methods\n- **Inheritance**: Deriving from parent class\n- **Polymorphism**: Many forms\n- **Abstraction**: Hiding complexity"
+        },
+        {
+            "id": "l2",
+            "title": "Classes and Objects",
+            "readingTime": 5,
+            "content": "# Classes and Objects\n\n## Class\nBlueprint for creating objects\n\n## Object\nInstance of a class"
+        }
+    ],
+    "quiz": {
+        "id": "q1",
+        "title": "Quiz: OOP",
+        "questions": [
+            {
+                "id": "q1_1",
+                "question": "What is encapsulation?",
+                "options": [
+                    "Hiding data",
+                    "Bundling data and methods",
+                    "Creating objects",
+                    "Deleting data"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Encapsulation bundles data and methods that operate on that data."
+            },
+            {
+                "id": "q1_2",
+                "question": "What is inheritance?",
+                "options": [
+                    "Creating new class",
+                    "Deriving from parent class",
+                    "Deleting class",
+                    "Copying class"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Inheritance allows a class to derive properties from a parent class."
+            },
+            {
+                "id": "q1_3",
+                "question": "What is a class?",
+                "options": [
+                    "An object",
+                    "Blueprint for objects",
+                    "A function",
+                    "A variable"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A class is a blueprint or template for creating objects."
+            },
+            {
+                "id": "q1_4",
+                "question": "What is an object?",
+                "options": [
+                    "A class",
+                    "Instance of a class",
+                    "A function",
+                    "A method"
+                ],
+                "correctAnswer": 1,
+                "explanation": "An object is an instance created from a class."
+            },
+            {
+                "id": "q1_5",
+                "question": "Polymorphism means:",
+                "options": [
+                    "One form",
+                    "Many forms",
+                    "No form",
+                    "Same form"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Polymorphism means the ability to take many forms."
+            },
+            {
+                "id": "q1_6",
+                "question": "Abstraction is:",
+                "options": [
+                    "Showing all details",
+                    "Hiding complexity",
+                    "Creating objects",
+                    "Deleting data"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Abstraction hides complex implementation details."
+            },
+            {
+                "id": "q1_7",
+                "question": "Which is NOT an OOP pillar?",
+                "options": [
+                    "Encapsulation",
+                    "Inheritance",
+                    "Compilation",
+                    "Polymorphism"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Compilation is not one of the four OOP pillars."
+            },
+            {
+                "id": "q1_8",
+                "question": "Constructor is used to:",
+                "options": [
+                    "Destroy objects",
+                    "Initialize objects",
+                    "Delete objects",
+                    "Copy objects"
+                ],
+                "correctAnswer": 1,
+                "explanation": "A constructor initializes an object when it's created."
+            },
+            {
+                "id": "q1_9",
+                "question": "Method overloading is:",
+                "options": [
+                    "Same name, different parameters",
+                    "Different name, same parameters",
+                    "No parameters",
+                    "One method only"
+                ],
+                "correctAnswer": 0,
+                "explanation": "Method overloading uses the same method name with different parameters."
+            },
+            {
+                "id": "q1_10",
+                "question": "Access modifier 'private' means:",
+                "options": [
+                    "Accessible everywhere",
+                    "Accessible only within class",
+                    "No access",
+                    "Public access"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Private members are accessible only within the class."
+            }
+        ]
+    }
+}

@@ -1,0 +1,42 @@
+[
+    {
+        "id": "math-7-ch1",
+        "title": "Geometrical Constructions",
+        "description": "Learn to construct triangles and other geometric figures.",
+        "units": 3,
+        "icon": "shape-outline",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-7-ch2",
+        "title": "Multiplication and Division of Integers",
+        "description": "Understand rules for multiplying and dividing integers.",
+        "units": 2,
+        "icon": "calculator",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-7-ch3",
+        "title": "HCF and LCM",
+        "description": "Find Highest Common Factor and Least Common Multiple.",
+        "units": 3,
+        "icon": "math-compass",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-7-ch4",
+        "title": "Angles and Pairs of Angles",
+        "description": "Study different types of angles and their relationships.",
+        "units": 2,
+        "icon": "angle-acute",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": "math-7-ch5",
+        "title": "Operations on Rational Numbers",
+        "description": "Perform operations on rational numbers.",
+        "units": 3,
+        "icon": "percent",
+        "color": "#FF6B6B"
+    }
+]

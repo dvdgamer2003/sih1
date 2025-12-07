@@ -1,0 +1,34 @@
+[
+    {
+        "id": "comp-7-ch1",
+        "title": "Fundamentals of Computer",
+        "description": "Understand the basic working and components of a computer.",
+        "units": 2,
+        "icon": "laptop",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-7-ch2",
+        "title": "Working with Windows",
+        "description": "Learn about the Windows operating system and its features.",
+        "units": 3,
+        "icon": "microsoft-windows",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-7-ch3",
+        "title": "Introduction to MS Word",
+        "description": "Learn word processing using Microsoft Word.",
+        "units": 4,
+        "icon": "file-document",
+        "color": "#60A5FA"
+    },
+    {
+        "id": "comp-7-ch4",
+        "title": "Internet and Email",
+        "description": "Basics of internet, web browsing and email.",
+        "units": 2,
+        "icon": "web",
+        "color": "#60A5FA"
+    }
+]
