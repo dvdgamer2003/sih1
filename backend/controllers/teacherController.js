@@ -292,9 +292,12 @@ const getMyContent = async (req, res) => {
 // @access  Private/Teacher
 const getStudents = async (req, res) => {
     try {
-        // In a real app, you might want to filter by the teacher's assigned classes
-        // For now, we'll return all students
-        const students = await User.find({ role: 'student' }).select('-password').sort({ createdAt: -1 });
+        // Filter students assigned to this teacher
+        const students = await User.find({
+            role: 'student',
+            teacherId: req.user._id // Only get students assigned to this teacher
+        }).select('-password').sort({ createdAt: -1 });
+
         res.json(students);
     } catch (error) {
         res.status(500).json({ message: error.message });

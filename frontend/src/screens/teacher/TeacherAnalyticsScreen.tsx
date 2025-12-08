@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, ScrollView, FlatList, TouchableOpacity } from 'react-native';
-import { Text, Surface, Avatar, Searchbar, Chip, ActivityIndicator } from 'react-native-paper';
+import { View, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator, Dimensions } from 'react-native';
+import { Text, Searchbar, Chip } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
-import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
-import GradientBackground from '../../components/ui/GradientBackground';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import api from '../../services/api';
+
+const { width } = Dimensions.get('window');
 
 const TeacherAnalyticsScreen = () => {
     const navigation = useNavigation();
@@ -22,8 +24,10 @@ const TeacherAnalyticsScreen = () => {
         setLoading(true);
         try {
             const response = await api.get(`/analytics/class/${classFilter}`);
-            setStudents(response.data);
-            setFilteredStudents(response.data);
+            // Sort by XP for proper ranking
+            const sorted = response.data.sort((a: any, b: any) => (b.xp || 0) - (a.xp || 0));
+            setStudents(sorted);
+            setFilteredStudents(sorted);
         } catch (error) {
             console.error('Failed to fetch class analytics:', error);
         } finally {
@@ -44,63 +48,51 @@ const TeacherAnalyticsScreen = () => {
         }
     };
 
-    const renderStudentItem = ({ item }: { item: any }) => (
-        <Surface style={styles.studentCard} elevation={1}>
-            <View style={styles.studentHeader}>
-                <Avatar.Text size={40} label={item.name.substring(0, 2).toUpperCase()} style={{ backgroundColor: '#6366F1' }} />
-                <View style={styles.studentInfo}>
-                    <Text style={styles.studentName}>{item.name}</Text>
-                    <Text style={styles.studentEmail}>{item.email}</Text>
-                </View>
-                <View style={styles.xpBadge}>
-                    <MaterialCommunityIcons name="trophy" size={16} color="#FFD700" />
-                    <Text style={styles.xpText}>{item.xp} XP</Text>
-                </View>
-            </View>
+    const getRankColor = (rank: number): [string, string] => {
+        switch (rank) {
+            case 1: return ['#FFD700', '#FFA000'];
+            case 2: return ['#C0C0C0', '#A0A0A0'];
+            case 3: return ['#CD7F32', '#A0522D'];
+            default: return ['#6200EA', '#7C4DFF'];
+        }
+    };
 
-            <View style={styles.statsRow}>
-                <View style={styles.statItem}>
-                    <Text style={styles.statValue}>{item.completedTasks}</Text>
-                    <Text style={styles.statLabel}>Completed</Text>
-                </View>
-                <View style={styles.statItem}>
-                    <Text style={[styles.statValue, { color: '#F59E0B' }]}>{item.pendingTasks}</Text>
-                    <Text style={styles.statLabel}>Pending</Text>
-                </View>
-                <View style={styles.statItem}>
-                    <Text style={[styles.statValue, { color: '#EF4444' }]}>{item.streak}</Text>
-                    <Text style={styles.statLabel}>Streak</Text>
-                </View>
+    if (loading) {
+        return (
+            <View style={styles.loadingContainer}>
+                <ActivityIndicator size="large" color="#6200EA" />
             </View>
+        );
+    }
 
-            <TouchableOpacity
-                style={styles.viewDetailsBtn}
-                onPress={() => (navigation as any).navigate('StudentAnalytics', { studentId: item.id })}
-            >
-                <Text style={styles.viewDetailsText}>View Full Analytics</Text>
-                <Ionicons name="arrow-forward" size={16} color="#6366F1" />
-            </TouchableOpacity>
-        </Surface>
-    );
+    const topThree = filteredStudents.slice(0, 3);
+    const restOfClass = filteredStudents.slice(3);
 
     return (
-        <GradientBackground>
-            <View style={styles.container}>
-                <View style={styles.header}>
-                    <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-                        <Ionicons name="arrow-back" size={24} color="#fff" />
-                    </TouchableOpacity>
+        <View style={styles.container}>
+            {/* Header */}
+            <LinearGradient
+                colors={['#6200EA', '#7C4DFF']}
+                style={styles.header}
+            >
+                <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+                    <MaterialCommunityIcons name="arrow-left" size={24} color="#fff" />
+                </TouchableOpacity>
+                <View style={styles.headerContent}>
                     <Text style={styles.headerTitle}>Class Analytics</Text>
-                    <View style={{ width: 40 }} />
+                    <Text style={styles.headerSubtitle}>Student Performance Overview</Text>
                 </View>
+            </LinearGradient>
 
+            <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
+                {/* Filter Chips */}
                 <View style={styles.filterContainer}>
                     <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.classFilters}>
                         <Chip
                             selected={classFilter === 'all'}
                             onPress={() => setClassFilter('all')}
-                            style={styles.chip}
-                            showSelectedOverlay
+                            style={[styles.chip, classFilter === 'all' && styles.chipActive]}
+                            textStyle={classFilter === 'all' ? styles.chipTextActive : styles.chipText}
                         >
                             All Classes
                         </Chip>
@@ -109,8 +101,8 @@ const TeacherAnalyticsScreen = () => {
                                 key={c}
                                 selected={classFilter === c}
                                 onPress={() => setClassFilter(c)}
-                                style={styles.chip}
-                                showSelectedOverlay
+                                style={[styles.chip, classFilter === c && styles.chipActive]}
+                                textStyle={classFilter === c ? styles.chipTextActive : styles.chipText}
                             >
                                 Class {c}
                             </Chip>
@@ -118,158 +110,404 @@ const TeacherAnalyticsScreen = () => {
                     </ScrollView>
                 </View>
 
+                {/* Search */}
                 <Searchbar
                     placeholder="Search students..."
                     onChangeText={onChangeSearch}
                     value={searchQuery}
                     style={styles.searchBar}
                     inputStyle={{ color: '#333' }}
+                    iconColor="#666"
                 />
 
-                {loading ? (
-                    <View style={styles.loadingContainer}>
-                        <ActivityIndicator size="large" color="#fff" />
+                {/* Stats Grid */}
+                {students.length > 0 && (
+                    <View style={styles.statsGrid}>
+                        <View style={styles.statCard}>
+                            <MaterialCommunityIcons name="account-group" size={28} color="#6200EA" />
+                            <Text style={styles.statValue}>{students.length}</Text>
+                            <Text style={styles.statLabel}>Students</Text>
+                        </View>
+
+                        <View style={styles.statCard}>
+                            <MaterialCommunityIcons name="chart-line" size={28} color="#4CAF50" />
+                            <Text style={styles.statValue}>
+                                {Math.round(students.reduce((sum, s) => sum + (s.xp || 0), 0) / students.length)}
+                            </Text>
+                            <Text style={styles.statLabel}>Avg XP</Text>
+                        </View>
+
+                        <View style={styles.statCard}>
+                            <MaterialCommunityIcons name="checkbox-marked-circle" size={28} color="#FF6B6B" />
+                            <Text style={styles.statValue}>
+                                {Math.round(students.reduce((sum, s) => sum + (s.completedTasks || 0), 0) / students.length)}
+                            </Text>
+                            <Text style={styles.statLabel}>Avg Tasks</Text>
+                        </View>
                     </View>
-                ) : (
-                    <FlatList
-                        data={filteredStudents}
-                        renderItem={renderStudentItem}
-                        keyExtractor={item => item.id}
-                        contentContainerStyle={styles.listContent}
-                        ListEmptyComponent={
-                            <View style={styles.emptyContainer}>
-                                <Text style={{ color: '#fff' }}>No students found</Text>
-                            </View>
-                        }
-                    />
                 )}
-            </View>
-        </GradientBackground>
+
+                {/* Top 3 Podium */}
+                {topThree.length > 0 && (
+                    <View style={styles.podiumSection}>
+                        <Text style={styles.sectionTitle}>🏆 Top Performers</Text>
+
+                        <View style={styles.podium}>
+                            {/* 2nd Place */}
+                            {topThree[1] && (
+                                <View style={styles.podiumItem}>
+                                    <LinearGradient
+                                        colors={getRankColor(2)}
+                                        style={[styles.podiumCard, styles.secondPlace]}
+                                    >
+                                        <MaterialCommunityIcons name="medal" size={32} color="#fff" />
+                                        <Text style={styles.podiumName} numberOfLines={1}>{topThree[1].name}</Text>
+                                        <Text style={styles.podiumXP}>{topThree[1].xp || 0} XP</Text>
+                                    </LinearGradient>
+                                    <View style={[styles.podiumBase, { height: 70, backgroundColor: '#E0E0E0' }]} />
+                                </View>
+                            )}
+
+                            {/* 1st Place */}
+                            {topThree[0] && (
+                                <View style={styles.podiumItem}>
+                                    <LinearGradient
+                                        colors={getRankColor(1)}
+                                        style={[styles.podiumCard, styles.firstPlace]}
+                                    >
+                                        <MaterialCommunityIcons name="crown" size={40} color="#fff" />
+                                        <Text style={styles.podiumName} numberOfLines={1}>{topThree[0].name}</Text>
+                                        <Text style={styles.podiumXP}>{topThree[0].xp || 0} XP</Text>
+                                    </LinearGradient>
+                                    <View style={[styles.podiumBase, { height: 100, backgroundColor: '#FFD700' }]} />
+                                </View>
+                            )}
+
+                            {/* 3rd Place */}
+                            {topThree[2] && (
+                                <View style={styles.podiumItem}>
+                                    <LinearGradient
+                                        colors={getRankColor(3)}
+                                        style={[styles.podiumCard, styles.thirdPlace]}
+                                    >
+                                        <MaterialCommunityIcons name="medal-outline" size={28} color="#fff" />
+                                        <Text style={styles.podiumName} numberOfLines={1}>{topThree[2].name}</Text>
+                                        <Text style={styles.podiumXP}>{topThree[2].xp || 0} XP</Text>
+                                    </LinearGradient>
+                                    <View style={[styles.podiumBase, { height: 50, backgroundColor: '#CD7F32' }]} />
+                                </View>
+                            )}
+                        </View>
+                    </View>
+                )}
+
+                {/* Full Student List */}
+                <View style={styles.listSection}>
+                    <Text style={styles.sectionTitle}>📊 All Students</Text>
+
+                    {filteredStudents.length > 0 ? (
+                        filteredStudents.map((student: any, index: number) => (
+                            <TouchableOpacity
+                                key={student.id}
+                                style={[
+                                    styles.studentCard,
+                                    index < 3 && styles.topThreeCard
+                                ]}
+                                onPress={() => (navigation as any).navigate('StudentAnalytics', {
+                                    studentId: student.id,
+                                    studentName: student.name
+                                })}
+                            >
+                                <View style={styles.studentInfo}>
+                                    <LinearGradient
+                                        colors={index < 3 ? getRankColor(index + 1) : ['#E0E0E0', '#BDBDBD']}
+                                        style={styles.rankBadge}
+                                    >
+                                        <Text style={styles.rankText}>{index + 1}</Text>
+                                    </LinearGradient>
+
+                                    <View style={styles.studentDetails}>
+                                        <Text style={styles.studentName}>{student.name}</Text>
+                                        <Text style={styles.studentEmail}>{student.email}</Text>
+
+                                        <View style={styles.studentStats}>
+                                            <View style={styles.statItem}>
+                                                <MaterialCommunityIcons name="trophy" size={14} color="#FFD700" />
+                                                <Text style={styles.studentStatText}>{student.xp || 0} XP</Text>
+                                            </View>
+                                            <View style={styles.statItem}>
+                                                <MaterialCommunityIcons name="check-circle" size={14} color="#4CAF50" />
+                                                <Text style={styles.studentStatText}>{student.completedTasks || 0} Tasks</Text>
+                                            </View>
+                                            <View style={styles.statItem}>
+                                                <MaterialCommunityIcons name="fire" size={14} color="#FF6B6B" />
+                                                <Text style={styles.studentStatText}>{student.streak || 0} Day Streak</Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </View>
+
+                                <MaterialCommunityIcons name="chevron-right" size={24} color="#999" />
+                            </TouchableOpacity>
+                        ))
+                    ) : (
+                        <View style={styles.emptyState}>
+                            <MaterialCommunityIcons name="account-search-outline" size={64} color="#ccc" />
+                            <Text style={styles.emptyText}>No students found</Text>
+                            <Text style={styles.emptySubtext}>Try adjusting your search or filters</Text>
+                        </View>
+                    )}
+                </View>
+
+                <View style={{ height: 40 }} />
+            </ScrollView>
+        </View>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 60,
+        backgroundColor: '#F5F5F7',
+    },
+    loadingContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5F5F7',
     },
     header: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        paddingTop: 50,
+        paddingBottom: 20,
         paddingHorizontal: 20,
-        marginBottom: 20,
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderBottomLeftRadius: 24,
+        borderBottomRightRadius: 24,
+        elevation: 8,
+        shadowColor: '#6200EA',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 8,
     },
     backButton: {
         padding: 8,
         backgroundColor: 'rgba(255,255,255,0.2)',
         borderRadius: 12,
     },
+    headerContent: {
+        marginLeft: 16,
+    },
     headerTitle: {
         fontSize: 24,
         fontWeight: 'bold',
         color: '#fff',
     },
+    headerSubtitle: {
+        fontSize: 14,
+        color: 'rgba(255, 255, 255, 0.8)',
+        marginTop: 2,
+    },
+    scrollView: {
+        flex: 1,
+    },
     filterContainer: {
-        marginBottom: 16,
+        marginTop: 16,
+        marginBottom: 8,
     },
     classFilters: {
-        paddingHorizontal: 20,
+        paddingHorizontal: 16,
     },
     chip: {
         marginRight: 8,
-        backgroundColor: 'rgba(255,255,255,0.9)',
-    },
-    searchBar: {
-        marginHorizontal: 20,
-        marginBottom: 20,
-        borderRadius: 12,
         backgroundColor: '#fff',
     },
-    listContent: {
-        paddingHorizontal: 20,
-        paddingBottom: 100,
+    chipActive: {
+        backgroundColor: '#6200EA',
     },
-    loadingContainer: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    studentCard: {
-        backgroundColor: '#fff',
-        borderRadius: 16,
-        padding: 16,
-        marginBottom: 12,
-    },
-    studentHeader: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginBottom: 16,
-    },
-    studentInfo: {
-        flex: 1,
-        marginLeft: 12,
-    },
-    studentName: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        color: '#333',
-    },
-    studentEmail: {
-        fontSize: 12,
+    chipText: {
         color: '#666',
     },
-    xpBadge: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        backgroundColor: '#FFF9C4',
-        paddingHorizontal: 8,
-        paddingVertical: 4,
+    chipTextActive: {
+        color: '#fff',
+    },
+    searchBar: {
+        marginHorizontal: 16,
+        marginBottom: 16,
         borderRadius: 12,
+        backgroundColor: '#fff',
+        elevation: 2,
     },
-    xpText: {
-        fontSize: 12,
-        fontWeight: 'bold',
-        color: '#F59E0B',
-        marginLeft: 4,
-    },
-    statsRow: {
+    statsGrid: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
-        borderTopWidth: 1,
-        borderTopColor: '#f0f0f0',
-        paddingTop: 12,
-        marginBottom: 12,
+        paddingHorizontal: 16,
+        paddingBottom: 16,
+        gap: 12,
     },
-    statItem: {
-        alignItems: 'center',
+    statCard: {
         flex: 1,
+        backgroundColor: '#fff',
+        padding: 16,
+        borderRadius: 16,
+        alignItems: 'center',
+        elevation: 2,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.05,
+        shadowRadius: 4,
     },
     statValue: {
-        fontSize: 18,
+        fontSize: 24,
         fontWeight: 'bold',
-        color: '#10B981',
+        color: '#333',
+        marginTop: 8,
     },
     statLabel: {
         fontSize: 12,
         color: '#666',
+        marginTop: 4,
     },
-    viewDetailsBtn: {
+    podiumSection: {
+        marginTop: 8,
+        paddingHorizontal: 16,
+    },
+    sectionTitle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#333',
+        marginBottom: 16,
+    },
+    podium: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'flex-end',
+        gap: 8,
+        marginBottom: 20,
+    },
+    podiumItem: {
+        alignItems: 'center',
+        flex: 1,
+    },
+    podiumCard: {
+        width: '100%',
+        padding: 12,
+        borderRadius: 12,
+        alignItems: 'center',
+        marginBottom: 4,
+        elevation: 4,
+    },
+    firstPlace: {
+        paddingVertical: 16,
+    },
+    secondPlace: {
+        paddingVertical: 14,
+    },
+    thirdPlace: {
+        paddingVertical: 12,
+    },
+    podiumName: {
+        fontSize: 12,
+        fontWeight: 'bold',
+        color: '#fff',
+        marginTop: 8,
+        textAlign: 'center',
+    },
+    podiumXP: {
+        fontSize: 14,
+        fontWeight: 'bold',
+        color: '#fff',
+        marginTop: 4,
+    },
+    podiumBase: {
+        width: '100%',
+        borderTopLeftRadius: 8,
+        borderTopRightRadius: 8,
+        opacity: 0.7,
+    },
+    listSection: {
+        paddingHorizontal: 16,
+        marginTop: 16,
+    },
+    studentCard: {
+        backgroundColor: '#fff',
+        padding: 16,
+        borderRadius: 12,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: 8,
+        elevation: 1,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.05,
+        shadowRadius: 2,
+    },
+    topThreeCard: {
+        borderWidth: 2,
+        borderColor: '#FFD700',
+        elevation: 3,
+    },
+    studentInfo: {
         flexDirection: 'row',
         alignItems: 'center',
+        flex: 1,
+    },
+    rankBadge: {
+        width: 40,
+        height: 40,
+        borderRadius: 20,
         justifyContent: 'center',
-        paddingTop: 8,
-        borderTopWidth: 1,
-        borderTopColor: '#f0f0f0',
-    },
-    viewDetailsText: {
-        color: '#6366F1',
-        fontWeight: '600',
-        marginRight: 4,
-    },
-    emptyContainer: {
         alignItems: 'center',
-        marginTop: 40,
+        marginRight: 12,
+    },
+    rankText: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#fff',
+    },
+    studentDetails: {
+        flex: 1,
+    },
+    studentName: {
+        fontSize: 16,
+        fontWeight: '600',
+        color: '#333',
+        marginBottom: 2,
+    },
+    studentEmail: {
+        fontSize: 12,
+        color: '#999',
+        marginBottom: 6,
+    },
+    studentStats: {
+        flexDirection: 'row',
+        gap: 12,
+        flexWrap: 'wrap',
+    },
+    statItem: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 4,
+    },
+    studentStatText: {
+        fontSize: 12,
+        color: '#666',
+    },
+    emptyState: {
+        alignItems: 'center',
+        paddingVertical: 60,
+    },
+    emptyText: {
+        fontSize: 18,
+        fontWeight: '600',
+        color: '#999',
+        marginTop: 16,
+    },
+    emptySubtext: {
+        fontSize: 14,
+        color: '#bbb',
+        marginTop: 8,
+        textAlign: 'center',
     },
 });
 

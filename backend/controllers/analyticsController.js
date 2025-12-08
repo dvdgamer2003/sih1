@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const GameResult = require('../models/GameResult');
 // const QuizResult = require('../models/QuizResult'); // Assuming we have this, or we use User.assignments
 // const LessonProgress = require('../models/LessonProgress'); // Assuming we have this
 
@@ -59,6 +60,37 @@ exports.getStudentAnalytics = async (req, res) => {
             ];
         }
 
+        // Game Performance
+        const gameResults = await GameResult.find({ userId: studentId }).sort({ _id: -1 });
+        const gamePerformance = [];
+
+        const distinctGames = [...new Set(gameResults.map(r => r.gameType))];
+        console.log('[Analytics] Distinct games:', distinctGames);
+
+        distinctGames.forEach(gameType => {
+            const resultsForGame = gameResults.filter(r => r.gameType === gameType);
+            const bestScore = Math.max(...resultsForGame.map(r => r.score));
+            const latest = resultsForGame[0]; // First is latest due to sort
+
+            console.log(`[Analytics] Game: ${gameType}, Latest result:`, {
+                id: latest._id,
+                delta: latest.delta,
+                proficiency: latest.proficiency,
+                difficulty: latest.difficulty,
+                createdAt: latest.createdAt
+            });
+
+            gamePerformance.push({
+                gameId: gameType,
+                title: gameType ? gameType.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) : 'Unknown Game',
+                bestScore: bestScore,
+                proficiency: latest.proficiency || 'Not Rated',
+                delta: latest.delta !== undefined ? latest.delta : 'N/A',
+                attempts: resultsForGame.length,
+                lastPlayed: latest.createdAt
+            });
+        });
+
         const analytics = {
             xp: student.xp || 0,
             streak: student.streak || 0,
@@ -67,8 +99,14 @@ exports.getStudentAnalytics = async (req, res) => {
             quizzesTaken: completedAssignments.filter(a => a.type === 'quiz').length,
             averageScore: averageScore,
             recentActivity,
-            xpHistory
+            xpHistory,
+            gamePerformance
         };
+
+        // Prevent caching to ensure fresh data
+        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+        res.setHeader('Pragma', 'no-cache');
+        res.setHeader('Expires', '0');
 
         res.json(analytics);
     } catch (error) {

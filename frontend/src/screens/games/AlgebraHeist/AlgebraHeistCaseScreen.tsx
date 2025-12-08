@@ -12,11 +12,15 @@ import { LinearGradient } from 'expo-linear-gradient';
 import Animated, { FadeIn, SlideInUp } from 'react-native-reanimated';
 import { useGameTimer } from '../../../hooks/useGameTimer';
 import { saveGameResult } from '../../../services/gamesService';
+import { calculateDelta, assessLearningOutcome, updateLeaderboardPoints } from '../../../utils/deltaAssessment';
+import GameResultModal from '../../GameResultModal';
+import { useAuth } from '../../../context/AuthContext';
 
 const AlgebraHeistCaseScreen = () => {
     const navigation = useNavigation();
     const route = useRoute();
     const { isDark } = useAppTheme();
+    const { user, addXP } = useAuth();
     const insets = useSafeAreaInsets();
 
     const { caseId } = route.params as { caseId: string };
@@ -29,6 +33,12 @@ const AlgebraHeistCaseScreen = () => {
     const [modalVisible, setModalVisible] = useState(false);
     const [feedback, setFeedback] = useState<'none' | 'correct' | 'wrong'>('none');
     const { elapsedTime, startTimer, stopTimer, displayTime, resetTimer: resetGameTimer } = useGameTimer();
+
+    // Delta System State
+    const [resultModalVisible, setResultModalVisible] = useState(false);
+    const [deltaResult, setDeltaResult] = useState<any>(null);
+    const [learningOutcome, setLearningOutcome] = useState<any>(null);
+    const [finalScore, setFinalScore] = useState(0);
 
     // Scratchpad auto-save simulation
     const [scratchpadText, setScratchpadText] = useState('');
@@ -91,19 +101,51 @@ const AlgebraHeistCaseScreen = () => {
 
     const handleCaseCompletion = async () => {
         stopTimer();
-        Alert.alert("Case Solved!", `Excellent work, Detective. Case closed in ${displayTime}.`);
+
+        // --- DELTA CALCULATION ---
+        // Difficulty can be derived from case ID or user settings. Default 'medium'.
+        const difficulty = 'medium';
+        const dResult = calculateDelta(elapsedTime, difficulty);
+
+        // Calculate Score
+        const baseScore = 300; // Base per case
+        const totalScore = baseScore + dResult.delta;
+
+        // Attempts tracking is tricky here as it's per clue. 
+        // We'll assume perfect outcome if they reached here, 
+        // but maybe we should track mistakes globally in component state later.
+        // For now, passing 0 mistakes/hints for simplicity or tracking state if I had it.
+        const outcome = assessLearningOutcome(dResult.delta, 100, 1, 0, difficulty);
+
+        setDeltaResult(dResult);
+        setLearningOutcome(outcome);
+        setFinalScore(totalScore);
+
+        addXP(totalScore, 'Algebra Heist');
+
+        // Identify Subject/Class
+        const subject = 'Math';
+        const classLevel = user?.selectedClass || '6';
+
+        // Update Leaderboard
+        await updateLeaderboardPoints(dResult.delta, difficulty, user?._id || 'guest');
 
         // Save using service
         await saveGameResult({
             gameId: 'algebra_heist',
-            score: 100, // Simplification
-            maxScore: 100,
+            score: totalScore,
+            maxScore: 400,
             timeTaken: elapsedTime,
-            difficulty: 'medium',
-            completedLevel: 1
+            difficulty: difficulty,
+            completedLevel: 1,
+            subject: subject,
+            classLevel: classLevel,
+            delta: dResult.delta,
+            proficiency: dResult.proficiency,
+            userId: user?._id
         });
 
-        // Save Progress
+        // Save Progress (Local stars)
         try {
             const savedData = await AsyncStorage.getItem('algebraHeist_progress');
             let progress = savedData ? JSON.parse(savedData) : { totalStars: 0, completedCases: [] };
@@ -111,15 +153,17 @@ const AlgebraHeistCaseScreen = () => {
             // Avoid duplicate rewards
             if (!progress.completedCases.includes(caseId)) {
                 progress.completedCases.push(caseId);
-                progress.totalStars += 1; // Simple 1 star per case for now
+                progress.totalStars += 1; // Simple 1 star per case
                 await AsyncStorage.setItem('algebraHeist_progress', JSON.stringify(progress));
             }
-
-            navigation.goBack();
         } catch (error) {
             console.error("Save failed", error);
         }
+
+        setResultModalVisible(true);
     };
+
+
 
     const handleScratchpadChange = (text: string) => {
         setScratchpadText(text);
@@ -243,6 +287,23 @@ const AlgebraHeistCaseScreen = () => {
                         )}
                     </Modal>
                 </Portal>
+                {/* Delta Game Result Modal */}
+                <GameResultModal
+                    visible={resultModalVisible}
+                    gameId="algebra_heist"
+                    score={finalScore}
+                    maxScore={400}
+                    timeTaken={elapsedTime}
+                    difficulty="medium"
+                    deltaResult={deltaResult}
+                    learningOutcome={learningOutcome}
+                    onClose={() => setResultModalVisible(false)}
+                    onGoHome={() => navigation.goBack()}
+                    onPlayAgain={() => {
+                        setResultModalVisible(false);
+                        navigation.goBack(); // Re-enter from map to reset simplified state
+                    }}
+                />
             </KeyboardAvoidingView>
         </Provider>
     );

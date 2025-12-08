@@ -84,6 +84,8 @@ const loginUser = async (req, res) => {
                 role: user.role,
                 status: user.status,
                 selectedClass: user.selectedClass,
+                avatar: user.avatar,
+                themeColor: user.themeColor,
                 xp: user.xp,
                 streak: user.streak,
                 token: generateToken(user._id),

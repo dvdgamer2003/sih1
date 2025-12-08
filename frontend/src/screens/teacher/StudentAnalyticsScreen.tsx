@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { View, ScrollView, StyleSheet, Text, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { View, ScrollView, StyleSheet, Text, ActivityIndicator, Dimensions } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { Ionicons } from '@expo/vector-icons';
-import GradientBackground from '../../components/ui/GradientBackground';
-import CustomCard from '../../components/ui/CustomCard';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import api from '../../services/api';
+
+const { width } = Dimensions.get('window');
 
 const StudentAnalyticsScreen = () => {
     const navigation = useNavigation();
@@ -15,10 +16,12 @@ const StudentAnalyticsScreen = () => {
     const [stats, setStats] = useState({
         xp: 0,
         streak: 0,
-        completedLessons: 0,
+        level: 1,
+        lessonsCompleted: 0,
         quizHistory: [],
         weakAreas: [],
-        performanceTrend: []
+        performanceTrend: [],
+        gamePerformance: []
     });
 
     useEffect(() => {
@@ -27,7 +30,7 @@ const StudentAnalyticsScreen = () => {
 
     const fetchAnalytics = async () => {
         try {
-            const response = await api.get(`/teacher/analytics/${studentId}`);
+            const response = await api.get(`/analytics/student/${studentId}`);
             setStats(response.data);
         } catch (error) {
             console.error(error);
@@ -36,184 +39,404 @@ const StudentAnalyticsScreen = () => {
         }
     };
 
-    const StatCard = ({ title, value, icon, color }: any) => (
-        <CustomCard style={styles.statCard}>
-            <View style={[styles.iconContainer, { backgroundColor: color + '20' }]}>
-                <Ionicons name={icon} size={24} color={color} />
+    const getProficiencyColor = (level: string) => {
+        switch (level) {
+            case 'Advanced': return ['#4CAF50', '#45a049'];
+            case 'Proficient': return ['#2196F3', '#1976D2'];
+            case 'Developing': return ['#FFC107', '#FFA000'];
+            default: return ['#9E9E9E', '#757575'];
+        }
+    };
+
+    const getProficiencyProgress = (level: string) => {
+        switch (level) {
+            case 'Advanced': return 1.0;
+            case 'Proficient': return 0.75;
+            case 'Developing': return 0.5;
+            default: return 0.25;
+        }
+    };
+
+    if (loading) {
+        return (
+            <View style={styles.loadingContainer}>
+                <ActivityIndicator size="large" color="#6200EA" />
             </View>
-            <View>
-                <Text style={styles.statValue}>{value}</Text>
-                <Text style={styles.statTitle}>{title}</Text>
-            </View>
-        </CustomCard>
-    );
+        );
+    }
 
     return (
-        <GradientBackground>
-            <ScrollView contentContainerStyle={styles.container}>
-                <View style={styles.header}>
-                    <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-                        <Ionicons name="arrow-back" size={24} color="#fff" />
-                    </TouchableOpacity>
-                    <Text style={styles.title}>{studentName}'s Progress</Text>
-                    <View style={{ width: 40 }} />
+        <View style={styles.container}>
+            {/* Header */}
+            <LinearGradient
+                colors={['#6200EA', '#7C4DFF']}
+                style={styles.header}
+            >
+                <MaterialCommunityIcons name="arrow-left" size={24} color="#fff" onPress={() => navigation.goBack()} />
+                <View style={styles.headerContent}>
+                    <Text style={styles.headerTitle}>{studentName}</Text>
+                    <Text style={styles.headerSubtitle}>Student Analytics</Text>
+                </View>
+            </LinearGradient>
+
+            <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
+                {/* Stats Overview */}
+                <View style={styles.statsGrid}>
+                    <LinearGradient colors={['#FFD700', '#FFA000']} style={styles.statCard}>
+                        <MaterialCommunityIcons name="trophy" size={32} color="#fff" />
+                        <Text style={styles.statValue}>{stats.xp || 0}</Text>
+                        <Text style={styles.statLabel}>Total XP</Text>
+                    </LinearGradient>
+
+                    <LinearGradient colors={['#FF6B6B', '#EE5A6F']} style={styles.statCard}>
+                        <MaterialCommunityIcons name="fire" size={32} color="#fff" />
+                        <Text style={styles.statValue}>{stats.streak || 0}</Text>
+                        <Text style={styles.statLabel}>Current Streak</Text>
+                    </LinearGradient>
+
+                    <LinearGradient colors={['#4ECDC4', '#44A08D']} style={styles.statCard}>
+                        <MaterialCommunityIcons name="check-circle" size={32} color="#fff" />
+                        <Text style={styles.statValue}>{stats.lessonsCompleted || 0}</Text>
+                        <Text style={styles.statLabel}>Lessons Done</Text>
+                    </LinearGradient>
                 </View>
 
-                {loading ? (
-                    <ActivityIndicator size="large" color="#fff" style={{ marginTop: 20 }} />
-                ) : (
-                    <View>
-                        <View style={styles.grid}>
-                            <StatCard
-                                title="Total XP"
-                                value={stats.xp}
-                                icon="trophy"
-                                color="#F59E0B"
-                            />
-                            <StatCard
-                                title="Current Streak"
-                                value={stats.streak}
-                                icon="flame"
-                                color="#EF4444"
-                            />
-                            <StatCard
-                                title="Lessons Done"
-                                value={stats.completedLessons}
-                                icon="checkmark-circle"
-                                color="#10B981"
-                            />
-                        </View>
+                {/* Game Proficiency Section */}
+                <View style={styles.section}>
+                    <View style={styles.sectionHeader}>
+                        <MaterialCommunityIcons name="gamepad-variant" size={24} color="#6200EA" />
+                        <Text style={styles.sectionTitle}>Game Performance</Text>
+                    </View>
 
-                        <CustomCard style={styles.sectionCard}>
-                            <Text style={styles.sectionTitle}>Recent Quiz Performance</Text>
-                            {stats.quizHistory.length > 0 ? (
-                                stats.quizHistory.map((quiz: any, index) => (
-                                    <View key={index} style={styles.quizRow}>
-                                        <Text style={styles.quizDate}>{new Date(quiz.date).toLocaleDateString()}</Text>
-                                        <View style={styles.scoreContainer}>
-                                            <Text style={styles.scoreText}>
-                                                {Math.round((quiz.score / quiz.totalQuestions) * 100)}%
-                                            </Text>
+                    {stats.gamePerformance && stats.gamePerformance.length > 0 ? (
+                        stats.gamePerformance.map((game: any, index: number) => (
+                            <View key={index} style={styles.gameCard}>
+                                <View style={styles.gameHeader}>
+                                    <View style={styles.gameInfo}>
+                                        <Text style={styles.gameName}>{game.title}</Text>
+                                        <Text style={styles.gameAttempts}>{game.attempts} {game.attempts === 1 ? 'play' : 'plays'}</Text>
+                                    </View>
+
+                                    {game.proficiency && game.proficiency !== 'Not Rated' ? (
+                                        <LinearGradient
+                                            colors={getProficiencyColor(game.proficiency)}
+                                            style={styles.proficiencyBadge}
+                                        >
+                                            <Text style={styles.proficiencyText}>{game.proficiency}</Text>
+                                        </LinearGradient>
+                                    ) : (
+                                        <View style={styles.notRatedBadge}>
+                                            <Text style={styles.notRatedText}>Not Rated</Text>
+                                        </View>
+                                    )}
+                                </View>
+
+                                {/* Progress Bar */}
+                                {game.proficiency && game.proficiency !== 'Not Rated' && (
+                                    <View style={styles.progressContainer}>
+                                        <View style={styles.progressBar}>
+                                            <LinearGradient
+                                                colors={getProficiencyColor(game.proficiency)}
+                                                style={[styles.progressFill, { width: `${getProficiencyProgress(game.proficiency) * 100}%` }]}
+                                            />
                                         </View>
                                     </View>
-                                ))
-                            ) : (
-                                <Text style={styles.emptyText}>No quizzes taken yet</Text>
-                            )}
-                        </CustomCard>
+                                )}
 
-                        <CustomCard style={styles.sectionCard}>
-                            <Text style={styles.sectionTitle}>Weak Areas</Text>
-                            {stats.weakAreas.length > 0 ? (
-                                stats.weakAreas.map((area: any, index) => (
-                                    <View key={index} style={styles.weakAreaRow}>
-                                        <Ionicons name="alert-circle" size={20} color="#EF4444" />
-                                        <Text style={styles.weakAreaText}>Quiz ID: {area}</Text>
+                                {/* Delta Score */}
+                                <View style={styles.deltaContainer}>
+                                    <View style={styles.deltaItem}>
+                                        <MaterialCommunityIcons name="speedometer" size={16} color="#666" />
+                                        <Text style={styles.deltaLabel}>Delta Score:</Text>
+                                        <Text style={styles.deltaValue}>
+                                            {typeof game.delta === 'number' ? game.delta.toFixed(2) : 'N/A'}
+                                        </Text>
                                     </View>
-                                ))
-                            ) : (
-                                <Text style={styles.emptyText}>No weak areas identified</Text>
-                            )}
-                        </CustomCard>
+                                    <View style={styles.deltaItem}>
+                                        <MaterialCommunityIcons name="star" size={16} color="#FFD700" />
+                                        <Text style={styles.deltaLabel}>Best:</Text>
+                                        <Text style={styles.deltaValue}>{game.bestScore}</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        ))
+                    ) : (
+                        <View style={styles.emptyCard}>
+                            <MaterialCommunityIcons name="gamepad-variant-outline" size={48} color="#ccc" />
+                            <Text style={styles.emptyText}>No games played yet</Text>
+                        </View>
+                    )}
+                </View>
+
+                {/* Quiz Performance */}
+                {stats.quizHistory && stats.quizHistory.length > 0 && (
+                    <View style={styles.section}>
+                        <View style={styles.sectionHeader}>
+                            <MaterialCommunityIcons name="file-document" size={24} color="#6200EA" />
+                            <Text style={styles.sectionTitle}>Recent Quizzes</Text>
+                        </View>
+
+                        {stats.quizHistory.slice(0, 5).map((quiz: any, index: number) => (
+                            <View key={index} style={styles.quizCard}>
+                                <View style={styles.quizHeader}>
+                                    <Text style={styles.quizTitle}>{quiz.title || 'Quiz ' + (index + 1)}</Text>
+                                    <Text style={styles.quizScore}>{quiz.score}%</Text>
+                                </View>
+                                <Text style={styles.quizDate}>
+                                    {new Date(quiz.date).toLocaleDateString()}
+                                </Text>
+                            </View>
+                        ))}
                     </View>
                 )}
+
+                {/* Weak Areas */}
+                {stats.weakAreas && stats.weakAreas.length > 0 && (
+                    <View style={styles.section}>
+                        <View style={styles.sectionHeader}>
+                            <MaterialCommunityIcons name="alert-circle" size={24} color="#FF6B6B" />
+                            <Text style={styles.sectionTitle}>Areas to Improve</Text>
+                        </View>
+
+                        {stats.weakAreas.map((area: any, index: number) => (
+                            <View key={index} style={styles.weakAreaCard}>
+                                <Text style={styles.weakAreaText}>{area.topic || area}</Text>
+                                <MaterialCommunityIcons name="chevron-right" size={20} color="#999" />
+                            </View>
+                        ))}
+                    </View>
+                )}
+
+                <View style={{ height: 40 }} />
             </ScrollView>
-        </GradientBackground>
+        </View>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
-        padding: 20,
-        paddingTop: 60,
+        flex: 1,
+        backgroundColor: '#F5F5F7',
+    },
+    loadingContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5F5F7',
     },
     header: {
+        paddingTop: 50,
+        paddingBottom: 20,
+        paddingHorizontal: 20,
         flexDirection: 'row',
-        justifyContent: 'space-between',
         alignItems: 'center',
-        marginBottom: 30,
+        borderBottomLeftRadius: 24,
+        borderBottomRightRadius: 24,
+        elevation: 8,
+        shadowColor: '#6200EA',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 8,
     },
-    backButton: {
-        padding: 8,
+    headerContent: {
+        marginLeft: 16,
     },
-    title: {
-        fontSize: 20,
+    headerTitle: {
+        fontSize: 24,
         fontWeight: 'bold',
         color: '#fff',
     },
-    grid: {
+    headerSubtitle: {
+        fontSize: 14,
+        color: 'rgba(255, 255, 255, 0.8)',
+        marginTop: 2,
+    },
+    scrollView: {
+        flex: 1,
+    },
+    statsGrid: {
         flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
+        paddingHorizontal: 16,
+        paddingTop: 20,
+        gap: 12,
     },
     statCard: {
-        width: '31%',
-        marginBottom: 20,
-        padding: 10,
+        flex: 1,
+        padding: 16,
+        borderRadius: 16,
         alignItems: 'center',
-    },
-    iconContainer: {
-        width: 36,
-        height: 36,
-        borderRadius: 18,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginBottom: 8,
+        elevation: 4,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
     },
     statValue: {
-        fontSize: 16,
+        fontSize: 24,
         fontWeight: 'bold',
-        color: '#1F2937',
+        color: '#fff',
+        marginTop: 8,
     },
-    statTitle: {
-        fontSize: 10,
-        color: '#6B7280',
-        textAlign: 'center',
+    statLabel: {
+        fontSize: 12,
+        color: 'rgba(255, 255, 255, 0.9)',
+        marginTop: 4,
     },
-    sectionCard: {
-        padding: 20,
-        marginBottom: 20,
+    section: {
+        marginTop: 24,
+        paddingHorizontal: 16,
+    },
+    sectionHeader: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 16,
     },
     sectionTitle: {
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#1F2937',
-        marginBottom: 15,
+        color: '#333',
+        marginLeft: 8,
     },
-    quizRow: {
+    gameCard: {
+        backgroundColor: '#fff',
+        padding: 16,
+        borderRadius: 16,
+        marginBottom: 12,
+        elevation: 2,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.05,
+        shadowRadius: 4,
+    },
+    gameHeader: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingVertical: 10,
-        borderBottomWidth: 1,
-        borderBottomColor: '#F3F4F6',
+        marginBottom: 12,
     },
-    quizDate: {
-        color: '#4B5563',
+    gameInfo: {
+        flex: 1,
     },
-    scoreContainer: {
-        backgroundColor: '#E0E7FF',
-        paddingHorizontal: 8,
-        paddingVertical: 4,
+    gameName: {
+        fontSize: 16,
+        fontWeight: '600',
+        color: '#333',
+    },
+    gameAttempts: {
+        fontSize: 12,
+        color: '#999',
+        marginTop: 2,
+    },
+    proficiencyBadge: {
+        paddingHorizontal: 12,
+        paddingVertical: 6,
         borderRadius: 12,
     },
-    scoreText: {
-        color: '#4F46E5',
-        fontWeight: 'bold',
+    proficiencyText: {
         fontSize: 12,
+        fontWeight: 'bold',
+        color: '#fff',
     },
-    weakAreaRow: {
+    notRatedBadge: {
+        paddingHorizontal: 12,
+        paddingVertical: 6,
+        borderRadius: 12,
+        backgroundColor: '#f0f0f0',
+    },
+    notRatedText: {
+        fontSize: 12,
+        fontWeight: '600',
+        color: '#999',
+    },
+    progressContainer: {
+        marginTop: 8,
+        marginBottom: 12,
+    },
+    progressBar: {
+        height: 6,
+        backgroundColor: '#f0f0f0',
+        borderRadius: 3,
+        overflow: 'hidden',
+    },
+    progressFill: {
+        height: '100%',
+        borderRadius: 3,
+    },
+    deltaContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingTop: 12,
+        borderTopWidth: 1,
+        borderTopColor: '#f0f0f0',
+    },
+    deltaItem: {
         flexDirection: 'row',
         alignItems: 'center',
-        gap: 10,
-        marginBottom: 10,
     },
-    weakAreaText: {
-        color: '#374151',
+    deltaLabel: {
+        fontSize: 12,
+        color: '#666',
+        marginLeft: 4,
+    },
+    deltaValue: {
+        fontSize: 14,
+        fontWeight: 'bold',
+        color: '#333',
+        marginLeft: 4,
+    },
+    emptyCard: {
+        backgroundColor: '#fff',
+        padding: 40,
+        borderRadius: 16,
+        alignItems: 'center',
+        elevation: 2,
     },
     emptyText: {
-        color: '#6B7280',
-        fontStyle: 'italic',
+        fontSize: 14,
+        color: '#999',
+        marginTop: 12,
+    },
+    quizCard: {
+        backgroundColor: '#fff',
+        padding: 16,
+        borderRadius: 12,
+        marginBottom: 8,
+        elevation: 1,
+    },
+    quizHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: 4,
+    },
+    quizTitle: {
+        fontSize: 14,
+        fontWeight: '600',
+        color: '#333',
+    },
+    quizScore: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#6200EA',
+    },
+    quizDate: {
+        fontSize: 12,
+        color: '#999',
+    },
+    weakAreaCard: {
+        backgroundColor: '#fff',
+        padding: 16,
+        borderRadius: 12,
+        marginBottom: 8,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        elevation: 1,
+    },
+    weakAreaText: {
+        fontSize: 14,
+        color: '#333',
+        fontWeight: '500',
     },
 });
 

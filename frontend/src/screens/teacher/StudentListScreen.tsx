@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { View, FlatList, StyleSheet, Text, TouchableOpacity, ActivityIndicator, Alert } from 'react-native';
+import { View, FlatList, StyleSheet, Text, TouchableOpacity, ActivityIndicator, Alert, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Ionicons } from '@expo/vector-icons';
-import GradientBackground from '../../components/ui/GradientBackground';
-import CustomCard from '../../components/ui/CustomCard';
-import CustomInput from '../../components/ui/CustomInput';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import api from '../../services/api';
 
 const StudentListScreen = () => {
@@ -19,9 +17,13 @@ const StudentListScreen = () => {
 
     const fetchStudents = async () => {
         try {
+            console.log('🔍 Fetching students...');
             const response = await api.get('/teacher/students');
+            console.log('📊 Students response:', response.data);
+            console.log('📊 Count:', response.data.length);
             setStudents(response.data);
         } catch (error) {
+            console.error('❌ Fetch error:', error);
             Alert.alert('Error', 'Failed to fetch students');
         } finally {
             setLoading(false);
@@ -55,189 +57,362 @@ const StudentListScreen = () => {
         student.email.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
+    const getLearnerGradient = (category: string): [string, string] => {
+        if (category === 'fast') return ['#4F46E5', '#7C3AED'];
+        if (category === 'slow') return ['#F59E0B', '#F97316'];
+        return ['#6B7280', '#9CA3AF'];
+    };
+
     const renderItem = ({ item }: { item: any }) => (
-        <CustomCard style={styles.card}>
+        <View style={styles.card}>
             <View style={styles.cardHeader}>
-                <View>
+                <LinearGradient
+                    colors={['#6200EA', '#7C4DFF']}
+                    style={styles.avatar}
+                >
+                    <Text style={styles.avatarText}>{item.name.substring(0, 2).toUpperCase()}</Text>
+                </LinearGradient>
+
+                <View style={styles.cardInfo}>
                     <Text style={styles.name}>{item.name}</Text>
                     <Text style={styles.email}>{item.email}</Text>
-                    <Text style={styles.grade}>Class {item.selectedClass}</Text>
+                    <View style={styles.metaRow}>
+                        <MaterialCommunityIcons name="school" size={14} color="#666" />
+                        <Text style={styles.grade}>Class {item.selectedClass}</Text>
+                    </View>
                 </View>
-                <View style={[styles.statusBadge, { backgroundColor: item.status === 'active' ? '#D1FAE5' : '#FEE2E2' }]}>
-                    <Text style={[styles.statusText, { color: item.status === 'active' ? '#059669' : '#DC2626' }]}>
-                        {item.status?.toUpperCase() || 'ACTIVE'}
-                    </Text>
+
+                <View style={styles.badgesColumn}>
+                    <View style={[
+                        styles.statusBadge,
+                        { backgroundColor: item.status === 'active' ? '#D1FAE5' : '#FEE2E2' }
+                    ]}>
+                        <Text style={[
+                            styles.statusText,
+                            { color: item.status === 'active' ? '#059669' : '#DC2626' }
+                        ]}>
+                            {item.status?.toUpperCase() || 'ACTIVE'}
+                        </Text>
+                    </View>
+
+                    {item.learnerCategory && item.learnerCategory !== 'neutral' && (
+                        <LinearGradient
+                            colors={getLearnerGradient(item.learnerCategory)}
+                            style={styles.learnerBadge}
+                        >
+                            <MaterialCommunityIcons
+                                name={item.learnerCategory === 'fast' ? 'lightning-bolt' : 'turtle'}
+                                size={12}
+                                color="#fff"
+                            />
+                            <Text style={styles.learnerText}>
+                                {item.learnerCategory === 'fast' ? 'Fast' : 'Slow'}
+                            </Text>
+                        </LinearGradient>
+                    )}
                 </View>
             </View>
-            {item.learnerCategory && item.learnerCategory !== 'neutral' && (
-                <View style={[
-                    styles.statusBadge,
-                    { marginLeft: 8, backgroundColor: item.learnerCategory === 'fast' ? '#E0E7FF' : '#FFEDD5' }
-                ]}>
-                    <Text style={[
-                        styles.statusText,
-                        { color: item.learnerCategory === 'fast' ? '#4F46E5' : '#EA580C' }
-                    ]}>
-                        {item.learnerCategory.toUpperCase()} LEARNER
-                    </Text>
-                </View>
-            )}
+
             <View style={styles.actions}>
                 <TouchableOpacity
                     style={[styles.actionButton, styles.analyticsButton]}
-                    onPress={() => (navigation as any).navigate('StudentAnalytics', { studentId: item._id, studentName: item.name })}
+                    onPress={() => (navigation as any).navigate('StudentAnalytics', {
+                        studentId: item._id,
+                        studentName: item.name
+                    })}
                 >
-                    <Ionicons name="stats-chart" size={20} color="#10B981" />
+                    <MaterialCommunityIcons name="chart-line" size={18} color="#fff" />
+                    <Text style={styles.actionButtonText}>Analytics</Text>
                 </TouchableOpacity>
+
                 <TouchableOpacity
                     style={[styles.actionButton, styles.editButton]}
                     onPress={() => (navigation as any).navigate('EditStudent', { student: item })}
                 >
-                    <Ionicons name="create-outline" size={20} color="#4F46E5" />
+                    <MaterialCommunityIcons name="pencil" size={18} color="#fff" />
                 </TouchableOpacity>
+
                 <TouchableOpacity
                     style={[styles.actionButton, styles.deleteButton]}
                     onPress={() => handleDelete(item._id)}
                 >
-                    <Ionicons name="trash-outline" size={20} color="#EF4444" />
+                    <MaterialCommunityIcons name="delete" size={18} color="#fff" />
                 </TouchableOpacity>
             </View>
-        </CustomCard>
+        </View>
     );
 
     return (
-        <GradientBackground>
-            <View style={styles.container}>
-                <View style={styles.header}>
-                    <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-                        <Ionicons name="arrow-back" size={24} color="#fff" />
-                    </TouchableOpacity>
-                    <Text style={styles.title}>My Students</Text>
-                    <TouchableOpacity
-                        style={styles.addButton}
-                        onPress={() => (navigation as any).navigate('CreateStudent')}
-                    >
-                        <Ionicons name="add" size={24} color="#4F46E5" />
-                    </TouchableOpacity>
+        <View style={styles.container}>
+            {/* Gradient Header */}
+            <LinearGradient
+                colors={['#6200EA', '#7C4DFF']}
+                style={styles.header}
+            >
+                <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+                    <MaterialCommunityIcons name="arrow-left" size={24} color="#fff" />
+                </TouchableOpacity>
+                <View style={styles.headerContent}>
+                    <Text style={styles.headerTitle}>My Students</Text>
+                    <Text style={styles.headerSubtitle}>{students.length} student{students.length !== 1 ? 's' : ''}</Text>
                 </View>
+                <TouchableOpacity
+                    style={styles.addButton}
+                    onPress={() => (navigation as any).navigate('CreateStudent')}
+                >
+                    <MaterialCommunityIcons name="plus" size={24} color="#6200EA" />
+                </TouchableOpacity>
+            </LinearGradient>
 
-                <CustomInput
-                    label="Search"
-                    placeholder="Search students..."
-                    value={searchQuery}
-                    onChangeText={setSearchQuery}
-                    icon={<Ionicons name="search" size={24} color="#6B7280" />}
-                    style={styles.searchBar}
-                />
-
-                {loading ? (
-                    <ActivityIndicator size="large" color="#fff" style={{ marginTop: 20 }} />
-                ) : (
-                    <FlatList
-                        data={filteredStudents}
-                        renderItem={renderItem}
-                        keyExtractor={(item: any) => item._id}
-                        contentContainerStyle={styles.list}
-                        ListEmptyComponent={
-                            <Text style={styles.emptyText}>No students found</Text>
-                        }
+            {/* Search Bar */}
+            <View style={styles.searchContainer}>
+                <View style={styles.searchBar}>
+                    <MaterialCommunityIcons name="magnify" size={20} color="#666" />
+                    <TextInput
+                        placeholder="Search students..."
+                        value={searchQuery}
+                        onChangeText={setSearchQuery}
+                        style={styles.searchInput}
                     />
-                )}
+                </View>
             </View>
-        </GradientBackground>
+
+            {loading ? (
+                <View style={styles.loadingContainer}>
+                    <ActivityIndicator size="large" color="#6200EA" />
+                </View>
+            ) : (
+                <FlatList
+                    data={filteredStudents}
+                    renderItem={renderItem}
+                    keyExtractor={(item: any) => item._id}
+                    contentContainerStyle={styles.list}
+                    ListEmptyComponent={
+                        <View style={styles.emptyState}>
+                            <LinearGradient
+                                colors={['rgba(98, 0, 234, 0.1)', 'rgba(124, 77, 255, 0.1)']}
+                                style={styles.emptyIconContainer}
+                            >
+                                <MaterialCommunityIcons name="account-group-outline" size={64} color="#6200EA" />
+                            </LinearGradient>
+                            <Text style={styles.emptyText}>No students found</Text>
+                            <Text style={styles.emptySubtext}>
+                                {searchQuery ? 'Try adjusting your search' : 'Add your first student to get started'}
+                            </Text>
+                        </View>
+                    }
+                />
+            )}
+        </View>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 20,
-        paddingTop: 60,
+        backgroundColor: '#F5F5F7',
     },
     header: {
+        paddingTop: 50,
+        paddingBottom: 20,
+        paddingHorizontal: 20,
         flexDirection: 'row',
-        justifyContent: 'space-between',
         alignItems: 'center',
-        marginBottom: 20,
+        justifyContent: 'space-between',
+        borderBottomLeftRadius: 24,
+        borderBottomRightRadius: 24,
+        elevation: 8,
+        shadowColor: '#6200EA',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 8,
     },
     backButton: {
         padding: 8,
+        backgroundColor: 'rgba(255,255,255,0.2)',
+        borderRadius: 12,
     },
-    title: {
+    headerContent: {
+        flex: 1,
+        marginLeft: 16,
+    },
+    headerTitle: {
         fontSize: 24,
         fontWeight: 'bold',
         color: '#fff',
     },
+    headerSubtitle: {
+        fontSize: 14,
+        color: 'rgba(255, 255, 255, 0.8)',
+        marginTop: 2,
+    },
     addButton: {
         backgroundColor: '#fff',
-        padding: 8,
+        width: 40,
+        height: 40,
         borderRadius: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    searchContainer: {
+        padding: 16,
     },
     searchBar: {
-        marginBottom: 20,
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#fff',
+        borderRadius: 12,
+        padding: 12,
+        elevation: 2,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.05,
+        shadowRadius: 4,
+    },
+    searchInput: {
+        flex: 1,
+        marginLeft: 8,
+        fontSize: 14,
+        color: '#333',
+    },
+    loadingContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     list: {
-        paddingBottom: 20,
+        padding: 16,
+        paddingTop: 0,
     },
     card: {
-        marginBottom: 15,
-        padding: 15,
+        backgroundColor: '#fff',
+        borderRadius: 16,
+        padding: 16,
+        marginBottom: 12,
+        elevation: 2,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.05,
+        shadowRadius: 4,
     },
     cardHeader: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'flex-start',
-        marginBottom: 10,
+        marginBottom: 12,
     },
-    name: {
+    avatar: {
+        width: 50,
+        height: 50,
+        borderRadius: 25,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginRight: 12,
+    },
+    avatarText: {
+        color: '#fff',
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#1F2937',
+    },
+    cardInfo: {
+        flex: 1,
+    },
+    name: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#333',
+        marginBottom: 4,
     },
     email: {
-        fontSize: 14,
-        color: '#6B7280',
-        marginTop: 2,
+        fontSize: 12,
+        color: '#666',
+        marginBottom: 4,
+    },
+    metaRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 4,
     },
     grade: {
-        fontSize: 14,
-        color: '#4B5563',
-        marginTop: 2,
+        fontSize: 12,
+        color: '#666',
         fontWeight: '500',
     },
+    badgesColumn: {
+        gap: 6,
+    },
     statusBadge: {
+        paddingHorizontal: 10,
+        paddingVertical: 4,
+        borderRadius: 12,
+        alignSelf: 'flex-start',
+    },
+    statusText: {
+        fontSize: 10,
+        fontWeight: 'bold',
+    },
+    learnerBadge: {
+        flexDirection: 'row',
+        alignItems: 'center',
         paddingHorizontal: 8,
         paddingVertical: 4,
         borderRadius: 12,
+        gap: 4,
     },
-    statusText: {
-        fontSize: 12,
+    learnerText: {
+        color: '#fff',
+        fontSize: 10,
         fontWeight: 'bold',
     },
     actions: {
         flexDirection: 'row',
-        justifyContent: 'flex-end',
-        gap: 10,
+        gap: 8,
     },
     actionButton: {
-        padding: 8,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
         borderRadius: 8,
-        backgroundColor: '#F3F4F6',
+        gap: 6,
     },
     analyticsButton: {
-        backgroundColor: '#D1FAE5',
+        backgroundColor: '#10B981',
+        flex: 1,
     },
     editButton: {
-        backgroundColor: '#E0E7FF',
+        backgroundColor: '#3B82F6',
     },
     deleteButton: {
-        backgroundColor: '#FEE2E2',
+        backgroundColor: '#EF4444',
+    },
+    actionButtonText: {
+        color: '#fff',
+        fontSize: 13,
+        fontWeight: '600',
+    },
+    emptyState: {
+        alignItems: 'center',
+        paddingVertical: 60,
+        paddingHorizontal: 20,
+    },
+    emptyIconContainer: {
+        width: 120,
+        height: 120,
+        borderRadius: 60,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 24,
     },
     emptyText: {
-        color: '#fff',
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#333',
+        marginBottom: 8,
+    },
+    emptySubtext: {
+        fontSize: 14,
+        color: '#666',
         textAlign: 'center',
-        marginTop: 20,
-        fontSize: 16,
     },
 });
 

@@ -1,50 +1,85 @@
-const jwt = require('jsonwebtoken');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const User = require('./models/User');
+const http = require('http');
 
-dotenv.config();
+function makeRequest(options, data = null) {
+    return new Promise((resolve, reject) => {
+        const req = http.request(options, (res) => {
+            let body = '';
+            res.on('data', chunk => body += chunk);
+            res.on('end', () => {
+                try {
+                    resolve({
+                        status: res.statusCode,
+                        data: JSON.parse(body)
+                    });
+                } catch (e) {
+                    resolve({ status: res.statusCode, data: body });
+                }
+            });
+        });
 
-const testLeaderboard = async () => {
+        req.on('error', reject);
+        if (data) req.write(JSON.stringify(data));
+        req.end();
+    });
+}
+
+async function testFlow() {
     try {
-        // 1. Connect to DB to get a valid user ID
-        await mongoose.connect(process.env.MONGO_URI);
-        const user = await User.findOne({ role: 'student' });
+        console.log('\n🧪 TESTING LOGIN → FETCH STUDENTS\n');
 
-        if (!user) {
-            console.log('No student user found in DB to test with.');
+        // Login
+        console.log('1️⃣ Login...');
+        const loginResp = await makeRequest({
+            hostname: 'localhost',
+            port: 5000,
+            path: '/api/auth/login',
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+        }, {
+            email: 'sarvesh@gmail.com',
+            password: 'password123'
+        });
+
+        if (loginResp.status !== 200) {
+            console.log('❌ Login failed:', loginResp.status);
+            console.log('Response:', loginResp.data);
             process.exit(1);
         }
 
-        // 2. Generate Token
-        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1d' });
-        console.log(`Generated token for user: ${user.name}`);
+        console.log('✅ Login OK');
+        console.log(`   Name: ${loginResp.data.name}`);
+        console.log(`   Role: ${loginResp.data.role}\n`);
 
-        // 3. Call API
-        try {
-            const response = await fetch('http://localhost:5000/api/xp/leaderboard', {
-                headers: { Authorization: `Bearer ${token}` }
+        const token = loginResp.data.token;
+
+        // Fetch students
+        console.log('2️⃣ Fetch students...');
+        const studentsResp = await makeRequest({
+            hostname: 'localhost',
+            port: 5000,
+            path: '/api/teacher/students',
+            method: 'GET',
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+
+        console.log(`✅ Students API: ${studentsResp.status}`);
+        console.log(`   Count: ${studentsResp.data.length}\n`);
+
+        if (studentsResp.data.length > 0) {
+            studentsResp.data.forEach((s, i) => {
+                console.log(`   ${i + 1}. ${s.name} (${s.email})`);
+                console.log(`      Class: ${s.selectedClass}, Status: ${s.status}`);
             });
-
-            console.log('API Response Status:', response.status);
-
-            if (response.ok) {
-                const data = await response.json();
-                console.log('Leaderboard Data Length:', data.length);
-                console.log('First Item:', data[0]);
-            } else {
-                const text = await response.text();
-                console.log('API Error Body:', text);
-            }
-        } catch (apiError) {
-            console.error('API Call Failed:', apiError);
+        } else {
+            console.log('❌ NO STUDENTS!');
         }
 
-        process.exit();
+        console.log('\n✅ DONE\n');
+        process.exit(0);
     } catch (error) {
-        console.error('Script Error:', error);
+        console.error('❌ Error:', error.message);
         process.exit(1);
     }
-};
+}
 
-testLeaderboard();
+testFlow();

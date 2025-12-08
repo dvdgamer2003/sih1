@@ -140,9 +140,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             // Call the real backend API - role determined by backend from database
             const response = await api.post(ENDPOINTS.LOGIN, { email, password });
 
-            const { _id, name, email: userEmail, role: userRole, status: userStatus, xp: userXp, streak: userStreak, selectedClass: userClass, token: authToken } = response.data;
+            const { _id, name, email: userEmail, role: userRole, status: userStatus, xp: userXp, streak: userStreak, selectedClass: userClass, avatar: userAvatar, themeColor, token: authToken } = response.data;
 
-            const userData = { _id, name, email: userEmail, role: userRole, status: userStatus, selectedClass: userClass };
+            const userData = { _id, name, email: userEmail, role: userRole, status: userStatus, selectedClass: userClass, avatar: userAvatar, themeColor };
 
             await storeData(STORAGE_KEYS.USER_DATA, userData);
             await storeData(STORAGE_KEYS.USER_TOKEN, authToken);
@@ -279,6 +279,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
                 updatedUser = { ...updatedUser, ...data };
             }
 
+            // If avatar was updated, ensure it's in the user object
+            if (data.avatar) {
+                updatedUser.avatar = data.avatar;
+            }
+
             // If selectedClass was updated, ensure it's in the user object and sync with classService
             if (data.selectedClass) {
                 updatedUser.selectedClass = data.selectedClass;
@@ -288,6 +293,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
                 await classService.saveClassLocally(`class-${data.selectedClass}`);
             }
 
+            // Immediately update state
             setUser(updatedUser);
             await storeData(STORAGE_KEYS.USER_DATA, updatedUser);
         } catch (error) {

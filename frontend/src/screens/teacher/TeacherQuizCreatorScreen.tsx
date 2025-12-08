@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, ScrollView, Alert, TouchableOpacity } from 'react-native';
-import { Text, TextInput, Button, RadioButton, IconButton, useTheme, Surface, HelperText } from 'react-native-paper';
+import { View, StyleSheet, ScrollView, Alert, TouchableOpacity, Dimensions } from 'react-native';
+import { Text, TextInput, RadioButton, ActivityIndicator } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
-import { Ionicons } from '@expo/vector-icons';
-import GradientBackground from '../../components/ui/GradientBackground';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import api from '../../services/api';
+
+const { width } = Dimensions.get('window');
 
 const TeacherQuizCreatorScreen = () => {
     const navigation = useNavigation();
-    const theme = useTheme();
-    const [step, setStep] = useState(1);
     const [loading, setLoading] = useState(false);
 
     const routes = navigation.getState()?.routes;
@@ -103,240 +103,395 @@ const TeacherQuizCreatorScreen = () => {
     };
 
     return (
-        <GradientBackground>
-            <View style={styles.container}>
-                <View style={styles.header}>
-                    <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-                        <Ionicons name="arrow-back" size={24} color="#fff" />
-                    </TouchableOpacity>
+        <View style={styles.container}>
+            {/* Gradient Header */}
+            <LinearGradient
+                colors={['#6200EA', '#7C4DFF']}
+                style={styles.header}
+            >
+                <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+                    <MaterialCommunityIcons name="arrow-left" size={24} color="#fff" />
+                </TouchableOpacity>
+                <View style={styles.headerContent}>
                     <Text style={styles.headerTitle}>{isEditing ? 'Edit Quiz' : 'Create Quiz'}</Text>
-                    <View style={{ width: 40 }} />
+                    <Text style={styles.headerSubtitle}>Design your assessment</Text>
                 </View>
+            </LinearGradient>
 
-                <ScrollView contentContainerStyle={styles.content}>
-                    <Surface style={styles.card} elevation={2}>
-                        <Text variant="titleLarge" style={styles.sectionTitle}>Quiz Details</Text>
+            <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+                {/* Quiz Details Card */}
+                <View style={styles.card}>
+                    <View style={styles.cardHeader}>
+                        <MaterialCommunityIcons name="clipboard-text" size={24} color="#6200EA" />
+                        <Text style={styles.cardTitle}>Quiz Details</Text>
+                    </View>
 
+                    <View style={styles.inputGroup}>
+                        <Text style={styles.label}>Quiz Title *</Text>
                         <TextInput
-                            label="Quiz Title"
                             value={title}
                             onChangeText={setTitle}
+                            placeholder="Enter quiz title"
+                            style={styles.textInput}
                             mode="outlined"
-                            style={styles.input}
+                            outlineColor="#E0E0E0"
+                            activeOutlineColor="#6200EA"
                         />
+                    </View>
 
+                    <View style={styles.inputGroup}>
+                        <Text style={styles.label}>Description (Optional)</Text>
                         <TextInput
-                            label="Description (Optional)"
                             value={description}
                             onChangeText={setDescription}
-                            mode="outlined"
+                            placeholder="Brief description of the quiz"
                             multiline
                             numberOfLines={3}
-                            style={styles.input}
+                            style={styles.textInput}
+                            mode="outlined"
+                            outlineColor="#E0E0E0"
+                            activeOutlineColor="#6200EA"
                         />
+                    </View>
 
-                        <View style={styles.row}>
-                            <View style={styles.halfInput}>
-                                <Text style={styles.label}>Class</Text>
-                                <View style={styles.radioGroup}>
-                                    {['6', '7', '8', '9', '10'].map(c => (
-                                        <TouchableOpacity
-                                            key={c}
-                                            style={[styles.radioBtn, selectedClass === c && styles.radioBtnActive]}
-                                            onPress={() => setSelectedClass(c)}
-                                        >
-                                            <Text style={[styles.radioText, selectedClass === c && styles.radioTextActive]}>{c}</Text>
-                                        </TouchableOpacity>
-                                    ))}
-                                </View>
-                            </View>
+                    <View style={styles.inputGroup}>
+                        <Text style={styles.label}>Class *</Text>
+                        <View style={styles.chipGroup}>
+                            {['6', '7', '8', '9', '10'].map(c => (
+                                <TouchableOpacity
+                                    key={c}
+                                    style={[styles.chip, selectedClass === c && styles.chipActive]}
+                                    onPress={() => setSelectedClass(c)}
+                                >
+                                    <Text style={[styles.chipText, selectedClass === c && styles.chipTextActive]}>
+                                        Class {c}
+                                    </Text>
+                                </TouchableOpacity>
+                            ))}
+                        </View>
+                    </View>
+
+                    <View style={styles.inputGroup}>
+                        <Text style={styles.label}>Subject *</Text>
+                        <View style={styles.chipGroup}>
+                            {['Math', 'Science', 'English', 'Social'].map(s => (
+                                <TouchableOpacity
+                                    key={s}
+                                    style={[styles.chip, subject === s && styles.chipActive]}
+                                    onPress={() => setSubject(s)}
+                                >
+                                    <Text style={[styles.chipText, subject === s && styles.chipTextActive]}>
+                                        {s}
+                                    </Text>
+                                </TouchableOpacity>
+                            ))}
+                        </View>
+                    </View>
+                </View>
+
+                {/* Questions Section */}
+                <View style={styles.sectionHeader}>
+                    <MaterialCommunityIcons name="help-circle" size={24} color="#333" />
+                    <Text style={styles.sectionTitle}>Questions ({questions.length})</Text>
+                </View>
+
+                {questions.map((q: any, qIndex: number) => (
+                    <View key={qIndex} style={styles.questionCard}>
+                        <View style={styles.questionHeader}>
+                            <LinearGradient
+                                colors={['#6200EA', '#7C4DFF']}
+                                style={styles.questionBadge}
+                            >
+                                <Text style={styles.questionNumber}>Q{qIndex + 1}</Text>
+                            </LinearGradient>
+                            {questions.length > 1 && (
+                                <TouchableOpacity
+                                    onPress={() => handleRemoveQuestion(qIndex)}
+                                    style={styles.deleteButton}
+                                >
+                                    <MaterialCommunityIcons name="delete-outline" size={20} color="#EF4444" />
+                                    <Text style={styles.deleteText}>Remove</Text>
+                                </TouchableOpacity>
+                            )}
                         </View>
 
-                        <View style={styles.inputContainer}>
-                            <Text style={styles.label}>Subject</Text>
-                            <View style={styles.radioGroup}>
-                                {['Math', 'Science', 'English', 'Social'].map(s => (
-                                    <TouchableOpacity
-                                        key={s}
-                                        style={[styles.radioBtn, subject === s && styles.radioBtnActive]}
-                                        onPress={() => setSubject(s)}
-                                    >
-                                        <Text style={[styles.radioText, subject === s && styles.radioTextActive]}>{s}</Text>
-                                    </TouchableOpacity>
-                                ))}
-                            </View>
-                        </View>
-                    </Surface>
-
-                    <Text variant="titleLarge" style={[styles.sectionTitle, { color: '#fff', marginTop: 20 }]}>Questions</Text>
-
-                    {questions.map((q: any, qIndex: number) => (
-                        <Surface key={qIndex} style={styles.questionCard} elevation={2}>
-                            <View style={styles.questionHeader}>
-                                <Text variant="titleMedium">Question {qIndex + 1}</Text>
-                                {questions.length > 1 && (
-                                    <IconButton icon="delete" iconColor="red" onPress={() => handleRemoveQuestion(qIndex)} />
-                                )}
-                            </View>
-
+                        <View style={styles.inputGroup}>
+                            <Text style={styles.label}>Question Text *</Text>
                             <TextInput
-                                label="Question Text"
                                 value={q.question}
                                 onChangeText={(text) => updateQuestion(qIndex, 'question', text)}
+                                placeholder="Enter your question"
+                                multiline
                                 mode="outlined"
-                                style={styles.input}
+                                style={styles.textInput}
+                                outlineColor="#E0E0E0"
+                                activeOutlineColor="#6200EA"
                             />
+                        </View>
 
-                            <Text style={styles.label}>Options</Text>
-                            {q.options.map((opt: string, oIndex: number) => (
-                                <View key={oIndex} style={styles.optionRow}>
-                                    <RadioButton
-                                        value={oIndex.toString()}
-                                        status={q.correctIndex === oIndex ? 'checked' : 'unchecked'}
-                                        onPress={() => updateQuestion(qIndex, 'correctIndex', oIndex)}
-                                    />
-                                    <TextInput
-                                        label={`Option ${oIndex + 1}`}
-                                        value={opt}
-                                        onChangeText={(text) => updateOption(qIndex, oIndex, text)}
-                                        mode="outlined"
-                                        style={[styles.input, { flex: 1, marginBottom: 0 }]}
-                                    />
-                                </View>
-                            ))}
-                        </Surface>
-                    ))}
+                        <Text style={styles.label}>Options *</Text>
+                        {q.options.map((opt: string, oIndex: number) => (
+                            <View key={oIndex} style={styles.optionRow}>
+                                <RadioButton
+                                    value={oIndex.toString()}
+                                    status={q.correctIndex === oIndex ? 'checked' : 'unchecked'}
+                                    onPress={() => updateQuestion(qIndex, 'correctIndex', oIndex)}
+                                    color="#6200EA"
+                                />
+                                <TextInput
+                                    value={opt}
+                                    onChangeText={(text) => updateOption(qIndex, oIndex, text)}
+                                    placeholder={`Option ${String.fromCharCode(65 + oIndex)}`}
+                                    style={[styles.textInput, styles.optionInput]}
+                                    mode="outlined"
+                                    outlineColor="#E0E0E0"
+                                    activeOutlineColor="#6200EA"
+                                />
+                                {q.correctIndex === oIndex && (
+                                    <MaterialCommunityIcons name="check-circle" size={20} color="#4CAF50" style={styles.correctIcon} />
+                                )}
+                            </View>
+                        ))}
+                    </View>
+                ))}
 
-                    <Button
-                        mode="outlined"
-                        onPress={handleAddQuestion}
-                        style={styles.addButton}
-                        icon="plus"
-                        textColor="#fff"
+                {/* Add Question Button */}
+                <TouchableOpacity
+                    style={styles.addQuestionButton}
+                    onPress={handleAddQuestion}
+                >
+                    <MaterialCommunityIcons name="plus-circle" size={24} color="#6200EA" />
+                    <Text style={styles.addQuestionText}>Add Another Question</Text>
+                </TouchableOpacity>
+
+                {/* Submit Button */}
+                <TouchableOpacity
+                    style={[styles.submitButton, loading && styles.submitButtonDisabled]}
+                    onPress={handleSubmit}
+                    disabled={loading}
+                >
+                    <LinearGradient
+                        colors={['#6200EA', '#7C4DFF']}
+                        style={styles.submitGradient}
                     >
-                        Add Question
-                    </Button>
+                        {loading ? (
+                            <ActivityIndicator color="#fff" />
+                        ) : (
+                            <>
+                                <MaterialCommunityIcons name="check-circle" size={24} color="#fff" />
+                                <Text style={styles.submitText}>
+                                    {isEditing ? 'Update Quiz' : 'Create Quiz'}
+                                </Text>
+                            </>
+                        )}
+                    </LinearGradient>
+                </TouchableOpacity>
 
-                    <Button
-                        mode="contained"
-                        onPress={handleSubmit}
-                        loading={loading}
-                        style={styles.submitButton}
-                        contentStyle={{ height: 50 }}
-                    >
-                        {isEditing ? 'Update Quiz' : 'Create Quiz'}
-                    </Button>
-                </ScrollView>
-            </View>
-        </GradientBackground>
+                <View style={{ height: 40 }} />
+            </ScrollView>
+        </View>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 60,
+        backgroundColor: '#F5F5F7',
     },
     header: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        paddingTop: 50,
+        paddingBottom: 20,
         paddingHorizontal: 20,
-        marginBottom: 20,
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderBottomLeftRadius: 24,
+        borderBottomRightRadius: 24,
+        elevation: 8,
+        shadowColor: '#6200EA',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 8,
     },
     backButton: {
         padding: 8,
         backgroundColor: 'rgba(255,255,255,0.2)',
         borderRadius: 12,
     },
+    headerContent: {
+        marginLeft: 16,
+    },
     headerTitle: {
         fontSize: 24,
         fontWeight: 'bold',
         color: '#fff',
     },
+    headerSubtitle: {
+        fontSize: 14,
+        color: 'rgba(255, 255, 255, 0.8)',
+        marginTop: 2,
+    },
     content: {
-        padding: 20,
-        paddingBottom: 100,
+        padding: 16,
     },
     card: {
-        padding: 20,
+        backgroundColor: '#fff',
         borderRadius: 16,
-        backgroundColor: '#fff',
-        marginBottom: 10,
-    },
-    questionCard: {
         padding: 20,
-        borderRadius: 16,
-        backgroundColor: '#fff',
         marginBottom: 16,
+        elevation: 2,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.05,
+        shadowRadius: 4,
     },
-    sectionTitle: {
-        fontWeight: 'bold',
-        marginBottom: 16,
-    },
-    input: {
-        marginBottom: 16,
-        backgroundColor: '#fff',
-    },
-    row: {
+    cardHeader: {
         flexDirection: 'row',
-        gap: 16,
+        alignItems: 'center',
+        marginBottom: 20,
     },
-    halfInput: {
-        flex: 1,
+    cardTitle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#333',
+        marginLeft: 12,
+    },
+    inputGroup: {
+        marginBottom: 16,
     },
     label: {
         fontSize: 14,
         fontWeight: '600',
-        marginBottom: 8,
         color: '#666',
+        marginBottom: 8,
     },
-    radioGroup: {
+    textInput: {
+        backgroundColor: '#fff',
+    },
+    chipGroup: {
         flexDirection: 'row',
         flexWrap: 'wrap',
         gap: 8,
-        marginBottom: 16,
     },
-    radioBtn: {
-        paddingHorizontal: 12,
-        paddingVertical: 6,
+    chip: {
+        paddingHorizontal: 16,
+        paddingVertical: 10,
         borderRadius: 20,
+        backgroundColor: '#F5F5F7',
         borderWidth: 1,
-        borderColor: '#ddd',
+        borderColor: '#E0E0E0',
     },
-    radioBtnActive: {
-        backgroundColor: '#6366F1',
-        borderColor: '#6366F1',
+    chipActive: {
+        backgroundColor: '#6200EA',
+        borderColor: '#6200EA',
     },
-    radioText: {
+    chipText: {
+        fontSize: 13,
         color: '#666',
+        fontWeight: '500',
     },
-    radioTextActive: {
+    chipTextActive: {
         color: '#fff',
         fontWeight: 'bold',
     },
-    inputContainer: {
+    sectionHeader: {
+        flexDirection: 'row',
+        alignItems: 'center',
         marginBottom: 16,
+        marginTop: 8,
+    },
+    sectionTitle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#333',
+        marginLeft: 12,
+    },
+    questionCard: {
+        backgroundColor: '#fff',
+        borderRadius: 16,
+        padding: 20,
+        marginBottom: 16,
+        elevation: 2,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.05,
+        shadowRadius: 4,
     },
     questionHeader: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginBottom: 10,
+        marginBottom: 16,
+    },
+    questionBadge: {
+        paddingHorizontal: 16,
+        paddingVertical: 8,
+        borderRadius: 20,
+    },
+    questionNumber: {
+        color: '#fff',
+        fontWeight: 'bold',
+        fontSize: 14,
+    },
+    deleteButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 4,
+        padding: 8,
+    },
+    deleteText: {
+        color: '#EF4444',
+        fontSize: 14,
+        fontWeight: '600',
     },
     optionRow: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginBottom: 8,
+        marginBottom: 12,
     },
-    addButton: {
-        borderColor: '#fff',
-        borderWidth: 1,
-        marginBottom: 20,
+    optionInput: {
+        flex: 1,
+        marginBottom: 0,
+    },
+    correctIcon: {
+        marginLeft: 8,
+    },
+    addQuestionButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 16,
+        backgroundColor: '#fff',
+        borderRadius: 12,
+        borderWidth: 2,
+        borderColor: '#6200EA',
+        borderStyle: 'dashed',
+        marginBottom: 16,
+    },
+    addQuestionText: {
+        fontSize: 16,
+        fontWeight: '600',
+        color: '#6200EA',
+        marginLeft: 8,
     },
     submitButton: {
-        backgroundColor: '#4F46E5',
         borderRadius: 12,
+        overflow: 'hidden',
+        elevation: 4,
+    },
+    submitButtonDisabled: {
+        opacity: 0.7,
+    },
+    submitGradient: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 16,
+        gap: 8,
+    },
+    submitText: {
+        color: '#fff',
+        fontSize: 18,
+        fontWeight: 'bold',
     },
 });
 

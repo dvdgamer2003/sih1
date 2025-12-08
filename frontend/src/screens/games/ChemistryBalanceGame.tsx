@@ -10,6 +10,7 @@ import Animated, { FadeInDown, BounceIn, ZoomIn } from 'react-native-reanimated'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useGameTimer } from '../../hooks/useGameTimer';
 import { saveGameResult } from '../../services/gamesService';
+import { calculateDelta } from '../../utils/deltaAssessment';
 
 interface ChemicalEquation {
     equation: string;
@@ -78,13 +79,20 @@ const ChemistryBalanceGame = () => {
                 stopTimer();
                 setGameOver(true);
 
+                const deltaResult = calculateDelta(elapsedTime, 'hard');
+
                 saveGameResult({
                     gameId: 'chemistry_balance',
                     score: finalScore,
                     maxScore: 75,
                     timeTaken: elapsedTime,
                     difficulty: 'hard',
-                    completedLevel: 1
+                    completedLevel: 1,
+                    // Delta Stats
+                    delta: deltaResult.delta,
+                    proficiency: deltaResult.proficiency,
+                    subject: 'Chemistry',
+                    classLevel: 'Class 9'
                 });
             }
         }, 1500);

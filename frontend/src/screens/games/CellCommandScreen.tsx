@@ -20,6 +20,7 @@ import { spacing } from '../../theme';
 import { soundManager } from '../../utils/soundEffects';
 import { useGameTimer } from '../../hooks/useGameTimer';
 import { saveGameResult } from '../../services/gamesService';
+import { calculateDelta } from '../../utils/deltaAssessment';
 
 const { height } = Dimensions.get('window');
 
@@ -133,13 +134,20 @@ const CellCommandScreen = () => {
                 stopTimer();
                 endGame(score + 50, elapsedTime);
                 alert(`Mission Complete!\nTime Taken: ${displayTime}`);
+                const deltaResult = calculateDelta(elapsedTime, 'easy');
+
                 saveGameResult({
                     gameId: 'cell_command',
                     score: score + 50,
                     maxScore: ORGANELLES.length * 50,
                     timeTaken: elapsedTime,
                     difficulty: 'easy',
-                    completedLevel: 1
+                    completedLevel: 1,
+                    // Delta Stats
+                    delta: deltaResult.delta,
+                    proficiency: deltaResult.proficiency,
+                    subject: 'Science', // Hardcoded for this game
+                    classLevel: 'Class 6' // Hardcoded or from context
                 });
             }
         } else {

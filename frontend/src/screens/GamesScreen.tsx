@@ -36,7 +36,7 @@ const GamesScreen = ({ navigation }: any) => {
     const insets = useSafeAreaInsets();
     const { isMobile } = useResponsive();
     const styles = createStyles(isDark, isMobile);
-    const [gameStats, setGameStats] = useState<Record<string, { lastPlayed: string, lastTimeTaken: number, highScore: number }>>({});
+    const [gameStats, setGameStats] = useState<Record<string, { lastPlayed: string, lastTimeTaken: number, highScore: number, proficiency?: string, delta?: number }>>({});
 
     useFocusEffect(
         useCallback(() => {
@@ -269,6 +269,17 @@ const GamesScreen = ({ navigation }: any) => {
                                                                 <Text style={styles.statText}>Played</Text>
                                                             </View>
                                                         )}
+                                                    </View>
+                                                )}
+
+                                                {/* Proficiency Badge */}
+                                                {stats?.proficiency && stats.proficiency !== 'Not Rated' && (
+                                                    <View style={[styles.proficiencyBadge, {
+                                                        backgroundColor: stats.proficiency === 'Advanced' ? '#4CAF50' :
+                                                            stats.proficiency === 'Proficient' ? '#2196F3' :
+                                                                stats.proficiency === 'Developing' ? '#FFC107' : '#FF5252'
+                                                    }]}>
+                                                        <Text style={styles.proficiencyText}>{stats.proficiency}</Text>
                                                     </View>
                                                 )}
                                             </View>
@@ -506,6 +517,19 @@ const createStyles = (isDark: boolean, isMobile: boolean) => StyleSheet.create({
     badgeText: {
         fontSize: 10,
         fontWeight: 'bold'
+    },
+    proficiencyBadge: {
+        marginTop: 6,
+        alignSelf: 'flex-start',
+        paddingHorizontal: 8,
+        paddingVertical: 2,
+        borderRadius: 4,
+    },
+    proficiencyText: {
+        color: '#fff',
+        fontSize: 10,
+        fontWeight: 'bold',
+        textTransform: 'uppercase'
     }
 });
 

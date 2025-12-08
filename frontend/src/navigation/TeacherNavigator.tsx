@@ -9,12 +9,13 @@ import TeacherContentManagerScreen from '../screens/teacher/TeacherContentManage
 import TeacherQuizCreatorScreen from '../screens/teacher/TeacherQuizCreatorScreen';
 import TeacherDashboardScreen from '../screens/TeacherDashboardScreen';
 import NotificationScreen from '../screens/NotificationScreen';
-import StudentAnalyticsScreen from '../screens/StudentAnalyticsScreen';
+import StudentAnalyticsScreen from '../screens/teacher/StudentAnalyticsScreen';;
 import TeacherAnalyticsScreen from '../screens/teacher/TeacherAnalyticsScreen';
 import TeacherClassroomScreen from '../screens/teacher/TeacherClassroomScreen';
 import QuizScreen from '../screens/QuizScreen';
 import QuizResult from '../screens/QuizResult';
 import TeacherChapterViewerScreen from '../screens/TeacherChapterViewerScreen';
+import TeacherGameAnalyticsScreen from '../screens/teacher/TeacherGameAnalyticsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +37,7 @@ const TeacherNavigator = () => {
             <Stack.Screen name="Quiz" component={QuizScreen} />
             <Stack.Screen name="QuizResult" component={QuizResult} />
             <Stack.Screen name="TeacherChapterViewer" component={TeacherChapterViewerScreen} />
+            <Stack.Screen name="TeacherGameAnalytics" component={TeacherGameAnalyticsScreen} />
             <Stack.Screen name="TeacherVideoManager" component={require('../screens/teacher/TeacherVideoManagerScreen').default} />
         </Stack.Navigator>
     );

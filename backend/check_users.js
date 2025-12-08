@@ -1,29 +1,35 @@
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+require('dotenv').config();
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/edugames', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+
 const User = require('./models/User');
 
-dotenv.config();
-
-const checkUsers = async () => {
+async function checkUsers() {
     try {
-        await mongoose.connect(process.env.MONGO_URI);
-        console.log('Connected to MongoDB');
+        console.log('📋 Checking all users in database...\n');
 
-        const users = await User.find({});
-        console.log(`Total users: ${users.length}`);
+        const teachers = await User.find({ role: 'teacher' }).select('name email status');
+        const students = await User.find({ role: 'student' }).select('name email teacherId');
 
-        users.forEach(user => {
-            console.log(`- ${user.name} (${user.email}): Role=${user.role}, XP=${user.xp}`);
+        console.log(`👨‍🏫 Teachers (${teachers.length}):`);
+        teachers.forEach(t => {
+            console.log(`   ${t.name} (${t.email}) - Status: ${t.status}`);
         });
 
-        const students = await User.find({ role: 'student' });
-        console.log(`Total students: ${students.length}`);
+        console.log(`\n👨‍🎓 Students (${students.length}):`);
+        students.forEach(s => {
+            console.log(`   ${s.name} (${s.email}) - Teacher ID: ${s.teacherId}`);
+        });
 
-        process.exit();
+        process.exit(0);
     } catch (error) {
         console.error('Error:', error);
         process.exit(1);
     }
-};
+}
 
 checkUsers();

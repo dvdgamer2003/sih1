@@ -10,6 +10,7 @@ import Animated, { FadeInDown, FadeIn, BounceIn, ZoomIn } from 'react-native-rea
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useGameTimer } from '../../hooks/useGameTimer';
 import { saveGameResult } from '../../services/gamesService';
+import { calculateDelta } from '../../utils/deltaAssessment';
 
 interface OrganLabel {
     id: string;
@@ -55,9 +56,6 @@ const getOrganImage = (organName: string) => {
         'Lungs': require('../../../assets/images/organs/lungs.png'),
         'Liver': require('../../../assets/images/organs/liver.png'),
         'Stomach': require('../../../assets/images/organs/stomach.png'),
-        'Kidneys': require('../../../assets/images/organs/human_body.png'),
-        'Intestines': require('../../../assets/images/organs/human_body.png'),
-        'Pancreas': require('../../../assets/images/organs/human_body.png'),
     };
     return imageMap[organName] || require('../../../assets/images/organs/human_body.png');
 };
@@ -100,13 +98,20 @@ const LabelOrganGame = () => {
                 addXP(xpReward, 'Label the Organ');
                 setGameOver(true);
                 stopTimer();
+                const deltaResult = calculateDelta(elapsedTime, 'medium');
+
                 saveGameResult({
                     gameId: 'label_organ',
                     score: finalScore,
                     maxScore: 200,
                     timeTaken: elapsedTime,
                     difficulty: 'medium',
-                    completedLevel: 1
+                    completedLevel: 1,
+                    // Delta Stats
+                    delta: deltaResult.delta,
+                    proficiency: deltaResult.proficiency,
+                    subject: 'Biology',
+                    classLevel: 'Class 6'
                 });
             }
         }, 1000);

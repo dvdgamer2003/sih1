@@ -19,6 +19,7 @@ import { useGameProgress } from '../../hooks/useGameProgress';
 import { soundManager } from '../../utils/soundEffects';
 import { useGameTimer } from '../../hooks/useGameTimer';
 import { saveGameResult } from '../../services/gamesService';
+import { calculateDelta } from '../../utils/deltaAssessment';
 
 const { width, height } = Dimensions.get('window');
 const FALL_SPEED_BASE = 6000; // Slower speed (6s to fall)
@@ -125,13 +126,20 @@ const DigestiveDashScreen = () => {
         if (isGameOver) {
             setGameState('gameover');
             stopTimer();
+            const deltaResult = calculateDelta(elapsedTime, 'medium');
+
             saveGameResult({
                 gameId: 'digestive_dash',
                 score: score,
                 maxScore: 1000, // Theoretical max
                 timeTaken: elapsedTime,
                 difficulty: 'medium',
-                completedLevel: 1
+                completedLevel: 1,
+                // Delta Stats
+                delta: deltaResult.delta,
+                proficiency: deltaResult.proficiency,
+                subject: 'Biology',
+                classLevel: 'Class 6'
             });
         }
     }, [isGameOver]);

@@ -3,7 +3,7 @@ import { addToQueue } from '../offline/syncQueue';
 import NetInfo from '@react-native-community/netinfo';
 
 export interface GameResult {
-    gameId: string; // Changed from gameType to gameId to match backend
+    gameId: string;
     score: number;
     maxScore?: number;
     timeTaken: number; // in seconds
@@ -11,27 +11,50 @@ export interface GameResult {
     difficulty?: string;
     completedLevel?: number;
     timestamp?: number;
+    // Added for Delta Assessment
+    subject?: string;
+    classLevel?: string;
+    delta?: number;
+    proficiency?: string;
+    userId?: string;
+    attempts?: number;
+    mistakes?: number;
 }
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 /**
- * Save game result - handles online/offline scenarios
+ * Save game result - handles online/offline scenarios and updates local analytics
  */
 export const saveGameResult = async (result: GameResult): Promise<void> => {
     const netInfo = await NetInfo.fetch();
+    const resultWithTimestamp = { ...result, timestamp: Date.now() };
 
+    // 1. Local Persistence for Delta Analytics (Offline-First)
+    if (result.userId && result.subject && result.classLevel) {
+        try {
+            const key = `gameResults_${result.userId}_${result.classLevel}_${result.subject}`;
+            const existingData = await AsyncStorage.getItem(key);
+            const history = existingData ? JSON.parse(existingData) : [];
+            history.push(resultWithTimestamp);
+            await AsyncStorage.setItem(key, JSON.stringify(history));
+            console.log('[GamesService] Saved local analytics for', key);
+        } catch (localError) {
+            console.error('[GamesService] Failed to save local analytics:', localError);
+        }
+    }
+
+    // 2. Remote / Sync Queue
     if (netInfo.isConnected) {
         try {
-            const response = await api.post('/games/result', result);
+            const response = await api.post('/games/result', resultWithTimestamp);
             console.log('[GamesService] Saved game result online:', response.data);
         } catch (error) {
             console.error('[GamesService] Failed to save online, queuing...', error);
-            // Ensure timestamp is present for offline queue
-            const resultWithTimestamp = { ...result, timestamp: Date.now() };
             await addToQueue('SUBMIT_GAME_RESULT', resultWithTimestamp);
         }
     } else {
-        console.log('[GamesService] Offline, queuing game result:', result);
-        const resultWithTimestamp = { ...result, timestamp: Date.now() };
+        console.log('[GamesService] Offline, queuing game result:', resultWithTimestamp);
         await addToQueue('SUBMIT_GAME_RESULT', resultWithTimestamp);
     }
 }

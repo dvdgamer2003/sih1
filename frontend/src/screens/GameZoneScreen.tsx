@@ -17,6 +17,9 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useGameTimer } from '../hooks/useGameTimer';
 import { saveGameResult } from '../services/gamesService';
+import { calculateDelta, assessLearningOutcome, updateLeaderboardPoints } from '../utils/deltaAssessment';
+import GameResultModal from './GameResultModal';
+import { useAuth } from '../context/AuthContext';
 
 // Placeholder Game Components (To be replaced with actual imports)
 // Interface for Concept Node
@@ -224,8 +227,10 @@ const FormulaChefGame = (props: any) => <PlaceholderGame name="Formula Chef" {..
 const StoryBranchGame = (props: any) => <PlaceholderGame name="Story Branch" {...props} />;
 
 const GameZoneScreen = () => {
+
     const route = useRoute();
     const navigation = useNavigation();
+    const { user, addXP } = useAuth();
     const { gameType, classLevel, subject, difficulty } = route.params as any || {};
 
     // State
@@ -235,7 +240,11 @@ const GameZoneScreen = () => {
     const [isOffline, setIsOffline] = useState(false);
     const { elapsedTime, startTimer, stopTimer, displayTime, resetTimer } = useGameTimer();
     const [isPlaying, setIsPlaying] = useState(false);
-    const [showEndModal, setShowEndModal] = useState(false);
+    // Delta System State
+    const [resultModalVisible, setResultModalVisible] = useState(false); // Replaces showEndModal
+    const [deltaResult, setDeltaResult] = useState<any>(null);
+    const [learningOutcome, setLearningOutcome] = useState<any>(null);
+    const [finalScore, setFinalScore] = useState(0);
     const [gameResult, setGameResult] = useState<any>(null);
 
     // Initial Load
@@ -340,6 +349,29 @@ const GameZoneScreen = () => {
         setIsPlaying(false);
         stopTimer();
 
+        // --- DELTA CALCULATION ---
+        const dResult = calculateDelta(elapsedTime, difficulty || 'medium');
+
+        // Calculate Final Score (Base Game Score + Delta)
+        // Game returns a score (e.g., 100), we add Delta to it.
+        const totalScore = result.score + dResult.delta;
+
+        // Assess Outcome
+        // Assuming perfect attempts if not provided by game result
+        const attempts = result.attempts || 1;
+        const mistakes = result.mistakes || 0;
+        const outcome = assessLearningOutcome(dResult.delta, (result.score / 100) * 100, attempts, mistakes, difficulty || 'medium');
+
+        setDeltaResult(dResult);
+        setLearningOutcome(outcome);
+        setFinalScore(totalScore);
+
+        // Add XP
+        addXP(totalScore, gameType);
+
+        // Update Leaderboard
+        await updateLeaderboardPoints(dResult.delta, difficulty || 'medium', user?._id || 'guest');
+
         const finalResult = {
             ...result,
             gameType,
@@ -347,15 +379,12 @@ const GameZoneScreen = () => {
             subject,
             difficulty,
             elapsedTime,
+            delta: dResult.delta,
+            proficiency: dResult.proficiency,
             timestamp: new Date().toISOString(),
         };
 
         setGameResult(finalResult);
-        setShowEndModal(true);
-
-        // Save Logic
-        setGameResult(finalResult);
-        setShowEndModal(true);
 
         // Save Logic
         const resultKey = `result_${gameType}_${classLevel}_${subject}_${difficulty}_${Date.now()}`;
@@ -363,12 +392,19 @@ const GameZoneScreen = () => {
 
         await saveGameResult({
             gameId: gameType,
-            score: result.score,
-            maxScore: 100, // Placeholder or calculate based on game type
+            score: totalScore,
+            maxScore: 100 + 100, // Concept score + max delta
             timeTaken: elapsedTime,
-            difficulty: difficulty,
-            completedLevel: 1
+            difficulty: typeof difficulty === 'string' ? difficulty : 'medium',
+            completedLevel: 1,
+            subject: subject || 'General',
+            classLevel: classLevel || 'All',
+            delta: dResult.delta,
+            proficiency: dResult.proficiency,
+            userId: user?._id
         });
+
+        setResultModalVisible(true);
     };
 
     const renderGame = () => {
@@ -398,13 +434,13 @@ const GameZoneScreen = () => {
     };
 
     const RestartGame = () => {
-        setShowEndModal(false);
+        setResultModalVisible(false);
         resetTimer();
         setIsPlaying(true);
     };
 
     const GoBackToMenu = () => {
-        setShowEndModal(false);
+        setResultModalVisible(false);
         navigation.goBack();
     };
 
@@ -442,30 +478,20 @@ const GameZoneScreen = () => {
                 {renderGame()}
             </View>
 
-            {/* End Game Modal */}
-            <Modal visible={showEndModal} transparent animationType="slide">
-                <View style={styles.modalOverlay}>
-                    <View style={styles.modalContent}>
-                        <Text style={styles.modalTitle}>Game Over!</Text>
-                        {gameResult && (
-                            <View style={styles.statsContainer}>
-                                <Text style={styles.statText}>Score: {gameResult.score}</Text>
-                                <Text style={styles.statText}>Time: {Math.floor(gameResult.elapsedTime / 60)}m {gameResult.elapsedTime % 60}s</Text>
-                                <Text style={styles.statText}>Stars: {'⭐'.repeat(gameResult.stars || 0)}</Text>
-                            </View>
-                        )}
-
-                        <View style={styles.modalButtons}>
-                            <TouchableOpacity style={[styles.modalButton, styles.playAgainBtn]} onPress={RestartGame}>
-                                <Text style={styles.playAgainText}>Play Again</Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={[styles.modalButton, styles.menuBtn]} onPress={GoBackToMenu}>
-                                <Text style={styles.menuText}>Back to Menu</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                </View>
-            </Modal>
+            {/* Delta Game Result Modal */}
+            <GameResultModal
+                visible={resultModalVisible}
+                gameId={gameType || 'game_zone'}
+                score={finalScore}
+                maxScore={200}
+                timeTaken={elapsedTime}
+                difficulty={difficulty || 'medium'}
+                deltaResult={deltaResult}
+                learningOutcome={learningOutcome}
+                onClose={() => setResultModalVisible(false)}
+                onGoHome={GoBackToMenu}
+                onPlayAgain={RestartGame}
+            />
         </SafeAreaView>
     );
 };

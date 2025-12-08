@@ -20,6 +20,8 @@ import { spacing } from '../../theme';
 import { soundManager } from '../../utils/soundEffects';
 import { useGameTimer } from '../../hooks/useGameTimer';
 import { saveGameResult } from '../../services/gamesService';
+import { calculateDelta, assessLearningOutcome, updateLeaderboardPoints } from '../../utils/deltaAssessment';
+import GameResultModal from '../GameResultModal';
 
 const { width } = Dimensions.get('window');
 const SLOT_HEIGHT = 70;
@@ -123,7 +125,7 @@ const DraggableEvent = ({
 
 const TimeTravelDebugScreen = () => {
     const navigation = useNavigation();
-    const { addXP } = useAuth();
+    const { user, addXP } = useAuth();
     const { isDark } = useAppTheme();
     const styles = createStyles(isDark);
 
@@ -180,17 +182,14 @@ const TimeTravelDebugScreen = () => {
         }
     };
 
-    const [showResultModal, setShowResultModal] = useState(false);
-    const [modalContent, setModalContent] = useState({ title: '', message: '', type: 'success' as 'success' | 'error' });
+    // Delta System State
+    const [resultModalVisible, setResultModalVisible] = useState(false);
+    const [deltaResult, setDeltaResult] = useState<any>(null);
+    const [learningOutcome, setLearningOutcome] = useState<any>(null);
 
-    const checkOrder = () => {
+    const checkOrder = async () => {
         if (timelineSlots.some(s => s === null)) {
-            setModalContent({
-                title: 'Incomplete',
-                message: 'Please fill all slots in the timeline first.',
-                type: 'error'
-            });
-            setShowResultModal(true);
+            Alert.alert('Incomplete', 'Please fill all slots in the timeline first.');
             return;
         }
 
@@ -211,37 +210,59 @@ const TimeTravelDebugScreen = () => {
 
         if (isCorrect) {
             soundManager.playSuccess();
-            const timeBonus = Math.max(0, 300 - Math.floor((Date.now() - startTime) / 1000));
-            const finalScore = score - (checks * 100) + timeBonus;
-            addXP(Math.floor(finalScore / 10), 'Time Travel Debug');
-            setScore(finalScore);
-            setGameComplete(true);
             stopTimer();
+            setGameComplete(true);
 
-            saveGameResult({
+            // --- DELTA CALCULATION ---
+            // Calculate Delta Score based on time and difficulty
+            // Using 'medium' as default for this game level
+            const dResult = calculateDelta(elapsedTime, 'medium');
+
+            // Assess Learning Outcome
+            // checks is attempts (1 initial + retries)
+            const outcome = assessLearningOutcome(dResult.delta, mistakes === 0 ? 100 : Math.max(0, 100 - (mistakes * 20)), checks + 1, 0, 'medium');
+
+            setDeltaResult(dResult);
+            setLearningOutcome(outcome);
+
+            // Calculate Score (Base + Delta Bonus)
+            // Original logic: score - (checks * 100) + timeBonus
+            // New logic: Base completion (500) + Delta Score + Accuracy Bonus
+            const baseScore = 500;
+            const accuracyBonus = Math.max(0, 100 - (checks * 50));
+            const finalScore = baseScore + dResult.delta + accuracyBonus;
+
+            setScore(finalScore);
+            addXP(finalScore, 'Time Travel Debug');
+
+            // Identify Subject/Class - assuming Class 6 History/Social Science for this game context
+            const subject = 'Social Science';
+            const classLevel = user?.selectedClass || '6';
+
+            // Update Leaderboard Points (Delta-based)
+            await updateLeaderboardPoints(dResult.delta, 'medium', user?._id || 'guest');
+
+            // Save Result
+            await saveGameResult({
                 gameId: 'time_travel_debug',
                 score: finalScore,
-                maxScore: 1300,
+                maxScore: 1000,
                 timeTaken: elapsedTime,
                 difficulty: 'medium',
-                accuracy: Math.max(0, 100 - (checks * 10))
+                accuracy: Math.max(0, 100 - (checks * 10)),
+                subject: subject,
+                classLevel: classLevel,
+                delta: dResult.delta,
+                proficiency: dResult.proficiency,
+                userId: user?._id
             });
 
-            setModalContent({
-                title: 'Mission Complete!',
-                message: `Timeline Restored!\n\nScore: ${finalScore}\nTime Taken: ${displayTime}`,
-                type: 'success'
-            });
-            setShowResultModal(true);
+            setResultModalVisible(true);
+
         } else {
             soundManager.playWrong();
             setScore(prev => Math.max(0, prev - 150));
-            setModalContent({
-                title: 'Incorrect Order',
-                message: 'Some events are out of order. Time is warping! (-150 pts)',
-                type: 'error'
-            });
-            setShowResultModal(true);
+            Alert.alert('Incorrect Order', 'Some events are out of order. Time is warping! (-150 pts)');
         }
     };
 
@@ -315,11 +336,7 @@ const TimeTravelDebugScreen = () => {
             </ScrollView>
 
             <View style={styles.footer}>
-                {gameComplete ? (
-                    <Button mode="contained" onPress={initGame} style={styles.checkButton} buttonColor="#4CAF50">
-                        Play Again
-                    </Button>
-                ) : (
+                {!gameComplete && (
                     <Button
                         mode="contained"
                         onPress={checkOrder}
@@ -331,36 +348,23 @@ const TimeTravelDebugScreen = () => {
                 )}
             </View>
 
-            {/* Custom Result Modal */}
-            {showResultModal && (
-                <View style={[StyleSheet.absoluteFill, { backgroundColor: 'rgba(0,0,0,0.7)', justifyContent: 'center', alignItems: 'center', zIndex: 1000 }]}>
-                    <Animated.View entering={SlideInDown.springify()} style={{ width: '85%', maxWidth: 400 }}>
-                        <Surface style={{ borderRadius: 24, padding: 24, alignItems: 'center', backgroundColor: isDark ? '#1E293B' : '#fff' }} elevation={5}>
-                            <MaterialCommunityIcons
-                                name={modalContent.type === 'success' ? "trophy" : "alert-circle"}
-                                size={64}
-                                color={modalContent.type === 'success' ? "#FFD700" : "#FF5252"}
-                                style={{ marginBottom: 16 }}
-                            />
-                            <Text variant="headlineSmall" style={{ fontWeight: 'bold', color: isDark ? '#fff' : '#333', marginBottom: 8, textAlign: 'center' }}>
-                                {modalContent.title}
-                            </Text>
-                            <Text variant="bodyLarge" style={{ textAlign: 'center', marginBottom: 24, color: isDark ? '#ddd' : '#666' }}>
-                                {modalContent.message}
-                            </Text>
-                            <Button
-                                mode="contained"
-                                onPress={() => setShowResultModal(false)}
-                                style={{ borderRadius: 30, width: '100%' }}
-                                contentStyle={{ paddingVertical: 4 }}
-                                buttonColor={modalContent.type === 'success' ? "#4CAF50" : "#FF5252"}
-                            >
-                                {modalContent.type === 'success' ? "Awesome!" : "Try Again"}
-                            </Button>
-                        </Surface>
-                    </Animated.View>
-                </View>
-            )}
+            {/* Delta Game Result Modal */}
+            <GameResultModal
+                visible={resultModalVisible}
+                gameId="time_travel_debug"
+                score={score}
+                maxScore={1000}
+                timeTaken={elapsedTime}
+                difficulty="medium"
+                deltaResult={deltaResult}
+                learningOutcome={learningOutcome}
+                onClose={() => setResultModalVisible(false)}
+                onGoHome={() => navigation.goBack()}
+                onPlayAgain={() => {
+                    setResultModalVisible(false);
+                    initGame();
+                }}
+            />
         </LinearGradient>
     );
 };

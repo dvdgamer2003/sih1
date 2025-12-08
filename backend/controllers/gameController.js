@@ -139,6 +139,7 @@ const getGameContent = async (req, res) => {
 // @route   POST /api/games/result
 // @access  Private
 const saveGameResult = async (req, res) => {
+    console.log('DEBUG: saveGameResult Payload:', JSON.stringify(req.body, null, 2));
     try {
         const { gameId, score, maxScore, accuracy, duration, timeTaken, difficulty, completedLevel } = req.body;
         const userId = req.user.id;
@@ -155,7 +156,13 @@ const saveGameResult = async (req, res) => {
             duration: finalTimeTaken,
             timeTaken: finalTimeTaken,
             difficulty,
-            completedLevel
+            completedLevel,
+            subject: req.body.subject,
+            classLevel: req.body.classLevel,
+            delta: req.body.delta,
+            proficiency: req.body.proficiency,
+            attempts: req.body.attempts,
+            mistakes: req.body.mistakes
         });
 
         await result.save();
@@ -242,7 +249,9 @@ const getUserGameStats = async (req, res) => {
                     lastPlayed: result.createdAt,
                     lastTimeTaken: result.timeTaken || result.duration, // Fallback
                     lastScore: result.score,
-                    highScore: result.score
+                    highScore: result.score,
+                    proficiency: result.proficiency || 'Not Rated',
+                    delta: result.delta || 0
                 };
             } else {
                 // Update high score

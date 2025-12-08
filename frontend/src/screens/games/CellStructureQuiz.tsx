@@ -10,6 +10,7 @@ import Animated, { FadeInDown, FadeIn, BounceIn, ZoomIn } from 'react-native-rea
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useGameTimer } from '../../hooks/useGameTimer';
 import { saveGameResult } from '../../services/gamesService';
+import { calculateDelta } from '../../utils/deltaAssessment';
 
 const { width } = Dimensions.get('window');
 
@@ -105,13 +106,20 @@ const CellStructureQuiz = () => {
                 stopTimer();
                 setGameOver(true);
 
+                const deltaResult = calculateDelta(elapsedTime, 'medium');
+
                 saveGameResult({
                     gameId: 'cell_structure_quiz',
                     score: finalScore,
                     maxScore: 200,
                     timeTaken: elapsedTime,
                     difficulty: 'medium',
-                    completedLevel: 1
+                    completedLevel: 1,
+                    // Delta Stats
+                    delta: deltaResult.delta,
+                    proficiency: deltaResult.proficiency,
+                    subject: 'Biology',
+                    classLevel: 'Class 6'
                 });
             }
         }, 1000);

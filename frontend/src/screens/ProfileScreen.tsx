@@ -20,6 +20,11 @@ const AVATAR_OPTIONS = [
     { id: 5, source: require('../assets/avatars/avatar_student_5_1763752442026.png'), gradient: ['#F093FB', '#F5576C'] as const },
     { id: 6, source: require('../assets/avatars/avatar_student_6_1763752457724.png'), gradient: ['#FAD961', '#F76B1C'] as const },
     { id: 7, source: require('../assets/avatars/avatar_student_7_1763752477440.png'), gradient: ['#667EEA', '#764BA2'] as const },
+    { id: 8, source: require('../assets/avatars/anime_1.png'), gradient: ['#4FACFE', '#00F2FE'] as const },
+    { id: 9, source: require('../assets/avatars/anime_2.png'), gradient: ['#FF9A9E', '#FECFEF'] as const },
+    { id: 10, source: require('../assets/avatars/anime_3.png'), gradient: ['#43E97B', '#38F9D7'] as const },
+    { id: 11, source: require('../assets/avatars/anime_4.png'), gradient: ['#FA709A', '#FEE140'] as const },
+    { id: 12, source: require('../assets/avatars/anime_5.png'), gradient: ['#667EEA', '#764BA2'] as const },
 ];
 
 const ProfileScreen = ({ navigation }: any) => {
@@ -34,7 +39,7 @@ const ProfileScreen = ({ navigation }: any) => {
     const [name, setName] = useState(user?.name || '');
     const [email, setEmail] = useState(user?.email || '');
     const [selectedClass, setSelectedClass] = useState(user?.selectedClass || null);
-    const [selectedAvatar, setSelectedAvatar] = useState(parseInt(user?.avatar || '1'));
+    const [selectedAvatar, setSelectedAvatar] = useState(parseInt(user?.avatar || '2'));
     const [themeColor, setThemeColor] = useState(user?.themeColor || theme.colors.primary);
     const [isEditing, setIsEditing] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -158,6 +163,47 @@ const ProfileScreen = ({ navigation }: any) => {
                             <Text variant="headlineMedium" style={styles.statValue}>{xp}</Text>
                             <Text variant="bodySmall" style={styles.statLabel}>Total XP</Text>
                         </LinearGradient>
+                    </Animated.View>
+
+                    {/* Analytics Button */}
+                    <Animated.View entering={FadeInUp.delay(250).duration(600)} style={{ paddingHorizontal: spacing.lg, marginBottom: spacing.lg }}>
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate('CourseProgress', { userId: user?._id, subject: 'Science', classLevel: user?.selectedClass || '6' })}
+                            activeOpacity={0.8}
+                        >
+                            <LinearGradient
+                                colors={['#7C3AED', '#6D28D9']}
+                                start={{ x: 0, y: 0 }}
+                                end={{ x: 1, y: 0 }}
+                                style={{
+                                    flexDirection: 'row',
+                                    alignItems: 'center',
+                                    justifyContent: 'space-between',
+                                    padding: spacing.lg,
+                                    borderRadius: 20,
+                                    shadowColor: '#7C3AED',
+                                    shadowOffset: { width: 0, height: 4 },
+                                    shadowOpacity: 0.3,
+                                    shadowRadius: 8,
+                                    elevation: 6
+                                }}
+                            >
+                                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                                    <View style={{
+                                        width: 48, height: 48, borderRadius: 24,
+                                        backgroundColor: 'rgba(255,255,255,0.2)',
+                                        justifyContent: 'center', alignItems: 'center'
+                                    }}>
+                                        <MaterialCommunityIcons name="chart-timeline-variant" size={24} color="#fff" />
+                                    </View>
+                                    <View>
+                                        <Text variant="titleMedium" style={{ color: '#fff', fontWeight: 'bold' }}>Learning Analytics</Text>
+                                        <Text variant="bodySmall" style={{ color: 'rgba(255,255,255,0.8)' }}>View your mastery progress</Text>
+                                    </View>
+                                </View>
+                                <MaterialCommunityIcons name="chevron-right" size={24} color="#fff" />
+                            </LinearGradient>
+                        </TouchableOpacity>
                     </Animated.View>
 
                     {/* Profile Form Card */}

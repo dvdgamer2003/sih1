@@ -10,6 +10,7 @@ import Animated, { FadeInDown, useSharedValue, useAnimatedStyle, withSpring, Bou
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useGameTimer } from '../../hooks/useGameTimer';
 import { saveGameResult } from '../../services/gamesService';
+import { calculateDelta } from '../../utils/deltaAssessment';
 
 const ForcePlayGame = () => {
     const navigation = useNavigation();
@@ -80,13 +81,20 @@ const ForcePlayGame = () => {
                 stopTimer();
                 setGameOver(true);
 
+                const deltaResult = calculateDelta(elapsedTime, 'medium');
+
                 saveGameResult({
                     gameId: 'force_play',
                     score: finalScore,
                     maxScore: 100,
                     timeTaken: elapsedTime,
                     difficulty: 'medium',
-                    completedLevel: 1
+                    completedLevel: 1,
+                    // Delta Stats
+                    delta: deltaResult.delta,
+                    proficiency: deltaResult.proficiency,
+                    subject: 'Physics',
+                    classLevel: 'Class 9'
                 });
             }
         }, 2500);
