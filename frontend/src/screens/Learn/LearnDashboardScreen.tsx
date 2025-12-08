@@ -91,6 +91,19 @@ const LearnDashboardScreen = ({ navigation }: any) => {
         }
     };
 
+    const getSubjectGradient = (subjectName: string) => {
+        const gradients: Record<string, string[]> = {
+            'Mathematics': ['#f12711', '#f5af19'],      // Red-Orange
+            'Science': ['#11998e', '#38ef7d'],          // Teal-Green
+            'English': ['#4A00E0', '#8E2DE2'],          // Deep Purple
+            'Social Studies': ['#4e4376', '#2b5876'],   // Tech Blue
+            'Hindi': ['#ec008c', '#fc6767'],            // Pink-Red
+            'Computer Science': ['#00d2ff', '#3a7bd5'], // Cyan-Blue
+        };
+        // Default gradient for unknown subjects
+        return gradients[subjectName] || ['#607D8B', '#90A4AE'];
+    };
+
     const renderHeader = () => (
         <View style={styles.headerContainer}>
             <UserGreetingCard
@@ -156,9 +169,14 @@ const LearnDashboardScreen = ({ navigation }: any) => {
                     style={styles.subjectCard}
                 >
                     <Surface style={styles.subjectCardContent} elevation={2}>
-                        <View style={[styles.iconBox, { backgroundColor: displayColor }]}>
-                            <MaterialCommunityIcons name={displayIcon} size={28} color={iconColor} />
-                        </View>
+                        <LinearGradient
+                            colors={getSubjectGradient(item.name) as any}
+                            style={styles.iconBox}
+                            start={{ x: 0, y: 0 }}
+                            end={{ x: 1, y: 1 }}
+                        >
+                            <MaterialCommunityIcons name={displayIcon} size={28} color="#fff" />
+                        </LinearGradient>
 
                         <View style={styles.subjectInfo}>
                             <Text variant="titleMedium" style={styles.subjectName}>{displayTitle}</Text>

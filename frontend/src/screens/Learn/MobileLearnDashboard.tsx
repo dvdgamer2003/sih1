@@ -26,7 +26,8 @@ const MobileLearnDashboard = ({ navigation }: any) => {
     const [loading, setLoading] = useState(true);
     const [selectedClass, setSelectedClass] = useState<number | null>(user?.class || 6);
 
-    const currentXP = 30;
+    // Use real XP from context, capping daily goal at 50 for visual consistency
+    const currentXP = xp % 100;
     const targetXP = 50;
 
     useEffect(() => {
@@ -45,7 +46,13 @@ const MobileLearnDashboard = ({ navigation }: any) => {
                     try {
                         const chapters = await learnService.getChapters(subject._id);
                         const chapterIds = chapters.map((ch: any) => ch._id);
-                        const progress = await progressService.calculateSubjectProgress(subject._id, chapterIds);
+                        // Fix: Use getSubjectProgress which matches the method in LearnDashboardScreen
+                        const progressData = await progressService.getSubjectProgress(
+                            subject._id,
+                            `class-${selectedClass}`,
+                            chapterIds.length
+                        );
+                        const progress = progressData.progress;
                         return { ...subject, progress };
                     } catch (e) {
                         return { ...subject, progress: 0 };
@@ -73,29 +80,17 @@ const MobileLearnDashboard = ({ navigation }: any) => {
     };
 
     const getSubjectGradient = (name: string) => {
-        if (isDark) {
-            // Darker, more vibrant gradients for dark mode
-            const darkGradients: Record<string, string[]> = {
-                'Mathematics': ['#C41E3A', '#8B0000'],
-                'Science': ['#008B8B', '#006666'],
-                'English': ['#6A0DAD', '#4B0082'],
-                'Social Studies': ['#DAA520', '#B8860B'],
-                'Hindi': ['#D2691E', '#8B4513'],
-                'Computer': ['#1E90FF', '#0047AB'],
-            };
-            return darkGradients[name] || ['#4B0082', '#2F004F'];
-        } else {
-            // Original light mode gradients
-            const gradients: Record<string, string[]> = {
-                'Mathematics': ['#FF6B6B', '#FF8E8E'],
-                'Science': ['#4ECDC4', '#6FE7DD'],
-                'English': ['#A78BFA', '#C4B5FD'],
-                'Social Studies': ['#FFD93D', '#FFE066'],
-                'Hindi': ['#FB923C', '#FDBA74'],
-                'Computer': ['#60A5FA', '#93C5FD'],
-            };
-            return gradients[name] || ['#9B59B6', '#B07CC6'];
-        }
+        // Unified vibrant gradients for both modes for a premium feel
+        const gradients: Record<string, string[]> = {
+            'Mathematics': ['#f12711', '#f5af19'],      // Red-Orange
+            'Science': ['#11998e', '#38ef7d'],          // Teal-Green
+            'English': ['#4A00E0', '#8E2DE2'],          // Deep Purple
+            'Social Studies': ['#4e4376', '#2b5876'],   // Tech Blue
+            'Hindi': ['#ec008c', '#fc6767'],            // Pink-Red
+            'Computer': ['#00d2ff', '#3a7bd5'],         // Cyan-Blue
+            'Computer Science': ['#00d2ff', '#3a7bd5'], // Cyan-Blue (Alternate name)
+        };
+        return gradients[name] || ['#607D8B', '#90A4AE']; // Default Grey-Blue
     };
 
     const bgColor = isDark ? '#121212' : '#F5F7FA';
@@ -115,7 +110,7 @@ const MobileLearnDashboard = ({ navigation }: any) => {
             >
                 {/* Premium Header */}
                 <LinearGradient
-                    colors={['#6A5AE0', '#8B7AFF', '#9D8FFF']}
+                    colors={['#4A00E0', '#8E2DE2']} // Deep, vibrant Purple
                     style={[styles.header, { paddingTop: insets.top + 8 }]}
                     start={{ x: 0, y: 0 }}
                     end={{ x: 1, y: 1 }}
@@ -147,10 +142,10 @@ const MobileLearnDashboard = ({ navigation }: any) => {
                         </View>
                     </View>
 
-                    {/* Enhanced Daily Goal */}
-                    <View style={styles.goalCard}>
+                    {/* Enhanced Daily Goal with Glass Border */}
+                    <View style={[styles.goalCard, { borderWidth: 1, borderColor: 'rgba(255,255,255,0.3)' }]}>
                         <LinearGradient
-                            colors={['rgba(255,255,255,0.25)', 'rgba(255,255,255,0.15)']}
+                            colors={['rgba(255,255,255,0.2)', 'rgba(255,255,255,0.1)']}
                             style={styles.goalGradient}
                             start={{ x: 0, y: 0 }}
                             end={{ x: 1, y: 0 }}
@@ -167,7 +162,7 @@ const MobileLearnDashboard = ({ navigation }: any) => {
                                     colors={['#00C48C', '#64FFDA']}
                                     start={{ x: 0, y: 0 }}
                                     end={{ x: 1, y: 0 }}
-                                    style={[styles.progressFill, { width: `${(currentXP / targetXP) * 100}%` }]}
+                                    style={[styles.progressFill, { width: `${Math.min((currentXP / targetXP) * 100, 100)}%` }]}
                                 />
                             </View>
                             <Text style={styles.goalMotivation}>
@@ -191,21 +186,21 @@ const MobileLearnDashboard = ({ navigation }: any) => {
                             style={styles.exploreCard}
                         >
                             <LinearGradient
-                                colors={['#E0F7FA', '#B2EBF2', '#80DEEA']}
+                                colors={['#00d2ff', '#3a7bd5']} // Vibrant Cyan-Blue
                                 style={styles.exploreGradient}
                                 start={{ x: 0, y: 0 }}
                                 end={{ x: 1, y: 1 }}
                             >
                                 <View style={styles.exploreContent}>
                                     <View style={styles.exploreTextContainer}>
-                                        <Text style={styles.exploreTitle}>Science Interactive</Text>
-                                        <Text style={styles.exploreSubtitle}>Explore 3D Models</Text>
-                                        <View style={styles.exploreBadge}>
+                                        <Text style={[styles.exploreTitle, { color: '#fff' }]}>Science Interactive</Text>
+                                        <Text style={[styles.exploreSubtitle, { color: 'rgba(255,255,255,0.9)' }]}>Explore 3D Models</Text>
+                                        <View style={[styles.exploreBadge, { backgroundColor: '#FF6B6B' }]}>
                                             <Text style={styles.exploreBadgeText}>NEW</Text>
                                         </View>
                                     </View>
-                                    <View style={styles.exploreIcon}>
-                                        <MaterialCommunityIcons name="cube-outline" size={36} color="#00838F" />
+                                    <View style={[styles.exploreIcon, { backgroundColor: 'rgba(255,255,255,0.2)' }]}>
+                                        <MaterialCommunityIcons name="cube-outline" size={36} color="#fff" />
                                     </View>
                                 </View>
                             </LinearGradient>

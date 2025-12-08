@@ -102,6 +102,7 @@ const GeneticsLabScreen = () => {
     const [gridState, setGridState] = useState<string[][]>([["", ""], ["", ""]]);
     const [showTutorial, setShowTutorial] = useState(true);
     const [completed, setCompleted] = useState(false);
+    const [wrongCell, setWrongCell] = useState<{ r: number, c: number } | null>(null);
 
     const currentLevel = LEVELS[currentLevelIdx];
 
@@ -184,6 +185,11 @@ const GeneticsLabScreen = () => {
 
             if (allele !== expectedTop && allele !== expectedLeft) {
                 soundManager.playWrong();
+
+                // Trigger visual feedback
+                setWrongCell({ r: row, c: col });
+                setTimeout(() => setWrongCell(null), 500);
+
                 return prev;
             }
 
@@ -195,6 +201,12 @@ const GeneticsLabScreen = () => {
             newGrid[row][col] = newVal;
             return newGrid;
         });
+    };
+
+    const handleReset = () => {
+        setGridState([["", ""], ["", ""]]);
+        setCompleted(false);
+        soundManager.playClick();
     };
 
     useEffect(() => {
@@ -248,6 +260,12 @@ const GeneticsLabScreen = () => {
                                 iconColor="#2E7D32"
                                 onPress={() => setShowTutorial(true)}
                             />
+                            <IconButton
+                                icon="refresh"
+                                size={24}
+                                iconColor="#2E7D32"
+                                onPress={handleReset}
+                            />
                         </View>
                     </Surface>
 
@@ -271,16 +289,22 @@ const GeneticsLabScreen = () => {
                                     <DraggableAllele allele={pAllele} source="left" onDrop={handleDropWithMeasurement} disabled={completed} />
                                 </View>
                                 {/* Grid Cells */}
-                                {[0, 1].map(cIdx => (
-                                    <View
-                                        key={`cell-${rIdx}-${cIdx}`}
-                                        style={styles.cell}
-                                        ref={ref => setDropZoneRef(rIdx, cIdx, ref)}
-                                        collapsable={false} // Important for measure
-                                    >
-                                        <Text style={styles.cellText}>{gridState[rIdx][cIdx]}</Text>
-                                    </View>
-                                ))}
+                                {[0, 1].map(cIdx => {
+                                    const isWrong = wrongCell?.r === rIdx && wrongCell?.c === cIdx;
+                                    return (
+                                        <View
+                                            key={`cell-${rIdx}-${cIdx}`}
+                                            style={[
+                                                styles.cell,
+                                                isWrong && { backgroundColor: '#FFEBEE', borderColor: '#EF5350' }
+                                            ]}
+                                            ref={ref => setDropZoneRef(rIdx, cIdx, ref)}
+                                            collapsable={false} // Important for measure
+                                        >
+                                            <Text style={styles.cellText}>{gridState[rIdx][cIdx]}</Text>
+                                        </View>
+                                    );
+                                })}
                             </View>
                         ))}
                     </View>

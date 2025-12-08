@@ -75,56 +75,56 @@ const MobileHomeScreen = ({ navigation }: any) => {
             id: '1',
             title: t('home.lessons') || 'Lessons',
             icon: 'book-open-variant',
-            gradient: ['#E040FB', '#EA80FC'],
+            gradient: ['#4A00E0', '#8E2DE2'], // Deep Purple
             onPress: () => navigation.navigate('Learn', { screen: 'LearnDashboard' }),
         },
         {
             id: '2',
             title: t('home.quiz') || 'Quiz',
             icon: 'help-circle-outline',
-            gradient: ['#FF4081', '#FF80AB'],
+            gradient: ['#ec008c', '#fc6767'], // Pink-Red
             onPress: () => navigation.navigate('Learn', { screen: 'Quiz' }),
         },
         {
             id: '3',
             title: t('home.games') || 'Games',
             icon: 'gamepad-variant',
-            gradient: ['#00B0FF', '#40C4FF'],
+            gradient: ['#11998e', '#38ef7d'], // Teal-Green
             onPress: () => navigation.navigate('Games'),
         },
         {
             id: '4',
             title: 'Rewards',
             icon: 'trophy-outline',
-            gradient: ['#FFAB00', '#FFD740'],
+            gradient: ['#f12711', '#f5af19'], // Gold-Orange
             onPress: () => navigation.navigate('Rewards'),
         },
         {
             id: '5',
             title: 'Science',
             icon: 'flask-outline',
-            gradient: ['#00E676', '#69F0AE'],
+            gradient: ['#00d2ff', '#3a7bd5'], // Cyan-Blue
             onPress: () => navigation.navigate('Science'),
         },
         {
             id: '6',
             title: 'Sync',
             icon: 'cloud-sync',
-            gradient: ['#78909C', '#B0BEC5'],
+            gradient: ['#4e4376', '#2b5876'], // Deep Blue/Purple
             onPress: () => navigation.navigate('Sync'),
         },
         {
             id: '7',
             title: 'Leaderboard',
             icon: 'podium',
-            gradient: ['#FFD700', '#FFE57F'],
+            gradient: ['#FDC830', '#F37335'], // Rich Gold
             onPress: () => navigation.navigate('Leaderboard'),
         },
         {
             id: '8',
             title: t('home.classroom'),
             icon: 'school',
-            gradient: ['#26A69A', '#80CBC4'],
+            gradient: ['#8E2DE2', '#4A00E0'], // Electric Violet
             onPress: () => navigation.navigate('Classroom'),
         },
     ];
@@ -140,16 +140,24 @@ const MobileHomeScreen = ({ navigation }: any) => {
             >
                 {/* Compact Header */}
                 <LinearGradient
-                    colors={gradients.primary as any}
+                    colors={['#4A00E0', '#8E2DE2']} // Unified Deep Purple
                     style={[styles.header, { paddingTop: insets.top + 8 }]}
+                    start={{ x: 0, y: 0 }}
+                    end={{ x: 1, y: 1 }}
                 >
+                    {/* Decorative Circles (Added for consistency) */}
+                    <View style={[styles.decorativeCircle, { top: -40, right: -30, width: 120, height: 120 }]} />
+                    <View style={[styles.decorativeCircle, { bottom: -20, left: -20, width: 80, height: 80 }]} />
+
                     {/* User Row */}
                     <View style={styles.userRow}>
                         <TouchableOpacity onPress={() => navigation.navigate('Profile')} style={styles.avatarButton}>
-                            <Image
-                                source={(AVATAR_OPTIONS.find(a => a.id === parseInt(user?.avatar || '1')) || AVATAR_OPTIONS[0]).source}
-                                style={styles.avatar}
-                            />
+                            <View style={styles.avatarGlow}>
+                                <Image
+                                    source={(AVATAR_OPTIONS.find(a => a.id === parseInt(user?.avatar || '1')) || AVATAR_OPTIONS[0]).source}
+                                    style={styles.avatar}
+                                />
+                            </View>
                         </TouchableOpacity>
                         <View style={styles.greeting}>
                             <Text style={styles.welcomeText}>Welcome back,</Text>
@@ -165,20 +173,47 @@ const MobileHomeScreen = ({ navigation }: any) => {
                         </View>
                     </View>
 
-                    {/* XP Progress */}
-                    <View style={styles.xpCard}>
-                        <View style={styles.xpRow}>
-                            <View style={styles.levelBadge}>
-                                <Text style={styles.levelText}>LVL {level}</Text>
+                    {/* Enhanced Daily Goal with Glass Border (Unified) */}
+                    <View style={[styles.goalCard, { borderWidth: 1, borderColor: 'rgba(255,255,255,0.3)' }]}>
+                        <LinearGradient
+                            colors={['rgba(255,255,255,0.2)', 'rgba(255,255,255,0.1)']}
+                            style={styles.goalGradient}
+                            start={{ x: 0, y: 0 }}
+                            end={{ x: 1, y: 0 }}
+                        >
+                            <View style={styles.goalHeader}>
+                                <View style={styles.goalIconBg}>
+                                    <MaterialCommunityIcons name="target" size={20} color="#6A5AE0" />
+                                </View>
+                                <Text style={styles.goalTitle}>Daily Goal</Text>
+                                <Text style={styles.goalXP}>{xpInLevel}/50 XP</Text>
                             </View>
-                            <Text style={styles.xpText}>{xpInLevel}/{xpForNextLevel} XP</Text>
+                            <View style={styles.progressBarContainer}>
+                                <LinearGradient
+                                    colors={['#00C48C', '#64FFDA']}
+                                    start={{ x: 0, y: 0 }}
+                                    end={{ x: 1, y: 0 }}
+                                    style={[styles.progressFill, { width: `${Math.min((xpInLevel / 50) * 100, 100)}%` }]}
+                                />
+                            </View>
+                            <Text style={styles.goalMotivation}>
+                                {xpInLevel >= 50 ? '🎉 Goal achieved!' : '💪 Keep going!'}
+                            </Text>
+                        </LinearGradient>
+                    </View>
+
+                    {/* Level Progress (Restored) */}
+                    <View style={styles.levelProgressContainer}>
+                        <View style={styles.levelInfo}>
+                            <Text style={styles.levelLabel}>Level {level}</Text>
+                            <Text style={styles.levelXP}>{xpInLevel}/{xpForNextLevel} XP</Text>
                         </View>
-                        <View style={styles.progressBar}>
+                        <View style={styles.levelBarBg}>
                             <LinearGradient
-                                colors={['#00C48C', '#64FFDA']}
+                                colors={['#FFD700', '#FFA000']} // Gold Gradient for Level
                                 start={{ x: 0, y: 0 }}
                                 end={{ x: 1, y: 0 }}
-                                style={[styles.progressFill, { width: `${(xpInLevel / xpForNextLevel) * 100}%` }]}
+                                style={[styles.levelBarFill, { width: `${(xpInLevel / xpForNextLevel) * 100}%` }]}
                             />
                         </View>
                     </View>
@@ -186,25 +221,6 @@ const MobileHomeScreen = ({ navigation }: any) => {
 
                 {/* Content */}
                 <View style={styles.content}>
-                    {/* Daily Goal */}
-                    <Animated.View entering={FadeInDown.delay(100)} style={styles.section}>
-                        <Surface style={[styles.dailyGoalCard, { backgroundColor: cardBgColor }]} elevation={2}>
-                            <View style={styles.dailyGoalHeader}>
-                                <MaterialCommunityIcons name="target" size={20} color={colors.primary} />
-                                <Text style={[styles.dailyGoalTitle, { color: textColor }]}>Daily Goal</Text>
-                                <Text style={[styles.dailyGoalXP, { color: secondaryTextColor }]}>{xpInLevel}/50 XP</Text>
-                            </View>
-                            <View style={styles.dailyProgressBar}>
-                                <LinearGradient
-                                    colors={[gradients.primary[0], gradients.primary[1]]}
-                                    start={{ x: 0, y: 0 }}
-                                    end={{ x: 1, y: 0 }}
-                                    style={[styles.dailyProgressFill, { width: `${Math.min((xpInLevel / 50) * 100, 100)}%` }]}
-                                />
-                            </View>
-                        </Surface>
-                    </Animated.View>
-
                     {/* Explore */}
                     <Animated.View entering={FadeInDown.delay(150)} style={styles.section}>
                         <Text style={[styles.sectionTitle, { color: textColor }]}>{t('home.explore')}</Text>
@@ -307,88 +323,150 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 24,
         borderBottomRightRadius: 24,
     },
+    decorativeCircle: {
+        position: 'absolute',
+        borderRadius: 999,
+        backgroundColor: 'rgba(255,255,255,0.1)',
+    },
     userRow: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginBottom: spacing.sm,
+        marginBottom: spacing.md,
     },
     avatarButton: {
         marginRight: spacing.sm,
     },
+    avatarGlow: {
+        padding: 2,
+        borderRadius: 24,
+        backgroundColor: 'rgba(255,255,255,0.3)',
+    },
     avatar: {
-        width: 40,
-        height: 40,
-        borderRadius: 20,
-        borderWidth: 2,
-        borderColor: 'rgba(255,255,255,0.8)',
+        width: 44,
+        height: 44,
+        borderRadius: 22,
+        borderWidth: 3,
+        borderColor: '#fff',
     },
     greeting: {
         flex: 1,
     },
     welcomeText: {
-        color: 'rgba(255,255,255,0.9)',
-        fontSize: 11,
+        color: 'rgba(255,255,255,0.95)',
+        fontSize: 12,
         fontWeight: '600',
+        letterSpacing: 0.3,
     },
     nameText: {
         color: '#fff',
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: 'bold',
+        letterSpacing: 0.2,
     },
     headerActions: {
         flexDirection: 'row',
+        alignItems: 'center',
         gap: spacing.sm,
     },
     streakBadge: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: 'rgba(0,0,0,0.2)',
-        paddingHorizontal: 8,
-        paddingVertical: 4,
-        borderRadius: 16,
+        backgroundColor: 'rgba(0,0,0,0.25)',
+        paddingHorizontal: 10,
+        paddingVertical: 6,
+        borderRadius: 20,
         gap: 4,
+        borderWidth: 1,
+        borderColor: 'rgba(255,255,255,0.2)',
     },
     streakText: {
         color: '#FFD700',
         fontWeight: 'bold',
-        fontSize: 12,
+        fontSize: 14,
     },
-    xpCard: {
-        backgroundColor: 'rgba(255,255,255,0.15)',
-        borderRadius: 12,
-        padding: 10,
-        borderWidth: 1,
-        borderColor: 'rgba(255,255,255,0.2)',
+    goalCard: {
+        borderRadius: 16,
+        overflow: 'hidden',
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.1,
+        shadowRadius: 8,
+        elevation: 4,
     },
-    xpRow: {
+    goalGradient: {
+        padding: spacing.md,
+        borderRadius: 16,
+    },
+    goalHeader: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
         alignItems: 'center',
+        gap: 8,
+        marginBottom: 8,
+    },
+    goalIconBg: {
+        width: 32,
+        height: 32,
+        borderRadius: 16,
+        backgroundColor: '#fff',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    goalTitle: {
+        flex: 1,
+        color: '#fff',
+        fontSize: 14,
+        fontWeight: 'bold',
+    },
+    goalXP: {
+        color: '#fff',
+        fontSize: 12,
+        fontWeight: '700',
+    },
+    progressBarContainer: {
+        height: 8,
+        backgroundColor: 'rgba(0,0,0,0.2)',
+        borderRadius: 4,
+        overflow: 'hidden',
         marginBottom: 6,
     },
-    levelBadge: {
-        backgroundColor: '#FFD700',
-        paddingHorizontal: 6,
-        paddingVertical: 2,
-        borderRadius: 6,
+    progressFill: {
+        height: '100%',
+        borderRadius: 4,
     },
-    levelText: {
-        color: '#000',
-        fontWeight: 'bold',
-        fontSize: 9,
-    },
-    xpText: {
+    goalMotivation: {
         color: '#fff',
         fontSize: 11,
         fontWeight: '600',
+        textAlign: 'center',
     },
-    progressBar: {
+    // Restored Level Bar Styles
+    levelProgressContainer: {
+        marginTop: spacing.md,
+        paddingTop: spacing.sm,
+        borderTopWidth: 1,
+        borderTopColor: 'rgba(255,255,255,0.1)',
+    },
+    levelInfo: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: 6,
+    },
+    levelLabel: {
+        color: '#fff',
+        fontSize: 12,
+        fontWeight: 'bold',
+    },
+    levelXP: {
+        color: 'rgba(255,255,255,0.8)',
+        fontSize: 12,
+    },
+    levelBarBg: {
         height: 6,
-        backgroundColor: 'rgba(0,0,0,0.2)',
+        backgroundColor: 'rgba(0,0,0,0.3)',
         borderRadius: 3,
         overflow: 'hidden',
     },
-    progressFill: {
+    levelBarFill: {
         height: '100%',
         borderRadius: 3,
     },
@@ -415,38 +493,6 @@ const styles = StyleSheet.create({
         color: '#2196F3',
         fontWeight: '600',
         fontSize: 13,
-    },
-    dailyGoalCard: {
-        backgroundColor: '#fff',
-        borderRadius: 16,
-        padding: spacing.md,
-    },
-    dailyGoalHeader: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: spacing.sm,
-        marginBottom: spacing.sm,
-    },
-    dailyGoalTitle: {
-        flex: 1,
-        fontSize: 14,
-        fontWeight: '600',
-        color: '#1A1A1A',
-    },
-    dailyGoalXP: {
-        fontSize: 12,
-        color: '#666',
-        fontWeight: '600',
-    },
-    dailyProgressBar: {
-        height: 8,
-        backgroundColor: '#E0E0E0',
-        borderRadius: 4,
-        overflow: 'hidden',
-    },
-    dailyProgressFill: {
-        height: '100%',
-        borderRadius: 4,
     },
     grid: {
         flexDirection: 'row',

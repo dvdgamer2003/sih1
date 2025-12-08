@@ -11,13 +11,26 @@ import { getData } from '../offline/offlineStorage';
 // To change the API URL, set EXPO_PUBLIC_API_URL in your .env file or update the default below
 // Example for physical device: 'http://192.168.1.7:5000/api' (replace with your computer's IP)
 
+import Constants from 'expo-constants';
+
 const getDefaultApiUrl = () => {
-    // Use localhost for web and Android emulator
+    // For Web/Emulator: use localhost if explicitly running there
     if (Platform.OS === 'web') {
         return 'http://localhost:5000/api';
     }
-    // For Android emulator, use 10.0.2.2 which maps to host's localhost
-    // For iOS simulator and physical devices on same network, use your computer's IP
+
+    // Dynamic IP detection for development (Expo Go / Dev Client)
+    // This allows the app to automatically connect to the machine running the bundler (metro)
+    // regardless of the IP address changes.
+    if (__DEV__) {
+        const debuggerHost = Constants.expoConfig?.hostUri;
+        if (debuggerHost) {
+            const ip = debuggerHost.split(':')[0];
+            return `http://${ip}:5000/api`;
+        }
+    }
+
+    // Fallback or explicit override
     return 'http://localhost:5000/api';
 };
 

@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     },
     content: {
         width: '100%',
-        maxWidth: 400,
+        maxWidth: '90%',
     },
     card: {
         padding: spacing.xl,
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     },
     stepRow: {
         flexDirection: 'row',
-        alignItems: 'center',
+        alignItems: 'flex-start', // Better for multiline text
         gap: spacing.md,
     },
     stepBadge: {

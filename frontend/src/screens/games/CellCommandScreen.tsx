@@ -5,7 +5,10 @@ import Animated, {
     useSharedValue,
     useAnimatedStyle,
     withSpring,
-    runOnJS
+    withRepeat,
+    runOnJS,
+    FadeIn,
+    FadeOut
 } from 'react-native-reanimated';
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -20,11 +23,11 @@ const { height } = Dimensions.get('window');
 
 // Game Data
 const ORGANELLES = [
-    { id: 'nucleus', name: 'Nucleus', icon: 'circle-opacity', color: '#9C27B0', targetPos: { x: 0, y: 0 } },
-    { id: 'mitochondria', name: 'Mitochondria', icon: 'bacteria', color: '#FF9800', targetPos: { x: -80, y: -60 } },
-    { id: 'ribosome', name: 'Ribosome', icon: 'dots-hexagon', color: '#F44336', targetPos: { x: 60, y: 50 } },
-    { id: 'vacuole', name: 'Vacuole', icon: 'water', color: '#2196F3', targetPos: { x: 70, y: -40 } },
-    { id: 'lysosome', name: 'Lysosome', icon: 'virus', color: '#4CAF50', targetPos: { x: -50, y: 70 } },
+    { id: 'nucleus', name: 'Nucleus', icon: 'circle-opacity', color: '#E040FB', targetPos: { x: 0, y: 0 }, fact: "The control center that holds DNA!" },
+    { id: 'mitochondria', name: 'Mitochondria', icon: 'bacteria', color: '#FFAB40', targetPos: { x: -80, y: -60 }, fact: "The Powerhouse of the cell!" },
+    { id: 'ribosome', name: 'Ribosome', icon: 'dots-hexagon', color: '#FF5252', targetPos: { x: 60, y: 50 }, fact: "Makes proteins for the cell." },
+    { id: 'vacuole', name: 'Vacuole', icon: 'water', color: '#40C4FF', targetPos: { x: 70, y: -40 }, fact: "Stores water and nutrients." },
+    { id: 'lysosome', name: 'Lysosome', icon: 'virus', color: '#69F0AE', targetPos: { x: -50, y: 70 }, fact: "Cleans up waste and recycling." },
 ];
 
 const DropZone = ({ x, y, active }: { x: number, y: number, active: boolean }) => (
@@ -38,10 +41,14 @@ const DraggableItem = ({ item, onDrop, completed }: { item: any, onDrop: (id: st
     const translateY = useSharedValue(0);
     const context = useSharedValue({ x: 0, y: 0 });
 
+    const scale = useSharedValue(1);
+
     const pan = Gesture.Pan()
         .onStart(() => {
             if (completed) return;
             context.value = { x: translateX.value, y: translateY.value };
+            scale.value = withSpring(1.2);
+            soundManager.playClick();
         })
         .onUpdate((event) => {
             if (completed) return;
@@ -50,6 +57,7 @@ const DraggableItem = ({ item, onDrop, completed }: { item: any, onDrop: (id: st
         })
         .onEnd((event) => {
             if (completed) return;
+            scale.value = withSpring(1);
             if (event.absoluteY < height * 0.6) {
                 runOnJS(onDrop)(item.id);
             }
@@ -62,8 +70,10 @@ const DraggableItem = ({ item, onDrop, completed }: { item: any, onDrop: (id: st
             transform: [
                 { translateX: translateX.value },
                 { translateY: translateY.value },
+                { scale: scale.value }
             ],
-            opacity: completed ? 0.5 : 1
+            opacity: completed ? 0.5 : 1,
+            zIndex: scale.value > 1 ? 100 : 1
         };
     });
 
@@ -85,11 +95,32 @@ const CellCommandScreen = () => {
     const [placedItems, setPlacedItems] = useState<string[]>([]);
     const [currentOrganelleIndex, setCurrentOrganelleIndex] = useState(0);
 
+    const [fact, setFact] = useState<string | null>(null);
+
+    // Breathing animation for cell
+    const membraneScale = useSharedValue(1);
+
+    React.useEffect(() => {
+        membraneScale.value = withRepeat(
+            withSpring(1.05, { damping: 2000, stiffness: 50 }), // Subtle breath
+            -1,
+            true
+        );
+    }, []);
+
+    const membraneStyle = useAnimatedStyle(() => ({
+        transform: [{ scale: membraneScale.value }]
+    }));
+
     const handleDrop = (id: string) => {
         if (id === ORGANELLES[currentOrganelleIndex].id) {
             soundManager.playCorrect();
             addScore(50);
             setPlacedItems(prev => [...prev, id]);
+
+            // Show Fact
+            setFact(ORGANELLES[currentOrganelleIndex].fact || "Correct!");
+            setTimeout(() => setFact(null), 3000);
 
             if (currentOrganelleIndex < ORGANELLES.length - 1) {
                 setCurrentOrganelleIndex(prev => prev + 1);
@@ -107,11 +138,11 @@ const CellCommandScreen = () => {
         <GameLayout title="Cell Command" score={score}>
             <GestureHandlerRootView style={styles.container}>
                 <LinearGradient
-                    colors={['#2c3e50', '#000000']}
+                    colors={['#1A0033', '#000033', '#000']}
                     style={styles.gradient}
                 >
                     <View style={styles.cellContainer}>
-                        <View style={styles.cellMembrane}>
+                        <Animated.View style={[styles.cellMembrane, membraneStyle]}>
                             {placedItems.map(id => {
                                 const item = ORGANELLES.find(o => o.id === id);
                                 if (!item) return null;
@@ -141,7 +172,15 @@ const CellCommandScreen = () => {
                                     active={true}
                                 />
                             )}
-                        </View>
+                        </Animated.View>
+
+                        {/* Fact Popup */}
+                        {fact && (
+                            <Animated.View entering={FadeIn.duration(300)} exiting={FadeOut} style={styles.factCard}>
+                                <Text style={styles.factText}>{fact}</Text>
+                            </Animated.View>
+                        )}
+
                         <Text style={styles.instructionText}>
                             Place the <Text style={{ fontWeight: 'bold', color: currentTarget?.color }}>{currentTarget?.name}</Text>
                         </Text>
@@ -195,8 +234,8 @@ const styles = StyleSheet.create({
         height: 300,
         borderRadius: 150,
         borderWidth: 4,
-        borderColor: 'rgba(255,255,255,0.5)',
-        backgroundColor: 'rgba(255,255,255,0.05)',
+        borderColor: '#4FC3F7',
+        backgroundColor: 'rgba(79, 195, 247, 0.1)',
         justifyContent: 'center',
         alignItems: 'center',
         position: 'relative',
@@ -233,9 +272,29 @@ const styles = StyleSheet.create({
         marginTop: spacing.xl,
         color: '#fff',
         fontSize: 18,
+        textShadowColor: 'rgba(0,0,0,0.8)',
+        textShadowRadius: 4,
+        textAlign: 'center',
+        paddingHorizontal: 20
+    },
+    factCard: {
+        position: 'absolute',
+        top: 60,
+        backgroundColor: 'rgba(255,255,255,0.95)',
+        padding: 16,
+        borderRadius: 16,
+        maxWidth: 280,
+        elevation: 6,
+        zIndex: 200,
+    },
+    factText: {
+        color: '#1A237E',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        fontSize: 16,
     },
     palette: {
-        backgroundColor: '#fff',
+        backgroundColor: 'rgba(255,255,255,0.9)',
         borderTopLeftRadius: 24,
         borderTopRightRadius: 24,
         padding: spacing.lg,

@@ -77,7 +77,7 @@ const HomeScreen = ({ navigation }: any) => {
             title: t('home.lessons'),
             icon: 'book-open-variant',
             color: '#E8DEF8',
-            gradient: ['#9C27B0', '#BA68C8'],
+            gradient: ['#4A00E0', '#8E2DE2'], // Deep Purple
             onPress: () => navigation.navigate('Learn', { screen: 'LearnDashboard' }),
         },
         {
@@ -85,7 +85,7 @@ const HomeScreen = ({ navigation }: any) => {
             title: t('home.quiz'),
             icon: 'help-circle-outline',
             color: '#F2B8B5',
-            gradient: ['#E91E63', '#F06292'],
+            gradient: ['#ec008c', '#fc6767'], // Pink-Red
             onPress: () => navigation.navigate('Learn', { screen: 'Quiz' }),
         },
         {
@@ -93,7 +93,7 @@ const HomeScreen = ({ navigation }: any) => {
             title: t('home.games'),
             icon: 'gamepad-variant',
             color: '#C4E7FF',
-            gradient: ['#2196F3', '#42A5F5'],
+            gradient: ['#11998e', '#38ef7d'], // Teal-Green (Fun/Growth)
             onPress: () => navigation.navigate('Games'),
         },
         {
@@ -101,7 +101,7 @@ const HomeScreen = ({ navigation }: any) => {
             title: t('home.rewards'),
             icon: 'trophy-outline',
             color: '#F7D486',
-            gradient: ['#FF9800', '#FFB74D'],
+            gradient: ['#f12711', '#f5af19'], // Gold-Orange
             onPress: () => navigation.navigate('Rewards'),
         },
         {
@@ -109,7 +109,7 @@ const HomeScreen = ({ navigation }: any) => {
             title: t('home.science'),
             icon: 'flask-outline',
             color: '#C3EED0',
-            gradient: ['#4CAF50', '#66BB6A'],
+            gradient: ['#00d2ff', '#3a7bd5'], // Cyan-Blue
             onPress: () => navigation.navigate('Learn', { screen: 'ModelList' }),
         },
         {
@@ -117,7 +117,7 @@ const HomeScreen = ({ navigation }: any) => {
             title: t('home.sync'),
             icon: 'cloud-sync-outline',
             color: '#E0E0E0',
-            gradient: ['#607D8B', '#90A4AE'],
+            gradient: ['#4e4376', '#2b5876'], // Deep Blue/Purple (Tech feel)
             onPress: () => navigation.navigate('Sync'),
         },
         {
@@ -125,7 +125,7 @@ const HomeScreen = ({ navigation }: any) => {
             title: 'Leaderboard',
             icon: 'podium-gold',
             color: '#FFD700',
-            gradient: ['#FFD700', '#FFA500'],
+            gradient: ['#FDC830', '#F37335'], // Rich Gold
             onPress: () => navigation.navigate('Leaderboard'),
         },
         {
@@ -133,7 +133,7 @@ const HomeScreen = ({ navigation }: any) => {
             title: 'Classroom',
             icon: 'school-outline',
             color: '#A78BFA',
-            gradient: ['#8B5CF6', '#A78BFA'],
+            gradient: ['#8E2DE2', '#4A00E0'], // Electric Violet
             onPress: () => navigation.navigate('StudentOnlineAssignments'),
         },
     ];
