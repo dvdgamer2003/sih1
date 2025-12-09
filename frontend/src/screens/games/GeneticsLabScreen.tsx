@@ -17,10 +17,12 @@ import { soundManager } from '../../utils/soundEffects';
 import { useGameTimer } from '../../hooks/useGameTimer';
 import { saveGameResult } from '../../services/gamesService';
 
-const { width } = Dimensions.get('window');
+// ... imports
+import { useWindowDimensions } from 'react-native';
+
+// Constants
 const HEADER_WIDTH = 70;
-const PADDING = 20;
-const CELL_SIZE = (width - HEADER_WIDTH - PADDING * 2) / 2;
+const MAX_GAME_WIDTH = 600;
 const ALLELE_SIZE = 45;
 
 type Allele = 'T' | 't' | 'B' | 'b' | 'P' | 'p';
@@ -62,6 +64,7 @@ const LEVELS: LevelData[] = [
 ];
 
 const DraggableAllele = ({ allele, source, onDrop, disabled }: { allele: Allele, source: string, onDrop: (val: Allele, x: number, y: number) => void, disabled: boolean }) => {
+    // ... existing DraggableAllele code ...
     const translateX = useSharedValue(0);
     const translateY = useSharedValue(0);
     const context = useSharedValue({ x: 0, y: 0 });
@@ -98,43 +101,22 @@ const DraggableAllele = ({ allele, source, onDrop, disabled }: { allele: Allele,
 };
 
 const GeneticsLabScreen = () => {
+    const { width } = useWindowDimensions();
     const { score, addScore, endGame, resetGame } = useGameProgress('genetics_lab');
     const { elapsedTime, startTimer, stopTimer, displayTime, resetTimer: resetGameTimer } = useGameTimer();
     const [currentLevelIdx, setCurrentLevelIdx] = useState(0);
-    // Grid state: 2x2 array of strings (e.g., "Tt")
+
+    // Dynamic Layout Calculation
+    const containerWidth = Math.min(width - 32, MAX_GAME_WIDTH);
+    const cellSize = (containerWidth - HEADER_WIDTH) / 2;
+
     const [gridState, setGridState] = useState<string[][]>([["", ""], ["", ""]]);
     const [showTutorial, setShowTutorial] = useState(true);
     const [completed, setCompleted] = useState(false);
     const [wrongCell, setWrongCell] = useState<{ r: number, c: number } | null>(null);
 
     const currentLevel = LEVELS[currentLevelIdx];
-
-    // Refs to store layout measurements
-    const gridLayoutRef = useRef<{ x: number, y: number, width: number, height: number } | null>(null);
-
-    const handleDrop = (allele: Allele, absX: number, absY: number) => {
-        // Fallback or deprecated - we use handleDropWithMeasurement now.
-        // But if needed, the manual logic would be:
-        // const gridTop = 280; 
-        // const startX = (width - ((CELL_SIZE * 2) + HEADER_WIDTH)) / 2 + HEADER_WIDTH;
-    };
-
-    // We will use a ref for the Container View and measure it legally.
     const containerRef = useRef<View>(null);
-    const [dropZones, setDropZones] = useState<{ row: number, col: number, x: number, y: number, width: number, height: number }[]>([]);
-
-    // We can't easily repeatedly measure in React Native without triggering it.
-    // Enhanced Approach: Update `dropZones` on layout.
-    // However, onLayout gives relative coordinates. 
-    // We'll use a simpler robust heuristic: The grid is large.
-
-    // Let's fallback to the View measure method when measuring is needed, or stick to the simplified logic but making it relative to the VIEW measurement not Screen constants.
-
-    const handleLayout = (event: any) => {
-        const { x, y, width, height } = event.nativeEvent.layout;
-        // This x,y is relative to parent.
-    };
-
     const dropZoneRefs = useRef<{ [key: string]: View | null }>({});
 
     const setDropZoneRef = (row: number, col: number, ref: View | null) => {
@@ -142,9 +124,6 @@ const GeneticsLabScreen = () => {
     };
 
     const handleDropWithMeasurement = async (allele: Allele, absX: number, absY: number) => {
-        // Find which cell contains the point (absX, absY)
-        // We iterate through our refs and measure them.
-
         let targetRow = -1;
         let targetCol = -1;
 
@@ -188,11 +167,8 @@ const GeneticsLabScreen = () => {
 
             if (allele !== expectedTop && allele !== expectedLeft) {
                 soundManager.playWrong();
-
-                // Trigger visual feedback
                 setWrongCell({ r: row, c: col });
                 setTimeout(() => setWrongCell(null), 500);
-
                 return prev;
             }
 
@@ -267,7 +243,7 @@ const GeneticsLabScreen = () => {
                     <LinearGradient colors={['#E8F5E9', '#A5D6A7']} style={styles.background} />
 
                     {/* Header with Help Button */}
-                    <Surface style={styles.headerCard} elevation={2}>
+                    <Surface style={[styles.headerCard, { width: containerWidth }]} elevation={2}>
                         <View style={styles.headerRow}>
                             <View style={{ flex: 1 }}>
                                 <Text variant="titleMedium" style={{ fontWeight: 'bold' }}>{currentLevel.title}</Text>
@@ -294,7 +270,7 @@ const GeneticsLabScreen = () => {
                         <View style={styles.topRow}>
                             <View style={styles.corner} />
                             {currentLevel.parent1.map((a, i) => (
-                                <View key={`p1-${i}`} style={styles.topHeaderCell}>
+                                <View key={`p1-${i}`} style={[styles.topHeaderCell, { width: cellSize }]}>
                                     <DraggableAllele allele={a} source="top" onDrop={handleDropWithMeasurement} disabled={completed} />
                                 </View>
                             ))}
@@ -315,10 +291,11 @@ const GeneticsLabScreen = () => {
                                             key={`cell-${rIdx}-${cIdx}`}
                                             style={[
                                                 styles.cell,
+                                                { width: cellSize, height: cellSize },
                                                 isWrong && { backgroundColor: '#FFEBEE', borderColor: '#EF5350' }
                                             ]}
                                             ref={ref => setDropZoneRef(rIdx, cIdx, ref)}
-                                            collapsable={false} // Important for measure
+                                            collapsable={false}
                                         >
                                             <Text style={styles.cellText}>{gridState[rIdx][cIdx]}</Text>
                                         </View>
@@ -363,7 +340,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        paddingTop: 100
+        paddingTop: 40, // Reduced from 100 for better fit
+        paddingBottom: 20,
     },
     background: {
         ...StyleSheet.absoluteFillObject,
@@ -372,8 +350,8 @@ const styles = StyleSheet.create({
         padding: 16,
         borderRadius: 12,
         backgroundColor: 'rgba(255,255,255,0.9)',
-        marginBottom: 20, // Reduced margin
-        width: width - 40
+        marginBottom: 20,
+        // Width is now set dynamically via inline style
     },
     headerRow: {
         flexDirection: 'row',
@@ -392,23 +370,25 @@ const styles = StyleSheet.create({
         height: 60,
     },
     topHeaderCell: {
-        width: CELL_SIZE,
+        // Width is dynamic
         height: 60,
         justifyContent: 'center',
         alignItems: 'center',
     },
     leftHeaderCell: {
         width: HEADER_WIDTH,
-        height: CELL_SIZE,
+        height: '100%', // Match parent (which should be cellSize) but easier to center if we let flex handle it or manual. 
+        // Actually, parent Grid Row height might be driven by cells. Let's make sure Left Header Cell matches dynamic height if we want squareness, OR just center it.
+        // For simplicity, we used fixed layout before. Now:
         justifyContent: 'center',
         alignItems: 'center',
     },
     gridRow: {
         flexDirection: 'row',
+        alignItems: 'center', // Ensure left header aligns with cells
     },
     cell: {
-        width: CELL_SIZE,
-        height: CELL_SIZE,
+        // width and height set dynamically
         borderWidth: 2,
         borderColor: '#388E3C',
         backgroundColor: 'rgba(255,255,255,0.5)',

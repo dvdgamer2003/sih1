@@ -109,15 +109,34 @@ const getGameContent = async (req, res) => {
                                     id: termId,
                                     label: term.trim(),
                                     description: description ? description.trim() : '',
-                                    connections: [subId],
+                                    connections: [], // Will be set in post-processing
                                     type: 'term'
                                 };
                                 selectedConcepts.push(termNode);
-                                subNode.connections.push(termId);
                             }
                         });
                     }
                 }
+            }
+
+            // Post-Processing: Linearize connections into a Bidirectional Cycle
+            // This ensures a Hamiltonian path exists starting from ANY node.
+            // Topology: Node[i] <-> Node[i+1] (and wrap around from last to first)
+            const count = selectedConcepts.length;
+            if (count > 0) {
+                selectedConcepts.forEach((node, index) => {
+                    const prevIndex = (index - 1 + count) % count;
+                    const nextIndex = (index + 1) % count;
+
+                    const prevId = selectedConcepts[prevIndex].id;
+                    const nextId = selectedConcepts[nextIndex].id;
+
+                    // Set connections to prev and next only
+                    node.connections = [prevId, nextId];
+
+                    // Remove duplicates if count is small (e.g. 2 nodes, prev==next)
+                    node.connections = [...new Set(node.connections)];
+                });
             }
 
             console.log(`Selected concepts count: ${selectedConcepts.length}`);

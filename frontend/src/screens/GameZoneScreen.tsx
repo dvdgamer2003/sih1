@@ -38,6 +38,7 @@ const ConceptChainGame = ({ content, config, onEndGame, difficulty }: any) => {
     const [hintsLeft, setHintsLeft] = useState(config?.hints || 3);
     const [hintActive, setHintActive] = useState(false);
     const [gameEnded, setGameEnded] = useState(false);
+    const [wrongCardId, setWrongCardId] = useState<string | null>(null);
 
     // Difficulty Colors
     const themeColor = difficulty === 'hard' ? '#FF5252' : difficulty === 'medium' ? '#FF9800' : '#4CAF50';
@@ -112,7 +113,18 @@ const ConceptChainGame = ({ content, config, onEndGame, difficulty }: any) => {
                 setTimeout(() => handleGameOver(finalScore), 500);
             }
         } else {
-            Alert.alert("Invalid Link", "Chain broken! Resetting...");
+            // Show visual feedback for wrong card
+            setWrongCardId(card.id);
+            setTimeout(() => setWrongCardId(null), 800);
+
+            // Show informative alert
+            const lastLabel = chain.length > 0 ? chain[chain.length - 1].label : 'Start';
+            Alert.alert(
+                "❌ Wrong Link!",
+                `"${card.label}" is not connected to "${lastLabel}".\n\nTry a different card! Use the hint button if needed.`,
+                [{ text: "Got it", style: "cancel" }]
+            );
+
             setScore((prev: number) => Math.max(0, prev - 5)); // Penalty
 
             // Reset Chain: Return all chained items to availableCards
@@ -186,17 +198,20 @@ const ConceptChainGame = ({ content, config, onEndGame, difficulty }: any) => {
                     <View style={gameStyles.cardsWrapper}>
                         {availableCards.map((card) => {
                             const isHinted = hintActive && isCardValidNext(card);
+                            const isWrong = wrongCardId === card.id;
                             return (
                                 <TouchableOpacity
                                     key={card.id}
                                     style={[
                                         gameStyles.card,
-                                        isHinted && { borderColor: '#FFD700', borderWidth: 3, transform: [{ scale: 1.05 }] }
+                                        isHinted && { borderColor: '#FFD700', borderWidth: 3, transform: [{ scale: 1.05 }] },
+                                        isWrong && { borderColor: '#FF5252', borderWidth: 3, backgroundColor: '#FFEBEE' }
                                     ]}
                                     onPress={() => handleCardPress(card)}
                                 >
-                                    <Text style={gameStyles.cardText}>{card.label}</Text>
+                                    <Text style={[gameStyles.cardText, isWrong && { color: '#D32F2F' }]}>{card.label}</Text>
                                     {isHinted && <MaterialCommunityIcons name="star" size={16} color="#FFD700" style={gameStyles.hintIcon} />}
+                                    {isWrong && <MaterialCommunityIcons name="close-circle" size={16} color="#FF5252" style={gameStyles.hintIcon} />}
                                 </TouchableOpacity>
                             );
                         })}
@@ -671,115 +686,150 @@ const styles = StyleSheet.create({
 const gameStyles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        borderRadius: 12,
+        backgroundColor: '#F0F4FF',
+        borderRadius: 16,
         overflow: 'hidden',
     },
     topBar: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: 12,
-        backgroundColor: '#f8f9fa',
-        borderBottomWidth: 1,
-        borderBottomColor: '#eee',
+        padding: 16,
+        backgroundColor: '#fff',
+        borderBottomWidth: 0,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.08,
+        shadowRadius: 8,
+        elevation: 4,
     },
     statBox: {
         alignItems: 'center',
+        backgroundColor: '#F8F9FF',
+        paddingHorizontal: 20,
+        paddingVertical: 10,
+        borderRadius: 12,
+        minWidth: 90,
     },
     statLabel: {
-        fontSize: 10,
-        color: '#888',
+        fontSize: 11,
+        color: '#8B8B9A',
         textTransform: 'uppercase',
+        fontWeight: '600',
+        letterSpacing: 0.5,
     },
     statValue: {
-        fontSize: 16,
+        fontSize: 20,
         fontWeight: 'bold',
-        color: '#333',
+        color: '#2D3748',
+        marginTop: 2,
     },
     hintButton: {
         flexDirection: 'row',
         alignItems: 'center',
-        paddingVertical: 6,
-        paddingHorizontal: 12,
-        borderRadius: 20,
-        gap: 4,
+        paddingVertical: 10,
+        paddingHorizontal: 16,
+        borderRadius: 25,
+        gap: 6,
+        shadowColor: '#FF9800',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 8,
+        elevation: 4,
     },
     hintText: {
         color: '#fff',
         fontWeight: 'bold',
+        fontSize: 16,
     },
     chainContainer: {
         padding: 16,
-        backgroundColor: '#fafafa',
-        borderBottomWidth: 1,
-        borderBottomColor: '#eee',
+        backgroundColor: 'linear-gradient(180deg, #E8F4FD 0%, #F0F4FF 100%)',
+        borderBottomWidth: 0,
+        minHeight: 100,
     },
     sectionTitle: {
-        fontSize: 14,
-        fontWeight: '600',
-        color: '#666',
-        marginBottom: 8,
+        fontSize: 13,
+        fontWeight: '700',
+        color: '#5B6EE1',
+        marginBottom: 12,
+        textTransform: 'uppercase',
+        letterSpacing: 1,
     },
     chainScroll: {
         alignItems: 'center',
         paddingRight: 20,
+        minHeight: 50,
     },
     chainItemContainer: {
         flexDirection: 'row',
         alignItems: 'center',
     },
     chainNode: {
-        paddingHorizontal: 16,
-        paddingVertical: 8,
+        paddingHorizontal: 18,
+        paddingVertical: 10,
         backgroundColor: '#fff',
-        borderRadius: 20,
+        borderRadius: 25,
         borderWidth: 2,
-        marginRight: 8,
-        elevation: 2,
+        marginRight: 4,
+        shadowColor: '#5B6EE1',
+        shadowOffset: { width: 0, height: 3 },
+        shadowOpacity: 0.15,
+        shadowRadius: 6,
+        elevation: 4,
     },
     nodeText: {
-        fontWeight: 'bold',
-        color: '#333',
+        fontWeight: '700',
+        color: '#2D3748',
+        fontSize: 14,
     },
     emptyChainText: {
-        color: '#999',
+        color: '#A0AEC0',
         fontStyle: 'italic',
+        fontSize: 14,
     },
     cardsContainer: {
         flex: 1,
         padding: 16,
+        backgroundColor: '#F0F4FF',
     },
     cardsGrid: {
-        paddingBottom: 20,
+        paddingBottom: 30,
     },
     cardsWrapper: {
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-between',
-        gap: 12,
+        gap: 14,
     },
     card: {
-        width: '48%',
+        width: '47%',
         backgroundColor: '#fff',
-        padding: 16,
-        borderRadius: 12,
+        padding: 20,
+        borderRadius: 16,
         justifyContent: 'center',
         alignItems: 'center',
-        elevation: 3,
-        marginBottom: 12,
-        minHeight: 80,
+        shadowColor: '#5B6EE1',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.12,
+        shadowRadius: 12,
+        elevation: 5,
+        marginBottom: 14,
+        minHeight: 90,
+        borderWidth: 1,
+        borderColor: '#E8ECF4',
     },
     cardText: {
         textAlign: 'center',
         fontWeight: '600',
-        color: '#333',
-        fontSize: 14,
+        color: '#2D3748',
+        fontSize: 15,
+        lineHeight: 20,
     },
     hintIcon: {
         position: 'absolute',
-        top: 8,
-        right: 8,
+        top: 10,
+        right: 10,
     }
 });
 

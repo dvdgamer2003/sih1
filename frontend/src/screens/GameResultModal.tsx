@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, StyleSheet, Modal, ScrollView, Dimensions, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Modal, ScrollView, TouchableOpacity, useWindowDimensions } from 'react-native';
 import { Text, Button, Surface, IconButton, ActivityIndicator } from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Animated, { FadeInDown, ZoomIn } from 'react-native-reanimated';
@@ -32,7 +32,7 @@ interface GameResultModalProps {
     streakUpdated?: boolean;
 }
 
-const { width, height } = Dimensions.get('window');
+
 
 const GameResultModal: React.FC<GameResultModalProps> = ({
     visible,
@@ -68,6 +68,11 @@ const GameResultModal: React.FC<GameResultModalProps> = ({
 
     const themeColor = getProficiencyColor(deltaResult.proficiency);
 
+    // Responsive dimensions
+    const { width: windowWidth, height: windowHeight } = useWindowDimensions();
+    const modalMaxWidth = Math.min(windowWidth - 40, 500);
+    const modalMaxHeight = windowHeight * 0.85;
+
     return (
         <Modal
             animationType="slide"
@@ -78,13 +83,26 @@ const GameResultModal: React.FC<GameResultModalProps> = ({
             <View style={styles.modalOverlay}>
                 <BlurView intensity={20} style={StyleSheet.absoluteFill} tint="dark" />
 
-                <Animated.View entering={ZoomIn.duration(400)} style={styles.modalContent}>
+                <Animated.View entering={ZoomIn.duration(400)} style={[styles.modalContent, { maxWidth: modalMaxWidth, maxHeight: modalMaxHeight }]}>
                     <Surface style={[styles.surface, { borderColor: themeColor }]} elevation={5}>
+                        {/* Close Button */}
+                        <TouchableOpacity
+                            style={styles.closeButton}
+                            onPress={onClose}
+                            accessibilityLabel="Close modal"
+                        >
+                            <MaterialCommunityIcons name="close" size={24} color="#666" />
+                        </TouchableOpacity>
+
                         <LinearGradient
                             colors={[themeColor + '20', '#ffffff']}
                             style={styles.gradientContainer}
                         >
-                            <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+                            <ScrollView
+                                contentContainerStyle={styles.scrollContent}
+                                showsVerticalScrollIndicator={true}
+                                bounces={true}
+                            >
 
                                 {/* Header badge */}
                                 <Animated.View entering={FadeInDown.delay(200)} style={styles.headerIconContainer}>
@@ -232,8 +250,21 @@ const styles = StyleSheet.create({
     },
     scrollContent: {
         padding: 24,
+        paddingTop: 40, // Extra space for close button
         alignItems: 'center',
         paddingBottom: 40
+    },
+    closeButton: {
+        position: 'absolute',
+        top: 12,
+        right: 12,
+        zIndex: 10,
+        width: 36,
+        height: 36,
+        borderRadius: 18,
+        backgroundColor: 'rgba(0,0,0,0.08)',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     headerIconContainer: {
         alignItems: 'center',

@@ -56,6 +56,9 @@ const getOrganImage = (organName: string) => {
         'Lungs': require('../../../assets/images/organs/lungs.png'),
         'Liver': require('../../../assets/images/organs/liver.png'),
         'Stomach': require('../../../assets/images/organs/stomach.png'),
+        'Kidneys': require('../../../assets/images/organs/kidneys.png'),
+        'Intestines': require('../../../assets/images/organs/intestines.png'),
+        'Pancreas': require('../../../assets/images/organs/pancreas.png'),
     };
     return imageMap[organName] || require('../../../assets/images/organs/human_body.png');
 };
