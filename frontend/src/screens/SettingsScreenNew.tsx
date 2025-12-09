@@ -200,6 +200,14 @@ const SettingsScreen = ({ navigation }: any) => {
                                 />
                             }
                         />
+                        <View style={styles.divider} />
+                        <SettingItem
+                            icon="clock-time-eight-outline"
+                            title="Digital Wellbeing"
+                            description="Track your screen time"
+                            onPress={() => navigation.navigate('DigitalWellbeing')}
+                            gradient={['#10B981', '#059669']}
+                        />
                     </Surface>
                 </Animated.View>
 
@@ -280,7 +288,7 @@ const SettingsScreen = ({ navigation }: any) => {
                 {/* App Info */}
                 <View style={styles.appInfo}>
                     <Text variant="bodySmall" style={styles.appInfoText}>
-                        Rural Learning App v1.0.0
+                        EduGames v1.0.0
                     </Text>
                     <Text variant="bodySmall" style={styles.appInfoText}>
                         Made with ❤️ for rural students
@@ -297,7 +305,7 @@ const SettingsScreen = ({ navigation }: any) => {
                 iconGradient={['#667EEA', '#764BA2']}
             >
                 <View style={styles.modalSection}>
-                    <Text variant="titleLarge" style={styles.appName}>Rural Learning App</Text>
+                    <Text variant="titleLarge" style={styles.appName}>EduGames</Text>
                     <Text variant="bodyMedium" style={styles.versionText}>Version 1.0.0</Text>
                 </View>
 
@@ -335,7 +343,7 @@ const SettingsScreen = ({ navigation }: any) => {
 
                 <View style={styles.modalSection}>
                     <Text variant="bodySmall" style={styles.copyrightText}>
-                        © 2025 Rural Learning App. All rights reserved.
+                        © 2025 EduGames. All rights reserved.
                     </Text>
                 </View>
             </InfoModal>

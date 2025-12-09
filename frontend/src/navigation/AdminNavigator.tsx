@@ -7,6 +7,7 @@ import AdminDashboardScreen from '../screens/AdminDashboardScreen';
 import GlobalAnalyticsScreen from '../screens/admin/GlobalAnalyticsScreen';
 import GlobalSyllabusManagerScreen from '../screens/admin/GlobalSyllabusManagerScreen';
 import QuizBankManagerScreen from '../screens/admin/QuizBankManagerScreen';
+import AdminMapScreen from '../screens/admin/AdminMapScreen';
 import NotificationScreen from '../screens/NotificationScreen';
 
 const Stack = createNativeStackNavigator();
@@ -21,6 +22,7 @@ const AdminNavigator = () => {
             <Stack.Screen name="GlobalAnalytics" component={GlobalAnalyticsScreen} />
             <Stack.Screen name="GlobalSyllabusManager" component={GlobalSyllabusManagerScreen} />
             <Stack.Screen name="QuizBankManager" component={QuizBankManagerScreen} />
+            <Stack.Screen name="AdminMap" component={AdminMapScreen} />
             <Stack.Screen name="Notifications" component={NotificationScreen} />
         </Stack.Navigator>
     );

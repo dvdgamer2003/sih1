@@ -10,7 +10,7 @@ import { useAuth } from '../../context/AuthContext';
 import { learnService } from '../../services/learnService';
 import { progressService } from '../../services/progressService';
 import { spacing } from '../../theme';
-import { AVATAR_OPTIONS } from '../../components/UserGreetingCard';
+import { AVATAR_OPTIONS } from '../../data/avatars';
 import ThemeToggle from '../../components/ThemeToggle';
 import { useAppTheme } from '../../context/ThemeContext';
 
@@ -38,6 +38,11 @@ const MobileLearnDashboard = ({ navigation }: any) => {
         setLoading(true);
         try {
             const classesData = await learnService.getClasses();
+            if (!classesData || !Array.isArray(classesData)) {
+                console.error('classesData is not an array:', classesData);
+                setSubjects([]);
+                return;
+            }
             const currentClassData = classesData.find((c: any) => c.classNumber === selectedClass);
 
             if (currentClassData) {

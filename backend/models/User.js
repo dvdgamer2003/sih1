@@ -44,6 +44,21 @@ const userSchema = new mongoose.Schema({
     // Profile Customization
     avatar: { type: String, default: null },
     themeColor: { type: String, default: '#6366F1' },
+    city: { type: String, default: null },
+
+    // Digital Wellbeing
+    screenTimeHistory: [{
+        date: { type: Date },
+        totalMinutes: { type: Number, default: 0 },
+        breakdown: {
+            games: { type: Number, default: 0 },
+            lessons: { type: Number, default: 0 },
+            quizzes: { type: Number, default: 0 },
+            other: { type: Number, default: 0 }
+        },
+        sessions: { type: Number, default: 0 }
+    }],
+    dailyGoalMinutes: { type: Number, default: 60 },
 
     createdAt: { type: Date, default: Date.now }
 });

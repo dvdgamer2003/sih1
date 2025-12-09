@@ -3,7 +3,7 @@ export const translations = {
     en: {
         // Onboarding
         onboarding: {
-            title: 'Rural Learning App',
+            title: 'EduGames',
             subtitle: 'Learn skills that matter to you 🚀',
             selectLanguage: 'Select Language',
             continue: 'Continue',
@@ -119,7 +119,7 @@ export const translations = {
     hi: {
         // Onboarding
         onboarding: {
-            title: 'ग्रामीण शिक्षा ऐप',
+            title: 'EduGames',
             subtitle: 'वे कौशल सीखें जो आपके लिए मायने रखते हैं 🚀',
             selectLanguage: 'भाषा चुनें',
             continue: 'जारी रखें',
@@ -235,7 +235,7 @@ export const translations = {
     od: {
         // Onboarding
         onboarding: {
-            title: 'ଗ୍ରାମୀଣ ଶିକ୍ଷା ଆପ୍',
+            title: 'EduGames',
             subtitle: 'ଆପଣଙ୍କ ପାଇଁ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ କୌଶଳ ଶିଖନ୍ତୁ 🚀',
             selectLanguage: 'ଭାଷା ଚୟନ କରନ୍ତୁ',
             continue: 'ଜାରି ରଖନ୍ତୁ',

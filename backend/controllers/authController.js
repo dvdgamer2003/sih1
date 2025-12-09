@@ -134,7 +134,7 @@ const logoutUser = async (req, res) => {
 // @access  Private
 const updateProfile = async (req, res) => {
     try {
-        const { name, email, selectedClass, avatar, themeColor } = req.body;
+        const { name, email, selectedClass, avatar, themeColor, city } = req.body;
         const user = await User.findById(req.user._id);
 
         if (user) {
@@ -149,6 +149,9 @@ const updateProfile = async (req, res) => {
             if (themeColor !== undefined) {
                 user.themeColor = themeColor;
             }
+            if (city !== undefined) {
+                user.city = city;
+            }
 
             const updatedUser = await user.save();
 
@@ -162,7 +165,8 @@ const updateProfile = async (req, res) => {
                 xp: updatedUser.xp,
                 streak: updatedUser.streak,
                 avatar: updatedUser.avatar,
-                themeColor: updatedUser.themeColor
+                themeColor: updatedUser.themeColor,
+                city: updatedUser.city
             });
         } else {
             res.status(404).json({ message: 'User not found' });

@@ -10,15 +10,7 @@ import { useAppTheme } from '../context/ThemeContext';
 import { useResponsive } from '../hooks/useResponsive';
 
 // Avatar options with local images
-export const AVATAR_OPTIONS = [
-    { id: 1, source: require('../assets/avatars/avatar_student_1_1763752373295.png'), gradient: ['#FF6B6B', '#FF8E53'] as const },
-    { id: 2, source: require('../assets/avatars/avatar_student_2_1763752389652.png'), gradient: ['#4FACFE', '#00F2FE'] as const },
-    { id: 3, source: require('../assets/avatars/avatar_student_3_1763752405157.png'), gradient: ['#A8EDEA', '#FED6E3'] as const },
-    { id: 4, source: require('../assets/avatars/avatar_student_4_1763752424974.png'), gradient: ['#5EE7DF', '#B490CA'] as const },
-    { id: 5, source: require('../assets/avatars/avatar_student_5_1763752442026.png'), gradient: ['#F093FB', '#F5576C'] as const },
-    { id: 6, source: require('../assets/avatars/avatar_student_6_1763752457724.png'), gradient: ['#FAD961', '#F76B1C'] as const },
-    { id: 7, source: require('../assets/avatars/avatar_student_7_1763752477440.png'), gradient: ['#667EEA', '#764BA2'] as const },
-];
+import { AVATAR_OPTIONS } from '../data/avatars';
 
 interface UserGreetingCardProps {
     userName: string;

@@ -11,7 +11,7 @@ import { useResponsive } from '../hooks/useResponsive';
 import Animated, { FadeInDown, FadeInRight, FadeIn } from 'react-native-reanimated';
 import { spacing, gradients, colors, borderRadius } from '../theme';
 import { getStaggerDelay } from '../utils/animations';
-import UserGreetingCard, { AVATAR_OPTIONS } from '../components/UserGreetingCard';
+import UserGreetingCard from '../components/UserGreetingCard';
 import XPProgressCard from '../components/XPProgressCard';
 import ConfettiAnimation from '../components/ConfettiAnimation';
 import { useTranslation } from '../i18n';

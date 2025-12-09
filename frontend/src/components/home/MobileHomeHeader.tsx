@@ -5,7 +5,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { spacing, colors, borderRadius } from '../../theme';
-import { AVATAR_OPTIONS } from '../UserGreetingCard';
+import { AVATAR_OPTIONS } from '../../data/avatars';
 
 interface MobileHomeHeaderProps {
     user: any;

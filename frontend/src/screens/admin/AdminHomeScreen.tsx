@@ -15,7 +15,8 @@ const AdminHomeScreen = () => {
         { title: 'Manage Institutes', icon: 'business', screen: 'AdminInstituteManager', color: '#10B981' },
         { title: 'Manage Users', icon: 'people', screen: 'AdminUserManagement', color: '#8B5CF6' },
         { title: 'Pending Approvals', icon: 'time', screen: 'AdminDashboard', color: '#F59E0B' }, // Reusing existing dashboard for approvals
-        { title: 'Global Analytics', icon: 'stats-chart', screen: 'AdminAnalytics', color: '#3B82F6' },
+        { title: 'Global Analytics', icon: 'stats-chart', screen: 'GlobalAnalytics', color: '#3B82F6' },
+        { title: 'User Locations', icon: 'map', screen: 'AdminMap', color: '#EC4899' },
     ];
 
     return (

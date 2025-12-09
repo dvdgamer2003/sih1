@@ -36,12 +36,13 @@ const TeacherHomeScreen = () => {
     const menuItems = [
         { title: 'Approvals', icon: 'checkmark-circle', screen: 'TeacherApprovals', color: '#8B5CF6', badge: stats.pendingApprovals },
         { title: 'My Students', icon: 'people', screen: 'StudentList', color: '#4F46E5' },
+        { title: 'Student Wellbeing', icon: 'heart', screen: 'TeacherWellbeing', color: '#10B981' },
         { title: 'Assign Chapters', icon: 'book', screen: 'ChapterAssign', color: '#F59E0B' },
-        { title: 'Content Manager', icon: 'folder-open', screen: 'TeacherContentManager', color: '#10B981' },
+        { title: 'Content Manager', icon: 'folder-open', screen: 'TeacherContentManager', color: '#059669' },
         { title: 'Quiz Creator', icon: 'create', screen: 'TeacherQuizCreator', color: '#EC4899' },
         { title: 'Class Analytics', icon: 'stats-chart', screen: 'TeacherAnalytics', color: '#3B82F6' },
         { title: 'Classroom', icon: 'school', screen: 'TeacherClassroom', color: '#6366F1' },
-        { title: 'Game Analytics', icon: 'game-controller', screen: 'TeacherGameAnalytics', color: '#F59E0B' },
+        { title: 'Game Analytics', icon: 'game-controller', screen: 'TeacherGameAnalytics', color: '#F97316' },
         { title: 'Video Manager', icon: 'logo-youtube', screen: 'TeacherVideoManager', color: '#FF0000' },
     ];
 

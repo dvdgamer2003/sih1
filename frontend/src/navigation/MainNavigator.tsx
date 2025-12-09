@@ -24,8 +24,7 @@ import LabelOrganGame from '../screens/games/LabelOrganGame';
 import CellStructureQuiz from '../screens/games/CellStructureQuiz';
 import CellCommandScreen from '../screens/games/CellCommandScreen';
 import DigestiveDashScreen from '../screens/games/DigestiveDashScreen';
-import GeneticsLabScreen from '../screens/games/GeneticsLabScreen';
-import GameZoneScreen from '../screens/GameZoneScreen';
+
 
 // Import other screens
 import SettingsScreenNew from '../screens/SettingsScreenNew';
@@ -77,8 +76,7 @@ const MainNavigator = () => {
             <Stack.Screen name="ForcePlayGame" component={ForcePlayGame} />
             <Stack.Screen name="CellCommand" component={CellCommandScreen} />
             <Stack.Screen name="DigestiveDash" component={DigestiveDashScreen} />
-            <Stack.Screen name="GeneticsLab" component={GeneticsLabScreen} />
-            <Stack.Screen name="GameZone" component={GameZoneScreen} />
+
 
             {/* New Games */}
 
@@ -106,6 +104,7 @@ const MainNavigator = () => {
             <Stack.Screen name="VideoLibrary" component={require('../screens/VideoLibraryScreen').default} />
             <Stack.Screen name="VideoPlayer" component={require('../screens/VideoPlayerScreen').default} />
             <Stack.Screen name="Chatbot" component={require('../screens/ChatbotScreen').default} />
+            <Stack.Screen name="DigitalWellbeing" component={require('../screens/DigitalWellbeingScreen').default} />
         </Stack.Navigator>
     );
 };

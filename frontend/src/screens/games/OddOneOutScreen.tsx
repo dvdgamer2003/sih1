@@ -10,6 +10,7 @@ import Animated, { FadeInDown, FadeIn, BounceIn, ZoomIn } from 'react-native-rea
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useGameTimer } from '../../hooks/useGameTimer';
 import { saveGameResult } from '../../services/gamesService';
+import GameCompletionModal from '../../components/GameCompletionModal';
 
 interface Question {
     question: string;
@@ -88,6 +89,8 @@ const OddOneOutScreen = () => {
     const [timeLeft, setTimeLeft] = useState(60);
     const [gameActive, setGameActive] = useState(true);
     const [gameOver, setGameOver] = useState(false);
+    const [showCompletionModal, setShowCompletionModal] = useState(false);
+    const [finalScore, setFinalScore] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
     const [showExplanation, setShowExplanation] = useState(false);
     const { elapsedTime, startTimer, stopTimer, displayTime, resetTimer: resetGameTimer } = useGameTimer();
@@ -141,13 +144,13 @@ const OddOneOutScreen = () => {
         }, 2000);
     };
 
-    const endGame = (finalScore?: number) => {
+    const endGame = (finalScoreParam?: number) => {
         setGameActive(false);
         setGameOver(true);
         stopTimer();
-        const endScore = finalScore !== undefined ? finalScore : score;
-        const xpReward = Math.floor(endScore / 2);
-        addXP(xpReward, 'Odd One Out');
+        const endScore = finalScoreParam !== undefined ? finalScoreParam : score;
+        setFinalScore(endScore);
+        setShowCompletionModal(true);
 
         saveGameResult({
             gameId: 'odd_one_out',
@@ -165,13 +168,32 @@ const OddOneOutScreen = () => {
         setTimeLeft(60);
         setGameActive(true);
         setGameOver(false);
+        setShowCompletionModal(false);
         setSelectedAnswer(null);
         setShowExplanation(false);
         resetGameTimer();
     };
 
-    if (gameOver) {
-        return (
+    // Calculate XP based on score
+    const xpEarned = Math.floor(finalScore / 2);
+    const accuracy = Math.round((finalScore / (EDUCATIONAL_QUESTIONS.length * 10)) * 100);
+
+    const question = EDUCATIONAL_QUESTIONS[currentQuestion];
+
+    return (
+        <>
+            <GameCompletionModal
+                visible={showCompletionModal}
+                onClose={() => setShowCompletionModal(false)}
+                gameTitle="Odd One Out"
+                score={finalScore}
+                maxScore={EDUCATIONAL_QUESTIONS.length * 10}
+                timeTaken={elapsedTime}
+                xpEarned={xpEarned}
+                accuracy={accuracy}
+                onPlayAgain={resetGame}
+                onGoHome={() => navigation.goBack()}
+            />
             <LinearGradient
                 colors={['#30cfd0', '#330867']}
                 style={styles.container}
@@ -188,169 +210,101 @@ const OddOneOutScreen = () => {
                         <View style={{ width: 40 }} />
                     </View>
 
-                    <Animated.View entering={BounceIn.duration(800)} style={styles.resultContainer}>
-                        <Surface style={styles.resultCard} elevation={5}>
-                            <Animated.View entering={ZoomIn.delay(200)}>
-                                <MaterialCommunityIcons
-                                    name={score >= 60 ? "trophy" : score >= 40 ? "star" : "book-open-variant"}
-                                    size={80}
-                                    color={score >= 60 ? "#FFD700" : score >= 40 ? "#4CAF50" : "#30cfd0"}
-                                />
-                            </Animated.View>
-                            <Text variant="headlineMedium" style={styles.resultTitle}>Game Complete!</Text>
-                            <LinearGradient
-                                colors={score >= 60 ? ['#FFD700', '#FFA000'] : score >= 40 ? ['#4CAF50', '#2E7D32'] : ['#30cfd0', '#330867']}
-                                style={styles.scoreGradient}
-                            >
-                                <Text variant="displaySmall" style={styles.scoreText}>{score}</Text>
-                            </LinearGradient>
-                            <Text variant="titleMedium" style={{ marginBottom: 10, color: isDark ? '#F1F5F9' : '#333' }}>Time: {displayTime}</Text>
-                            <Text variant="bodyLarge" style={styles.resultMessage}>
-                                {score >= 60 ? 'Excellent! 🎉' : score >= 40 ? 'Good Job! 👍' : 'Keep Learning! 📚'}
+                    <LinearGradient
+                        colors={['rgba(255,255,255,0.95)', 'rgba(255,255,255,0.85)']}
+                        style={styles.statsCard}
+                    >
+                        <View style={styles.statItem}>
+                            <MaterialCommunityIcons name="star" size={20} color="#FFD700" />
+                            <Text variant="titleMedium" style={styles.statLabel}>Score: {score}</Text>
+                        </View>
+                        <View style={styles.statItem}>
+                            <MaterialCommunityIcons name="clock-outline" size={20} color={timeLeft < 20 ? "#f44336" : "#30cfd0"} />
+                            <Text variant="titleMedium" style={[styles.statLabel, timeLeft < 20 && { color: '#f44336' }]}>
+                                Left: {timeLeft}s (Time: {displayTime})
                             </Text>
-                            <View style={styles.buttonRow}>
+                        </View>
+                        <View style={styles.statItem}>
+                            <MaterialCommunityIcons name="help-circle" size={20} color="#30cfd0" />
+                            <Text variant="bodyMedium" style={styles.statLabel}>{currentQuestion + 1}/{EDUCATIONAL_QUESTIONS.length}</Text>
+                        </View>
+                    </LinearGradient>
+
+                    <ScrollView style={styles.gameArea} contentContainerStyle={styles.scrollContent}>
+                        <Animated.View entering={FadeInDown.delay(200).duration(600)}>
+                            <Surface style={styles.questionCard} elevation={4}>
                                 <LinearGradient
                                     colors={['#30cfd0', '#330867']}
-                                    style={styles.gradientButton}
+                                    style={styles.categoryBadge}
                                 >
-                                    <Button
-                                        mode="text"
-                                        onPress={resetGame}
-                                        textColor="#fff"
-                                        labelStyle={styles.buttonLabel}
-                                    >
-                                        Play Again
-                                    </Button>
+                                    <Text variant="bodySmall" style={styles.categoryText}>{question.category}</Text>
                                 </LinearGradient>
-                                <Button
-                                    mode="outlined"
-                                    onPress={() => navigation.goBack()}
-                                    style={styles.outlineButton}
-                                    textColor="#30cfd0"
-                                >
-                                    Exit
-                                </Button>
+                                <Text variant="titleLarge" style={styles.questionText}>
+                                    {question.question}
+                                </Text>
+                            </Surface>
+
+                            <View style={styles.optionsGrid}>
+                                {question.options.map((option, index) => {
+                                    const isSelected = selectedAnswer === index;
+                                    const isCorrect = index === question.oddOneIndex;
+
+                                    return (
+                                        <Animated.View
+                                            key={index}
+                                            entering={FadeIn.delay(index * 50)}
+                                            style={styles.optionWrapper}
+                                        >
+                                            {isSelected ? (
+                                                <LinearGradient
+                                                    colors={isCorrect ? ['#4CAF50', '#2E7D32'] : ['#f44336', '#c62828']}
+                                                    style={styles.selectedOption}
+                                                >
+                                                    <MaterialCommunityIcons
+                                                        name={isCorrect ? "check-circle" : "close-circle"}
+                                                        size={16}
+                                                        color="#fff"
+                                                    />
+                                                    <Text style={styles.selectedOptionText}>{option}</Text>
+                                                </LinearGradient>
+                                            ) : (
+                                                <Button
+                                                    mode="outlined"
+                                                    onPress={() => handleAnswer(index)}
+                                                    style={styles.optionButton}
+                                                    contentStyle={styles.optionContent}
+                                                    disabled={selectedAnswer !== null}
+                                                    textColor="#fff"
+                                                    labelStyle={styles.optionLabel}
+                                                >
+                                                    {option}
+                                                </Button>
+                                            )}
+                                        </Animated.View>
+                                    );
+                                })}
                             </View>
-                        </Surface>
-                    </Animated.View>
+
+                            {showExplanation && (
+                                <Animated.View entering={FadeIn.duration(400)}>
+                                    <Surface style={styles.explanationCard} elevation={3}>
+                                        <Text variant="titleSmall" style={[
+                                            styles.explanationTitle,
+                                            { color: selectedAnswer === question.oddOneIndex ? '#4CAF50' : '#f44336' }
+                                        ]}>
+                                            {selectedAnswer === question.oddOneIndex ? '✓ Correct!' : '✗ Incorrect'}
+                                        </Text>
+                                        <Text variant="bodyMedium" style={styles.explanationText}>
+                                            {question.explanation}
+                                        </Text>
+                                    </Surface>
+                                </Animated.View>
+                            )}
+                        </Animated.View>
+                    </ScrollView>
                 </View>
             </LinearGradient>
-        );
-    }
-
-    const question = EDUCATIONAL_QUESTIONS[currentQuestion];
-
-    return (
-        <LinearGradient
-            colors={['#30cfd0', '#330867']}
-            style={styles.container}
-        >
-            <View style={styles.innerContainer}>
-                <View style={styles.header}>
-                    <IconButton
-                        icon="arrow-left"
-                        iconColor="#fff"
-                        size={24}
-                        onPress={() => navigation.goBack()}
-                    />
-                    <Text variant="titleLarge" style={styles.headerTitle}>Odd One Out</Text>
-                    <View style={{ width: 40 }} />
-                </View>
-
-                <LinearGradient
-                    colors={['rgba(255,255,255,0.95)', 'rgba(255,255,255,0.85)']}
-                    style={styles.statsCard}
-                >
-                    <View style={styles.statItem}>
-                        <MaterialCommunityIcons name="star" size={20} color="#FFD700" />
-                        <Text variant="titleMedium" style={styles.statLabel}>Score: {score}</Text>
-                    </View>
-                    <View style={styles.statItem}>
-                        <MaterialCommunityIcons name="clock-outline" size={20} color={timeLeft < 20 ? "#f44336" : "#30cfd0"} />
-                        <Text variant="titleMedium" style={[styles.statLabel, timeLeft < 20 && { color: '#f44336' }]}>
-                            Left: {timeLeft}s (Time: {displayTime})
-                        </Text>
-                    </View>
-                    <View style={styles.statItem}>
-                        <MaterialCommunityIcons name="help-circle" size={20} color="#30cfd0" />
-                        <Text variant="bodyMedium" style={styles.statLabel}>{currentQuestion + 1}/{EDUCATIONAL_QUESTIONS.length}</Text>
-                    </View>
-                </LinearGradient>
-
-                <ScrollView style={styles.gameArea} contentContainerStyle={styles.scrollContent}>
-                    <Animated.View entering={FadeInDown.delay(200).duration(600)}>
-                        <Surface style={styles.questionCard} elevation={4}>
-                            <LinearGradient
-                                colors={['#30cfd0', '#330867']}
-                                style={styles.categoryBadge}
-                            >
-                                <Text variant="bodySmall" style={styles.categoryText}>{question.category}</Text>
-                            </LinearGradient>
-                            <Text variant="titleLarge" style={styles.questionText}>
-                                {question.question}
-                            </Text>
-                        </Surface>
-
-                        <View style={styles.optionsGrid}>
-                            {question.options.map((option, index) => {
-                                const isSelected = selectedAnswer === index;
-                                const isCorrect = index === question.oddOneIndex;
-
-                                return (
-                                    <Animated.View
-                                        key={index}
-                                        entering={FadeIn.delay(index * 50)}
-                                        style={styles.optionWrapper}
-                                    >
-                                        {isSelected ? (
-                                            <LinearGradient
-                                                colors={isCorrect ? ['#4CAF50', '#2E7D32'] : ['#f44336', '#c62828']}
-                                                style={styles.selectedOption}
-                                            >
-                                                <MaterialCommunityIcons
-                                                    name={isCorrect ? "check-circle" : "close-circle"}
-                                                    size={16}
-                                                    color="#fff"
-                                                />
-                                                <Text style={styles.selectedOptionText}>{option}</Text>
-                                            </LinearGradient>
-                                        ) : (
-                                            <Button
-                                                mode="outlined"
-                                                onPress={() => handleAnswer(index)}
-                                                style={styles.optionButton}
-                                                contentStyle={styles.optionContent}
-                                                disabled={selectedAnswer !== null}
-                                                textColor="#fff"
-                                                labelStyle={styles.optionLabel}
-                                            >
-                                                {option}
-                                            </Button>
-                                        )}
-                                    </Animated.View>
-                                );
-                            })}
-                        </View>
-
-                        {showExplanation && (
-                            <Animated.View entering={FadeIn.duration(400)}>
-                                <Surface style={styles.explanationCard} elevation={3}>
-                                    <Text variant="titleSmall" style={[
-                                        styles.explanationTitle,
-                                        { color: selectedAnswer === question.oddOneIndex ? '#4CAF50' : '#f44336' }
-                                    ]}>
-                                        {selectedAnswer === question.oddOneIndex ? '✓ Correct!' : '✗ Incorrect'}
-                                    </Text>
-                                    <Text variant="bodyMedium" style={styles.explanationText}>
-                                        {question.explanation}
-                                    </Text>
-                                </Surface>
-                            </Animated.View>
-                        )}
-                    </Animated.View>
-                </ScrollView>
-            </View>
-        </LinearGradient>
+        </>
     );
 };
 

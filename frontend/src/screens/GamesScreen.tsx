@@ -50,32 +50,6 @@ const GamesScreen = ({ navigation }: any) => {
 
     const allGames: GameItem[] = [
         {
-            id: 100,
-            title: 'Concept Chain',
-            description: 'Connect related concepts',
-            icon: 'link-variant',
-            color: '#FF9800',
-            gradient: ['#F7971E', '#FFD200'],
-            route: 'GameZone',
-            params: { gameType: 'conceptChain', classLevel: '6', subject: 'science', difficulty: 'medium' },
-            category: 'Science',
-            isNew: true,
-            gameId: 'conceptChain'
-        },
-        {
-            id: 13,
-            title: 'Genetics Lab',
-            description: 'Solve the Punnett Square',
-            icon: 'flask',
-            color: '#4CAF50',
-            gradient: ['#11998e', '#38ef7d'],
-            route: 'GeneticsLab',
-            category: 'Science',
-            isNew: true,
-            isPopular: true,
-            gameId: 'genetics_lab'
-        },
-        {
             id: 101,
             title: 'Time Travel Debug',
             description: 'Order historical events',

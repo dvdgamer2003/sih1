@@ -11,6 +11,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useGameTimer } from '../../hooks/useGameTimer';
 import { saveGameResult } from '../../services/gamesService';
 import { calculateDelta } from '../../utils/deltaAssessment';
+import GameCompletionModal from '../../components/GameCompletionModal';
 
 interface OrganLabel {
     id: string;
@@ -72,6 +73,8 @@ const LabelOrganGame = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
     const [gameOver, setGameOver] = useState(false);
+    const [showCompletionModal, setShowCompletionModal] = useState(false);
+    const [finalScore, setFinalScore] = useState(0);
     const [questions, setQuestions] = useState<typeof ALL_QUESTIONS>([]);
     const { elapsedTime, startTimer, stopTimer, displayTime, resetTimer: resetGameTimer } = useGameTimer();
 
@@ -96,21 +99,20 @@ const LabelOrganGame = () => {
                 setCurrentQuestion(currentQuestion + 1);
                 setSelectedAnswer(null);
             } else {
-                const finalScore = correct ? score + 20 : score;
-                const xpReward = Math.floor(finalScore / 5);
-                addXP(xpReward, 'Label the Organ');
+                const computedFinalScore = correct ? score + 20 : score;
+                setFinalScore(computedFinalScore);
                 setGameOver(true);
+                setShowCompletionModal(true);
                 stopTimer();
                 const deltaResult = calculateDelta(elapsedTime, 'medium');
 
                 saveGameResult({
                     gameId: 'label_organ',
-                    score: finalScore,
+                    score: computedFinalScore,
                     maxScore: 200,
                     timeTaken: elapsedTime,
                     difficulty: 'medium',
                     completedLevel: 1,
-                    // Delta Stats
                     delta: deltaResult.delta,
                     proficiency: deltaResult.proficiency,
                     subject: 'Biology',
@@ -125,16 +127,37 @@ const LabelOrganGame = () => {
         setCurrentQuestion(0);
         setSelectedAnswer(null);
         setGameOver(false);
+        setShowCompletionModal(false);
         const shuffled = [...ALL_QUESTIONS].sort(() => Math.random() - 0.5);
         setQuestions(shuffled.slice(0, 10));
         resetGameTimer();
         startTimer();
     };
 
-    // ... (rest of the component)
+    // Calculate XP based on score
+    const xpEarned = Math.floor(finalScore / 5);
+    const accuracy = Math.round((finalScore / 200) * 100);
 
-    if (gameOver) {
-        return (
+    if (questions.length === 0) {
+        return null;
+    }
+
+    const currentQ = questions[currentQuestion];
+
+    return (
+        <>
+            <GameCompletionModal
+                visible={showCompletionModal}
+                onClose={() => setShowCompletionModal(false)}
+                gameTitle="Label the Organ"
+                score={finalScore}
+                maxScore={200}
+                timeTaken={elapsedTime}
+                xpEarned={xpEarned}
+                accuracy={accuracy}
+                onPlayAgain={resetGame}
+                onGoHome={() => navigation.goBack()}
+            />
             <LinearGradient
                 colors={isDark ? ['#4A148C', '#880E4F'] : ['#f093fb', '#f5576c']}
                 style={styles.container}
@@ -148,160 +171,88 @@ const LabelOrganGame = () => {
                             onPress={() => navigation.goBack()}
                         />
                         <Text variant="titleLarge" style={styles.headerTitle}>Label the Organ</Text>
-                        <View style={{ width: 40 }} />
+                        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                            <MaterialCommunityIcons name="clock-outline" size={20} color="#fff" style={{ marginRight: 4 }} />
+                            <Text style={{ color: '#fff', fontWeight: 'bold' }}>{displayTime}</Text>
+                        </View>
                     </View>
 
-                    <Animated.View entering={BounceIn.duration(800)} style={styles.resultContainer}>
-                        <Surface style={styles.resultCard} elevation={5}>
-                            <Animated.View entering={ZoomIn.delay(200)}>
-                                <MaterialCommunityIcons
-                                    name={score >= 160 ? "trophy" : score >= 120 ? "heart-pulse" : "human"}
-                                    size={80}
-                                    color={score >= 160 ? "#FFD700" : score >= 120 ? "#f5576c" : "#f093fb"}
-                                />
-                            </Animated.View>
-                            <Text variant="headlineMedium" style={styles.resultTitle}>Quiz Complete!</Text>
-                            <LinearGradient
-                                colors={score >= 160 ? ['#FFD700', '#FFA000'] : score >= 120 ? ['#f5576c', '#c62828'] : ['#f093fb', '#f5576c']}
-                                style={styles.scoreGradient}
-                            >
-                                <Text variant="displaySmall" style={styles.scoreText}>{score}/200</Text>
-                            </LinearGradient>
-                            <Text variant="titleMedium" style={{ marginBottom: 10, color: '#333' }}>Time: {displayTime}</Text>
-                            <Text variant="bodyLarge" style={styles.resultMessage}>
-                                {score >= 160 ? 'Anatomy Expert! 🏥' : score >= 120 ? 'Well Done! ❤️' : 'Keep Learning! 📚'}
+                    <LinearGradient
+                        colors={isDark ? ['#1E293B', '#0F172A'] : ['rgba(255,255,255,0.95)', 'rgba(255,255,255,0.85)']}
+                        style={styles.scoreCard}
+                    >
+                        <View style={styles.scoreItem}>
+                            <MaterialCommunityIcons name="star" size={20} color="#FFD700" />
+                            <Text variant="titleMedium" style={styles.scoreLabel}>Score: {score}</Text>
+                        </View>
+                        <View style={styles.scoreItem}>
+                            <Text variant="bodyMedium" style={styles.questionLabel}>Question {currentQuestion + 1}/{questions.length}</Text>
+                        </View>
+
+                    </LinearGradient>
+
+                    <Animated.View entering={FadeInDown.delay(200).duration(600)} style={styles.gameArea}>
+                        <Surface style={styles.questionCard} elevation={4}>
+                            <Text variant="titleLarge" style={styles.questionText}>
+                                {currentQ.question}
                             </Text>
-                            <View style={styles.buttonRow}>
-                                <LinearGradient
-                                    colors={['#f093fb', '#f5576c']}
-                                    style={styles.gradientButton}
-                                >
-                                    <Button
-                                        mode="text"
-                                        onPress={resetGame}
-                                        textColor="#fff"
-                                        labelStyle={styles.buttonLabel}
-                                    >
-                                        Play Again
-                                    </Button>
-                                </LinearGradient>
-                                <Button
-                                    mode="outlined"
-                                    onPress={() => navigation.goBack()}
-                                    style={styles.outlineButton}
-                                    textColor={isDark ? '#f093fb' : '#f5576c'}
-                                >
-                                    Exit
-                                </Button>
-                            </View>
                         </Surface>
+
+                        <View style={styles.organDisplay}>
+                            <Image
+                                source={getOrganImage(currentQ.organ)}
+                                style={styles.organImage}
+                                resizeMode="contain"
+                            />
+                            <Text variant="bodySmall" style={styles.instructionText}>
+                                Select the correct organ below
+                            </Text>
+                        </View>
+
+                        <View style={styles.optionsContainer}>
+                            {ORGANS.slice(0, 4).map((organ, index) => {
+                                const isSelected = selectedAnswer === organ.id;
+                                const isCorrect = organ.id === currentQ.correctId;
+
+                                return (
+                                    <Animated.View
+                                        key={index}
+                                        entering={FadeIn.delay(index * 100)}
+                                        style={styles.optionWrapper}
+                                    >
+                                        {isSelected ? (
+                                            <LinearGradient
+                                                colors={isCorrect ? ['#4CAF50', '#2E7D32'] : ['#f44336', '#c62828']}
+                                                style={styles.selectedOption}
+                                            >
+                                                <MaterialCommunityIcons
+                                                    name={isCorrect ? "check-circle" : "close-circle"}
+                                                    size={20}
+                                                    color="#fff"
+                                                />
+                                                <Text style={styles.selectedOptionText}>{organ.name}</Text>
+                                            </LinearGradient>
+                                        ) : (
+                                            <Button
+                                                mode="outlined"
+                                                onPress={() => handleAnswer(organ.id)}
+                                                style={styles.optionButton}
+                                                contentStyle={styles.optionContent}
+                                                disabled={selectedAnswer !== null}
+                                                textColor="#fff"
+                                                labelStyle={styles.optionLabel}
+                                            >
+                                                {organ.name}
+                                            </Button>
+                                        )}
+                                    </Animated.View>
+                                );
+                            })}
+                        </View>
                     </Animated.View>
                 </View>
             </LinearGradient>
-        );
-    }
-
-    if (questions.length === 0) {
-        return null;
-    }
-
-    const currentQ = questions[currentQuestion];
-
-    return (
-        <LinearGradient
-            colors={isDark ? ['#4A148C', '#880E4F'] : ['#f093fb', '#f5576c']}
-            style={styles.container}
-        >
-            <View style={styles.innerContainer}>
-                <View style={styles.header}>
-                    <IconButton
-                        icon="arrow-left"
-                        iconColor="#fff"
-                        size={24}
-                        onPress={() => navigation.goBack()}
-                    />
-                    <Text variant="titleLarge" style={styles.headerTitle}>Label the Organ</Text>
-                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                        <MaterialCommunityIcons name="clock-outline" size={20} color="#fff" style={{ marginRight: 4 }} />
-                        <Text style={{ color: '#fff', fontWeight: 'bold' }}>{displayTime}</Text>
-                    </View>
-                </View>
-
-                <LinearGradient
-                    colors={isDark ? ['#1E293B', '#0F172A'] : ['rgba(255,255,255,0.95)', 'rgba(255,255,255,0.85)']}
-                    style={styles.scoreCard}
-                >
-                    <View style={styles.scoreItem}>
-                        <MaterialCommunityIcons name="star" size={20} color="#FFD700" />
-                        <Text variant="titleMedium" style={styles.scoreLabel}>Score: {score}</Text>
-                    </View>
-                    <View style={styles.scoreItem}>
-                        <Text variant="bodyMedium" style={styles.questionLabel}>Question {currentQuestion + 1}/{questions.length}</Text>
-                    </View>
-
-                </LinearGradient>
-
-                <Animated.View entering={FadeInDown.delay(200).duration(600)} style={styles.gameArea}>
-                    <Surface style={styles.questionCard} elevation={4}>
-                        <Text variant="titleLarge" style={styles.questionText}>
-                            {currentQ.question}
-                        </Text>
-                    </Surface>
-
-                    <View style={styles.organDisplay}>
-                        <Image
-                            source={getOrganImage(currentQ.organ)}
-                            style={styles.organImage}
-                            resizeMode="contain"
-                        />
-                        <Text variant="bodySmall" style={styles.instructionText}>
-                            Select the correct organ below
-                        </Text>
-                    </View>
-
-                    <View style={styles.optionsContainer}>
-                        {ORGANS.slice(0, 4).map((organ, index) => {
-                            const isSelected = selectedAnswer === organ.id;
-                            const isCorrect = organ.id === currentQ.correctId;
-
-                            return (
-                                <Animated.View
-                                    key={index}
-                                    entering={FadeIn.delay(index * 100)}
-                                    style={styles.optionWrapper}
-                                >
-                                    {isSelected ? (
-                                        <LinearGradient
-                                            colors={isCorrect ? ['#4CAF50', '#2E7D32'] : ['#f44336', '#c62828']}
-                                            style={styles.selectedOption}
-                                        >
-                                            <MaterialCommunityIcons
-                                                name={isCorrect ? "check-circle" : "close-circle"}
-                                                size={20}
-                                                color="#fff"
-                                            />
-                                            <Text style={styles.selectedOptionText}>{organ.name}</Text>
-                                        </LinearGradient>
-                                    ) : (
-                                        <Button
-                                            mode="outlined"
-                                            onPress={() => handleAnswer(organ.id)}
-                                            style={styles.optionButton}
-                                            contentStyle={styles.optionContent}
-                                            disabled={selectedAnswer !== null}
-                                            textColor="#fff"
-                                            labelStyle={styles.optionLabel}
-                                        >
-                                            {organ.name}
-                                        </Button>
-                                    )}
-                                </Animated.View>
-                            );
-                        })}
-                    </View>
-                </Animated.View>
-            </View>
-        </LinearGradient>
+        </>
     );
 };
 

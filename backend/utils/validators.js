@@ -5,7 +5,10 @@ const registerSchema = Joi.object({
     email: Joi.string().email().required(),
     password: Joi.string().min(6).required(),
     language: Joi.string().optional(),
-    role: Joi.string().valid('student', 'teacher', 'institute', 'admin').default('student')
+    role: Joi.string().valid('student', 'teacher', 'institute', 'admin').default('student'),
+    selectedClass: Joi.number().optional().allow(null),
+    avatar: Joi.string().optional().allow(null),
+    themeColor: Joi.string().optional().allow(null)
 });
 
 const loginSchema = Joi.object({

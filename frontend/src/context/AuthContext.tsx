@@ -20,7 +20,7 @@ interface AuthContextType {
     loginAsGuest: () => Promise<void>;
     logout: () => Promise<void>;
     addXP: (amount: number, source?: string) => Promise<void>;
-    updateUser: (data: { name?: string; email?: string; selectedClass?: number | null; avatar?: string | null; themeColor?: string }) => Promise<void>;
+    updateUser: (data: { name?: string; email?: string; selectedClass?: number | null; avatar?: string | null; themeColor?: string; city?: string }) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -266,7 +266,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         }
     };
 
-    const updateUser = async (data: { name?: string; email?: string; selectedClass?: number | null; avatar?: string | null; themeColor?: string }) => {
+    const updateUser = async (data: { name?: string; email?: string; selectedClass?: number | null; avatar?: string | null; themeColor?: string; city?: string }) => {
         try {
             let updatedUser = { ...user };
 

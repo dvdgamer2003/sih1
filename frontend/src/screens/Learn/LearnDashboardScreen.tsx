@@ -57,6 +57,11 @@ const LearnDashboardScreen = ({ navigation }: any) => {
         setLoading(true);
         try {
             const classesData = await learnService.getClasses();
+            if (!classesData || !Array.isArray(classesData)) {
+                console.error('classesData is not an array:', classesData);
+                setSubjects([]);
+                return;
+            }
             const currentClassData = classesData.find((c: any) => c.classNumber === selectedClass);
 
             if (currentClassData) {

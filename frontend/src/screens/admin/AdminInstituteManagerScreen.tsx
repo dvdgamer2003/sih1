@@ -81,9 +81,24 @@ const AdminInstituteManagerScreen = () => {
                     <MaterialCommunityIcons name="office-building" size={24} color={theme.colors.primary} />
                 </View>
                 <View style={styles.info}>
-                    <Text style={styles.name}>{item.name}</Text>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                        <Text style={styles.name}>{item.name}</Text>
+                        {item.status === 'pending' && (
+                            <View style={{ backgroundColor: '#F59E0B', paddingHorizontal: 8, paddingVertical: 2, borderRadius: 10 }}>
+                                <Text style={{ color: '#fff', fontSize: 10, fontWeight: '600' }}>Pending</Text>
+                            </View>
+                        )}
+                        {item.status === 'active' && (
+                            <View style={{ backgroundColor: '#10B981', paddingHorizontal: 8, paddingVertical: 2, borderRadius: 10 }}>
+                                <Text style={{ color: '#fff', fontSize: 10, fontWeight: '600' }}>Active</Text>
+                            </View>
+                        )}
+                    </View>
                     <Text style={styles.code}>Code: {item.code}</Text>
                     <Text style={styles.email}>{item.adminEmail}</Text>
+                    {item.source === 'user_registration' && (
+                        <Text style={{ fontSize: 10, color: '#8B5CF6', marginTop: 4 }}>📋 Registered Account</Text>
+                    )}
                 </View>
                 <TouchableOpacity onPress={() => handleDeleteInstitute(item._id)} style={styles.deleteBtn}>
                     <Ionicons name="trash-outline" size={20} color="#EF4444" />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, ScrollView, TouchableOpacity, Dimensions } from 'react-native';
 import { Text, Button, Surface, useTheme, IconButton } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import { useAuth } from '../../context/AuthContext';
@@ -8,6 +8,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { spacing, gradients, theme, shadows } from '../../theme';
 import Animated, { FadeInDown, withTiming, useAnimatedStyle, useSharedValue, BounceIn, ZoomIn, FlipInEasyY } from 'react-native-reanimated';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import GameCompletionModal from '../../components/GameCompletionModal';
 
 interface Card {
     id: number;
@@ -212,6 +213,8 @@ const MemoryMatchScreen = () => {
     const [moves, setMoves] = useState(0);
     const [gameActive, setGameActive] = useState(false);
     const [gameWon, setGameWon] = useState(false);
+    const [showCompletionModal, setShowCompletionModal] = useState(false);
+    const [finalScore, setFinalScore] = useState(0);
     const { elapsedTime, startTimer, stopTimer, displayTime, resetTimer: resetGameTimer } = useGameTimer();
 
     const styles = createStyles(isDark);
@@ -313,8 +316,8 @@ const MemoryMatchScreen = () => {
         setGameWon(true);
         soundManager.playSuccess();
         const score = Math.max(0, 1000 - moves * 10 - elapsedTime * 2);
-        const xpReward = Math.floor(score / 20);
-        addXP(xpReward, 'Memory Match');
+        setFinalScore(score);
+        setShowCompletionModal(true);
 
         saveGameResult({
             gameId: 'memory_match',
@@ -326,12 +329,30 @@ const MemoryMatchScreen = () => {
         });
     };
 
+    const resetGame = () => {
+        setShowCompletionModal(false);
+        initializeGame();
+    };
+
     // formatTime helper removed as it describes useGameTimer
 
 
-    if (gameWon) {
-        const score = Math.max(0, 1000 - moves * 10 - elapsedTime * 2);
-        return (
+    // Calculate XP based on score
+    const xpEarned = Math.floor(finalScore / 20);
+
+    return (
+        <>
+            <GameCompletionModal
+                visible={showCompletionModal}
+                onClose={() => setShowCompletionModal(false)}
+                gameTitle="Memory Match"
+                score={finalScore}
+                maxScore={1000}
+                timeTaken={elapsedTime}
+                xpEarned={xpEarned}
+                onPlayAgain={resetGame}
+                onGoHome={() => navigation.goBack()}
+            />
             <LinearGradient
                 colors={['#fa709a', '#fee140']}
                 style={styles.container}
@@ -348,146 +369,70 @@ const MemoryMatchScreen = () => {
                         <View style={{ width: 40 }} />
                     </View>
 
-                    <Animated.View entering={BounceIn.duration(800)} style={styles.resultContainer}>
-                        <Surface style={styles.resultCard} elevation={5}>
-                            <Animated.View entering={ZoomIn.delay(200)}>
-                                <MaterialCommunityIcons
-                                    name="trophy"
-                                    size={80}
-                                    color="#FFD700"
-                                />
-                            </Animated.View>
-                            <Text variant="headlineMedium" style={styles.resultTitle}>🎉 You Won!</Text>
-                            <Text variant="bodyLarge" style={styles.resultMessage}>
-                                Congratulations! You found all pairs!
-                            </Text>
-                            <View style={styles.statsContainer}>
-                                <View style={styles.statBox}>
-                                    <MaterialCommunityIcons name="gesture-tap" size={24} color="#fa709a" />
-                                    <Text variant="bodySmall" style={styles.statLabel}>Moves</Text>
-                                    <Text variant="titleMedium" style={styles.statValue}>{moves}</Text>
-                                </View>
-                                <View style={styles.statBox}>
-                                    <MaterialCommunityIcons name="clock-outline" size={24} color="#fa709a" />
-                                    <Text variant="bodySmall" style={styles.statLabel}>Time</Text>
-                                    <Text variant="titleMedium" style={styles.statValue}>{displayTime}</Text>
-                                </View>
-                                <View style={styles.statBox}>
-                                    <MaterialCommunityIcons name="star" size={24} color="#FFD700" />
-                                    <Text variant="bodySmall" style={styles.statLabel}>Score</Text>
-                                    <Text variant="titleMedium" style={styles.statValue}>{score}</Text>
-                                </View>
-                            </View>
-                            <View style={styles.buttonRow}>
-                                <LinearGradient
-                                    colors={['#fa709a', '#fee140']}
-                                    style={styles.gradientButton}
-                                >
-                                    <Button
-                                        mode="text"
-                                        onPress={initializeGame}
-                                        textColor="#fff"
-                                        labelStyle={styles.buttonLabel}
-                                    >
-                                        Play Again
-                                    </Button>
-                                </LinearGradient>
-                                <Button
-                                    mode="outlined"
-                                    onPress={() => navigation.goBack()}
-                                    style={styles.outlineButton}
-                                    textColor="#fa709a"
-                                >
-                                    Exit
-                                </Button>
-                            </View>
-                        </Surface>
-                    </Animated.View>
-                </View>
-            </LinearGradient>
-        );
-    }
-
-    return (
-        <LinearGradient
-            colors={['#fa709a', '#fee140']}
-            style={styles.container}
-        >
-            <View style={styles.innerContainer}>
-                <View style={[styles.header, { paddingTop: insets.top + spacing.sm }]}>
-                    <IconButton
-                        icon="arrow-left"
-                        iconColor="#fff"
-                        size={24}
-                        onPress={() => navigation.goBack()}
-                    />
-                    <Text variant="titleLarge" style={styles.headerTitle}>Memory Match</Text>
-                    <View style={{ width: 40 }} />
-                </View>
-
-                <LinearGradient
-                    colors={['rgba(255,255,255,0.95)', 'rgba(255,255,255,0.85)']}
-                    style={styles.statsCard}
-                >
-                    <View style={styles.statItem}>
-                        <MaterialCommunityIcons name="gesture-tap" size={20} color="#fa709a" />
-                        <Text variant="titleMedium" style={styles.statItemLabel}>Moves: {moves}</Text>
-                    </View>
-                    <View style={styles.statItem}>
-                        <MaterialCommunityIcons name="clock-outline" size={20} color="#fa709a" />
-                        <Text variant="titleMedium" style={styles.statItemLabel}>Time: {displayTime}</Text>
-                    </View>
-                    <View style={styles.statItem}>
-                        <MaterialCommunityIcons name="cards" size={20} color="#fa709a" />
-                        <Text variant="bodyMedium" style={styles.statItemLabel}>
-                            Pairs: {matchedPairs.length}/{TOTAL_PAIRS}
-                        </Text>
-                    </View>
-                </LinearGradient>
-
-                <ScrollView
-                    style={styles.gameArea}
-                    overScrollMode="never"
-                    contentContainerStyle={[
-                        styles.scrollContent,
-                        { paddingHorizontal: containerPadding }
-                    ]}
-                >
-                    <Text variant="bodyLarge" style={styles.instructions}>
-                        Match the concepts with their meanings!
-                    </Text>
-
-                    <View style={[styles.grid, { gap }]}>
-                        {cards.map((card) => (
-                            <CardComponent
-                                key={card.id}
-                                card={card}
-                                cardSize={cardSize}
-                                isFlipped={flippedCards.includes(card.id)}
-                                isMatched={matchedPairs.includes(card.pairId)}
-                                onPress={() => handleCardPress(card.id)}
-                                style={{ marginBottom: 0 }} // Gap handles spacing now
-                            />
-                        ))}
-                    </View>
-
                     <LinearGradient
                         colors={['rgba(255,255,255,0.95)', 'rgba(255,255,255,0.85)']}
-                        style={styles.resetButton}
+                        style={styles.statsCard}
                     >
-                        <Button
-                            mode="text"
-                            onPress={initializeGame}
-                            icon="refresh"
-                            textColor="#fa709a"
-                            labelStyle={{ fontWeight: 'bold' }}
-                        >
-                            New Game
-                        </Button>
+                        <View style={styles.statItem}>
+                            <MaterialCommunityIcons name="gesture-tap" size={20} color="#fa709a" />
+                            <Text variant="titleMedium" style={styles.statItemLabel}>Moves: {moves}</Text>
+                        </View>
+                        <View style={styles.statItem}>
+                            <MaterialCommunityIcons name="clock-outline" size={20} color="#fa709a" />
+                            <Text variant="titleMedium" style={styles.statItemLabel}>Time: {displayTime}</Text>
+                        </View>
+                        <View style={styles.statItem}>
+                            <MaterialCommunityIcons name="cards" size={20} color="#fa709a" />
+                            <Text variant="bodyMedium" style={styles.statItemLabel}>
+                                Pairs: {matchedPairs.length}/{TOTAL_PAIRS}
+                            </Text>
+                        </View>
                     </LinearGradient>
-                </ScrollView>
-            </View>
-        </LinearGradient>
+
+                    <ScrollView
+                        style={styles.gameArea}
+                        overScrollMode="never"
+                        contentContainerStyle={[
+                            styles.scrollContent,
+                            { paddingHorizontal: containerPadding }
+                        ]}
+                    >
+                        <Text variant="bodyLarge" style={styles.instructions}>
+                            Match the concepts with their meanings!
+                        </Text>
+
+                        <View style={[styles.grid, { gap }]}>
+                            {cards.map((card) => (
+                                <CardComponent
+                                    key={card.id}
+                                    card={card}
+                                    cardSize={cardSize}
+                                    isFlipped={flippedCards.includes(card.id)}
+                                    isMatched={matchedPairs.includes(card.pairId)}
+                                    onPress={() => handleCardPress(card.id)}
+                                    style={{ marginBottom: 0 }} // Gap handles spacing now
+                                />
+                            ))}
+                        </View>
+
+                        <LinearGradient
+                            colors={['rgba(255,255,255,0.95)', 'rgba(255,255,255,0.85)']}
+                            style={styles.resetButton}
+                        >
+                            <Button
+                                mode="text"
+                                onPress={initializeGame}
+                                icon="refresh"
+                                textColor="#fa709a"
+                                labelStyle={{ fontWeight: 'bold' }}
+                            >
+                                New Game
+                            </Button>
+                        </LinearGradient>
+                    </ScrollView>
+                </View>
+            </LinearGradient>
+        </>
     );
 };
 

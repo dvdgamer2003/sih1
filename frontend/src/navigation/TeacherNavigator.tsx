@@ -39,6 +39,7 @@ const TeacherNavigator = () => {
             <Stack.Screen name="TeacherChapterViewer" component={TeacherChapterViewerScreen} />
             <Stack.Screen name="TeacherGameAnalytics" component={TeacherGameAnalyticsScreen} />
             <Stack.Screen name="TeacherVideoManager" component={require('../screens/teacher/TeacherVideoManagerScreen').default} />
+            <Stack.Screen name="TeacherWellbeing" component={require('../screens/teacher/TeacherWellbeingScreen').default} />
         </Stack.Navigator>
     );
 };

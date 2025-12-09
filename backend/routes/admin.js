@@ -27,7 +27,9 @@ const {
     getUsers,
     createUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    getUsersByCity,
+    getUniqueCities
 } = require('../controllers/adminController');
 
 // All routes require authentication and admin role
@@ -73,5 +75,9 @@ router.delete('/institutes/:id', deleteInstitute);
 
 // Analytics route
 router.get('/analytics', getGlobalAnalytics);
+
+// City/Location routes
+router.get('/users/by-city', getUsersByCity);
+router.get('/cities', getUniqueCities);
 
 module.exports = router;

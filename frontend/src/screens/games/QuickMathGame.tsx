@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 import { Text, Button, Surface, useTheme, IconButton } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import { useAuth } from '../../context/AuthContext';
@@ -11,6 +11,10 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { soundManager } from '../../utils/soundEffects';
 import { useGameTimer } from '../../hooks/useGameTimer';
 import { saveGameResult } from '../../services/gamesService';
+import GameCompletionModal from '../../components/GameCompletionModal';
+
+const { width } = Dimensions.get('window');
+const isMobile = width < 768;
 
 interface MathQuestion {
     question: string;
@@ -76,10 +80,11 @@ const QuickMathGame = () => {
     const [currentQuestion, setCurrentQuestion] = useState<MathQuestion>(generateQuestion(1));
     const [timeLeft, setTimeLeft] = useState(30);
     const [gameOver, setGameOver] = useState(false);
+    const [showCompletionModal, setShowCompletionModal] = useState(false);
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
     const { elapsedTime, startTimer, stopTimer, displayTime, resetTimer: resetGameTimer } = useGameTimer();
 
-    const styles = createStyles(isDark);
+    const styles = createStyles(isDark, isMobile);
 
     // Initialize sounds
     useEffect(() => {
@@ -94,13 +99,11 @@ const QuickMathGame = () => {
             startTimer();
             const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
             return () => clearTimeout(timer);
-        } else if (timeLeft === 0) {
-            stopTimer(); // Stop counting up
-            // Award XP based on score
-            const xpReward = Math.floor(score / 2); // 5 XP per correct answer at level 1
-            addXP(xpReward, 'Quick Math Game');
+        } else if (timeLeft === 0 && !gameOver) {
+            stopTimer();
             soundManager.playSuccess();
             setGameOver(true);
+            setShowCompletionModal(true);
 
             saveGameResult({
                 gameId: 'quick_math',
@@ -145,16 +148,30 @@ const QuickMathGame = () => {
         setDifficulty(1);
         setTimeLeft(30);
         setGameOver(false);
-        setGameOver(false);
-        setCurrentQuestion(generateQuestion(1));
-        setSelectedAnswer(null);
+        setShowCompletionModal(false);
         setCurrentQuestion(generateQuestion(1));
         setSelectedAnswer(null);
         resetGameTimer();
     };
 
-    if (gameOver) {
-        return (
+    // Calculate XP based on score
+    const xpEarned = Math.floor(score / 2);
+
+    return (
+        <>
+            <GameCompletionModal
+                visible={showCompletionModal}
+                onClose={() => setShowCompletionModal(false)}
+                gameTitle="Quick Math Challenge"
+                score={score}
+                maxScore={questionCount * 10 * difficulty || 100}
+                timeTaken={30}
+                xpEarned={xpEarned}
+                accuracy={questionCount > 0 ? Math.round((score / (questionCount * 10 * difficulty)) * 100) : 0}
+                onPlayAgain={resetGame}
+                onGoHome={() => navigation.goBack()}
+            />
+
             <LinearGradient
                 colors={['#ffecd2', '#fcb69f']}
                 style={styles.container}
@@ -171,157 +188,88 @@ const QuickMathGame = () => {
                         <View style={{ width: 40 }} />
                     </View>
 
-                    <Animated.View entering={BounceIn.duration(800)} style={styles.resultContainer}>
-                        <Surface style={styles.resultCard} elevation={5}>
-                            <Animated.View entering={ZoomIn.delay(200)}>
-                                <MaterialCommunityIcons
-                                    name="calculator"
-                                    size={80}
-                                    color="#FF9800"
-                                />
-                            </Animated.View>
-                            <Text variant="headlineMedium" style={styles.resultTitle}>Time's Up!</Text>
-                            <LinearGradient
-                                colors={['#FF9800', '#F57C00']}
-                                style={styles.scoreGradient}
-                            >
-                                <Text variant="displaySmall" style={styles.scoreText}>{score}</Text>
-                            </LinearGradient>
-                            <Text variant="titleMedium" style={{ marginBottom: 10, color: isDark ? '#F1F5F9' : '#333' }}>Time: {displayTime}</Text>
-                            <Text variant="bodyLarge" style={styles.resultMessage}>
-                                Questions Solved: {questionCount}
+                    <LinearGradient
+                        colors={['rgba(255,255,255,0.95)', 'rgba(255,255,255,0.85)']}
+                        style={styles.statsCard}
+                    >
+                        <View style={styles.statItem}>
+                            <MaterialCommunityIcons name="star" size={20} color="#FFD700" />
+                            <Text variant="titleMedium" style={styles.statLabel}>Score: {score}</Text>
+                        </View>
+                        <View style={styles.statItem}>
+                            <MaterialCommunityIcons name="clock-outline" size={20} color={timeLeft < 10 ? "#f44336" : "#FF9800"} />
+                            <Text variant="titleMedium" style={[styles.statLabel, timeLeft < 10 && { color: '#f44336' }]}>
+                                {timeLeft}s
                             </Text>
-                            <Text variant="bodyMedium" style={styles.difficultyText}>
-                                Difficulty Level: {difficulty}
+                        </View>
+                        <View style={styles.statItem}>
+                            <MaterialCommunityIcons name="speedometer" size={20} color="#FF9800" />
+                            <Text variant="bodyMedium" style={styles.statLabel}>Level: {difficulty}</Text>
+                        </View>
+                    </LinearGradient>
+
+                    <View style={styles.progressContainer}>
+                        <LinearGradient
+                            colors={timeLeft < 10 ? ['#f44336', '#c62828'] : ['#FF9800', '#F57C00']}
+                            style={[styles.progressBar, { width: `${(timeLeft / 30) * 100}%` }]}
+                        />
+                    </View>
+
+                    <Animated.View entering={FadeIn.duration(400)} style={styles.gameArea}>
+                        <Surface style={styles.questionCard} elevation={4}>
+                            <Text variant="displayMedium" style={styles.questionText}>
+                                {currentQuestion.question} = ?
                             </Text>
-                            <View style={styles.buttonRow}>
-                                <LinearGradient
-                                    colors={['#ffecd2', '#fcb69f']}
-                                    style={styles.gradientButton}
-                                >
-                                    <Button
-                                        mode="text"
-                                        onPress={resetGame}
-                                        textColor="#fff"
-                                        labelStyle={styles.buttonLabel}
-                                    >
-                                        Play Again
-                                    </Button>
-                                </LinearGradient>
-                                <Button
-                                    mode="outlined"
-                                    onPress={() => navigation.goBack()}
-                                    style={styles.outlineButton}
-                                    textColor="#FF9800"
-                                >
-                                    Exit
-                                </Button>
-                            </View>
                         </Surface>
+
+                        <View style={styles.optionsContainer}>
+                            {currentQuestion.options.map((option, index) => {
+                                const isSelected = selectedAnswer === option;
+                                const isCorrect = option === currentQuestion.answer;
+
+                                return (
+                                    <Animated.View
+                                        key={index}
+                                        entering={FadeIn.delay(index * 100)}
+                                        style={styles.optionWrapper}
+                                    >
+                                        {isSelected ? (
+                                            <LinearGradient
+                                                colors={isCorrect ? ['#4CAF50', '#2E7D32'] : ['#f44336', '#c62828']}
+                                                style={styles.selectedOption}
+                                            >
+                                                <MaterialCommunityIcons
+                                                    name={isCorrect ? "check-circle" : "close-circle"}
+                                                    size={24}
+                                                    color="#fff"
+                                                />
+                                                <Text style={styles.selectedOptionText}>{option}</Text>
+                                            </LinearGradient>
+                                        ) : (
+                                            <Button
+                                                mode="outlined"
+                                                onPress={() => handleAnswer(option)}
+                                                style={styles.optionButton}
+                                                contentStyle={styles.optionContent}
+                                                disabled={selectedAnswer !== null}
+                                                textColor="#E65100"
+                                                labelStyle={styles.optionLabel}
+                                            >
+                                                {option}
+                                            </Button>
+                                        )}
+                                    </Animated.View>
+                                );
+                            })}
+                        </View>
                     </Animated.View>
                 </View>
             </LinearGradient>
-        );
-    }
-
-    return (
-        <LinearGradient
-            colors={['#ffecd2', '#fcb69f']}
-            style={styles.container}
-        >
-            <View style={styles.innerContainer}>
-                <View style={styles.header}>
-                    <IconButton
-                        icon="arrow-left"
-                        iconColor="#fff"
-                        size={24}
-                        onPress={() => navigation.goBack()}
-                    />
-                    <Text variant="titleLarge" style={styles.headerTitle}>Quick Math</Text>
-                    <View style={{ width: 40 }} />
-                </View>
-
-                <LinearGradient
-                    colors={['rgba(255,255,255,0.95)', 'rgba(255,255,255,0.85)']}
-                    style={styles.statsCard}
-                >
-                    <View style={styles.statItem}>
-                        <MaterialCommunityIcons name="star" size={20} color="#FFD700" />
-                        <Text variant="titleMedium" style={styles.statLabel}>Score: {score}</Text>
-                    </View>
-                    <View style={styles.statItem}>
-                        <MaterialCommunityIcons name="clock-outline" size={20} color={timeLeft < 10 ? "#f44336" : "#FF9800"} />
-                        <Text variant="titleMedium" style={[styles.statLabel, timeLeft < 10 && { color: '#f44336' }]}>
-                            {timeLeft}s
-                        </Text>
-                    </View>
-                    <View style={styles.statItem}>
-                        <MaterialCommunityIcons name="speedometer" size={20} color="#FF9800" />
-                        <Text variant="bodyMedium" style={styles.statLabel}>Level: {difficulty}</Text>
-                    </View>
-                </LinearGradient>
-
-                <View style={styles.progressContainer}>
-                    <LinearGradient
-                        colors={timeLeft < 10 ? ['#f44336', '#c62828'] : ['#FF9800', '#F57C00']}
-                        style={[styles.progressBar, { width: `${(timeLeft / 30) * 100}%` }]}
-                    />
-                </View>
-
-                <Animated.View entering={FadeIn.duration(400)} style={styles.gameArea}>
-                    <Surface style={styles.questionCard} elevation={4}>
-                        <Text variant="displayMedium" style={styles.questionText}>
-                            {currentQuestion.question} = ?
-                        </Text>
-                    </Surface>
-
-                    <View style={styles.optionsContainer}>
-                        {currentQuestion.options.map((option, index) => {
-                            const isSelected = selectedAnswer === option;
-                            const isCorrect = option === currentQuestion.answer;
-
-                            return (
-                                <Animated.View
-                                    key={index}
-                                    entering={FadeIn.delay(index * 100)}
-                                    style={styles.optionWrapper}
-                                >
-                                    {isSelected ? (
-                                        <LinearGradient
-                                            colors={isCorrect ? ['#4CAF50', '#2E7D32'] : ['#f44336', '#c62828']}
-                                            style={styles.selectedOption}
-                                        >
-                                            <MaterialCommunityIcons
-                                                name={isCorrect ? "check-circle" : "close-circle"}
-                                                size={24}
-                                                color="#fff"
-                                            />
-                                            <Text style={styles.selectedOptionText}>{option}</Text>
-                                        </LinearGradient>
-                                    ) : (
-                                        <Button
-                                            mode="outlined"
-                                            onPress={() => handleAnswer(option)}
-                                            style={styles.optionButton}
-                                            contentStyle={styles.optionContent}
-                                            disabled={selectedAnswer !== null}
-                                            textColor="#E65100"
-                                            labelStyle={styles.optionLabel}
-                                        >
-                                            {option}
-                                        </Button>
-                                    )}
-                                </Animated.View>
-                            );
-                        })}
-                    </View>
-                </Animated.View>
-            </View>
-        </LinearGradient>
+        </>
     );
 };
 
-const createStyles = (isDark: boolean) => StyleSheet.create({
+const createStyles = (isDark: boolean, isMobile: boolean) => StyleSheet.create({
     container: {
         flex: 1,
     },

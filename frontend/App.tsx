@@ -5,6 +5,7 @@ import { AuthProvider } from './src/context/AuthContext';
 import { LanguageProvider } from './src/i18n';
 import { ThemeProvider } from './src/context/ThemeContext';
 import { SyncProvider } from './src/context/SyncContext';
+import { ScreenTimeProvider } from './src/context/ScreenTimeContext';
 import AppNavigator from './src/navigation/AppNavigator';
 import { theme } from './src/theme';
 import { LogBox, View, ActivityIndicator } from 'react-native';
@@ -80,9 +81,11 @@ export default function App() {
         <LanguageProvider>
           <AuthProvider>
             <SyncProvider>
-              <StatusBar style="auto" />
-              <AppNavigator />
-              <BackendHealthCheck />
+              <ScreenTimeProvider>
+                <StatusBar style="auto" />
+                <AppNavigator />
+                <BackendHealthCheck />
+              </ScreenTimeProvider>
             </SyncProvider>
           </AuthProvider>
         </LanguageProvider>

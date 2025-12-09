@@ -11,7 +11,7 @@ import { useAuth } from '../context/AuthContext';
 import { spacing, gradients, colors } from '../theme';
 import { getAllSimulations, Simulation } from '../data/phetMappings';
 import { useTranslation } from '../i18n';
-import { AVATAR_OPTIONS } from '../components/UserGreetingCard';
+import { AVATAR_OPTIONS } from '../data/avatars';
 import SimulationViewer from '../components/learn/SimulationViewer';
 import OnboardingTutorial from '../components/OnboardingTutorial';
 import StreakCelebration from '../components/StreakCelebration';

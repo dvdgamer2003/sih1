@@ -155,8 +155,40 @@ const createInstitute = async (req, res) => {
 // @access  Private/Admin
 const getInstitutes = async (req, res) => {
     try {
-        const institutes = await Institute.find({});
-        res.json(institutes);
+        // Get institutes from Institute model
+        const instituteRecords = await Institute.find({});
+
+        // Get users who registered as institutes
+        const instituteUsers = await User.find({ role: 'institute' }).select('-password');
+
+        // Combine both sources, marking the source
+        const combinedInstitutes = [
+            ...instituteRecords.map(inst => ({
+                _id: inst._id,
+                name: inst.name,
+                code: inst.code,
+                address: inst.address,
+                adminEmail: inst.adminEmail,
+                status: inst.status,
+                source: 'institute_model',
+                createdAt: inst.createdAt
+            })),
+            ...instituteUsers.map(user => ({
+                _id: user._id,
+                name: user.name,
+                code: user.email?.split('@')[0]?.toUpperCase() || 'N/A',
+                address: user.city || 'Not specified',
+                adminEmail: user.email,
+                status: user.status,
+                source: 'user_registration',
+                createdAt: user.createdAt
+            }))
+        ];
+
+        // Sort by creation date (newest first)
+        combinedInstitutes.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+        res.json(combinedInstitutes);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -211,25 +243,115 @@ const deleteInstitute = async (req, res) => {
 // @access  Private/Admin
 const getGlobalAnalytics = async (req, res) => {
     try {
+        const GameResult = require('../models/GameResult');
+        const ChapterProgress = require('../models/ChapterProgress');
+
+        // Basic counts
         const totalInstitutes = await Institute.countDocuments({});
         const totalTeachers = await User.countDocuments({ role: 'teacher' });
         const totalStudents = await User.countDocuments({ role: 'student' });
         const totalQuizzesTaken = await QuizResult.countDocuments({});
-        const totalLessonsCompleted = 0; // Placeholder
+        const totalGamesPlayed = await GameResult.countDocuments({});
+        const totalLessonsCompleted = await ChapterProgress.countDocuments({ completed: true });
+        const pendingApprovals = await User.countDocuments({ status: 'pending' });
 
+        // Daily active users (last 24 hours)
         const yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
         const dailyActiveUsers = await User.countDocuments({ lastActiveDate: { $gte: yesterday } });
 
-        const pendingApprovals = await User.countDocuments({ status: 'pending' });
+        // Weekly active users (last 7 days)
+        const lastWeek = new Date(new Date().setDate(new Date().getDate() - 7));
+        const weeklyActiveUsers = await User.countDocuments({ lastActiveDate: { $gte: lastWeek } });
+
+        // User growth - new users this week vs last week
+        const thisWeekStart = new Date(new Date().setDate(new Date().getDate() - 7));
+        const lastWeekStart = new Date(new Date().setDate(new Date().getDate() - 14));
+        const newUsersThisWeek = await User.countDocuments({ createdAt: { $gte: thisWeekStart } });
+        const newUsersLastWeek = await User.countDocuments({
+            createdAt: { $gte: lastWeekStart, $lt: thisWeekStart }
+        });
+        const userGrowthPercent = newUsersLastWeek > 0
+            ? Math.round(((newUsersThisWeek - newUsersLastWeek) / newUsersLastWeek) * 100)
+            : newUsersThisWeek > 0 ? 100 : 0;
+
+        // Top 5 students by XP
+        const topStudents = await User.find({ role: 'student', status: 'active' })
+            .select('name email xp streak avatar city')
+            .sort({ xp: -1 })
+            .limit(5);
+
+        // Game statistics
+        const gameStats = await GameResult.aggregate([
+            {
+                $group: {
+                    _id: '$gameType',
+                    totalPlays: { $sum: 1 },
+                    avgScore: { $avg: '$score' },
+                    avgTime: { $avg: '$timeTaken' }
+                }
+            },
+            { $sort: { totalPlays: -1 } },
+            { $limit: 5 }
+        ]);
+
+        // User distribution by role
+        const usersByRole = await User.aggregate([
+            { $match: { status: 'active' } },
+            { $group: { _id: '$role', count: { $sum: 1 } } }
+        ]);
+
+        // Recent registrations (last 7 days by day)
+        const registrationTrend = await User.aggregate([
+            { $match: { createdAt: { $gte: lastWeek } } },
+            {
+                $group: {
+                    _id: { $dateToString: { format: '%Y-%m-%d', date: '$createdAt' } },
+                    count: { $sum: 1 }
+                }
+            },
+            { $sort: { _id: 1 } }
+        ]);
+
+        // Average quiz score
+        const avgQuizScore = await QuizResult.aggregate([
+            { $group: { _id: null, avgScore: { $avg: '$score' } } }
+        ]);
+
+        // Users by city (top 5)
+        const usersByCity = await User.aggregate([
+            { $match: { city: { $ne: null, $ne: '' } } },
+            { $group: { _id: '$city', count: { $sum: 1 } } },
+            { $sort: { count: -1 } },
+            { $limit: 5 }
+        ]);
 
         res.json({
+            // Basic stats
             totalInstitutes,
             totalTeachers,
             totalStudents,
             totalQuizzesTaken,
+            totalGamesPlayed,
             totalLessonsCompleted,
             dailyActiveUsers,
-            pendingApprovals
+            weeklyActiveUsers,
+            pendingApprovals,
+
+            // Growth metrics
+            newUsersThisWeek,
+            userGrowthPercent,
+
+            // Engagement
+            avgQuizScore: avgQuizScore[0]?.avgScore ? Math.round(avgQuizScore[0].avgScore) : 0,
+
+            // Top performers
+            topStudents,
+
+            // Distributions
+            gameStats,
+            usersByRole,
+            usersByCity,
+            registrationTrend
         });
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -450,6 +572,80 @@ const deleteTeacher = async (req, res) => {
     }
 };
 
+// --- Location/City Controllers ---
+
+// @desc    Get users by city
+// @route   GET /api/admin/users/by-city
+// @access  Private/Admin
+const getUsersByCity = async (req, res) => {
+    try {
+        const { city } = req.query;
+
+        if (!city) {
+            return res.status(400).json({ message: 'City parameter is required' });
+        }
+
+        const users = await User.find({
+            city: { $regex: new RegExp(city, 'i') },
+            status: 'active'
+        }).select('-password');
+
+        // Group by role
+        const students = users.filter(u => u.role === 'student');
+        const teachers = users.filter(u => u.role === 'teacher');
+        const institutes = users.filter(u => u.role === 'institute');
+
+        res.json({
+            city,
+            totalUsers: users.length,
+            students,
+            teachers,
+            institutes,
+            counts: {
+                students: students.length,
+                teachers: teachers.length,
+                institutes: institutes.length
+            }
+        });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
+// @desc    Get all unique cities with user counts
+// @route   GET /api/admin/cities
+// @access  Private/Admin
+const getUniqueCities = async (req, res) => {
+    try {
+        const cities = await User.aggregate([
+            { $match: { city: { $ne: null, $ne: '' } } },
+            {
+                $group: {
+                    _id: { $toLower: '$city' },
+                    originalCity: { $first: '$city' },
+                    totalUsers: { $sum: 1 },
+                    students: { $sum: { $cond: [{ $eq: ['$role', 'student'] }, 1, 0] } },
+                    teachers: { $sum: { $cond: [{ $eq: ['$role', 'teacher'] }, 1, 0] } },
+                    institutes: { $sum: { $cond: [{ $eq: ['$role', 'institute'] }, 1, 0] } }
+                }
+            },
+            { $sort: { totalUsers: -1 } }
+        ]);
+
+        const result = cities.map(c => ({
+            city: c.originalCity,
+            totalUsers: c.totalUsers,
+            students: c.students,
+            teachers: c.teachers,
+            institutes: c.institutes
+        }));
+
+        res.json(result);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
 module.exports = {
     getUsers,
     createUser,
@@ -475,5 +671,7 @@ module.exports = {
     getTeachers,
     createTeacher,
     updateTeacher,
-    deleteTeacher
+    deleteTeacher,
+    getUsersByCity,
+    getUniqueCities
 };

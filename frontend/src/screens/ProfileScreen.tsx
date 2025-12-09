@@ -12,20 +12,7 @@ import { spacing, gradients, colors } from '../theme';
 import CustomButton from '../components/ui/CustomButton';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 
-const AVATAR_OPTIONS = [
-    { id: 1, source: require('../assets/avatars/avatar_student_1_1763752373295.png'), gradient: ['#FF6B6B', '#FF8E53'] as const },
-    { id: 2, source: require('../assets/avatars/avatar_student_2_1763752389652.png'), gradient: ['#4FACFE', '#00F2FE'] as const },
-    { id: 3, source: require('../assets/avatars/avatar_student_3_1763752405157.png'), gradient: ['#A8EDEA', '#FED6E3'] as const },
-    { id: 4, source: require('../assets/avatars/avatar_student_4_1763752424974.png'), gradient: ['#5EE7DF', '#B490CA'] as const },
-    { id: 5, source: require('../assets/avatars/avatar_student_5_1763752442026.png'), gradient: ['#F093FB', '#F5576C'] as const },
-    { id: 6, source: require('../assets/avatars/avatar_student_6_1763752457724.png'), gradient: ['#FAD961', '#F76B1C'] as const },
-    { id: 7, source: require('../assets/avatars/avatar_student_7_1763752477440.png'), gradient: ['#667EEA', '#764BA2'] as const },
-    { id: 8, source: require('../assets/avatars/anime_1.png'), gradient: ['#4FACFE', '#00F2FE'] as const },
-    { id: 9, source: require('../assets/avatars/anime_2.png'), gradient: ['#FF9A9E', '#FECFEF'] as const },
-    { id: 10, source: require('../assets/avatars/anime_3.png'), gradient: ['#43E97B', '#38F9D7'] as const },
-    { id: 11, source: require('../assets/avatars/anime_4.png'), gradient: ['#FA709A', '#FEE140'] as const },
-    { id: 12, source: require('../assets/avatars/anime_5.png'), gradient: ['#667EEA', '#764BA2'] as const },
-];
+import { AVATAR_OPTIONS } from '../data/avatars';
 
 const ProfileScreen = ({ navigation }: any) => {
     const theme = useTheme();
@@ -41,6 +28,7 @@ const ProfileScreen = ({ navigation }: any) => {
     const [selectedClass, setSelectedClass] = useState(user?.selectedClass || null);
     const [selectedAvatar, setSelectedAvatar] = useState(parseInt(user?.avatar || '2'));
     const [themeColor, setThemeColor] = useState(user?.themeColor || theme.colors.primary);
+    const [city, setCity] = useState(user?.city || '');
     const [isEditing, setIsEditing] = useState(false);
     const [loading, setLoading] = useState(false);
     const [showAvatarPicker, setShowAvatarPicker] = useState(false);
@@ -57,6 +45,7 @@ const ProfileScreen = ({ navigation }: any) => {
                 selectedClass,
                 avatar: selectedAvatar.toString(),
                 themeColor,
+                city,
             });
             setIsEditing(false);
             Alert.alert('Success', 'Profile updated successfully!');
@@ -232,6 +221,19 @@ const ProfileScreen = ({ navigation }: any) => {
                                     textColor={isDark ? '#F1F5F9' : '#1A1A1A'}
                                     outlineColor={isDark ? '#475569' : '#E2E8F0'}
                                     activeOutlineColor={isDark ? '#60A5FA' : '#2563EB'}
+                                />
+                                <TextInput
+                                    label="City"
+                                    value={city}
+                                    onChangeText={setCity}
+                                    mode="outlined"
+                                    disabled={!isEditing}
+                                    placeholder="Enter your city"
+                                    style={styles.input}
+                                    textColor={isDark ? '#F1F5F9' : '#1A1A1A'}
+                                    outlineColor={isDark ? '#475569' : '#E2E8F0'}
+                                    activeOutlineColor={isDark ? '#60A5FA' : '#2563EB'}
+                                    left={<TextInput.Icon icon="map-marker" />}
                                 />
 
                                 {/* Class Selection */}
