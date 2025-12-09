@@ -105,6 +105,8 @@ const MainNavigator = () => {
             <Stack.Screen name="VideoPlayer" component={require('../screens/VideoPlayerScreen').default} />
             <Stack.Screen name="Chatbot" component={require('../screens/ChatbotScreen').default} />
             <Stack.Screen name="DigitalWellbeing" component={require('../screens/DigitalWellbeingScreen').default} />
+            <Stack.Screen name="StudentFeedback" component={require('../screens/StudentFeedbackScreen').default} />
+            <Stack.Screen name="TeacherFeedback" component={require('../screens/teacher/TeacherFeedbackScreen').default} />
         </Stack.Navigator>
     );
 };

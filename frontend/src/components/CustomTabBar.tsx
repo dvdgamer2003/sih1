@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
     container: {
         borderTopWidth: 1,
         borderTopColor: 'rgba(0, 0, 0, 0.08)',
-        ...shadows.elevation2,
+        ...shadows.sm,
         paddingBottom: Platform.OS === 'ios' ? spacing.lg : spacing.sm,
     },
     tabBar: {

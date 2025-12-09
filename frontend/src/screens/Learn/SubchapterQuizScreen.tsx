@@ -96,7 +96,7 @@ const SubchapterQuizScreen = ({ route, navigation }: any) => {
 
     if (loading) {
         return (
-            <GradientBackground colors={gradients.softPurple}>
+            <GradientBackground colors={gradients.onboarding}>
                 <View style={styles.centerContainer}>
                     <ActivityIndicator size="large" color={theme.colors.primary} />
                     <Text variant="titleMedium" style={{ marginTop: spacing.lg, color: theme.colors.primary }}>
@@ -112,7 +112,7 @@ const SubchapterQuizScreen = ({ route, navigation }: any) => {
 
     if (!questions || questions.length === 0) {
         return (
-            <GradientBackground colors={gradients.softPurple}>
+            <GradientBackground colors={gradients.onboarding}>
                 <View style={styles.centerContainer}>
                     <Text variant="titleMedium">No questions available.</Text>
                     <Button mode="contained" onPress={() => navigation.goBack()} style={{ marginTop: spacing.lg }}>
@@ -127,7 +127,7 @@ const SubchapterQuizScreen = ({ route, navigation }: any) => {
     const progress = (currentQuestionIndex + 1) / questions.length;
 
     return (
-        <GradientBackground colors={gradients.softPurple}>
+        <GradientBackground colors={gradients.onboarding}>
             <View style={styles.container}>
                 <XPToast
                     visible={showToast}

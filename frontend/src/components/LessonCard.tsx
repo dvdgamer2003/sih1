@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Pressable } from 'react-native';
 import { Card, Text, useTheme, Surface, Button } from 'react-native-paper';
 import { Lesson } from '../services/lessonsService';
-import { spacing, borderRadius, neumorphism } from '../theme';
+import { spacing, borderRadius } from '../theme';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Animated, { useAnimatedStyle, useSharedValue, withSpring, withTiming } from 'react-native-reanimated';
 import { useResponsive } from '../hooks/useResponsive';

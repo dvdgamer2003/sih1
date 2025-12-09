@@ -144,6 +144,14 @@ const HomeScreen = ({ navigation }: any) => {
             gradient: ['#00ACC1', '#0097A7'], // Cyan/Teal
             onPress: () => navigation.navigate('Chatbot'),
         },
+        {
+            id: '10',
+            title: 'Feedback',
+            icon: 'comment-quote-outline',
+            color: '#FFCCBC',
+            gradient: ['#FF416C', '#FF4B2B'], // Red-Orange
+            onPress: () => navigation.navigate('StudentFeedback'),
+        },
     ];
 
     const getSimIcon = (subject: string) => {

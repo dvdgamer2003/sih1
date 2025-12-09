@@ -74,7 +74,7 @@ const ModelListScreen = () => {
     );
 
     return (
-        <GradientBackground colors={gradients.cool}>
+        <GradientBackground colors={gradients.onboarding}>
             <View style={styles.container}>
                 <View style={[styles.header, containerStyle]}>
                     <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>

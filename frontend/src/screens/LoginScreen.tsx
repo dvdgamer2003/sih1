@@ -69,7 +69,7 @@ const LoginScreen = ({ navigation }: any) => {
         setError(null);
         setSuccess(null);
         try {
-            await login(email, password, role);
+            await login(email, password);
             setSuccess(t('login.loginSuccess') || 'Login successful!');
             setVisible(true);
         } catch (e: any) {

@@ -82,7 +82,7 @@ const SearchScreen = () => {
     );
 
     return (
-        <GradientBackground colors={gradients.softPurple}>
+        <GradientBackground colors={gradients.onboarding}>
             <View style={[styles.container, containerStyle]}>
                 <View style={styles.header}>
                     <IconButton icon="arrow-left" onPress={() => navigation.goBack()} />

@@ -134,6 +134,13 @@ const MobileHomeScreen = ({ navigation }: any) => {
             gradient: ['#00ACC1', '#0097A7'], // Cyan/Teal
             onPress: () => navigation.navigate('Chatbot'),
         },
+        {
+            id: 'feedback',
+            title: 'Feedback',
+            icon: 'comment-quote-outline',
+            gradient: ['#FF416C', '#FF4B2B'], // Red-Orange
+            onPress: () => navigation.navigate('StudentFeedback'),
+        },
     ];
 
     return (

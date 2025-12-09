@@ -64,7 +64,7 @@ router.post('/select-class', protect, async (req, res) => {
 // Get user profile (includes selected class)
 router.get('/profile', protect, async (req, res) => {
     try {
-        const user = await User.findById(req.user.id).select('-password');
+        const user = await User.findById(req.user.id).select('-password').populate('assignedTeacher', 'name');
 
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
@@ -80,13 +80,42 @@ router.get('/profile', protect, async (req, res) => {
                 xp: user.xp,
                 level: user.level,
                 streak: user.streak,
+                level: user.level,
+                streak: user.streak,
                 language: user.language,
+                assignedTeacher: user.assignedTeacher
             }
         });
     } catch (error) {
         console.error('[UserRoutes] Error getting profile:', error);
         res.status(500).json({
             message: 'Failed to get profile',
+            error: error.message
+        });
+    }
+});
+
+// Get available teachers for the student
+router.get('/teachers', protect, async (req, res) => {
+    try {
+        const user = await User.findById(req.user.id);
+        const query = { role: 'teacher' };
+
+        if (user.instituteId) {
+            query.instituteId = user.instituteId;
+        } else if (user.assignedTeacher) {
+            query._id = user.assignedTeacher;
+        } else {
+            // If no institute and no assigned teacher, return empty
+            return res.json({ teachers: [] });
+        }
+
+        const teachers = await User.find(query).select('name email avatar');
+        res.json({ teachers });
+    } catch (error) {
+        console.error('[UserRoutes] Error getting teachers:', error);
+        res.status(500).json({
+            message: 'Failed to get teachers',
             error: error.message
         });
     }

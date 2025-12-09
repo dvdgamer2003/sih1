@@ -64,7 +64,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'center',
-            ...shadows.elevation2,
+            ...shadows.sm,
         };
 
         const sizeStyles = {

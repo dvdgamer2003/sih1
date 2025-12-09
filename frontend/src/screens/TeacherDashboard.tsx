@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, ScrollView, RefreshControl } from 'react-native';
-import { Text, Card, DataTable, useTheme, ActivityIndicator, Chip } from 'react-native-paper';
+import { Text, Card, DataTable, useTheme, ActivityIndicator, Chip, Button } from 'react-native-paper';
 import { getTeacherStats, TeacherStats } from '../services/teacherService';
 import { useAuth } from '../context/AuthContext';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -68,9 +68,19 @@ const TeacherDashboard = ({ navigation }: any) => {
                     contentContainerStyle={styles.content}
                     refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
                 >
-                    <Text variant="headlineMedium" style={styles.title}>
-                        Teacher Dashboard
-                    </Text>
+                    <View style={styles.headerRow}>
+                        <Text variant="headlineMedium" style={styles.title}>
+                            Teacher Dashboard
+                        </Text>
+                        <Button
+                            mode="contained"
+                            onPress={() => navigation.navigate('TeacherFeedback')}
+                            icon="message-reply-text"
+                            style={styles.feedbackBtn}
+                        >
+                            Feedback
+                        </Button>
+                    </View>
 
                     {/* Key Metrics */}
                     <View style={[styles.metricsRow, { flexDirection: isMobile ? 'column' : 'row' }]}>
@@ -208,6 +218,15 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: 'bold',
         marginBottom: 20,
+    },
+    headerRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: 20,
+    },
+    feedbackBtn: {
+        borderRadius: 8,
     },
     metricsRow: {
         flexDirection: 'row',

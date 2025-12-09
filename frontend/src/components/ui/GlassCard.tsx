@@ -18,7 +18,7 @@ const GlassCard: React.FC<GlassCardProps> = ({
     style,
 }) => {
     return (
-        <View style={[styles.container, shadows.elevation3, style]}>
+        <View style={[styles.container, shadows.base, style]}>
             <BlurView intensity={intensity} tint={tint} style={styles.blurView}>
                 <LinearGradient
                     colors={['rgba(255, 255, 255, 0.25)', 'rgba(255, 255, 255, 0.1)']}

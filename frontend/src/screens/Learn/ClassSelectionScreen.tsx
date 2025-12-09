@@ -60,7 +60,7 @@ const ClassSelectionScreen = ({ navigation }: any) => {
     }
 
     return (
-        <GradientBackground colors={gradients.warm}>
+        <GradientBackground colors={gradients.primary}>
             <View style={styles.container}>
                 <Text variant="headlineMedium" style={styles.headerTitle}>
                     Select Your Class

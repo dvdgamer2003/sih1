@@ -51,7 +51,14 @@ const CustomCard: React.FC<CustomCardProps> = ({
         transform: [{ scale: scale.value }],
     }));
 
-    const shadowStyle = shadows[`elevation${elevation}`];
+    const shadowMap: Record<number, keyof typeof shadows> = {
+        1: 'xs',
+        2: 'sm',
+        3: 'base', // Approx
+        4: 'base', // Approx
+        5: 'md',
+    };
+    const shadowStyle = shadows[shadowMap[elevation] || 'sm'];
 
     const cardStyle = [
         styles.card,

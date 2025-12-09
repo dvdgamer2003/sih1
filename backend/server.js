@@ -44,6 +44,7 @@ app.use('/api/analytics', require('./routes/analyticsRoutes'));
 app.use('/api/student', require('./routes/studentRoutes'));
 app.use('/api/videos', require('./routes/videoRoutes'));
 app.use('/api/wellbeing', require('./routes/wellbeingRoutes'));
+app.use('/api/feedback', require('./routes/feedbackRoutes'));
 
 // Health check route
 app.get('/api/health', (req, res) => {

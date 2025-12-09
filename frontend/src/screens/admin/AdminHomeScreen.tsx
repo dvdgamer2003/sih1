@@ -17,6 +17,7 @@ const AdminHomeScreen = () => {
         { title: 'Pending Approvals', icon: 'time', screen: 'AdminDashboard', color: '#F59E0B' }, // Reusing existing dashboard for approvals
         { title: 'Global Analytics', icon: 'stats-chart', screen: 'GlobalAnalytics', color: '#3B82F6' },
         { title: 'User Locations', icon: 'map', screen: 'AdminMap', color: '#EC4899' },
+        { title: 'Feedback Manager', icon: 'chatbox-ellipses', screen: 'AdminFeedback', color: '#F97316' },
     ];
 
     return (

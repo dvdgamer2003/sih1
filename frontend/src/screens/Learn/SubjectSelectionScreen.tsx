@@ -67,7 +67,7 @@ const SubjectSelectionScreen = ({ route, navigation }: any) => {
     }
 
     return (
-        <GradientBackground colors={gradients.warm}>
+        <GradientBackground colors={gradients.primary}>
             <View style={styles.container}>
                 <View style={styles.header}>
                     <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>

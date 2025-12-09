@@ -55,7 +55,7 @@ const LessonsScreen = () => {
 
     if (loading) {
         return (
-            <GradientBackground colors={gradients.softPurple}>
+            <GradientBackground colors={gradients.onboarding}>
                 <View style={styles.centerContainer}>
                     <ActivityIndicator size="large" color={theme.colors.primary} />
                     <Text variant="titleMedium" style={styles.loadingText}>

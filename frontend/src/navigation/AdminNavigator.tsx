@@ -24,6 +24,7 @@ const AdminNavigator = () => {
             <Stack.Screen name="QuizBankManager" component={QuizBankManagerScreen} />
             <Stack.Screen name="AdminMap" component={AdminMapScreen} />
             <Stack.Screen name="Notifications" component={NotificationScreen} />
+            <Stack.Screen name="AdminFeedback" component={require('../screens/admin/AdminFeedbackScreen').default} />
         </Stack.Navigator>
     );
 };
